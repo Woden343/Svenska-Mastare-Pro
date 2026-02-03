@@ -1,5 +1,5 @@
 // svenska-features.js
-// Phase 2 (Lecons) + Phase 3 (Quiz + XP) + Phase 4 (Flashcards)
+// Phase 2 (Lecons) + Phase 3 (Quiz + XP) + Phase 4 (Flashcards) + Phase 5 (Progression)
 // Offline, sans dependances
 
 // -------------------- HELPERS --------------------
@@ -12,6 +12,31 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) {
   return escapeHtml(s).replaceAll('"', "&quot;");
+}
+
+function clamp(n, a, b) {
+  return Math.max(a, Math.min(b, n));
+}
+
+function toPercent(n) {
+  return `${clamp(Math.round(n), 0, 100)}%`;
+}
+
+function downloadText(filename, text) {
+  const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function downloadJson(filename, obj) {
+  const text = JSON.stringify(obj, null, 2);
+  downloadText(filename, text);
 }
 
 // -------------------- AUDIO (gratuit) --------------------
@@ -227,15 +252,16 @@ function renderPracticeHome() {
 
   const answered = (appState.progress.quiz && appState.progress.quiz.answered) || 0;
   const correct = (appState.progress.quiz && appState.progress.quiz.correct) || 0;
+  const rate = answered ? Math.round((correct / answered) * 100) : 0;
 
   area.innerHTML = `
     <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-6">
       <div class="font-extrabold text-slate-800 text-lg">Pratiquer - Niveau ${escapeHtml(appState.user.level)}</div>
       <div class="text-slate-600 mt-1">
-        Choisis un mode. Tu gagnes <b>+10 XP</b> si correct, <b>+2 XP</b> si incorrect.
+        +10 XP si correct, +2 XP si incorrect.
       </div>
       <div class="mt-4 text-sm text-slate-500">
-        Stats : ${answered} reponses • ${correct} correctes
+        Stats : ${answered} reponses • ${correct} correctes • ${rate}%
       </div>
     </div>
   `;
@@ -429,17 +455,12 @@ function shuffle(arr) {
 // PHASE 4 : FLASHCARDS
 // =========================================================
 
-const flashSession = {
-  category: null,
-  index: 0,
-  showingBack: false
-};
+const flashSession = { category: null, index: 0, showingBack: false };
 
 function renderFlashcards() {
   const container = document.getElementById("content-flashcards");
   if (!container) return;
 
-  // Créer l'UI si absente
   if (!document.getElementById("flashcards-root")) {
     container.innerHTML = `
       <div id="flashcards-root" class="space-y-4">
@@ -476,31 +497,26 @@ function renderFlashcards() {
         </div>
       </div>
     `;
-
     bindFlashcardsEvents();
   }
 
-  // Init catégorie par défaut
   const categories = Object.keys(FLASHCARDS || {});
   if (!categories.length) return;
 
   if (!flashSession.category) flashSession.category = categories[0];
 
-  // Remplir le select
   const select = document.getElementById("flash-category");
   select.innerHTML = categories.map(c => `<option value="${escapeAttr(c)}">${escapeHtml(c)}</option>`).join("");
   select.value = flashSession.category;
 
-  // Render carte
   renderFlashcardCard();
   renderFlashStats();
 }
 
 function ensureFlashProgress() {
   if (!appState.progress) appState.progress = {};
-  if (!appState.progress.flashcards) {
-    appState.progress.flashcards = { learned: [] }; // learned = liste de clés
-  }
+  if (!appState.progress.flashcards) appState.progress.flashcards = { learned: [] };
+  if (!Array.isArray(appState.progress.flashcards.learned)) appState.progress.flashcards.learned = [];
 }
 
 function flashKey(category, sv) {
@@ -520,8 +536,7 @@ function renderFlashcardCard() {
   const list = (FLASHCARDS[flashSession.category] || []);
   if (!list.length) return;
 
-  if (flashSession.index < 0) flashSession.index = 0;
-  if (flashSession.index >= list.length) flashSession.index = list.length - 1;
+  flashSession.index = clamp(flashSession.index, 0, list.length - 1);
 
   const item = list[flashSession.index];
   const counter = document.getElementById("flash-counter");
@@ -566,7 +581,6 @@ function bindFlashcardsEvents() {
     if (flashSession.showingBack) {
       if (back) back.classList.remove("hidden");
 
-      // Marquer comme appris quand on voit le verso
       ensureFlashProgress();
       const key = flashKey(flashSession.category, item.sv);
       const learned = appState.progress.flashcards.learned || (appState.progress.flashcards.learned = []);
@@ -583,19 +597,8 @@ function bindFlashcardsEvents() {
   if (card) card.onclick = flip;
   if (btnFlip) btnFlip.onclick = flip;
 
-  if (btnPrev) {
-    btnPrev.onclick = () => {
-      flashSession.index -= 1;
-      renderFlashcardCard();
-    };
-  }
-
-  if (btnNext) {
-    btnNext.onclick = () => {
-      flashSession.index += 1;
-      renderFlashcardCard();
-    };
-  }
+  if (btnPrev) btnPrev.onclick = () => { flashSession.index -= 1; renderFlashcardCard(); };
+  if (btnNext) btnNext.onclick = () => { flashSession.index += 1; renderFlashcardCard(); };
 
   if (btnAudio) {
     btnAudio.onclick = () => {
@@ -603,6 +606,141 @@ function bindFlashcardsEvents() {
       if (!list.length) return;
       const item = list[flashSession.index];
       speakSv(item.sv);
+    };
+  }
+}
+
+// =========================================================
+// PHASE 5 : PROGRESSION (Dashboard + Export + Reset)
+// =========================================================
+
+function renderProgress() {
+  const container = document.getElementById("content-progress");
+  if (!container) return;
+
+  // Calculs
+  const xp = appState.user?.xp || 0;
+  const level = appState.user?.level || "A1";
+
+  // Lecons (par niveau)
+  const doneIds = new Set(appState.progress?.lessonsCompleted || []);
+  const lessonStats = LEVELS.map((lvl) => {
+    const total = (LESSONS[lvl] || []).length;
+    const done = (LESSONS[lvl] || []).filter(l => doneIds.has(l.id)).length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    return { lvl, total, done, pct };
+  });
+
+  // Quiz
+  const answered = appState.progress?.quiz?.answered || 0;
+  const correct = appState.progress?.quiz?.correct || 0;
+  const rate = answered ? Math.round((correct / answered) * 100) : 0;
+
+  // Flashcards
+  const learned = (appState.progress?.flashcards?.learned || []).length;
+  const flashTotal = Object.values(FLASHCARDS || {}).reduce((acc, arr) => acc + (arr ? arr.length : 0), 0;
+
+  // UI
+  container.innerHTML = `
+    <div class="space-y-4" id="progress-root">
+      <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <div class="text-sm text-slate-500">Progression</div>
+            <div class="text-xl font-extrabold text-slate-800">Ton tableau de bord</div>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button id="btn-export-json" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition focus-ring">⬇ Export JSON</button>
+            <button id="btn-export-txt" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition focus-ring">⬇ Export texte</button>
+            <button id="btn-reset-all" class="px-4 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 transition focus-ring">🗑 Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <div class="text-sm text-slate-500">XP</div>
+          <div class="text-3xl font-extrabold text-slate-900 mt-1">${xp}</div>
+          <div class="text-xs text-slate-500 mt-2">Total gagne via quiz.</div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <div class="text-sm text-slate-500">Niveau actuel</div>
+          <div class="text-3xl font-extrabold text-slate-900 mt-1">${escapeHtml(level)}</div>
+          <div class="text-xs text-slate-500 mt-2">Changeable dans Apprendre.</div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <div class="text-sm text-slate-500">Quiz</div>
+          <div class="text-lg font-extrabold text-slate-900 mt-2">${answered} reponses</div>
+          <div class="text-slate-700 mt-1">${correct} correctes • ${rate}%</div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+        <div class="font-extrabold text-slate-800">Lecons terminees par niveau</div>
+        <div class="mt-3 space-y-3">
+          ${lessonStats.map(s => `
+            <div>
+              <div class="flex items-center justify-between text-sm">
+                <div class="font-semibold text-slate-700">${s.lvl}</div>
+                <div class="text-slate-600">${s.done} / ${s.total} • ${toPercent(s.pct)}</div>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden mt-2 border border-slate-200">
+                <div style="width:${s.pct}%" class="h-full bg-indigo-600"></div>
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+        <div class="font-extrabold text-slate-800">Flashcards</div>
+        <div class="text-slate-700 mt-2">Mots appris : <b>${learned}</b> / ${flashTotal}</div>
+        <div class="text-xs text-slate-500 mt-2">
+          Un mot est considere appris quand tu retournes la carte (verso).
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Bind buttons
+  const btnJson = document.getElementById("btn-export-json");
+  const btnTxt = document.getElementById("btn-export-txt");
+  const btnReset = document.getElementById("btn-reset-all");
+
+  if (btnJson) {
+    btnJson.onclick = () => {
+      downloadJson("svenska-progress.json", {
+        exportedAt: new Date().toISOString(),
+        state: appState
+      });
+    };
+  }
+
+  if (btnTxt) {
+    btnTxt.onclick = () => {
+      const lines = [];
+      lines.push("Svenska Mastare - Export progression");
+      lines.push(`Date: ${new Date().toLocaleString()}`);
+      lines.push("");
+      lines.push(`XP: ${xp}`);
+      lines.push(`Niveau: ${level}`);
+      lines.push("");
+      lines.push(`Quiz: ${answered} reponses, ${correct} correctes, ${rate}%`);
+      lines.push(`Flashcards: ${learned} appris / ${flashTotal}`);
+      lines.push("");
+      lines.push("Lecons par niveau:");
+      lessonStats.forEach(s => lines.push(`- ${s.lvl}: ${s.done}/${s.total} (${s.pct}%)`));
+      downloadText("svenska-progress.txt", lines.join("\n"));
+    };
+  }
+
+  if (btnReset) {
+    btnReset.onclick = () => {
+      if (!confirm("Supprimer TOUTE la progression (XP, lecons, quiz, flashcards) ?")) return;
+      localStorage.removeItem("svenska-mastare-state");
+      location.reload();
     };
   }
 }
