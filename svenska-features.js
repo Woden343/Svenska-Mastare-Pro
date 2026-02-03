@@ -1,5 +1,18 @@
 // svenska-features.js
-// Phase 2 (Lecons) + Phase 3 (Quiz + XP)
+// Phase 2 (Lecons) + Phase 3 (Quiz + XP) + Phase 4 (Flashcards)
+// Offline, sans dependances
+
+// -------------------- HELPERS --------------------
+
+function escapeHtml(s) {
+  return String(s)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+function escapeAttr(s) {
+  return escapeHtml(s).replaceAll('"', "&quot;");
+}
 
 // -------------------- AUDIO (gratuit) --------------------
 
@@ -14,7 +27,9 @@ function speakSv(text) {
   }
 }
 
-// -------------------- LEARN (Phase 2) --------------------
+// =========================================================
+// PHASE 2 : LEARN (Lecons)
+// =========================================================
 
 function renderLearn() {
   const levelSelect = document.getElementById("level-selector");
@@ -42,7 +57,7 @@ function renderLearn() {
   if (!grid || !container) return;
 
   if (!list.length) {
-    grid.innerHTML = `<div class="text-slate-600">Aucune lecon disponible pour ${level}.</div>`;
+    grid.innerHTML = `<div class="text-slate-600">Aucune lecon disponible pour ${escapeHtml(level)}.</div>`;
   } else {
     grid.innerHTML = list
       .map((lesson) => {
@@ -171,15 +186,12 @@ function openLesson(lessonId) {
   modal.classList.remove("hidden");
 }
 
-// -------------------- PRACTICE (Phase 3) --------------------
+// =========================================================
+// PHASE 3 : PRACTICE (Quiz + XP)
+// =========================================================
 
 // Etat session quiz (en RAM)
-const quizSession = {
-  mode: null,
-  items: [],
-  index: 0,
-  score: 0
-};
+const quizSession = { mode: null, items: [], index: 0, score: 0 };
 
 function renderPractice() {
   renderPracticeHome();
@@ -239,7 +251,6 @@ function startQuiz(mode) {
     alert("Pas encore de questions pour ce niveau. Ajoute-en dans QUESTIONS.");
     return;
   }
-
   renderQuizQuestion();
 }
 
@@ -250,7 +261,6 @@ function getQuestionsForMode(mode) {
   if (mode === "quick") return shuffle(pool).slice(0, 10);
   if (mode === "grammar") return shuffle(pool.filter((q) => q.category === "grammar")).slice(0, 10);
   if (mode === "vocab") return shuffle(pool.filter((q) => q.category === "vocab")).slice(0, 10);
-
   return shuffle(pool).slice(0, 10);
 }
 
@@ -292,13 +302,12 @@ function renderQuizQuestion() {
   const answerArea = document.getElementById("quiz-answer-area");
   if (q.type === "mcq") {
     answerArea.innerHTML = (q.choices || [])
-      .map(
-        (c) => `
-      <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer mt-2">
-        <input type="radio" name="quizChoice" value="${escapeAttr(c)}" />
-        <span class="font-semibold">${escapeHtml(c)}</span>
-      </label>`
-      )
+      .map((c) => `
+        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer mt-2">
+          <input type="radio" name="quizChoice" value="${escapeAttr(c)}" />
+          <span class="font-semibold">${escapeHtml(c)}</span>
+        </label>
+      `)
       .join("");
   } else {
     answerArea.innerHTML = `
@@ -328,12 +337,10 @@ function submitQuizAnswer() {
 
   const correct = isCorrectAnswer(q, userAnswer);
 
-  // stats persistantes
   if (!appState.progress.quiz) appState.progress.quiz = { answered: 0, correct: 0 };
   appState.progress.quiz.answered += 1;
   if (correct) appState.progress.quiz.correct += 1;
 
-  // XP
   if (correct) {
     appState.user.xp += 10;
     quizSession.score += 1;
@@ -367,11 +374,8 @@ function submitQuizAnswer() {
 
 function nextQuizQuestion() {
   quizSession.index += 1;
-  if (quizSession.index >= quizSession.items.length) {
-    renderQuizEnd();
-  } else {
-    renderQuizQuestion();
-  }
+  if (quizSession.index >= quizSession.items.length) renderQuizEnd();
+  else renderQuizQuestion();
 }
 
 function renderQuizEnd() {
@@ -403,10 +407,7 @@ function quitQuiz() {
 
 function isCorrectAnswer(q, userAnswer) {
   const ua = String(userAnswer || "").trim().toLowerCase();
-
-  if (q.type === "mcq") {
-    return ua === String(q.answer).trim().toLowerCase();
-  }
+  if (q.type === "mcq") return ua === String(q.answer).trim().toLowerCase();
 
   const expected = String(q.answer).trim().toLowerCase();
   const acc = (q.acceptable || []).map((x) => String(x).trim().toLowerCase());
@@ -424,15 +425,184 @@ function shuffle(arr) {
   return a;
 }
 
-// -------------------- HELPERS --------------------
+// =========================================================
+// PHASE 4 : FLASHCARDS
+// =========================================================
 
-function escapeHtml(s) {
-  return String(s)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;");
+const flashSession = {
+  category: null,
+  index: 0,
+  showingBack: false
+};
+
+function renderFlashcards() {
+  const container = document.getElementById("content-flashcards");
+  if (!container) return;
+
+  // Créer l'UI si absente
+  if (!document.getElementById("flashcards-root")) {
+    container.innerHTML = `
+      <div id="flashcards-root" class="space-y-4">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <div class="text-sm text-slate-500">Flashcards</div>
+              <div class="text-xl font-extrabold text-slate-800">Memoriser le vocabulaire</div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
+              <select id="flash-category" class="p-3 border-2 border-slate-300 rounded-xl focus-ring bg-white"></select>
+              <button id="flash-audio" class="px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition focus-ring">🔊 Audio</button>
+            </div>
+          </div>
+
+          <div class="mt-4 text-sm text-slate-500" id="flash-stats"></div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <div class="text-sm text-slate-500 mb-3" id="flash-counter"></div>
+
+          <button id="flash-card" class="w-full text-center rounded-2xl border-2 border-slate-200 hover:bg-slate-50 transition p-10 focus-ring">
+            <div class="text-3xl font-extrabold text-slate-900" id="flash-front"></div>
+            <div class="mt-4 text-lg text-slate-700 hidden" id="flash-back"></div>
+            <div class="mt-6 text-xs text-slate-500">(Clique pour retourner)</div>
+          </button>
+
+          <div class="mt-5 flex items-center justify-between gap-2">
+            <button id="flash-prev" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition focus-ring">⬅ Precedent</button>
+            <button id="flash-flip" class="px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition focus-ring">↩ Retourner</button>
+            <button id="flash-next" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 transition focus-ring">Suivant ➜</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    bindFlashcardsEvents();
+  }
+
+  // Init catégorie par défaut
+  const categories = Object.keys(FLASHCARDS || {});
+  if (!categories.length) return;
+
+  if (!flashSession.category) flashSession.category = categories[0];
+
+  // Remplir le select
+  const select = document.getElementById("flash-category");
+  select.innerHTML = categories.map(c => `<option value="${escapeAttr(c)}">${escapeHtml(c)}</option>`).join("");
+  select.value = flashSession.category;
+
+  // Render carte
+  renderFlashcardCard();
+  renderFlashStats();
 }
 
-function escapeAttr(s) {
-  return escapeHtml(s).replaceAll('"', "&quot;");
+function ensureFlashProgress() {
+  if (!appState.progress) appState.progress = {};
+  if (!appState.progress.flashcards) {
+    appState.progress.flashcards = { learned: [] }; // learned = liste de clés
+  }
+}
+
+function flashKey(category, sv) {
+  return `${category}||${sv}`;
+}
+
+function renderFlashStats() {
+  ensureFlashProgress();
+  const learned = appState.progress.flashcards.learned || [];
+  const total = Object.values(FLASHCARDS || {}).reduce((acc, arr) => acc + (arr ? arr.length : 0), 0);
+
+  const stats = document.getElementById("flash-stats");
+  if (stats) stats.textContent = `Mots appris : ${learned.length} / ${total}`;
+}
+
+function renderFlashcardCard() {
+  const list = (FLASHCARDS[flashSession.category] || []);
+  if (!list.length) return;
+
+  if (flashSession.index < 0) flashSession.index = 0;
+  if (flashSession.index >= list.length) flashSession.index = list.length - 1;
+
+  const item = list[flashSession.index];
+  const counter = document.getElementById("flash-counter");
+  if (counter) counter.textContent = `${flashSession.category} • Carte ${flashSession.index + 1} / ${list.length}`;
+
+  const front = document.getElementById("flash-front");
+  const back = document.getElementById("flash-back");
+
+  if (front) front.textContent = item.sv;
+  if (back) back.textContent = item.fr;
+
+  flashSession.showingBack = false;
+  if (back) back.classList.add("hidden");
+}
+
+function bindFlashcardsEvents() {
+  const select = document.getElementById("flash-category");
+  const card = document.getElementById("flash-card");
+  const btnPrev = document.getElementById("flash-prev");
+  const btnNext = document.getElementById("flash-next");
+  const btnFlip = document.getElementById("flash-flip");
+  const btnAudio = document.getElementById("flash-audio");
+
+  if (select) {
+    select.onchange = () => {
+      flashSession.category = select.value;
+      flashSession.index = 0;
+      flashSession.showingBack = false;
+      renderFlashcardCard();
+      renderFlashStats();
+    };
+  }
+
+  const flip = () => {
+    const list = (FLASHCARDS[flashSession.category] || []);
+    if (!list.length) return;
+    const item = list[flashSession.index];
+
+    const back = document.getElementById("flash-back");
+    flashSession.showingBack = !flashSession.showingBack;
+
+    if (flashSession.showingBack) {
+      if (back) back.classList.remove("hidden");
+
+      // Marquer comme appris quand on voit le verso
+      ensureFlashProgress();
+      const key = flashKey(flashSession.category, item.sv);
+      const learned = appState.progress.flashcards.learned || (appState.progress.flashcards.learned = []);
+      if (!learned.includes(key)) {
+        learned.push(key);
+        saveState();
+        renderFlashStats();
+      }
+    } else {
+      if (back) back.classList.add("hidden");
+    }
+  };
+
+  if (card) card.onclick = flip;
+  if (btnFlip) btnFlip.onclick = flip;
+
+  if (btnPrev) {
+    btnPrev.onclick = () => {
+      flashSession.index -= 1;
+      renderFlashcardCard();
+    };
+  }
+
+  if (btnNext) {
+    btnNext.onclick = () => {
+      flashSession.index += 1;
+      renderFlashcardCard();
+    };
+  }
+
+  if (btnAudio) {
+    btnAudio.onclick = () => {
+      const list = (FLASHCARDS[flashSession.category] || []);
+      if (!list.length) return;
+      const item = list[flashSession.index];
+      speakSv(item.sv);
+    };
+  }
 }
