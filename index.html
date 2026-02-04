@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Svenska Mästare Pro — Version Ultime avec Vocabulaire & Verbes Essentiels">
+  <title>Svenska Mästare Pro - Version Ultime</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+    
+    .card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+    .progress-bar { transition: width 0.6s ease-in-out; }
+    .fade-in { animation: fadeIn 0.4s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
+    .flip-card { perspective: 1000px; cursor: pointer; min-height: 250px; }
+    .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+    .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
+      position: absolute; width: 100%; height: 100%; backface-visibility: hidden;
+      border-radius: 1rem; display: flex; align-items: center; justify-content: center; padding: 2rem; min-height: 250px;
+    }
+    .flip-card-back { transform: rotateY(180deg); }
+    
+    .focus-ring:focus { outline: 3px solid rgba(59, 130, 246, 0.6); outline-offset: 2px; }
+    .hidden { display: none !important; }
+    
+    .tab-active { background: linear-gradient(to right, #3b82f6, #6366f1); color: white; }
+    .tab-inactive { background: white; color: #64748b; }
+    
+    .message-bubble { max-width: 80%; padding: 1rem; border-radius: 1rem; margin-bottom: 1rem; animation: fadeIn 0.3s ease-in; }
+    .message-user { background: #3b82f6; color: white; margin-left: auto; border-bottom-right-radius: 0.25rem; }
+    .message-ai { background: #f1f5f9; color: #1e293b; margin-right: auto; border-bottom-left-radius: 0.25rem; }
+    
+    .lesson-content { line-height: 1.8; }
+    .lesson-content h4 { font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1e293b; }
+    .lesson-content .example { background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; }
+    .lesson-content .rule-box { background: #fef3c7; border: 2px solid #f59e0b; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; }
+    .lesson-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    .lesson-content table th { background: #f1f5f9; padding: 0.75rem; text-align: left; font-weight: 600; border-bottom: 2px solid #cbd5e1; }
+    .lesson-content table td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; }
+    
+    .vocab-item { border-left: 4px solid #10b981; }
+    .verb-item { border-left: 4px solid #8b5cf6; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <span class="text-3xl">🇸🇪</span>
+          <div>
+            <h1 class="text-xl font-extrabold">Svenska Mästare Pro</h1>
+            <p class="text-xs text-blue-100">Version Ultime • A1→C2 Complet • Vocabulaire & Verbes</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <div class="bg-blue-700/60 px-3 py-2 rounded-full flex items-center gap-2">
+            <span class="text-xl">🔥</span>
+            <div><div class="text-[11px] text-blue-200">Série</div><div id="ui-streak" class="text-sm font-bold">0</div></div>
+          </div>
+          <div class="bg-blue-700/60 px-3 py-2 rounded-full">
+            <div class="text-[11px] text-blue-200">XP</div><div id="ui-xp" class="text-sm font-bold">0</div>
+          </div>
+          <button id="btn-open-settings" class="p-2 hover:bg-blue-700/60 rounded-lg transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-6">
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-2xl p-6 shadow-lg mb-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div><h2 class="text-3xl font-extrabold">Välkommen! 👋</h2><p class="text-blue-100">Version Ultime avec Vocabulaire Essentiel</p></div>
+        <div class="flex flex-wrap gap-3">
+          <div class="bg-white/15 px-4 py-2 rounded-xl"><div class="text-xs text-blue-100">Niveau</div><div id="ui-level" class="font-bold text-lg">A1</div></div>
+          <div class="bg-white/15 px-4 py-2 rounded-xl"><div class="text-xs text-blue-100">Progression</div><div id="ui-progress" class="font-bold text-lg">0%</div></div>
+          <div class="bg-white/15 px-4 py-2 rounded-xl"><div class="text-xs text-blue-100">Mots</div><div id="ui-words" class="font-bold text-lg">0</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+      <div class="flex border-b border-slate-200 overflow-x-auto">
+        <button id="tab-learn" class="tab-active flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>📚</span><span class="hidden sm:inline">Apprendre</span></button>
+        <button id="tab-vocab" class="tab-inactive flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>📖</span><span class="hidden sm:inline">Vocabulaire</span></button>
+        <button id="tab-verbs" class="tab-inactive flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>⚡</span><span class="hidden sm:inline">Verbes</span></button>
+        <button id="tab-practice" class="tab-inactive flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>🎯</span><span class="hidden sm:inline">Pratiquer</span></button>
+        <button id="tab-flashcards" class="tab-inactive flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>🃏</span><span class="hidden sm:inline">Flashcards</span></button>
+        <button id="tab-progress" class="tab-inactive flex-1 px-3 py-4 font-semibold transition flex items-center justify-center gap-2 whitespace-nowrap min-w-[100px]"><span>📊</span><span class="hidden sm:inline">Stats</span></button>
+      </div>
+
+      <div class="p-6">
+        <div id="content-learn" class="space-y-4"></div>
+        <div id="content-vocab" class="hidden space-y-4"></div>
+        <div id="content-verbs" class="hidden space-y-4"></div>
+        <div id="content-practice" class="hidden space-y-4"></div>
+        <div id="content-flashcards" class="hidden space-y-4"></div>
+        <div id="content-progress" class="hidden space-y-6"></div>
+      </div>
+    </section>
+
+    <footer class="mt-8 text-center text-sm text-slate-500">
+      <p>Svenska Mästare Pro - Version Ultime • 300+ mots essentiels • 100 verbes • Prononciation francophone</p>
+    </footer>
+  </main>
+
+  <!-- Settings Modal (identique) -->
+  <div id="settings-modal" class="hidden fixed inset-0 z-50">
+    <div class="absolute inset-0 bg-black/50" onclick="document.getElementById('settings-modal').classList.add('hidden')"></div>
+    <div class="relative max-w-lg mx-auto mt-16 bg-white rounded-2xl shadow-2xl border overflow-hidden">
+      <div class="px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white flex items-center justify-between">
+        <h4 class="font-extrabold text-lg">⚙️ Paramètres</h4>
+        <button id="btn-close-settings" onclick="document.getElementById('settings-modal').classList.add('hidden')" class="p-2 hover:bg-white/15 rounded">✕</button>
+      </div>
+      <div class="p-6 space-y-5">
+        <div class="flex items-center justify-between">
+          <div><div class="font-semibold">Passage automatique</div><div class="text-xs text-slate-500">Question suivante</div></div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input id="toggle-auto-next" type="checkbox" class="sr-only peer">
+            <div class="w-11 h-6 bg-slate-300 rounded-full peer peer-checked:bg-blue-600 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+          </label>
+        </div>
+        <div>
+          <label class="font-semibold block mb-2">Objectif quotidien</label>
+          <select id="select-goal" class="w-full p-3 border-2 rounded-xl">
+            <option value="10">10 questions/jour</option>
+            <option value="20" selected>20 questions/jour</option>
+            <option value="30">30 questions/jour</option>
+            <option value="50">50 questions/jour</option>
+          </select>
+        </div>
+        <button id="btn-save-settings" class="w-full px-4 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 font-bold">💾 Enregistrer</button>
+        <div class="pt-4 border-t">
+          <button id="btn-reset-all" class="w-full px-4 py-3 bg-red-50 text-red-700 border border-red-200 rounded-xl hover:bg-red-100">🗑️ Réinitialiser</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+    <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-lg" id="toast-text"></div>
+  </div>
+
+  <script src="svenska-ultimate-data.js"></script>
+  <script src="svenska-ultimate-app.js"></script>
+</body>
+</html>
