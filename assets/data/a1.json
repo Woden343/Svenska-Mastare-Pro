@@ -1,19 +1,22 @@
 {
   "level": "A1",
-  "title": "Fondations du suédois",
+  "title": "Fondations complètes du suédois",
   "modules": [
 
     {
-      "id": "pron",
-      "title": "Prononciation",
+      "id": "alphabet",
+      "title": "Alphabet & sons",
       "lessons": [
         {
-          "id": "a1_1",
-          "title": "Premiers sons",
+          "id": "a1_alpha",
+          "title": "Alphabet suédois",
           "content": [
-            "Le suédois possède des voyelles longues et courtes.",
-            "L’accent est presque toujours sur la première syllabe.",
-            "å = o ouvert, ä = è, ö = eu, y = u très fermé."
+            "Alphabet : a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö.",
+            "å ≈ o ouvert (båt → bôt)",
+            "ä ≈ è (här → hèr)",
+            "ö ≈ eu (söt → sœut)",
+            "y ≈ u très fermé (ny → nu)",
+            "L’accent tonique est presque toujours sur la première syllabe."
           ],
           "vocab": [
             { "sv": "hej", "fr": "salut", "pron": "hèï" },
@@ -23,8 +26,8 @@
           ],
           "quiz": {
             "type": "mcq",
-            "q": "Comment dit-on merci ?",
-            "choices": ["hej", "tack", "nej"],
+            "q": "Quelle lettre correspond au son 'è' ?",
+            "choices": ["å", "ä", "ö"],
             "answerIndex": 1
           }
         }
@@ -32,51 +35,131 @@
     },
 
     {
-      "id": "basic",
-      "title": "Phrase simple",
+      "id": "sounds",
+      "title": "Voyelles longues & sons spéciaux",
       "lessons": [
         {
-          "id": "a1_2",
-          "title": "Sujet – Verbe – Objet",
+          "id": "a1_sounds",
+          "title": "Long / court – sj / tj / k",
           "content": [
-            "Ordre : Sujet + verbe + objet.",
-            "La négation inte vient après le verbe."
+            "Voyelle longue si une seule consonne suit : tak (toit).",
+            "Voyelle courte si deux consonnes suivent : tack (merci).",
+            "sj ≈ 'chr' aspiré : sju → chrü",
+            "tj / k devant e,i,y,ä,ö ≈ 'tch' doux : tjugo → tchougo",
+            "k devant a,o,u reste dur : kaffe → kafé"
           ],
           "examples": [
-            { "sv": "Jag bor här.", "fr": "J’habite ici.", "pron": "yag bour hèr" },
-            { "sv": "Jag bor inte här.", "fr": "Je n’habite pas ici.", "pron": "yag bour innté hèr" }
+            { "sv": "tak", "fr": "toit", "pron": "taak" },
+            { "sv": "tack", "fr": "merci", "pron": "tak" },
+            { "sv": "sju", "fr": "sept", "pron": "chrü" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "syntax",
+      "title": "Phrase & ordre V2",
+      "lessons": [
+        {
+          "id": "a1_v2",
+          "title": "SVO + règle V2",
+          "content": [
+            "Ordre normal : Sujet – Verbe – Objet.",
+            "Mais si on commence par un adverbe, le verbe devient 2e : Idag arbetar jag.",
+            "C’est la règle V2 : le verbe est TOUJOURS en position 2."
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Jag ___ inte här.",
-            "answer": "bor"
-          }
+          "examples": [
+            { "sv": "Jag dricker kaffe.", "fr": "Je bois du café.", "pron": "yag drikkèr kafé" },
+            { "sv": "Idag dricker jag kaffe.", "fr": "Aujourd’hui je bois du café.", "pron": "idag drikkèr yag kafé" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "questions",
+      "title": "Questions",
+      "lessons": [
+        {
+          "id": "a1_q",
+          "title": "vad / vem / var / hur",
+          "content": [
+            "vad = quoi",
+            "vem = qui",
+            "var = où",
+            "hur = comment"
+          ],
+          "examples": [
+            { "sv": "Vad heter du?", "fr": "Comment tu t’appelles ?", "pron": "vad hètèr dou" },
+            { "sv": "Var bor du?", "fr": "Où habites-tu ?", "pron": "var bour dou" }
+          ]
         }
       ]
     },
 
     {
       "id": "articles",
-      "title": "Articles en / ett",
+      "title": "Articles & pluriel",
       "lessons": [
         {
-          "id": "a1_3",
-          "title": "Genre",
+          "id": "a1_art",
+          "title": "en / ett + pluriel",
           "content": [
-            "Il existe deux genres : en et ett.",
-            "90% des mots sont en.",
-            "Article défini collé au mot : boken, huset."
+            "Deux genres : en (90%) et ett.",
+            "Défini collé : bok → boken.",
+            "Pluriel souvent -or ou -ar."
           ],
           "vocab": [
             { "sv": "en bok", "fr": "un livre", "pron": "èn bouk" },
-            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" }
+            { "sv": "böcker", "fr": "livres", "pron": "beukèr" },
+            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" },
+            { "sv": "hus", "fr": "maisons", "pron": "houss" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "possessive",
+      "title": "Possessifs",
+      "lessons": [
+        {
+          "id": "a1_pos",
+          "title": "min / mitt / mina",
+          "content": [
+            "min → mots en",
+            "mitt → mots ett",
+            "mina → pluriel"
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel article pour bok ?",
-            "choices": ["ett", "en"],
-            "answerIndex": 1
-          }
+          "examples": [
+            { "sv": "min bok", "fr": "mon livre", "pron": "min bouk" },
+            { "sv": "mitt hus", "fr": "ma maison", "pron": "mitt houss" },
+            { "sv": "mina barn", "fr": "mes enfants", "pron": "mina barn" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "numbers",
+      "title": "Chiffres",
+      "lessons": [
+        {
+          "id": "a1_num",
+          "title": "1 à 10",
+          "vocab": [
+            { "sv": "ett", "fr": "1", "pron": "ètt" },
+            { "sv": "två", "fr": "2", "pron": "tvo" },
+            { "sv": "tre", "fr": "3", "pron": "tré" },
+            { "sv": "fyra", "fr": "4", "pron": "fiira" },
+            { "sv": "fem", "fr": "5", "pron": "fèm" },
+            { "sv": "sex", "fr": "6", "pron": "sèks" },
+            { "sv": "sju", "fr": "7", "pron": "chrü" },
+            { "sv": "åtta", "fr": "8", "pron": "ôtta" },
+            { "sv": "nio", "fr": "9", "pron": "niyo" },
+            { "sv": "tio", "fr": "10", "pron": "tiyo" }
+          ]
         }
       ]
     },
@@ -86,23 +169,31 @@
       "title": "Verbes essentiels",
       "lessons": [
         {
-          "id": "a1_4",
-          "title": "vara / ha",
-          "content": [
-            "vara = être",
-            "ha = avoir",
-            "Même forme pour toutes les personnes."
-          ],
-          "vocab": [
+          "id": "a1_verbs",
+          "title": "vara / ha / göra / gå",
+          "examples": [
             { "sv": "Jag är Alex.", "fr": "Je suis Alex.", "pron": "yag èr alèks" },
-            { "sv": "Jag har kaffe.", "fr": "J’ai du café.", "pron": "yag har kafé" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Comment dire: Je suis ?",
-            "choices": ["Jag har", "Jag är"],
-            "answerIndex": 1
-          }
+            { "sv": "Jag har kaffe.", "fr": "J’ai du café.", "pron": "yag har kafé" },
+            { "sv": "Jag gör mat.", "fr": "Je fais à manger.", "pron": "yag yeu mat" },
+            { "sv": "Jag går hem.", "fr": "Je rentre.", "pron": "yag gour hèm" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "dialog",
+      "title": "Mini dialogues",
+      "lessons": [
+        {
+          "id": "a1_dialog",
+          "title": "Se présenter",
+          "content": [
+            "Hej! Jag heter Alex.",
+            "Hej! Vad heter du?",
+            "Jag bor i Frankrike.",
+            "Trevligt att träffas!"
+          ]
         }
       ]
     }
