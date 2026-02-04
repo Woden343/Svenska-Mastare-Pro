@@ -1,18 +1,19 @@
 {
   "level": "A1",
-  "title": "Bases absolues",
+  "title": "Fondations du suédois",
   "modules": [
+
     {
       "id": "pron",
-      "title": "Prononciation & sons",
+      "title": "Prononciation",
       "lessons": [
         {
-          "id": "a1_p_1",
-          "title": "Premiers mots",
+          "id": "a1_1",
+          "title": "Premiers sons",
           "content": [
-            "Le suédois possède des voyelles longues et courtes : la durée change le sens.",
-            "L’accent tonique est presque toujours sur la première syllabe.",
-            "Certaines consonnes n’existent pas en français."
+            "Le suédois possède des voyelles longues et courtes.",
+            "L’accent est presque toujours sur la première syllabe.",
+            "å = o ouvert, ä = è, ö = eu, y = u très fermé."
           ],
           "vocab": [
             { "sv": "hej", "fr": "salut", "pron": "hèï" },
@@ -23,23 +24,22 @@
           "quiz": {
             "type": "mcq",
             "q": "Comment dit-on merci ?",
-            "choices": ["hej", "nej", "tack", "ja"],
-            "answerIndex": 2
+            "choices": ["hej", "tack", "nej"],
+            "answerIndex": 1
           }
         }
       ]
     },
 
     {
-      "id": "syntax",
+      "id": "basic",
       "title": "Phrase simple",
       "lessons": [
         {
-          "id": "a1_s_1",
+          "id": "a1_2",
           "title": "Sujet – Verbe – Objet",
           "content": [
-            "Ordre normal : Sujet + verbe + objet.",
-            "Jag dricker kaffe = Je bois du café.",
+            "Ordre : Sujet + verbe + objet.",
             "La négation inte vient après le verbe."
           ],
           "examples": [
@@ -60,17 +60,16 @@
       "title": "Articles en / ett",
       "lessons": [
         {
-          "id": "a1_a_1",
-          "title": "Un / une",
+          "id": "a1_3",
+          "title": "Genre",
           "content": [
             "Il existe deux genres : en et ett.",
-            "en bok = un livre",
-            "ett hus = une maison",
-            "90% des mots sont en."
+            "90% des mots sont en.",
+            "Article défini collé au mot : boken, huset."
           ],
           "vocab": [
             { "sv": "en bok", "fr": "un livre", "pron": "èn bouk" },
-            { "sv": "ett hus", "fr": "une maison", "pron": "ètt housse" }
+            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" }
           ],
           "quiz": {
             "type": "mcq",
@@ -80,6 +79,33 @@
           }
         }
       ]
+    },
+
+    {
+      "id": "verbs",
+      "title": "Verbes essentiels",
+      "lessons": [
+        {
+          "id": "a1_4",
+          "title": "vara / ha",
+          "content": [
+            "vara = être",
+            "ha = avoir",
+            "Même forme pour toutes les personnes."
+          ],
+          "vocab": [
+            { "sv": "Jag är Alex.", "fr": "Je suis Alex.", "pron": "yag èr alèks" },
+            { "sv": "Jag har kaffe.", "fr": "J’ai du café.", "pron": "yag har kafé" }
+          ],
+          "quiz": {
+            "type": "mcq",
+            "q": "Comment dire: Je suis ?",
+            "choices": ["Jag har", "Jag är"],
+            "answerIndex": 1
+          }
+        }
+      ]
     }
+
   ]
 }
