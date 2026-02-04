@@ -1,0 +1,85 @@
+{
+  "level": "A1",
+  "title": "Bases absolues",
+  "modules": [
+    {
+      "id": "pron",
+      "title": "Prononciation & sons",
+      "lessons": [
+        {
+          "id": "a1_p_1",
+          "title": "Premiers mots",
+          "content": [
+            "Le suédois possède des voyelles longues et courtes : la durée change le sens.",
+            "L’accent tonique est presque toujours sur la première syllabe.",
+            "Certaines consonnes n’existent pas en français."
+          ],
+          "vocab": [
+            { "sv": "hej", "fr": "salut", "pron": "hèï" },
+            { "sv": "tack", "fr": "merci", "pron": "tak" },
+            { "sv": "ja", "fr": "oui", "pron": "ya" },
+            { "sv": "nej", "fr": "non", "pron": "nèï" }
+          ],
+          "quiz": {
+            "type": "mcq",
+            "q": "Comment dit-on merci ?",
+            "choices": ["hej", "nej", "tack", "ja"],
+            "answerIndex": 2
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "syntax",
+      "title": "Phrase simple",
+      "lessons": [
+        {
+          "id": "a1_s_1",
+          "title": "Sujet – Verbe – Objet",
+          "content": [
+            "Ordre normal : Sujet + verbe + objet.",
+            "Jag dricker kaffe = Je bois du café.",
+            "La négation inte vient après le verbe."
+          ],
+          "examples": [
+            { "sv": "Jag bor här.", "fr": "J’habite ici.", "pron": "yag bour hèr" },
+            { "sv": "Jag bor inte här.", "fr": "Je n’habite pas ici.", "pron": "yag bour innté hèr" }
+          ],
+          "quiz": {
+            "type": "gap",
+            "q": "Jag ___ inte här.",
+            "answer": "bor"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "articles",
+      "title": "Articles en / ett",
+      "lessons": [
+        {
+          "id": "a1_a_1",
+          "title": "Un / une",
+          "content": [
+            "Il existe deux genres : en et ett.",
+            "en bok = un livre",
+            "ett hus = une maison",
+            "90% des mots sont en."
+          ],
+          "vocab": [
+            { "sv": "en bok", "fr": "un livre", "pron": "èn bouk" },
+            { "sv": "ett hus", "fr": "une maison", "pron": "ètt housse" }
+          ],
+          "quiz": {
+            "type": "mcq",
+            "q": "Quel article pour bok ?",
+            "choices": ["ett", "en"],
+            "answerIndex": 1
+          }
+        }
+      ]
+    }
+  ]
+}
