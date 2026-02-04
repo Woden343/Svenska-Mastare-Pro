@@ -1,40 +1,39 @@
 {
   "level": "A1",
-  "title": "A1 — Manuel complet (FR → SV) : cours + exemples + max exercices",
+  "title": "A1 — Manuel complet (V3) : règles détaillées + beaucoup d’exemples + séries d’exercices",
   "modules": [
     {
       "id": "intro",
-      "title": "0) Démarrage & méthode",
+      "title": "0) Démarrage : méthode & repères",
       "lessons": [
         {
           "id": "a1_intro_1",
-          "title": "Objectifs A1 & méthode de travail",
+          "title": "Objectifs A1 & méthode (vraiment efficace)",
           "content": [
-            "Objectif A1 : comprendre/produire des phrases simples sur soi, le quotidien, les lieux, le temps, les achats.",
-            "Le suédois est simple sur la conjugaison (souvent une forme au présent), mais exigeant sur l’ordre des mots (V2).",
-            "Méthode conseillée : (1) lire la règle (2) répéter les exemples à voix haute (3) faire l’exercice (4) revoir plus tard."
+            "Objectif A1 : comprendre et produire des phrases simples sur soi, la famille, le travail, les achats, la localisation, le temps.",
+            "Le suédois est souvent facile sur la conjugaison (même forme au présent pour je/tu/il), MAIS exigeant sur l’ordre des mots (V2).",
+            "Ce manuel A1 est structuré en : (1) règle claire + pièges FR (2) séries d’exemples (3) exercices progressifs.",
+            "Méthode recommandée :",
+            "• Lis la règle à voix haute.",
+            "• Répète 5–10 fois les phrases d’exemples (sans lire la traduction).",
+            "• Fais les exercices (sans tricher).",
+            "• Reviens 24h plus tard : refais uniquement les exercices ratés.",
+            "Rappel : au début, vise la compréhension et la clarté, pas un accent parfait."
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "En A1, le point le plus structurant en grammaire suédoise est souvent…",
-            "choices": ["La conjugaison par personne", "L’ordre des mots (V2)", "Le subjonctif"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_intro_2",
-          "title": "Prononciation : principe d’approximation francophone",
-          "content": [
-            "La prononciation simplifiée (FR) sert à être compris rapidement : elle n’est pas IPA, c’est un repère.",
-            "On privilégie : longueur voyelles (long/court), sons å/ä/ö/y, sj/tj/k doux, accent tonique.",
-            "Exemple : jag se prononce très souvent 'ya' (le g final est généralement muet en suédois courant)."
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Prononciation la plus naturelle de « jag » (au quotidien) :",
-            "choices": ["yag", "ya"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "En A1, le point le plus structurant en grammaire suédoise est…",
+              "choices": ["La conjugaison par personne", "L’ordre des mots (V2)", "Le subjonctif"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "La bonne routine d’apprentissage est plutôt…",
+              "choices": ["Règle → Exemples → Exercices → Révision", "Exercices → Règle → Exemples", "Règle seulement"],
+              "answerIndex": 0
+            }
+          ]
         }
       ]
     },
@@ -45,389 +44,483 @@
       "lessons": [
         {
           "id": "a1_pron_1",
-          "title": "Alphabet suédois + å ä ö",
+          "title": "Alphabet suédois + å/ä/ö (repères FR)",
           "content": [
             "Alphabet : a b c d e f g h i j k l m n o p q r s t u v w x y z å ä ö.",
-            "å, ä, ö sont des lettres à part.",
-            "Repères FR : å≈o ouvert, ä≈è, ö≈eu."
+            "å, ä, ö sont des lettres à part (pas des accents).",
+            "Repères francophones (approx.) : å ≈ 'o' ouvert, ä ≈ 'è', ö ≈ 'eu'.",
+            "Piège FR : les voyelles suédoises sont souvent plus « nettes » que les voyelles françaises. Ose ouvrir/fermer davantage.",
+            "Accent tonique : souvent sur la première syllabe (très utile pour être compris)."
           ],
-          "vocab": [
+          "examples": [
             { "sv": "båt", "fr": "bateau", "pron": "bôt" },
             { "sv": "här", "fr": "ici", "pron": "hèr" },
+            { "sv": "där", "fr": "là-bas", "pron": "dèr" },
             { "sv": "söt", "fr": "mignon/sucré", "pron": "sœut" },
             { "sv": "öl", "fr": "bière", "pron": "eul" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle lettre correspond au son proche de « è » ?",
-            "choices": ["å", "ä", "ö"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle lettre correspond le mieux au son proche de « eu » ?",
+              "choices": ["ä", "ö", "å"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : « ici » se dit ___.",
+              "answer": "här"
+            }
+          ]
         },
+
         {
           "id": "a1_pron_2",
-          "title": "Voyelles longues / courtes (tak vs tack)",
+          "title": "Longue vs courte (tak/tack, glas/glass) — essentiel",
           "content": [
-            "La longueur change le sens :",
-            "• souvent LONGUE si une seule consonne suit : tak (toit).",
-            "• souvent COURTE si deux consonnes suivent : tack (merci).",
-            "Autre paire utile : glas (verre) vs glass (glace)."
+            "En suédois, la longueur des voyelles peut changer le mot (et c’est un piège énorme pour les francophones).",
+            "Règle très utile (A1) :",
+            "• voyelle souvent LONGUE si elle est suivie d’une seule consonne : tak (toit).",
+            "• voyelle souvent COURTE si elle est suivie de deux consonnes : tack (merci).",
+            "Autres paires fréquentes : glas (verre) vs glass (glace).",
+            "Exception : il existe des exceptions selon l’origine des mots et certains schémas, mais cette règle est suffisante pour démarrer."
           ],
           "examples": [
             { "sv": "tak", "fr": "toit", "pron": "taak" },
             { "sv": "tack", "fr": "merci", "pron": "tak" },
             { "sv": "glas", "fr": "un verre", "pron": "glaas" },
-            { "sv": "glass", "fr": "une glace", "pron": "glass" }
+            { "sv": "glass", "fr": "une glace", "pron": "glass" },
+            { "sv": "ful", "fr": "moche", "pron": "fuul" },
+            { "sv": "full", "fr": "saoul / plein", "pron": "full" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel mot signifie « une glace » ?",
-            "choices": ["glas", "glass"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel mot signifie « merci » ?",
+              "choices": ["tak", "tack", "takks"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "Quel mot signifie « une glace » ?",
+              "choices": ["glas", "glass"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "La règle A1 la plus fréquente : voyelle courte quand…",
+              "choices": ["une consonne suit", "deux consonnes suivent"],
+              "answerIndex": 1
+            }
+          ]
         },
+
         {
           "id": "a1_pron_3",
-          "title": "y (voyelle difficile pour FR)",
+          "title": "y = « ü » (très fermé) + exemple avec mycket",
           "content": [
-            "y se prononce comme un 'u' très fermé (lèvres arrondies, langue haute).",
-            "Repère FR : proche de 'u' mais encore plus fermé.",
-            "Exemples : ny (nouveau), typ (genre)."
+            "La voyelle y correspond au son /y/ : proche du « ü » allemand.",
+            "Repère pratique : fais un « i » avec la langue, mais arrondis les lèvres comme pour « u ». Tu obtiens y.",
+            "Important : on le retrouve dans des mots très fréquents : mycket (beaucoup), ny (nouveau).",
+            "mycket : prononciation A1 utile = « mük-kèt » (y=ü, et k long)."
           ],
-          "vocab": [
-            { "sv": "ny", "fr": "nouveau", "pron": "nu (très fermé)" },
-            { "sv": "typ", "fr": "genre / type", "pron": "tup (très fermé)" }
+          "examples": [
+            { "sv": "ny", "fr": "nouveau", "pron": "nü (y=ü fermé)" },
+            { "sv": "mycket", "fr": "beaucoup", "pron": "mük-kèt" },
+            { "sv": "fyra", "fr": "quatre", "pron": "fiira" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : « nouveau » se dit ___.",
-            "answer": "ny"
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Dans « mycket », le y se prononce plutôt…",
+              "choices": ["comme 'i'", "comme 'ü' (fermé)"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : « beaucoup » se dit ___.",
+              "answer": "mycket"
+            }
+          ]
         },
+
         {
           "id": "a1_pron_4",
-          "title": "sj / tj / k doux (règles + variations)",
+          "title": "sj / tj / k doux : règles + pièges",
           "content": [
-            "sj- : son 'ch' soufflé/rauque (repère FR : 'chr'). Ex : sju.",
-            "tj- : 'tch' doux (entre ch et tch). Ex : tjugo.",
-            "k doux : k devant e, i, y, ä, ö devient souvent comme 'tch' doux. Ex : köpa.",
-            "k dur : k devant a, o, u reste dur. Ex : kaffe.",
-            "Note : ces sons varient selon régions, mais ces repères A1 te rendent compréhensible."
+            "sj- : son « ch » soufflé/rauque (repère FR : « chr »). Exemple : sju.",
+            "tj- : son proche de « tch » doux (entre 'ch' et 'tch'). Exemple : tjugo.",
+            "k doux : k devant e, i, y, ä, ö devient souvent comme un 'tch' doux. Exemple : köpa.",
+            "k dur : k devant a, o, u reste dur. Exemple : kaffe.",
+            "Note : la prononciation exacte peut varier selon les régions, mais ces repères sont efficaces et compris."
           ],
           "examples": [
             { "sv": "sju", "fr": "sept", "pron": "chrü" },
+            { "sv": "sjuk", "fr": "malade", "pron": "chrük" },
             { "sv": "tjugo", "fr": "vingt", "pron": "tchou-go (doux)" },
+            { "sv": "tjej", "fr": "fille (fam.)", "pron": "tchèï (doux)" },
             { "sv": "köpa", "fr": "acheter", "pron": "tcheu-pa (doux)" },
-            { "sv": "kaffe", "fr": "café", "pron": "kafé" }
+            { "sv": "kille", "fr": "garçon (fam.)", "pron": "tchil-lè (doux)" },
+            { "sv": "kaffe", "fr": "café", "pron": "kafé" },
+            { "sv": "katt", "fr": "chat", "pron": "kat" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Dans « köpa », le k est plutôt…",
-            "choices": ["dur (k)", "doux (tch doux)"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Dans « köpa », le k est…",
+              "choices": ["dur", "doux"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "Quel mot contient un son sj- ?",
+              "choices": ["kaffe", "sjuk", "tjej"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : 20 = ___. (indice : tj-)",
+              "answer": "tjugo"
+            }
+          ]
         },
+
         {
           "id": "a1_pron_5",
-          "title": "j, g et « jag » (exception utile)",
+          "title": "j, g et « jag » : naturel vs soigné",
           "content": [
-            "j se prononce souvent comme 'y'.",
-            "« jag » est très souvent prononcé 'ya' (g final muet en usage courant).",
-            "En prononciation très soignée/isolée, on peut entendre une trace de g, mais au quotidien : 'ya'."
+            "La lettre j se prononce souvent comme 'y'.",
+            "« jag » se prononce très souvent « ya » en suédois courant (g final généralement muet).",
+            "En prononciation isolée/très soignée, on peut entendre une trace de g, mais pour parler naturellement : « ya ».",
+            "Astuce : utilise « ya » systématiquement dans cette app (A1)."
           ],
           "examples": [
             { "sv": "Jag heter Alex.", "fr": "Je m’appelle Alex.", "pron": "ya hètèr alèks" },
-            { "sv": "Jag bor här.", "fr": "J’habite ici.", "pron": "ya bour hèr" }
+            { "sv": "Jag bor här.", "fr": "J’habite ici.", "pron": "ya bour hèr" },
+            { "sv": "Jag gillar kaffe.", "fr": "J’aime le café.", "pron": "ya yil-lar kafé" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Prononciation A1 la plus naturelle de « jag » :",
-            "choices": ["ya", "yag"],
-            "answerIndex": 0
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Prononciation A1 la plus naturelle de « jag » :",
+              "choices": ["ya", "yag"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ kaffe. (J’aime le café.)",
+              "answer": "gillar"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "survival",
-      "title": "2) Survie : saluer, remercier, s’excuser",
+      "title": "2) Survie : salutations, politesse, phrases clés",
       "lessons": [
         {
           "id": "a1_surv_1",
-          "title": "Salutations (hej, god morgon…)",
+          "title": "Saluer (hej, god morgon, hej då)",
           "content": [
-            "Hej = salut (le plus courant).",
-            "God morgon = bonjour (matin). God kväll = bonsoir.",
-            "Hej hej = très courant (salut-salut)."
+            "Formules essentielles :",
+            "• Hej! = Salut (neutre, très courant).",
+            "• Hej hej! = Salut (encore plus familier).",
+            "• God morgon = Bonjour (matin).",
+            "• God kväll = Bonsoir.",
+            "• Hej då = Au revoir.",
+            "Astuce : Hej marche presque partout (c’est le couteau suisse A1)."
           ],
-          "vocab": [
+          "examples": [
             { "sv": "Hej!", "fr": "Salut !", "pron": "hèï" },
-            { "sv": "God morgon", "fr": "Bonjour (matin)", "pron": "goud mor-ron" },
-            { "sv": "God kväll", "fr": "Bonsoir", "pron": "goud kvel" }
+            { "sv": "God morgon!", "fr": "Bonjour (matin) !", "pron": "goud mor-ron" },
+            { "sv": "God kväll!", "fr": "Bonsoir !", "pron": "goud kvel" },
+            { "sv": "Hej då!", "fr": "Au revoir !", "pron": "hèï do" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle formule est la plus neutre et la plus fréquente ?",
-            "choices": ["God morgon", "Hej", "God kväll"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel mot est le plus polyvalent (salut/bonjour) ?",
+              "choices": ["Hej", "God morgon", "Hej då"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Au revoir = Hej ___.",
+              "answer": "då"
+            }
+          ]
         },
+
         {
           "id": "a1_surv_2",
-          "title": "Merci / de rien (tack, varsågod)",
+          "title": "Merci / de rien / voilà (tack, tack så mycket, varsågod) — développé",
           "content": [
-            "Tack = merci. Tack så mycket = merci beaucoup.",
-            "Varsågod = de rien / je t’en prie / voilà (selon contexte)."
+            "Tack = merci (neutre, ultra fréquent).",
+            "Tack så mycket = merci beaucoup (plus appuyé).",
+            "Tack ska du ha = merci (idiomatique, très courant à l’oral).",
+            "Varsågod = de rien / je t’en prie / voilà (selon contexte) :",
+            "• réponse à un merci : Tack! — Varsågod!",
+            "• quand tu donnes quelque chose : Varsågod! (Voilà).",
+            "Piège FR : varsågod n’est pas seulement « de rien », c’est aussi « voilà »."
+          ],
+          "examples": [
+            { "sv": "Tack!", "fr": "Merci !", "pron": "tak" },
+            { "sv": "Tack så mycket!", "fr": "Merci beaucoup !", "pron": "tak so mük-kèt" },
+            { "sv": "Tack ska du ha!", "fr": "Merci ! (idiomatique)", "pron": "tak ska dou ha" },
+            { "sv": "Varsågod.", "fr": "De rien / Voilà.", "pron": "var-so-goud" },
+            { "sv": "Varsågod, här är din kaffe.", "fr": "Voilà, voici ton café.", "pron": "var-so-goud hèr èr din kafé" },
+            { "sv": "Tack! — Varsågod!", "fr": "Merci ! — De rien !", "pron": "tak — var-so-goud" }
           ],
           "vocab": [
-            { "sv": "Tack", "fr": "merci", "pron": "tak" },
-            { "sv": "Tack så mycket", "fr": "merci beaucoup", "pron": "tak so mykèt" },
-            { "sv": "Varsågod", "fr": "de rien / voilà", "pron": "var-so-goud" }
+            { "sv": "mycket", "fr": "beaucoup", "pron": "mük-kèt" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Tack så ___. (Merci beaucoup)",
-            "answer": "mycket"
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Tu réponds « de rien » après « tack » :",
+              "choices": ["Varsågod", "Förlåt", "Hej då"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Tack så ___.",
+              "answer": "mycket"
+            },
+            {
+              "type": "mcq",
+              "q": "Quand tu donnes un objet (« voilà »), tu peux dire :",
+              "choices": ["Varsågod", "Vem", "Var"],
+              "answerIndex": 0
+            }
+          ]
         },
+
         {
           "id": "a1_surv_3",
-          "title": "Pardon / excusez-moi (förlåt, ursäkta)",
+          "title": "S’excuser / interpeller (förlåt, ursäkta)",
           "content": [
             "Förlåt = pardon / désolé (excuse).",
-            "Ursäkta = excusez-moi (pour interpeller ou déranger).",
-            "A1 : Ursäkta est très pratique en public."
+            "Ursäkta = excusez-moi (pour interpeller quelqu’un, demander un renseignement).",
+            "Différence A1 :",
+            "• tu as fait une erreur → Förlåt!",
+            "• tu veux attirer l’attention → Ursäkta!"
           ],
-          "vocab": [
-            { "sv": "Förlåt", "fr": "pardon", "pron": "feur-lôt" },
-            { "sv": "Ursäkta", "fr": "excusez-moi", "pron": "eur-sek-ta" }
+          "examples": [
+            { "sv": "Förlåt!", "fr": "Pardon !", "pron": "feur-lôt" },
+            { "sv": "Ursäkta, var är toaletten?", "fr": "Excusez-moi, où sont les toilettes ?", "pron": "eur-sek-ta var èr tou-a-lèttèn" },
+            { "sv": "Förlåt, jag förstår inte.", "fr": "Pardon, je ne comprends pas.", "pron": "feur-lôt ya feur-stor innté" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Pour interpeller quelqu’un poliment, tu utilises plutôt…",
-            "choices": ["Ursäkta", "Hej då"],
-            "answerIndex": 0
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Pour demander un renseignement à quelqu’un (interpellation), tu utilises plutôt…",
+              "choices": ["Ursäkta", "Förlåt"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Ursäkta, var är ___? (les toilettes)",
+              "answer": "toaletten"
+            }
+          ]
         }
       ]
     },
 
     {
-      "id": "pronouns_svo",
-      "title": "3) Pronoms + phrase simple SVO",
+      "id": "core_grammar_svo",
+      "title": "3) Phrase simple (SVO), présent, négation",
       "lessons": [
-        {
-          "id": "a1_pro_1",
-          "title": "Pronoms sujets (jag/du/han/hon/vi/ni/de)",
-          "content": [
-            "Pronoms : jag(=ya), du, han, hon, vi, ni, de.",
-            "À l’oral, « de » se prononce souvent 'dom' (info utile)."
-          ],
-          "vocab": [
-            { "sv": "jag", "fr": "je", "pron": "ya" },
-            { "sv": "du", "fr": "tu", "pron": "dou" },
-            { "sv": "han", "fr": "il", "pron": "han" },
-            { "sv": "hon", "fr": "elle", "pron": "houn" },
-            { "sv": "vi", "fr": "nous", "pron": "vi" },
-            { "sv": "ni", "fr": "vous", "pron": "ni" },
-            { "sv": "de", "fr": "ils/elles", "pron": "dom" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« hon » signifie…",
-            "choices": ["il", "elle", "nous"],
-            "answerIndex": 1
-          }
-        },
         {
           "id": "a1_svo_1",
-          "title": "SVO : sujet + verbe + objet",
+          "title": "Pronoms sujets + SVO (base)",
           "content": [
-            "Ordre de base : Sujet – Verbe – Objet.",
-            "Ex : Ya dricker kaffe. Dou äter bröd.",
-            "Le présent ne change pas selon la personne (généralement)."
+            "Pronoms sujets essentiels : jag(=ya), du, han, hon, vi, ni, de(oral : dom).",
+            "Ordre de base : Sujet + verbe + complément.",
+            "En A1, cet ordre te donnera 80% des phrases du quotidien."
           ],
           "examples": [
-            { "sv": "Jag dricker kaffe.", "fr": "Je bois du café.", "pron": "ya drikkèr kafé" },
-            { "sv": "Du äter bröd.", "fr": "Tu manges du pain.", "pron": "dou ètèr breud" }
+            { "sv": "Jag heter Alex.", "fr": "Je m’appelle Alex.", "pron": "ya hètèr alèks" },
+            { "sv": "Du bor här.", "fr": "Tu habites ici.", "pron": "dou bour hèr" },
+            { "sv": "Han jobbar idag.", "fr": "Il travaille aujourd’hui.", "pron": "han yobb-ar idag" },
+            { "sv": "Hon gillar kaffe.", "fr": "Elle aime le café.", "pron": "houn yil-lar kafé" },
+            { "sv": "Vi bor i Paris.", "fr": "Nous habitons à Paris.", "pron": "vi bour i pari" },
+            { "sv": "De kommer nu.", "fr": "Ils arrivent maintenant.", "pron": "dom kommèr nou" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ kaffe. (Je bois du café.)",
-            "answer": "dricker"
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "À l’oral, « de » (ils/elles) se prononce souvent…",
+              "choices": ["de", "dom"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ Alex. (Je m’appelle Alex.)",
+              "answer": "heter"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : De ___ nu. (Ils arrivent maintenant.)",
+              "answer": "kommer"
+            }
+          ]
         },
-        {
-          "id": "a1_svo_2",
-          "title": "Verbes fréquents A1 (bor, jobbar, kommer)",
-          "content": [
-            "bor = habiter (présent de bo)",
-            "jobbar = travailler",
-            "kommer = venir/arriver (ou futur avec ska + infinitif plus tard)."
-          ],
-          "examples": [
-            { "sv": "Jag bor i Paris.", "fr": "J’habite à Paris.", "pron": "ya bour i pari" },
-            { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yobb-ar idag" },
-            { "sv": "Hon kommer nu.", "fr": "Elle arrive maintenant.", "pron": "houn kommèr nou" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel verbe signifie « habiter » ?",
-            "choices": ["jobbar", "bor", "kommer"],
-            "answerIndex": 1
-          }
-        }
-      ]
-    },
 
-    {
-      "id": "present_verbs",
-      "title": "4) Présent : formation + verbes essentiels",
-      "lessons": [
         {
-          "id": "a1_pres_1",
-          "title": "Présent en -r (modèle simple)",
+          "id": "a1_present_1",
+          "title": "Présent : une forme (souvent -r) + exceptions",
           "content": [
-            "Beaucoup de verbes : infinitif en -a → présent en -ar.",
-            "Ex : prata → pratar (parler), jobba → jobbar (travailler).",
-            "Même forme pour toutes les personnes : ya pratar, dou pratar, han pratar."
+            "En suédois, au présent, la forme est souvent la même pour toutes les personnes.",
+            "Modèle fréquent : infinitif en -a → présent en -ar (jobba→jobbar, prata→pratar).",
+            "Autres verbes très fréquents n’ont pas ce modèle : är (être), har (avoir), gör (faire), går (aller).",
+            "Point important : tu n’as pas besoin de conjuguer comme en français, mais tu dois mémoriser quelques formes essentielles."
           ],
           "examples": [
-            { "sv": "Jag pratar svenska.", "fr": "Je parle suédois.", "pron": "ya praa-tar svènska" },
-            { "sv": "Du jobbar här.", "fr": "Tu travailles ici.", "pron": "dou yobb-ar hèr" }
+            { "sv": "Jag jobbar här.", "fr": "Je travaille ici.", "pron": "ya yobb-ar hèr" },
+            { "sv": "Du pratar svenska.", "fr": "Tu parles suédois.", "pron": "dou praa-tar svènska" },
+            { "sv": "Han bor i Sverige.", "fr": "Il habite en Suède.", "pron": "han bour i svè-ri-ye" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : jobba → ___. (présent)",
-            "answer": "jobbar"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : jobba → ___. (présent)",
+              "answer": "jobbar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : prata → ___. (présent)",
+              "answer": "pratar"
+            },
+            {
+              "type": "mcq",
+              "q": "En suédois, au présent, la forme change selon la personne ?",
+              "choices": ["Oui", "Non (généralement une forme)"],
+              "answerIndex": 1
+            }
+          ]
         },
+
         {
-          "id": "a1_pres_2",
-          "title": "vara/är (être) — irrégulier",
+          "id": "a1_verbs_essential_1",
+          "title": "Verbes essentiels à mémoriser : är/har/gör/går/kommer",
           "content": [
-            "vara = être, présent : är.",
-            "Très fréquent : Det är… (c’est…), Jag är… (je suis…)."
+            "Vara (être) → är",
+            "Ha (avoir) → har",
+            "Göra (faire) → gör",
+            "Gå (aller/marcher) → går",
+            "Komma (venir/arriver) → kommer",
+            "Ces verbes sont très fréquents : mémorise-les comme du vocabulaire (pas comme une règle)."
           ],
           "examples": [
             { "sv": "Jag är trött.", "fr": "Je suis fatigué.", "pron": "ya èr treutt" },
-            { "sv": "Det är bra.", "fr": "C’est bien.", "pron": "dè èr bra" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Complète : Jag ___ trött.",
-            "choices": ["har", "är", "gör"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_pres_3",
-          "title": "ha/har (avoir) — irrégulier",
-          "content": [
-            "ha = avoir, présent : har.",
-            "Très utile pour possessions : Jag har en bil / ett hus."
-          ],
-          "examples": [
             { "sv": "Jag har en bil.", "fr": "J’ai une voiture.", "pron": "ya har èn biil" },
-            { "sv": "Hon har ett hus.", "fr": "Elle a une maison.", "pron": "houn har ètt houss" }
-          ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ en bok. (J’ai un livre.)",
-            "answer": "har"
-          }
-        },
-        {
-          "id": "a1_pres_4",
-          "title": "göra/gör (faire), gå/går (aller), komma/kommer (venir)",
-          "content": [
-            "göra → gör (faire)",
-            "gå → går (aller/marcher)",
-            "komma → kommer (venir/arriver)",
-            "Ces formes sont à mémoriser (fréquentes)."
-          ],
-          "examples": [
             { "sv": "Jag gör mat.", "fr": "Je fais à manger.", "pron": "ya yeur maat" },
-            { "sv": "Jag går hem.", "fr": "Je rentre (je vais à la maison).", "pron": "ya gour hèm" },
-            { "sv": "Vi kommer imorgon.", "fr": "On vient demain.", "pron": "vi kommèr i-mor-ron" }
+            { "sv": "Jag går hem.", "fr": "Je rentre.", "pron": "ya gour hèm" },
+            { "sv": "Hon kommer nu.", "fr": "Elle arrive maintenant.", "pron": "houn kommèr nou" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel verbe signifie « aller/rentrer » (gå) au présent ?",
-            "choices": ["går", "gör", "kommer"],
-            "answerIndex": 0
-          }
-        }
-      ]
-    },
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Complète : Jag ___ en bil. (J’ai une voiture.)",
+              "choices": ["är", "har", "gör"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ hem. (Je rentre.)",
+              "answer": "går"
+            },
+            {
+              "type": "mcq",
+              "q": "Quel verbe correspond à « faire » au présent ?",
+              "choices": ["gör", "går", "kommer"],
+              "answerIndex": 0
+            }
+          ]
+        },
 
-    {
-      "id": "negation",
-      "title": "5) Négation (inte) + structures fréquentes",
-      "lessons": [
         {
-          "id": "a1_neg_1",
-          "title": "inte après le verbe (règle de base)",
+          "id": "a1_negation_1",
+          "title": "Négation : inte (position + cas fréquent avec modal)",
           "content": [
-            "Règle A1 : inte se place généralement après le verbe conjugué.",
-            "Ex : Ya bor inte här. Ya är inte trött."
+            "Règle A1 : « inte » se place généralement après le verbe conjugué.",
+            "Ex : Jag bor inte här. Jag är inte trött.",
+            "Avec un modal + infinitif, on place souvent inte après le modal : Jag kan inte komma.",
+            "Piège FR : éviter de mettre inte au tout début."
           ],
           "examples": [
             { "sv": "Jag bor inte här.", "fr": "Je n’habite pas ici.", "pron": "ya bour innté hèr" },
-            { "sv": "Jag är inte trött.", "fr": "Je ne suis pas fatigué.", "pron": "ya èr innté treutt" }
-          ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag är ___ trött.",
-            "answer": "inte"
-          }
-        },
-        {
-          "id": "a1_neg_2",
-          "title": "Négation avec modaux (kan inte…)",
-          "content": [
-            "Avec un modal + infinitif : inte arrive souvent après le modal.",
-            "Ex : Ya kan inte komma. Ya vill inte gå."
-          ],
-          "examples": [
+            { "sv": "Jag är inte trött.", "fr": "Je ne suis pas fatigué.", "pron": "ya èr innté treutt" },
             { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan innté komm-a" },
             { "sv": "Jag vill inte gå.", "fr": "Je ne veux pas y aller.", "pron": "ya vill innté go" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle phrase est correcte ?",
-            "choices": ["Jag inte kan komma.", "Jag kan inte komma."],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag bor ___ här.",
+              "answer": "inte"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": ["Jag inte kan komma.", "Jag kan inte komma."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ inte gå. (Je ne veux pas y aller.)",
+              "answer": "vill"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "questions",
-      "title": "6) Questions (oui/non + mots interrogatifs)",
+      "title": "4) Questions (oui/non + interrogatifs) — très pratique",
       "lessons": [
         {
-          "id": "a1_q_1",
-          "title": "Questions oui/non : inversion",
+          "id": "a1_q_yesno_1",
+          "title": "Questions oui/non : inversion verbe-sujet",
           "content": [
-            "Souvent : verbe + sujet + …",
-            "Ex : Bor du här? Är du trött?"
+            "Question oui/non : on met souvent le verbe conjugué avant le sujet.",
+            "Ex : Du bor här. → Bor du här?",
+            "Ex : Du är trött. → Är du trött?",
+            "À l’oral, l’intonation aide, mais l’inversion est la structure la plus claire."
           ],
           "examples": [
             { "sv": "Bor du här?", "fr": "Tu habites ici ?", "pron": "bour dou hèr" },
-            { "sv": "Är du trött?", "fr": "Tu es fatigué ?", "pron": "èr dou treutt" }
+            { "sv": "Är du trött?", "fr": "Tu es fatigué ?", "pron": "èr dou treutt" },
+            { "sv": "Har du tid?", "fr": "Tu as le temps ?", "pron": "har dou tiid" },
+            { "sv": "Gillar du kaffe?", "fr": "Tu aimes le café ?", "pron": "yil-lar dou kafé" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Transforme : Du bor här. → ___ du här?",
-            "answer": "Bor"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Transforme : Du bor här. → ___ du här?",
+              "answer": "Bor"
+            },
+            {
+              "type": "gap",
+              "q": "Transforme : Du är trött. → ___ du trött?",
+              "answer": "Är"
+            },
+            {
+              "type": "mcq",
+              "q": "« Tu aimes le café ? »",
+              "choices": ["Gillar du kaffe?", "Du gillar kaffe?"],
+              "answerIndex": 0
+            }
+          ]
         },
+
         {
-          "id": "a1_q_2",
-          "title": "vad/vem/var/hur/när/varför",
+          "id": "a1_q_words_1",
+          "title": "Interrogatifs : vad/vem/var/hur/när/varför",
           "content": [
             "vad = quoi",
             "vem = qui",
@@ -435,325 +528,535 @@
             "hur = comment",
             "när = quand",
             "varför = pourquoi",
-            "Structure fréquente : mot interrogatif + verbe + sujet (V2)."
+            "Structure fréquente (A1) : mot interrogatif + verbe + sujet + … (V2).",
+            "Ex : Var bor du? (où habites-tu?)",
+            "Piège FR : ne pas mettre le sujet directement après le mot interrogatif si ça casse V2."
           ],
           "examples": [
             { "sv": "Vad heter du?", "fr": "Comment tu t’appelles ?", "pron": "vad hètèr dou" },
+            { "sv": "Vem är du?", "fr": "Qui es-tu ?", "pron": "vèm èr dou" },
             { "sv": "Var bor du?", "fr": "Où habites-tu ?", "pron": "var bour dou" },
+            { "sv": "Hur mår du?", "fr": "Comment ça va ? (comment tu te sens)", "pron": "hour mor dou" },
             { "sv": "När kommer du?", "fr": "Quand viens-tu ?", "pron": "nèr kommèr dou" },
             { "sv": "Varför är du här?", "fr": "Pourquoi es-tu ici ?", "pron": "var-feur èr dou hèr" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« Var » signifie…",
-            "choices": ["où", "quoi", "qui"],
-            "answerIndex": 0
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel mot signifie « où » ?",
+              "choices": ["vem", "var", "vad"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ bor du? (Où habites-tu ?)",
+              "answer": "Var"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ heter du? (Comment tu t’appelles ?)",
+              "answer": "Vad"
+            }
+          ]
         },
+
         {
-          "id": "a1_q_3",
-          "title": "hur mycket? / hur många?",
+          "id": "a1_q_amount_1",
+          "title": "hur mycket / hur många (quantité vs comptable)",
           "content": [
             "hur mycket = combien (quantité non comptable) : hur mycket kaffe?",
-            "hur många = combien (objets comptables) : hur många böcker?"
+            "hur många = combien (objets comptables) : hur många böcker?",
+            "Astuce : si tu peux compter (1,2,3…) → många. Sinon → mycket."
           ],
           "examples": [
-            { "sv": "Hur mycket kostar det?", "fr": "Combien ça coûte ?", "pron": "hour mykèt kost-ar dè" },
-            { "sv": "Hur många barn har du?", "fr": "Combien d’enfants as-tu ?", "pron": "hour mon-ga barn har dou" }
+            { "sv": "Hur mycket kostar det?", "fr": "Combien ça coûte ?", "pron": "hour mük-kèt kost-ar dè" },
+            { "sv": "Hur mycket kaffe vill du ha?", "fr": "Combien de café tu veux ?", "pron": "hour mük-kèt kafé vill dou ha" },
+            { "sv": "Hur många böcker har du?", "fr": "Combien de livres as-tu ?", "pron": "hour mon-ga beuk-èr har dou" },
+            { "sv": "Hur många barn har ni?", "fr": "Combien d’enfants avez-vous ?", "pron": "hour mon-ga barn har ni" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Pour « combien de livres ? » tu utilises…",
-            "choices": ["hur mycket", "hur många"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Pour « combien de livres », tu utilises…",
+              "choices": ["hur mycket", "hur många"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "Pour « combien de café » (quantité), tu utilises…",
+              "choices": ["hur många", "hur mycket"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Hur ___ kostar det? (Combien ça coûte ?)",
+              "answer": "mycket"
+            }
+          ]
         }
       ]
     },
 
     {
-      "id": "v2",
-      "title": "7) Ordre des mots V2 (ultra fondamental)",
+      "id": "v2_wordorder",
+      "title": "5) Ordre des mots V2 (fondamental)",
       "lessons": [
         {
           "id": "a1_v2_1",
-          "title": "V2 : le verbe en position 2",
+          "title": "V2 : le verbe conjugué en position 2 (phrase principale)",
           "content": [
-            "Phrase principale : verbe conjugué en position 2.",
-            "Sujet en 1 : Ya jobbar idag.",
-            "Temps/lieu en 1 : Idag jobbar ya.",
-            "Erreur typique FR : *Idag ya jobbar* (incorrect)."
+            "Règle V2 : en phrase principale, le verbe conjugué est en position 2.",
+            "Si le sujet est en 1 → facile : Jag (1) jobbar (2) idag (3).",
+            "Si tu commences par le temps/lieu → le verbe reste 2 et le sujet passe après : Idag (1) jobbar (2) jag (3).",
+            "Erreur FR typique : *Idag jag jobbar* (incorrect).",
+            "Astuce : pense « 1 élément + VERBE + sujet… »."
           ],
           "examples": [
             { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yobb-ar idag" },
-            { "sv": "Idag jobbar jag.", "fr": "Aujourd’hui je travaille.", "pron": "idag yobb-ar ya" }
+            { "sv": "Idag jobbar jag.", "fr": "Aujourd’hui je travaille.", "pron": "idag yobb-ar ya" },
+            { "sv": "Nu kommer han.", "fr": "Maintenant il arrive.", "pron": "nou kommèr han" },
+            { "sv": "I Paris bor jag.", "fr": "À Paris, j’habite.", "pron": "i pari bour ya" },
+            { "sv": "Här bor vi.", "fr": "Ici nous habitons.", "pron": "hèr bour vi" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle phrase est correcte ?",
-            "choices": ["Idag jag jobbar.", "Idag jobbar jag."],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": ["Idag jag jobbar.", "Idag jobbar jag."],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": ["I Sverige jag bor.", "I Sverige bor jag."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Nu ___ han. (Il arrive maintenant.)",
+              "answer": "kommer"
+            }
+          ]
         },
+
         {
           "id": "a1_v2_2",
-          "title": "V2 avec lieu : i Sverige…",
+          "title": "V2 + négation (inte) : modèle A1",
           "content": [
-            "Quand tu commences par un lieu :",
-            "I Sverige bor jag. (En Suède, j’habite.)",
-            "Le verbe reste 2e, le sujet vient après."
+            "V2 fixe le verbe en position 2. « inte » vient souvent après le verbe (ou après le modal).",
+            "Ex : Idag jobbar jag inte. (Aujourd’hui je ne travaille pas.)",
+            "Ex : Idag kan jag inte komma. (Aujourd’hui je ne peux pas venir.)",
+            "Piège : *Idag jag jobbar inte* (incorrect)."
           ],
           "examples": [
-            { "sv": "I Sverige bor jag.", "fr": "En Suède, j’habite.", "pron": "i svè-ri-ye bour ya" },
-            { "sv": "I Paris jobbar du.", "fr": "À Paris, tu travailles.", "pron": "i pari yobb-ar dou" }
+            { "sv": "Idag jobbar jag inte.", "fr": "Aujourd’hui je ne travaille pas.", "pron": "idag yobb-ar ya innté" },
+            { "sv": "Nu är jag inte hemma.", "fr": "Là je ne suis pas à la maison.", "pron": "nou èr ya innté hèm-ma" },
+            { "sv": "Idag kan jag inte komma.", "fr": "Aujourd’hui je ne peux pas venir.", "pron": "idag kan ya innté komm-a" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : I Sverige ___ jag. (J’habite)",
-            "answer": "bor"
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": ["Idag jag jobbar inte.", "Idag jobbar jag inte."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Idag ___ jag inte komma. (Je ne peux pas venir.)",
+              "answer": "kan"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Nu är jag ___ hemma.",
+              "answer": "inte"
+            }
+          ]
         }
       ]
     },
 
     {
-      "id": "articles_definite",
-      "title": "8) Noms : en/ett + défini (-en/-et) + exceptions",
+      "id": "nouns_articles_plural",
+      "title": "6) Noms : en/ett, défini, pluriels (+ exceptions A1)",
       "lessons": [
         {
-          "id": "a1_art_1",
-          "title": "Indéfini : en / ett (toujours apprendre avec le nom)",
+          "id": "a1_nouns_1",
+          "title": "en/ett : apprendre le genre (stratégie + erreurs fréquentes)",
           "content": [
-            "Deux genres : en-ord et ett-ord.",
-            "A1 : apprendre le nom avec son article (en bok, ett hus).",
-            "Beaucoup de mots sont en, mais il faut mémoriser."
+            "Deux genres : en-ord (commun) et ett-ord (neutre).",
+            "Stratégie A1 : apprendre TOUJOURS « en/ett + nom » (pas le nom seul).",
+            "Piège FR : vouloir deviner le genre via le français → ça marche mal. Il faut mémoriser.",
+            "Astuce : la majorité est en, mais il y a beaucoup d’ett très fréquents (ett barn, ett hus, ett rum…)."
           ],
           "vocab": [
             { "sv": "en bok", "fr": "un livre", "pron": "èn bouk" },
-            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" },
             { "sv": "en bil", "fr": "une voiture", "pron": "èn biil" },
-            { "sv": "ett barn", "fr": "un enfant", "pron": "ètt barn" }
+            { "sv": "en stol", "fr": "une chaise", "pron": "èn stoul" },
+            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" },
+            { "sv": "ett barn", "fr": "un enfant", "pron": "ètt barn" },
+            { "sv": "ett rum", "fr": "une pièce", "pron": "ètt roum" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel article pour « barn » ?",
-            "choices": ["en", "ett"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel article pour « barn » ?",
+              "choices": ["en", "ett"],
+              "answerIndex": 1
+            },
+            {
+              "type": "mcq",
+              "q": "Quel article pour « bil » ?",
+              "choices": ["en", "ett"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ hus (une maison).",
+              "answer": "ett"
+            }
+          ]
         },
+
         {
-          "id": "a1_art_2",
-          "title": "Défini : suffixe (-en/-et) + variantes (-n/-t)",
+          "id": "a1_nouns_2",
+          "title": "Défini : -en/-et et variantes -n/-t (formes fréquentes)",
           "content": [
-            "Le défini se colle souvent : en bok → boken, ett hus → huset.",
-            "Variantes : en bil → bilen (souvent -n), ett rum → rummet (souvent -t).",
-            "A1 : mémoriser les formes définies des mots fréquents."
+            "Le défini se colle souvent au nom :",
+            "• en bok → boken (le livre)",
+            "• ett hus → huset (la maison)",
+            "Variantes fréquentes :",
+            "• en bil → bilen (souvent -n)",
+            "• ett rum → rummet (souvent -t)",
+            "A1 : mémorise les formes définies des mots que tu utilises."
           ],
           "examples": [
             { "sv": "boken", "fr": "le livre", "pron": "bou-kèn" },
             { "sv": "huset", "fr": "la maison", "pron": "hou-sètt" },
             { "sv": "bilen", "fr": "la voiture", "pron": "biil-èn" },
-            { "sv": "rummet", "fr": "la pièce", "pron": "roum-mètt" }
+            { "sv": "rummet", "fr": "la pièce", "pron": "roum-mètt" },
+            { "sv": "stolen", "fr": "la chaise", "pron": "stou-lèn" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : ett hus → ___. (la maison)",
-            "answer": "huset"
-          }
-        }
-      ]
-    },
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : en bok → ___ (le livre)",
+              "answer": "boken"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : en bil → ___ (la voiture)",
+              "answer": "bilen"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ett rum → ___ (la pièce)",
+              "answer": "rummet"
+            }
+          ]
+        },
 
-    {
-      "id": "plural",
-      "title": "9) Pluriels (modèles + irréguliers utiles A1)",
-      "lessons": [
         {
-          "id": "a1_pl_1",
-          "title": "Les 5 grandes familles (-or/-ar/-er/-n/Ø)",
+          "id": "a1_plural_1",
+          "title": "Pluriels : -or/-ar/-er/-n/Ø (modèles + astuces)",
           "content": [
-            "Pluriels fréquents : -or, -ar, -er, -n, ou Ø (invariable).",
-            "A1 : apprendre les pluriels des mots fréquents plutôt que la théorie parfaite."
+            "Le pluriel suédois a plusieurs terminaisons : -or, -ar, -er, -n, ou Ø (invariable).",
+            "A1 : retiens des exemples typiques par modèle, et mémorise les exceptions fréquentes.",
+            "Important : certains mots restent identiques au pluriel (ett hus → hus, ett barn → barn)."
           ],
           "examples": [
             { "sv": "en stol → stolar", "fr": "une chaise → des chaises", "pron": "èn stoul → stou-lar" },
             { "sv": "en flicka → flickor", "fr": "une fille → des filles", "pron": "èn flik-ka → flik-kor" },
             { "sv": "en telefon → telefoner", "fr": "un téléphone → des téléphones", "pron": "èn té-lé-fon → té-lé-fo-nèr" },
             { "sv": "ett äpple → äpplen", "fr": "une pomme → des pommes", "pron": "ètt èp-lè → èp-lèn" },
-            { "sv": "ett hus → hus", "fr": "une maison → des maisons", "pron": "ètt houss → houss" }
+            { "sv": "ett hus → hus", "fr": "une maison → des maisons", "pron": "ètt houss → houss" },
+            { "sv": "ett barn → barn", "fr": "un enfant → des enfants", "pron": "ètt barn → barn" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel pluriel est invariable ?",
-            "choices": ["stolar", "hus", "telefoner"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel mot a un pluriel invariable ?",
+              "choices": ["stolar", "hus", "telefoner"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : en stol → ___. (pluriel)",
+              "answer": "stolar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ett äpple → ___. (pluriel)",
+              "answer": "äpplen"
+            }
+          ]
         },
+
         {
-          "id": "a1_pl_2",
-          "title": "Irréguliers utiles : bok→böcker, man→män",
+          "id": "a1_plural_2",
+          "title": "Pluriels irréguliers utiles A1 : bok→böcker, man→män",
           "content": [
             "Certains pluriels changent la voyelle : bok → böcker (très fréquent).",
-            "Autre irrégulier connu : man → män (utile, même si plus avancé).",
-            "A1 : mémoriser ces exceptions comme des mots à part."
+            "Autre exemple connu : man → män (utile à connaître).",
+            "A1 : mémorise ces pluriels comme des mots séparés."
           ],
-          "vocab": [
+          "examples": [
             { "sv": "en bok → böcker", "fr": "un livre → des livres", "pron": "èn bouk → beuk-èr" },
             { "sv": "en man → män", "fr": "un homme → des hommes", "pron": "èn man → mèn" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : en bok → ___. (pluriel)",
-            "answer": "böcker"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : en bok → ___.",
+              "answer": "böcker"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : en man → ___.",
+              "answer": "män"
+            },
+            {
+              "type": "mcq",
+              "q": "Quel pluriel est irrégulier (changement de voyelle) ?",
+              "choices": ["stolar", "böcker", "telefoner"],
+              "answerIndex": 1
+            }
+          ]
         },
+
         {
-          "id": "a1_pl_3",
-          "title": "Défini pluriel : -na / -en (première approche)",
+          "id": "a1_plural_def_1",
+          "title": "Défini pluriel : -na / -en (première maîtrise A1)",
           "content": [
-            "Au pluriel défini (les …), on ajoute souvent -na ou -en :",
-            "stolar → stolarna (les chaises)",
-            "böcker → böckerna (les livres)",
-            "hus → husen (les maisons) (souvent -en avec invariables).",
-            "A1 : retiens -na comme très courant."
+            "Pour dire « les … » (pluriel défini), on ajoute souvent -na ou -en.",
+            "Très courant : -na : stolar → stolarna, böcker → böckerna.",
+            "Avec certains pluriels invariables : hus → husen (souvent -en).",
+            "A1 : retiens stolarna, böckerna, husen comme modèles."
           ],
           "examples": [
             { "sv": "stolarna", "fr": "les chaises", "pron": "stou-lar-na" },
             { "sv": "böckerna", "fr": "les livres", "pron": "beuk-èr-na" },
-            { "sv": "husen", "fr": "les maisons", "pron": "hou-sèn" }
+            { "sv": "husen", "fr": "les maisons", "pron": "hou-sèn" },
+            { "sv": "barnen", "fr": "les enfants", "pron": "bar-nèn" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« les livres » :",
-            "choices": ["boken", "böckerna", "husen"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« les livres » :",
+              "choices": ["boken", "böckerna", "husen"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : hus → ___. (les maisons)",
+              "answer": "husen"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : stolar → ___. (les chaises)",
+              "answer": "stolarna"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "adjectives",
-      "title": "10) Adjectifs : accord (en/ett/pluriel) + exceptions utiles",
+      "title": "7) Adjectifs (accord) + exceptions A1",
       "lessons": [
         {
           "id": "a1_adj_1",
-          "title": "stor/stort/stora (modèle)",
+          "title": "Accord : en / ett / pluriel (stor/stort/stora)",
           "content": [
-            "Accord simple :",
+            "Règle A1 : l’adjectif s’accorde avec le genre et le nombre.",
             "en-ord : en stor bil",
             "ett-ord : ett stort hus (+t)",
-            "pluriel : stora hus (+a)."
+            "pluriel : stora hus (+a)",
+            "Piège FR : ne pas oublier le +t pour les ett-ord."
           ],
           "examples": [
             { "sv": "en stor bil", "fr": "une grande voiture", "pron": "èn stour biil" },
             { "sv": "ett stort hus", "fr": "une grande maison", "pron": "ètt stourt houss" },
+            { "sv": "stora bilar", "fr": "de grandes voitures", "pron": "stou-ra biil-ar" },
             { "sv": "stora hus", "fr": "de grandes maisons", "pron": "stou-ra houss" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : ett ___ hus. (une grande maison)",
-            "answer": "stort"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ett ___ hus. (une grande maison)",
+              "answer": "stort"
+            },
+            {
+              "type": "mcq",
+              "q": "« de grandes maisons » :",
+              "choices": ["stort hus", "stora hus", "stor hus"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : en ___ bil. (une grande voiture)",
+              "answer": "stor"
+            }
+          ]
         },
+
         {
           "id": "a1_adj_2",
-          "title": "liten/litet/små (exception très utile)",
+          "title": "Exception utile : liten/litet/små",
           "content": [
             "Exception fréquente :",
             "en liten bil (petite voiture)",
             "ett litet hus (petite maison)",
-            "små hus (petites maisons)."
+            "små hus (petites maisons)",
+            "A1 : mémorise cette exception, elle revient souvent."
           ],
           "examples": [
             { "sv": "en liten bil", "fr": "une petite voiture", "pron": "èn lii-ten biil" },
             { "sv": "ett litet hus", "fr": "une petite maison", "pron": "ètt lii-tèt houss" },
             { "sv": "små hus", "fr": "de petites maisons", "pron": "smo houss" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel est le pluriel de « liten/litet » ?",
-            "choices": ["lita", "små", "stora"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel est le pluriel adjectival de « liten/litet » ?",
+              "choices": ["små", "lita", "litenar"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ett ___ hus. (une petite maison)",
+              "answer": "litet"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ hus. (de petites maisons)",
+              "answer": "små"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "possessives",
-      "title": "11) Possessifs : min/mitt/mina + din/ditt/dina + sin/sitt/sina",
+      "title": "8) Possessifs (min/mitt/mina + din/ditt/dina + sin/sitt/sina)",
       "lessons": [
         {
           "id": "a1_pos_1",
           "title": "min/mitt/mina (mon/ma/mes)",
           "content": [
             "min = en-ord, mitt = ett-ord, mina = pluriel.",
-            "Ex : min bok, mitt hus, mina böcker."
+            "Règle : même logique que les adjectifs (en/ett/pluriel).",
+            "A1 : automatiser avec 10 exemples à voix haute."
           ],
           "examples": [
             { "sv": "min bok", "fr": "mon livre", "pron": "min bouk" },
             { "sv": "mitt hus", "fr": "ma maison", "pron": "mitt houss" },
-            { "sv": "mina böcker", "fr": "mes livres", "pron": "mi-na beuk-èr" }
+            { "sv": "mina böcker", "fr": "mes livres", "pron": "mi-na beuk-èr" },
+            { "sv": "min bil", "fr": "ma voiture", "pron": "min biil" },
+            { "sv": "mitt barn", "fr": "mon enfant", "pron": "mitt barn" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« ma maison » :",
-            "choices": ["min hus", "mitt hus", "mina hus"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« ma maison » :",
+              "choices": ["min hus", "mitt hus", "mina hus"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ bok (mon livre)",
+              "answer": "min"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ böcker (mes livres)",
+              "answer": "mina"
+            }
+          ]
         },
+
         {
           "id": "a1_pos_2",
           "title": "din/ditt/dina (ton/ta/tes)",
           "content": [
             "din = en-ord, ditt = ett-ord, dina = pluriel.",
-            "Ex : din bil, ditt barn, dina barn."
+            "Très utile en dialogue : din bok? ditt hus? dina barn?"
           ],
           "examples": [
-            { "sv": "din bil", "fr": "ta voiture", "pron": "din biil" },
-            { "sv": "ditt barn", "fr": "ton enfant", "pron": "ditt barn" },
-            { "sv": "dina barn", "fr": "tes enfants", "pron": "di-na barn" }
+            { "sv": "din bok", "fr": "ton livre", "pron": "din bouk" },
+            { "sv": "ditt hus", "fr": "ta maison", "pron": "ditt houss" },
+            { "sv": "dina böcker", "fr": "tes livres", "pron": "di-na beuk-èr" },
+            { "sv": "ditt barn", "fr": "ton enfant", "pron": "ditt barn" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : ___ barn (ton enfant).",
-            "answer": "ditt"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ___ hus (ta maison)",
+              "answer": "ditt"
+            },
+            {
+              "type": "mcq",
+              "q": "« tes livres » :",
+              "choices": ["din böcker", "ditt böcker", "dina böcker"],
+              "answerIndex": 2
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ bok (ton livre)",
+              "answer": "din"
+            }
+          ]
         },
+
         {
           "id": "a1_pos_3",
-          "title": "sin/sitt/sina (piège FR : possessif réfléchi)",
+          "title": "sin/sitt/sina (possessif réfléchi) — piège FR",
           "content": [
-            "sin/sitt/sina = son/sa/ses quand le possesseur est le sujet.",
-            "Han har sin bil (sa voiture à lui). Hon har sitt hus (sa maison à elle).",
-            "hans/hennes = son/sa à lui/à elle (souvent pour préciser).",
-            "A1 : maîtrise sin/sitt/sina pour son/sa/ses (sujet identique)."
+            "sin/sitt/sina = son/sa/ses quand le possesseur est le sujet de la phrase.",
+            "Ex : Han har sin bil. (Il a sa voiture à lui.)",
+            "Ex : Hon har sitt hus. (Elle a sa maison à elle.)",
+            "Ex : De har sina barn. (Ils ont leurs enfants.)",
+            "hans/hennes = son/sa à lui/à elle (souvent pour préciser ou quand le possesseur n’est pas le sujet).",
+            "A1 : maîtrise sin/sitt/sina dans les phrases simples (sujet = possesseur)."
           ],
           "examples": [
             { "sv": "Han har sin bil.", "fr": "Il a sa voiture (à lui).", "pron": "han har sin biil" },
             { "sv": "Hon har sitt hus.", "fr": "Elle a sa maison (à elle).", "pron": "houn har sitt houss" },
             { "sv": "De har sina barn.", "fr": "Ils ont leurs enfants.", "pron": "dom har si-na barn" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Dans « Hon har ___ hus », on met…",
-            "choices": ["sitt", "hennes"],
-            "answerIndex": 0
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Dans « Hon har ___ hus », tu mets…",
+              "choices": ["sitt", "hennes"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Han har ___ bil.",
+              "answer": "sin"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : De har ___ barn.",
+              "answer": "sina"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "numbers_time",
-      "title": "12) Chiffres & temps",
+      "title": "9) Chiffres & heure (vocab + automatisation)",
       "lessons": [
         {
           "id": "a1_num_1",
-          "title": "0–10",
+          "title": "0–10 (prononciation + pièges)",
           "content": [
-            "0 noll, 1 ett, 2 två, 3 tre, 4 fyra, 5 fem, 6 sex, 7 sju, 8 åtta, 9 nio, 10 tio."
+            "0 noll, 1 ett, 2 två, 3 tre, 4 fyra, 5 fem, 6 sex, 7 sju, 8 åtta, 9 nio, 10 tio.",
+            "Pièges : två (å), sju (sj), åtta (å), nio/tio (i long)."
           ],
           "vocab": [
             { "sv": "noll", "fr": "0", "pron": "noll" },
@@ -768,106 +1071,179 @@
             { "sv": "nio", "fr": "9", "pron": "niyo" },
             { "sv": "tio", "fr": "10", "pron": "tiyo" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : 7 = ___.",
-            "answer": "sju"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : 8 = ___.",
+              "answer": "åtta"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : 2 = ___.",
+              "answer": "två"
+            },
+            {
+              "type": "mcq",
+              "q": "Quel nombre contient un son sj- ?",
+              "choices": ["sex", "sju", "tio"],
+              "answerIndex": 1
+            }
+          ]
         },
+
         {
           "id": "a1_num_2",
-          "title": "11–20 + dizaines",
+          "title": "11–20 + dizaines (bases A1)",
           "content": [
             "11 elva, 12 tolv, 13 tretton, 14 fjorton, 15 femton, 16 sexton, 17 sjutton, 18 arton, 19 nitton, 20 tjugo.",
-            "30 trettio, 40 fyrtio, 50 femtio, 60 sextio, 70 sjuttio, 80 åttio, 90 nittio, 100 hundra."
+            "Dizaines : 30 trettio, 40 fyrtio, 50 femtio, 60 sextio, 70 sjuttio, 80 åttio, 90 nittio, 100 hundra.",
+            "Astuce : apprends 20, 30, 40, 50, 100 en priorité (très utile)."
           ],
-          "vocab": [
-            { "sv": "elva", "fr": "11", "pron": "èl-va" },
-            { "sv": "tolv", "fr": "12", "pron": "tollv" },
+          "examples": [
             { "sv": "tjugo", "fr": "20", "pron": "tchou-go (doux)" },
+            { "sv": "trettio", "fr": "30", "pron": "trèt-tiyo" },
+            { "sv": "fyrtio", "fr": "40", "pron": "fiir-tiyo" },
             { "sv": "hundra", "fr": "100", "pron": "houn-dra" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel mot signifie 20 ?",
-            "choices": ["arton", "tjugo", "trettio"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : 20 = ___.",
+              "answer": "tjugo"
+            },
+            {
+              "type": "mcq",
+              "q": "Quel mot signifie 100 ?",
+              "choices": ["hundra", "nitton", "arton"],
+              "answerIndex": 0
+            },
+            {
+              "type": "gap",
+              "q": "Complète : 30 = ___.",
+              "answer": "trettio"
+            }
+          ]
         },
+
         {
           "id": "a1_time_1",
-          "title": "Heure simple (klockan är …)",
+          "title": "Heure simple (Vad är klockan? / Klockan är …)",
           "content": [
             "Vad är klockan? = Quelle heure est-il ?",
             "Klockan är tre. = Il est 3h.",
-            "A1 : reste sur la forme simple."
+            "A1 : utilise la forme simple. Plus tard, tu verras 'halv', 'över', etc."
           ],
           "examples": [
             { "sv": "Vad är klockan?", "fr": "Quelle heure est-il ?", "pron": "vad èr klok-kan" },
+            { "sv": "Klockan är ett.", "fr": "Il est une heure.", "pron": "klok-kan èr ètt" },
             { "sv": "Klockan är fem.", "fr": "Il est cinq heures.", "pron": "klok-kan èr fèm" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Klockan ___ fem.",
-            "answer": "är"
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« Quelle heure est-il ? »",
+              "choices": ["Var är klockan?", "Vad är klockan?"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Klockan ___ fem.",
+              "answer": "är"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Vad är ___? (Quelle heure est-il?)",
+              "answer": "klockan"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "prepositions",
-      "title": "13) Prépositions (i/på/till/från/med) + usages idiomatiques A1",
+      "title": "10) Prépositions (i/på/till/från/med) — usages A1",
       "lessons": [
         {
           "id": "a1_prep_1",
-          "title": "i vs på (piège A1)",
+          "title": "i vs på : règles + usages idiomatiques",
           "content": [
-            "i : dans (souvent pays/villes/intérieur) : i Sverige, i Paris, i ett hus.",
-            "på : sur, mais aussi 'au travail/à l’école' : på jobbet, på skolan (usage très courant)."
+            "i = dans (pays/villes/intérieur) : i Sverige, i Paris, i ett hus.",
+            "på = sur, mais aussi 'au travail/à l’école' : på jobbet, på skolan (très courant).",
+            "Piège A1 : on ne dit pas *i jobbet* en général, mais på jobbet."
           ],
           "examples": [
             { "sv": "Jag bor i Sverige.", "fr": "J’habite en Suède.", "pron": "ya bour i svè-ri-ye" },
-            { "sv": "Jag är på jobbet.", "fr": "Je suis au travail.", "pron": "ya èr po yobbèt" }
+            { "sv": "Jag bor i Paris.", "fr": "J’habite à Paris.", "pron": "ya bour i pari" },
+            { "sv": "Jag är på jobbet.", "fr": "Je suis au travail.", "pron": "ya èr po yobbèt" },
+            { "sv": "Boken är på bordet.", "fr": "Le livre est sur la table.", "pron": "bou-kèn èr po bour-dètt" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« au travail » se dit le plus souvent…",
-            "choices": ["i jobbet", "på jobbet"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« au travail » se dit le plus souvent…",
+              "choices": ["i jobbet", "på jobbet"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag bor ___ Paris.",
+              "answer": "i"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Boken är ___ bordet.",
+              "answer": "på"
+            }
+          ]
         },
+
         {
           "id": "a1_prep_2",
-          "title": "till / från / med",
+          "title": "till/från/med : destination, origine, accompagnement",
           "content": [
-            "till : vers/à (destination) : Jag går till skolan.",
-            "från : de/depuis (origine) : Jag kommer från Frankrike.",
-            "med : avec : Jag är här med en vän."
+            "till = vers/à (destination) : Jag går till skolan.",
+            "från = de/depuis (origine) : Jag kommer från Frankrike.",
+            "med = avec : Jag är här med en vän.",
+            "Astuce A1 : till = direction, från = provenance."
           ],
           "examples": [
             { "sv": "Jag går till skolan.", "fr": "Je vais à l’école.", "pron": "ya gour till skou-lan" },
             { "sv": "Jag kommer från Frankrike.", "fr": "Je viens de France.", "pron": "ya kommèr fron frank-ri-kè" },
-            { "sv": "Jag är här med en vän.", "fr": "Je suis ici avec un ami.", "pron": "ya èr hèr mèd èn vèn" }
+            { "sv": "Jag är här med en vän.", "fr": "Je suis ici avec un ami.", "pron": "ya èr hèr mèd èn vèn" },
+            { "sv": "Vi går till jobbet.", "fr": "On va au travail.", "pron": "vi gour till yobbèt" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag kommer ___ Frankrike.",
-            "answer": "från"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag kommer ___ Frankrike.",
+              "answer": "från"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag går ___ skolan.",
+              "answer": "till"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag är här ___ en vän.",
+              "answer": "med"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "modals_future",
-      "title": "14) Modaux + futur proche (ska, kan, vill, måste)",
+      "title": "11) Modaux + futur (kan/vill/måste/ska) — très important A1",
       "lessons": [
         {
           "id": "a1_modal_1",
-          "title": "kan/vill/måste + infinitif",
+          "title": "kan/vill/måste : structure modal + infinitif",
           "content": [
-            "kan = pouvoir/savoir (capacité). vill = vouloir. måste = devoir.",
+            "Modaux essentiels :",
+            "kan = pouvoir/savoir (capacité), vill = vouloir, måste = devoir.",
             "Structure : modal + infinitif (souvent sans att en A1).",
             "Négation : modal + inte + infinitif."
           ],
@@ -875,376 +1251,373 @@
             { "sv": "Jag kan komma.", "fr": "Je peux venir.", "pron": "ya kan komm-a" },
             { "sv": "Jag vill ha kaffe.", "fr": "Je veux du café.", "pron": "ya vill ha kafé" },
             { "sv": "Jag måste gå.", "fr": "Je dois y aller.", "pron": "ya meuss-tè go" },
-            { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan innté komm-a" }
+            { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan innté komm-a" },
+            { "sv": "Jag vill inte gå.", "fr": "Je ne veux pas y aller.", "pron": "ya vill innté go" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« Je dois y aller » :",
-            "choices": ["Jag vill gå.", "Jag måste gå.", "Jag kan gå."],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle structure est correcte ?",
+              "choices": ["Jag inte kan komma.", "Jag kan inte komma."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ ha kaffe. (Je veux du café.)",
+              "answer": "vill"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ gå. (Je dois y aller.)",
+              "answer": "måste"
+            }
+          ]
         },
+
         {
           "id": "a1_future_1",
-          "title": "ska : intention / futur",
+          "title": "ska : futur proche / intention",
           "content": [
-            "ska + infinitif = futur proche / intention : Jag ska gå hem.",
-            "Très fréquent dans la vie réelle."
+            "ska + infinitif = intention / futur : Jag ska gå hem.",
+            "Très courant pour parler de plans : imorgon, idag, i kväll.",
+            "Négation : Jag ska inte gå."
           ],
           "examples": [
             { "sv": "Jag ska gå hem.", "fr": "Je vais rentrer.", "pron": "ya ska go hèm" },
-            { "sv": "Vi ska äta nu.", "fr": "On va manger maintenant.", "pron": "vi ska èt-a nou" }
+            { "sv": "Jag ska jobba imorgon.", "fr": "Je vais travailler demain.", "pron": "ya ska yobb-a i-mor-ron" },
+            { "sv": "Jag ska inte gå.", "fr": "Je ne vais pas y aller.", "pron": "ya ska innté go" },
+            { "sv": "Idag ska jag jobba.", "fr": "Aujourd’hui, je vais travailler (V2).", "pron": "idag ska ya yobb-a" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ gå hem. (Je vais rentrer.)",
-            "answer": "ska"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ gå hem. (Je vais rentrer.)",
+              "answer": "ska"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": ["Idag jag ska jobba.", "Idag ska jag jobba."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ska ___ gå. (Je ne vais pas y aller.)",
+              "answer": "inte"
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "core_expressions",
-      "title": "15) Expressions indispensables (det är / det finns / jag gillar)",
+      "title": "12) Expressions indispensables (det är / det finns / gilla)",
       "lessons": [
         {
           "id": "a1_expr_1",
-          "title": "det är vs det finns (c’est vs il y a)",
+          "title": "det är vs det finns (description vs existence)",
           "content": [
-            "det är = c’est/il est (description) : Det är bra.",
+            "det är = c’est/il est (description) : Det är bra. Det är en bil.",
             "det finns = il y a (existence) : Det finns en butik här.",
-            "Piège FR : ne pas confondre description et existence."
+            "Piège FR : ne pas dire *Det är en butik här* pour 'il y a' (on préfère det finns)."
           ],
           "examples": [
             { "sv": "Det är bra.", "fr": "C’est bien.", "pron": "dè èr bra" },
-            { "sv": "Det finns en butik här.", "fr": "Il y a un magasin ici.", "pron": "dè finns èn bou-tik hèr" }
+            { "sv": "Det är en bil.", "fr": "C’est une voiture.", "pron": "dè èr èn biil" },
+            { "sv": "Det finns en butik här.", "fr": "Il y a un magasin ici.", "pron": "dè finns èn bou-tik hèr" },
+            { "sv": "Det finns kaffe.", "fr": "Il y a du café.", "pron": "dè finns kafé" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Pour dire « il y a », on utilise…",
-            "choices": ["det är", "det finns"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Pour dire « il y a », tu utilises…",
+              "choices": ["det är", "det finns"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det ___ en butik här. (Il y a un magasin ici.)",
+              "answer": "finns"
+            },
+            {
+              "type": "mcq",
+              "q": "Pour décrire « c’est bien », tu utilises…",
+              "choices": ["det finns", "det är"],
+              "answerIndex": 1
+            }
+          ]
         },
+
         {
           "id": "a1_expr_2",
-          "title": "gilla : aimer (goût)",
+          "title": "gilla : aimer (préférence) + négation",
           "content": [
-            "gilla = aimer (préférence) : Ya gillar kaffe.",
-            "Négation : Ya gillar inte te."
+            "gilla = aimer (goût/préférence).",
+            "Structure : Jag gillar + nom.",
+            "Négation : Jag gillar inte + nom."
           ],
           "examples": [
             { "sv": "Jag gillar kaffe.", "fr": "J’aime le café.", "pron": "ya yil-lar kafé" },
-            { "sv": "Jag gillar inte te.", "fr": "Je n’aime pas le thé.", "pron": "ya yil-lar innté té" }
+            { "sv": "Jag gillar inte te.", "fr": "Je n’aime pas le thé.", "pron": "ya yil-lar innté té" },
+            { "sv": "Hon gillar mat.", "fr": "Elle aime la nourriture.", "pron": "houn yil-lar maat" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ kaffe. (J’aime le café.)",
-            "answer": "gillar"
-          }
-        }
-      ]
-    },
-
-    {
-      "id": "vocab_sets",
-      "title": "16) Vocabulaire A1 (lots de mots + articles + prononciation)",
-      "lessons": [
-        {
-          "id": "a1_vocab_people",
-          "title": "Personnes & famille",
-          "content": [
-            "Apprends les noms avec en/ett + prononciation + un exemple mental.",
-            "Note : certains pluriels sont irréguliers (ex : man→män). On les reverra, mais connaître les mots est utile."
-          ],
-          "vocab": [
-            { "sv": "en vän", "fr": "un ami", "pron": "èn vèn" },
-            { "sv": "en familj", "fr": "une famille", "pron": "èn fa-miï" },
-            { "sv": "en mamma", "fr": "une maman", "pron": "èn mam-ma" },
-            { "sv": "en pappa", "fr": "un papa", "pron": "èn pap-pa" },
-            { "sv": "ett barn", "fr": "un enfant", "pron": "ètt barn" },
-            { "sv": "en man", "fr": "un homme", "pron": "èn man" },
-            { "sv": "en kvinna", "fr": "une femme", "pron": "èn kvin-na" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel mot signifie « un enfant » ?",
-            "choices": ["en familj", "ett barn", "en vän"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_vocab_home",
-          "title": "Maison & objets",
-          "vocab": [
-            { "sv": "ett hus", "fr": "une maison", "pron": "ètt houss" },
-            { "sv": "en lägenhet", "fr": "un appartement", "pron": "èn lè-guèn-hèt" },
-            { "sv": "ett rum", "fr": "une pièce", "pron": "ètt roum" },
-            { "sv": "en stol", "fr": "une chaise", "pron": "èn stoul" },
-            { "sv": "ett bord", "fr": "une table", "pron": "ètt bour(d)" },
-            { "sv": "en dörr", "fr": "une porte", "pron": "èn dœrr" },
-            { "sv": "ett fönster", "fr": "une fenêtre", "pron": "ètt feun-ster" }
-          ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : une porte = en ___.",
-            "answer": "dörr"
-          }
-        },
-        {
-          "id": "a1_vocab_food",
-          "title": "Nourriture & boisson",
-          "vocab": [
-            { "sv": "kaffe", "fr": "café", "pron": "kafé" },
-            { "sv": "te", "fr": "thé", "pron": "té" },
-            { "sv": "vatten", "fr": "eau", "pron": "vat-tèn" },
-            { "sv": "mjölk", "fr": "lait", "pron": "myœlk" },
-            { "sv": "bröd", "fr": "pain", "pron": "breud" },
-            { "sv": "ost", "fr": "fromage", "pron": "ost" },
-            { "sv": "mat", "fr": "nourriture/repas", "pron": "maat" }
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« mjölk » signifie…",
-            "choices": ["pain", "lait", "eau"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ kaffe. (J’aime le café.)",
+              "answer": "gillar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag gillar ___ te. (Je n’aime pas le thé.)",
+              "answer": "inte"
+            },
+            {
+              "type": "mcq",
+              "q": "Quel verbe signifie « aimer » (préférence) ?",
+              "choices": ["gilla", "gå", "göra"],
+              "answerIndex": 0
+            }
+          ]
         }
       ]
     },
 
     {
       "id": "dialogues",
-      "title": "17) Dialogues A1 (beaucoup de situations)",
+      "title": "13) Dialogues A1 (situations réelles) + exercices",
       "lessons": [
         {
           "id": "a1_dial_1",
-          "title": "Se présenter (basique)",
+          "title": "Se présenter (simple) + variations",
           "content": [
+            "Dialogue :",
             "A: Hej! Jag heter Alex. Vad heter du?",
             "B: Hej! Jag heter Lina.",
             "A: Trevligt att träffas!",
-            "B: Detsamma!"
+            "B: Detsamma!",
+            "Variations utiles :",
+            "• Jag kommer från Frankrike. (Je viens de France.)",
+            "• Jag bor i Paris. (J’habite à Paris.)",
+            "• Jag är 28 år. (J’ai 28 ans.)"
           ],
           "examples": [
-            { "sv": "Trevligt att träffas!", "fr": "Enchanté !", "pron": "trèv-ligt att trèf-fass" },
-            { "sv": "Detsamma!", "fr": "Moi aussi ! (enchanté)", "pron": "dè-sam-ma" }
+            { "sv": "Jag heter Alex.", "fr": "Je m’appelle Alex.", "pron": "ya hètèr alèks" },
+            { "sv": "Jag kommer från Frankrike.", "fr": "Je viens de France.", "pron": "ya kommèr fron frank-ri-kè" },
+            { "sv": "Jag bor i Paris.", "fr": "J’habite à Paris.", "pron": "ya bour i pari" },
+            { "sv": "Jag är 28 år.", "fr": "J’ai 28 ans.", "pron": "ya èr tjugoåtta or" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« Je m’appelle… » se dit…",
-            "choices": ["Jag bor…", "Jag heter…"],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« Je m’appelle… » :",
+              "choices": ["Jag bor…", "Jag heter…", "Jag går…"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag kommer ___ Frankrike. (Je viens de France.)",
+              "answer": "från"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ i Paris. (J’habite à Paris.)",
+              "answer": "bor"
+            }
+          ]
         },
+
         {
           "id": "a1_dial_2",
-          "title": "Au café (commande + prix)",
+          "title": "Au café : commande + prix + politesse",
           "content": [
+            "Dialogue :",
             "A: Ursäkta! En kaffe, tack.",
             "B: Varsågod. Vill du ha mjölk?",
             "A: Ja, tack. Hur mycket kostar det?",
-            "B: 30 kronor."
+            "B: 30 kronor.",
+            "Variations :",
+            "• En te, tack. (Un thé.)",
+            "• Jag vill ha vatten. (Je veux de l’eau.)",
+            "• Jag vill inte ha mjölk. (Je ne veux pas de lait.)"
           ],
           "vocab": [
-            { "sv": "En kaffe, tack.", "fr": "Un café, s’il vous plaît.", "pron": "èn kafé tak" },
-            { "sv": "Hur mycket kostar det?", "fr": "Combien ça coûte ?", "pron": "hour mykèt kost-ar dè" },
-            { "sv": "kronor", "fr": "couronnes", "pron": "krou-nor" }
+            { "sv": "en kaffe", "fr": "un café", "pron": "èn kafé" },
+            { "sv": "te", "fr": "thé", "pron": "té" },
+            { "sv": "vatten", "fr": "eau", "pron": "vat-tèn" },
+            { "sv": "mjölk", "fr": "lait", "pron": "myœlk" },
+            { "sv": "kronor", "fr": "couronnes", "pron": "krou-nor" },
+            { "sv": "mycket", "fr": "beaucoup", "pron": "mük-kèt" }
           ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Hur mycket ___ det? (Combien ça coûte ?)",
-            "answer": "kostar"
-          }
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : En kaffe, ___.",
+              "answer": "tack"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Hur ___ kostar det? (Combien ça coûte?)",
+              "answer": "mycket"
+            },
+            {
+              "type": "mcq",
+              "q": "« Je ne veux pas de lait » :",
+              "choices": ["Jag vill inte ha mjölk.", "Jag vill ha inte mjölk.", "Jag inte vill ha mjölk."],
+              "answerIndex": 0
+            }
+          ]
         },
+
         {
           "id": "a1_dial_3",
-          "title": "Demander un lieu (toaletten)",
+          "title": "Demander un lieu : toilettes, métro, sortie",
           "content": [
+            "Dialogue :",
             "A: Ursäkta, var är toaletten?",
             "B: Toaletten är där.",
             "A: Tack så mycket!",
-            "B: Varsågod!"
-          ],
-          "quiz": {
-            "type": "mcq",
-            "q": "« Où sont les toilettes ? »",
-            "choices": ["Vad är toaletten?", "Var är toaletten?"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_dial_4",
-          "title": "Plan simple (ska + V2)",
-          "content": [
-            "A: Vad ska du göra idag?",
-            "B: Idag ska jag jobba.",
-            "A: Okej. När slutar du?",
-            "B: Jag slutar klockan fem."
+            "B: Varsågod!",
+            "Variations utiles :",
+            "• Var är tunnelbanan? (Où est le métro?)",
+            "• Var är utgången? (Où est la sortie?)"
           ],
           "vocab": [
-            { "sv": "Vad ska du göra?", "fr": "Qu’est-ce que tu vas faire ?", "pron": "vad ska dou yeu-ra" },
-            { "sv": "Jag slutar", "fr": "je finis", "pron": "ya slou-tar" }
+            { "sv": "toalett", "fr": "toilettes", "pron": "tou-a-lètt" },
+            { "sv": "toaletten", "fr": "les toilettes (défini)", "pron": "tou-a-lèttèn" },
+            { "sv": "tunnelbanan", "fr": "métro", "pron": "toun-nèl-ba-nan" },
+            { "sv": "utgången", "fr": "sortie", "pron": "out-gon-guèn" }
           ],
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle phrase respecte bien V2 ?",
-            "choices": ["Idag jag ska jobba.", "Idag ska jag jobba."],
-            "answerIndex": 1
-          }
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "« Où sont les toilettes ? »",
+              "choices": ["Vad är toaletten?", "Var är toaletten?"],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Ursäkta, var är ___?",
+              "answer": "toaletten"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Tack så ___.",
+              "answer": "mycket"
+            }
+          ]
+        },
+
+        {
+          "id": "a1_dial_4",
+          "title": "Plans : idag/imorgon + ska + V2",
+          "content": [
+            "Dialogue :",
+            "A: Vad ska du göra idag?",
+            "B: Idag ska jag jobba.",
+            "A: När slutar du?",
+            "B: Jag slutar klockan fem.",
+            "Notes :",
+            "• V2 : Idag ska jag… (verbe 2e)",
+            "• ska = intention/futur proche"
+          ],
+          "vocab": [
+            { "sv": "idag", "fr": "aujourd’hui", "pron": "idag" },
+            { "sv": "imorgon", "fr": "demain", "pron": "i-mor-ron" },
+            { "sv": "slutar", "fr": "finit", "pron": "slou-tar" }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": ["Idag jag ska jobba.", "Idag ska jag jobba."],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ klockan fem. (Je finis à 5h.)",
+              "answer": "slutar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ jobba imorgon. (Je vais travailler demain.)",
+              "answer": "ska"
+            }
+          ]
         }
       ]
     },
 
     {
-      "id": "practice_pack",
-      "title": "18) Pack d’exercices cumulés (max)",
+      "id": "review_pack",
+      "title": "14) Pack de révision A1 (gros volume d’exercices cumulés)",
       "lessons": [
         {
-          "id": "a1_ex_1",
-          "title": "Exercice cumul 1 (verbes essentiels)",
-          "content": [
-            "Réponds mentalement puis écris la bonne forme dans l’exercice."
-          ],
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ trött. (Je suis fatigué.)",
-            "answer": "är"
-          }
+          "id": "a1_rev_1",
+          "title": "Révision 1 — essentiels (är/har/inte/V2)",
+          "quiz": [
+            { "type": "gap", "q": "Jag ___ trött. (Je suis fatigué.)", "answer": "är" },
+            { "type": "gap", "q": "Jag ___ en bil. (J’ai une voiture.)", "answer": "har" },
+            { "type": "gap", "q": "Jag bor ___ här. (Je n’habite pas ici.)", "answer": "inte" },
+            { "type": "mcq", "q": "V2 : quelle phrase est correcte ?", "choices": ["Idag jag jobbar.", "Idag jobbar jag."], "answerIndex": 1 },
+            { "type": "gap", "q": "Nu ___ han. (Il arrive maintenant.)", "answer": "kommer" }
+          ]
         },
         {
-          "id": "a1_ex_2",
-          "title": "Exercice cumul 2 (avoir)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ en bil. (J’ai une voiture.)",
-            "answer": "har"
-          }
+          "id": "a1_rev_2",
+          "title": "Révision 2 — questions + interrogatifs",
+          "quiz": [
+            { "type": "gap", "q": "Du bor här. → ___ du här? (question)", "answer": "Bor" },
+            { "type": "gap", "q": "Du är trött. → ___ du trött? (question)", "answer": "Är" },
+            { "type": "gap", "q": "___ bor du? (Où habites-tu?)", "answer": "Var" },
+            { "type": "gap", "q": "___ heter du? (Comment tu t’appelles?)", "answer": "Vad" },
+            { "type": "mcq", "q": "Combien de livres ? (comptables)", "choices": ["hur mycket", "hur många"], "answerIndex": 1 }
+          ]
         },
         {
-          "id": "a1_ex_3",
-          "title": "Exercice cumul 3 (négation)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag bor ___ här. (Je n’habite pas ici.)",
-            "answer": "inte"
-          }
+          "id": "a1_rev_3",
+          "title": "Révision 3 — en/ett + défini + pluriel",
+          "quiz": [
+            { "type": "mcq", "q": "Quel article pour « hus » ?", "choices": ["en", "ett"], "answerIndex": 1 },
+            { "type": "gap", "q": "en bil → ___ (la voiture)", "answer": "bilen" },
+            { "type": "gap", "q": "en bok → ___ (le livre)", "answer": "boken" },
+            { "type": "gap", "q": "en stol → ___ (pluriel)", "answer": "stolar" },
+            { "type": "mcq", "q": "« les livres » :", "choices": ["böckerna", "boken", "husen"], "answerIndex": 0 }
+          ]
         },
         {
-          "id": "a1_ex_4",
-          "title": "Exercice cumul 4 (question oui/non)",
-          "quiz": {
-            "type": "gap",
-            "q": "Transforme en question : Du är trött. → ___ du trött?",
-            "answer": "Är"
-          }
+          "id": "a1_rev_4",
+          "title": "Révision 4 — possessifs",
+          "quiz": [
+            { "type": "mcq", "q": "« ma maison » :", "choices": ["min hus", "mitt hus", "mina hus"], "answerIndex": 1 },
+            { "type": "gap", "q": "___ bok (mon livre)", "answer": "min" },
+            { "type": "gap", "q": "___ böcker (mes livres)", "answer": "mina" },
+            { "type": "gap", "q": "Hon har ___ hus. (son/sa à elle-même)", "answer": "sitt" },
+            { "type": "gap", "q": "De har ___ barn. (leurs enfants à eux)", "answer": "sina" }
+          ]
         },
         {
-          "id": "a1_ex_5",
-          "title": "Exercice cumul 5 (mot interrogatif)",
-          "quiz": {
-            "type": "mcq",
-            "q": "« Où habites-tu ? »",
-            "choices": ["Vad bor du?", "Var bor du?", "Vem bor du?"],
-            "answerIndex": 1
-          }
+          "id": "a1_rev_5",
+          "title": "Révision 5 — prépositions + ska",
+          "quiz": [
+            { "type": "mcq", "q": "« au travail » :", "choices": ["i jobbet", "på jobbet"], "answerIndex": 1 },
+            { "type": "gap", "q": "Jag kommer ___ Frankrike.", "answer": "från" },
+            { "type": "gap", "q": "Jag går ___ skolan.", "answer": "till" },
+            { "type": "gap", "q": "Jag är här ___ en vän.", "answer": "med" },
+            { "type": "gap", "q": "Jag ___ gå hem. (Je vais rentrer.)", "answer": "ska" }
+          ]
         },
         {
-          "id": "a1_ex_6",
-          "title": "Exercice cumul 6 (V2)",
-          "quiz": {
-            "type": "mcq",
-            "q": "Quelle phrase est correcte ?",
-            "choices": ["I Paris jag bor.", "I Paris bor jag."],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_ex_7",
-          "title": "Exercice cumul 7 (en/ett)",
-          "quiz": {
-            "type": "mcq",
-            "q": "Quel article pour « bok » ?",
-            "choices": ["en", "ett"],
-            "answerIndex": 0
-          }
-        },
-        {
-          "id": "a1_ex_8",
-          "title": "Exercice cumul 8 (défini)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : en bil → ___. (la voiture)",
-            "answer": "bilen"
-          }
-        },
-        {
-          "id": "a1_ex_9",
-          "title": "Exercice cumul 9 (pluriel)",
-          "quiz": {
-            "type": "mcq",
-            "q": "Le pluriel de « ett hus » :",
-            "choices": ["hus", "husar", "huser"],
-            "answerIndex": 0
-          }
-        },
-        {
-          "id": "a1_ex_10",
-          "title": "Exercice cumul 10 (possessif)",
-          "quiz": {
-            "type": "mcq",
-            "q": "« ma maison » :",
-            "choices": ["min hus", "mitt hus", "mina hus"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_ex_11",
-          "title": "Exercice cumul 11 (numéros)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : 20 = ___.",
-            "answer": "tjugo"
-          }
-        },
-        {
-          "id": "a1_ex_12",
-          "title": "Exercice cumul 12 (préposition)",
-          "quiz": {
-            "type": "mcq",
-            "q": "« au travail » :",
-            "choices": ["i jobbet", "på jobbet"],
-            "answerIndex": 1
-          }
-        },
-        {
-          "id": "a1_ex_13",
-          "title": "Exercice cumul 13 (ska)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ gå hem. (Je vais rentrer.)",
-            "answer": "ska"
-          }
-        },
-        {
-          "id": "a1_ex_14",
-          "title": "Exercice cumul 14 (gilla)",
-          "quiz": {
-            "type": "gap",
-            "q": "Complète : Jag ___ kaffe. (J’aime le café.)",
-            "answer": "gillar"
-          }
-        },
-        {
-          "id": "a1_ex_15",
-          "title": "Exercice cumul 15 (det finns)",
-          "quiz": {
-            "type": "mcq",
-            "q": "Pour dire « il y a », tu utilises…",
-            "choices": ["det är", "det finns"],
-            "answerIndex": 1
-          }
+          "id": "a1_rev_6",
+          "title": "Révision 6 — chiffres + mycket",
+          "quiz": [
+            { "type": "gap", "q": "8 = ___", "answer": "åtta" },
+            { "type": "gap", "q": "2 = ___", "answer": "två" },
+            { "type": "gap", "q": "20 = ___", "answer": "tjugo" },
+            { "type": "gap", "q": "« beaucoup » = ___", "answer": "mycket" },
+            { "type": "mcq", "q": "Dans « mycket », y se prononce…", "choices": ["comme 'i'", "comme 'ü' fermé"], "answerIndex": 1 }
+          ]
         }
       ]
     }
