@@ -9,11 +9,15 @@ const App = {
   // Ordre d’affichage sur l’accueil
   levelsOrder: ["A1", "A2"],
 
+  // Références (Bescherelle + vocab)
+  refData: null,
+
   async init() {
     // Nav
     document.getElementById("nav-home").onclick = () => Router.go("/");
     document.getElementById("nav-review").onclick = () => Router.go("/review");
     document.getElementById("nav-stats").onclick = () => Router.go("/stats");
+    document.getElementById("nav-ref").onclick = () => Router.go("/ref");
 
     // Routes
     Router.on("/", () => this.viewHome());
@@ -21,6 +25,7 @@ const App = {
     Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
     Router.on("/review", () => this.viewReview());
     Router.on("/stats", () => this.viewStats());
+    Router.on("/ref", () => this.viewRef());
 
     // Charger A1 + A2 (et ignorer proprement un niveau manquant)
     await this.preloadLevels();
@@ -75,6 +80,23 @@ const App = {
       title: json.title || "",
       modules: Array.isArray(json.modules) ? json.modules : []
     };
+  },
+
+  async loadRef() {
+    if (this.refData) return this.refData;
+
+    const url = "assets/data/ref.json";
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Impossible de charger ${url} (${res.status})`);
+    const json = await res.json();
+
+    this.refData = {
+      title: json.title || "Références",
+      verbs: Array.isArray(json.verbs) ? json.verbs : [],
+      nouns: Array.isArray(json.nouns) ? json.nouns : []
+    };
+
+    return this.refData;
   },
 
   setView(html) {
@@ -352,6 +374,159 @@ const App = {
     };
 
     renderOne();
+  },
+
+  async viewRef() {
+    let R;
+    try {
+      R = await this.loadRef();
+    } catch (e) {
+      return this.setView(`
+        <section class="card">
+          <h2>Références</h2>
+          <p class="muted">Erreur : ${String(e.message || e)}</p>
+          <button class="btn" onclick="Router.go('/')">← Retour</button>
+        </section>
+      `);
+    }
+
+    const renderVerbRows = (items) => items.map(v => `
+      <tr>
+        <td>
+          <b>${v.inf || ""}</b>
+          <div class="muted">${v.pron ? `<i>${v.pron}</i>` : ""}</div>
+        </td>
+        <td>${v.pres || ""}</td>
+        <td>${v.pret || ""}</td>
+        <td>${v.sup || ""}</td>
+        <td>${v.imp || ""}</td>
+        <td class="muted">${v.fr || ""}</td>
+      </tr>
+    `).join("");
+
+    const renderNounRows = (items) => items.map(n => `
+      <tr>
+        <td>
+          <b>${n.base || ""}</b>
+          <div class="muted">${n.pron ? `<i>${n.pron}</i>` : ""}</div>
+        </td>
+        <td>${n.indef || ""}</td>
+        <td>${n.def || ""}</td>
+        <td>${n.pl_indef || ""}</td>
+        <td>${n.pl_def || ""}</td>
+        <td>${n.this_sg || ""}</td>
+        <td>${n.this_pl || ""}</td>
+        <td class="muted">${n.fr || ""}</td>
+      </tr>
+    `).join("");
+
+    this.setView(`
+      <section class="card">
+        <h2>Références 📚</h2>
+        <p class="muted">
+          Deux modules : <b>Verbes</b> (conjugaisons utiles) et <b>Vocabulaire</b> (articles + accords).
+          Utilise la recherche pour retrouver rapidement un mot.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+          <input id="ref-search" placeholder="Rechercher (ex: vara / gjort / boken / husen)..." style="flex:1; min-width:240px;" />
+          <select id="ref-scope">
+            <option value="all">Tout</option>
+            <option value="verbs">Verbes</option>
+            <option value="nouns">Vocabulaire</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h3>Module 1 — Verbes (type Bescherelle)</h3>
+        <p class="muted">Colonnes : infinitif • présent • prétérit • supin • impératif • sens</p>
+
+        <div style="overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Infinitif</th>
+                <th>Présent</th>
+                <th>Prétérit</th>
+                <th>Supin</th>
+                <th>Impératif</th>
+                <th>FR</th>
+              </tr>
+            </thead>
+            <tbody id="verb-rows">
+              ${renderVerbRows(R.verbs)}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h3>Module 2 — Vocabulaire (articles + accords)</h3>
+        <p class="muted">
+          Correspondances : <b>un</b>=en/ett • <b>le</b>=défini (-en/-et) • <b>des</b>=pluriel indéfini •
+          <b>les</b>=pluriel défini • <b>ce</b>=den här/det här • <b>ces</b>=de här
+        </p>
+
+        <div style="overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>un</th>
+                <th>le</th>
+                <th>des</th>
+                <th>les</th>
+                <th>ce</th>
+                <th>ces</th>
+                <th>FR</th>
+              </tr>
+            </thead>
+            <tbody id="noun-rows">
+              ${renderNounRows(R.nouns)}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div style="margin-top:12px;">
+        <button class="btn" onclick="Router.go('/')">← Retour</button>
+      </div>
+    `);
+
+    // Recherche
+    const input = document.getElementById("ref-search");
+    const scope = document.getElementById("ref-scope");
+
+    const norm = (x) => (x || "").toString().toLowerCase();
+
+    const filter = () => {
+      const q = norm(input.value).trim();
+      const sc = scope.value;
+
+      const verbItems = (sc === "all" || sc === "verbs")
+        ? R.verbs.filter(v => {
+            const hay = [
+              v.inf, v.pres, v.pret, v.sup, v.imp, v.fr, v.pron
+            ].map(norm).join(" | ");
+            return !q || hay.includes(q);
+          })
+        : [];
+
+      const nounItems = (sc === "all" || sc === "nouns")
+        ? R.nouns.filter(n => {
+            const hay = [
+              n.base, n.indef, n.def, n.pl_indef, n.pl_def, n.this_sg, n.this_pl, n.fr, n.pron
+            ].map(norm).join(" | ");
+            return !q || hay.includes(q);
+          })
+        : [];
+
+      document.getElementById("verb-rows").innerHTML = renderVerbRows(verbItems);
+      document.getElementById("noun-rows").innerHTML = renderNounRows(nounItems);
+    };
+
+    input.addEventListener("input", filter);
+    scope.addEventListener("change", filter);
   },
 
   viewReview() {
