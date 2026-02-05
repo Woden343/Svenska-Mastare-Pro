@@ -7,39 +7,33 @@ const App = {
   levelsOrder: ["A1", "A2", "B1"],
 
   ref: { title: "Références", modules: [] },
-  refPlus: { title: "Référence+ (tableaux)", verbs: [], vocab: [], particles: [] },
+  refPlus: { title: "Référence+ (tableaux)", themes: [], verbs: [], vocab: [], particles: [] },
 
   async init() {
-    // Nav (IDs depuis index.html)
     document.getElementById("nav-home").onclick = () => Router.go("/");
     document.getElementById("nav-home-btn").onclick = () => Router.go("/");
     document.getElementById("nav-ref").onclick = () => Router.go("/ref");
     document.getElementById("nav-review").onclick = () => Router.go("/review");
     document.getElementById("nav-stats").onclick = () => Router.go("/stats");
 
-    // Routes
     Router.on("/", () => this.viewHome());
     Router.on("/level", (p) => this.viewLevel(p.level));
     Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
 
     Router.on("/ref", () => this.viewRef());
     Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
-    Router.on("/ref-plus", () => this.viewRefPlus());
+    Router.on("/ref-plus", (p) => this.viewRefPlus(p));
 
-    // ✅ Révision + Stats (vraies pages)
     Router.on("/review", () => this.viewReview());
     Router.on("/stats", () => this.viewStats());
 
     await this.loadAllData();
-
-    // SRS cards build
     Storage.upsertCards(SRS.buildCardsFromLevels(this.levels));
 
     Router.start("/");
   },
 
   async loadAllData() {
-    // Levels
     for (const lvl of this.levelsOrder) {
       try {
         this.levels[lvl] = await this.loadJson(`assets/data/${lvl.toLowerCase()}.json`, lvl);
@@ -48,7 +42,6 @@ const App = {
       }
     }
 
-    // ref.json (cartes/fiches)
     try {
       const r = await this.loadJson("assets/data/ref.json", "REF");
       this.ref = this.normalizeRef(r);
@@ -57,13 +50,12 @@ const App = {
       this.ref = { title: "Références", modules: [] };
     }
 
-    // ref_plus.json (tableaux)
     try {
       const rp = await this.loadJson("assets/data/ref_plus.json", "REFPLUS");
       this.refPlus = this.normalizeRefPlus(rp);
     } catch (e) {
       console.warn("[ref_plus] non chargé:", e.message || e);
-      this.refPlus = { title: "Référence+ (tableaux)", verbs: [], vocab: [], particles: [] };
+      this.refPlus = { title: "Référence+ (tableaux)", themes: [], verbs: [], vocab: [], particles: [] };
     }
   },
 
@@ -116,8 +108,10 @@ const App = {
   },
 
   normalizeRefPlus(json) {
+    const themes = Array.isArray(json.themes) ? json.themes : [];
     return {
       title: json.title || "Référence+ (tableaux)",
+      themes,
       verbs: Array.isArray(json.verbs) ? json.verbs : [],
       vocab: Array.isArray(json.vocab) ? json.vocab : [],
       particles: Array.isArray(json.particles) ? json.particles : []
@@ -167,7 +161,7 @@ const App = {
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
           <button class="btn" onclick="Router.go('/ref')">📚 Référence</button>
-          <button class="btn" onclick="Router.go('/ref-plus')">📋 Référence+</button>
+          <button class="btn" onclick="Router.go('/ref-plus',{theme:'all', section:'all'})">📋 Référence+</button>
           <button class="btn" onclick="Router.go('/review')">🎴 Révision</button>
           <button class="btn" onclick="Router.go('/stats')">📈 Stats</button>
         </div>
@@ -366,7 +360,7 @@ const App = {
         <p class="muted">Choisis un module, puis une fiche.</p>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/ref-plus')">📋 Référence+ (tableaux)</button>
+          <button class="btn" onclick="Router.go('/ref-plus',{theme:'all', section:'all'})">📋 Référence+ (tableaux)</button>
           <button class="btn" onclick="Router.go('/')">← Accueil</button>
         </div>
       </section>
@@ -429,13 +423,46 @@ const App = {
     `);
   },
 
-  // ---------------- REF+ (tables) ----------------
-  viewRefPlus() {
+  // ---------------- REF+ FILTERED TABLES ----------------
+  viewRefPlus(params = {}) {
     const R = this.refPlus;
+
+    const theme = (params.theme || "all").toLowerCase();
+    const section = (params.section || "all").toLowerCase();
+
+    const themesList = (R.themes && R.themes.length)
+      ? R.themes
+      : [{ id: "all", label: "Tous" }];
+
+    const themeOptions = themesList.map(t =>
+      `<option value="${t.id}" ${t.id === theme ? "selected" : ""}>${t.label}</option>`
+    ).join("");
+
+    const sectionOptions = [
+      { id: "all", label: "Tout" },
+      { id: "verbs", label: "Verbes" },
+      { id: "vocab", label: "Vocabulaire" },
+      { id: "particles", label: "Verbes à particules" }
+    ].map(s =>
+      `<option value="${s.id}" ${s.id === section ? "selected" : ""}>${s.label}</option>`
+    ).join("");
+
+    const filterByTheme = (arr) => {
+      if (theme === "all") return arr;
+      return (arr || []).filter(x => (x.theme || "daily") === theme);
+    };
+
+    const verbs = filterByTheme(R.verbs);
+    const vocab = filterByTheme(R.vocab);
+    const particles = filterByTheme(R.particles);
+
+    const showVerbs = section === "all" || section === "verbs";
+    const showVocab = section === "all" || section === "vocab";
+    const showParticles = section === "all" || section === "particles";
 
     const tableVerbs = this.renderTable(
       ["Inf.", "Présent", "Prétérit", "Supin", "Imp.", "FR", "Note", "Exemple"],
-      (R.verbs || []).map(v => [
+      (verbs || []).map(v => [
         `${v.inf || ""}`,
         `${v.pres || ""}`,
         `${v.pret || ""}`,
@@ -449,7 +476,7 @@ const App = {
 
     const tableVocab = this.renderTable(
       ["SV", "FR", "Pron", "en/ett", "Déf. sg", "Pl", "Déf. pl"],
-      (R.vocab || []).map(w => [
+      (vocab || []).map(w => [
         `${w.sv || ""}`,
         `${w.fr || ""}`,
         `${w.pron || ""}`,
@@ -462,7 +489,7 @@ const App = {
 
     const tableParticles = this.renderTable(
       ["SV", "FR", "Pron", "Exemple"],
-      (R.particles || []).map(p => [
+      (particles || []).map(p => [
         `${p.sv || ""}`,
         `${p.fr || ""}`,
         `${p.pron || ""}`,
@@ -470,33 +497,75 @@ const App = {
       ])
     );
 
+    const noData =
+      (showVerbs && verbs.length === 0) &&
+      (showVocab && vocab.length === 0) &&
+      (showParticles && particles.length === 0);
+
     this.setView(`
       <section class="card">
         <span class="pill">Référence+</span>
         <h2 style="margin-top:10px;">${R.title || "Référence+ (tableaux)"}</h2>
-        <p class="muted">Vue scan rapide (tables zébrées).</p>
+        <p class="muted">Filtre par thème (global) + section.</p>
 
-        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/ref')">📚 Retour Référence</button>
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <label class="muted">Thème</label>
+          <select id="ref-theme" style="max-width:260px;">
+            ${themeOptions}
+          </select>
+
+          <label class="muted">Section</label>
+          <select id="ref-section" style="max-width:260px;">
+            ${sectionOptions}
+          </select>
+
+          <button class="btn" onclick="Router.go('/ref')">📚 Référence</button>
           <button class="btn" onclick="Router.go('/')">← Accueil</button>
         </div>
       </section>
 
-      <section class="card" style="margin-top:12px;">
-        <h3>Verbes essentiels</h3>
-        <div class="table-wrap">${tableVerbs}</div>
-      </section>
+      ${noData ? `
+        <section class="card" style="margin-top:12px;">
+          <h3>Aucun résultat</h3>
+          <p class="muted">Aucune entrée pour ce thème/section. Essaie “Tous”.</p>
+        </section>
+      ` : ""}
 
-      <section class="card" style="margin-top:12px;">
-        <h3>Vocabulaire 20/80 + accords</h3>
-        <div class="table-wrap">${tableVocab}</div>
-      </section>
+      ${showVerbs ? `
+        <section class="card" style="margin-top:12px;">
+          <h3>Verbes essentiels</h3>
+          <div class="table-wrap">${tableVerbs}</div>
+        </section>
+      ` : ""}
 
-      <section class="card" style="margin-top:12px;">
-        <h3>Verbes à particules</h3>
-        <div class="table-wrap">${tableParticles}</div>
-      </section>
+      ${showVocab ? `
+        <section class="card" style="margin-top:12px;">
+          <h3>Vocabulaire 20/80 + accords</h3>
+          <div class="table-wrap">${tableVocab}</div>
+        </section>
+      ` : ""}
+
+      ${showParticles ? `
+        <section class="card" style="margin-top:12px;">
+          <h3>Verbes à particules</h3>
+          <div class="table-wrap">${tableParticles}</div>
+        </section>
+      ` : ""}
     `);
+
+    const themeSel = document.getElementById("ref-theme");
+    const sectionSel = document.getElementById("ref-section");
+
+    if (themeSel) {
+      themeSel.onchange = () => {
+        Router.go("/ref-plus", { theme: themeSel.value, section: sectionSel ? sectionSel.value : "all" });
+      };
+    }
+    if (sectionSel) {
+      sectionSel.onchange = () => {
+        Router.go("/ref-plus", { theme: themeSel ? themeSel.value : "all", section: sectionSel.value });
+      };
+    }
   },
 
   renderTable(headers, rows) {
@@ -527,7 +596,6 @@ const App = {
       `);
     }
 
-    // Session simple : 1 carte à la fois
     let idx = 0;
     let showBack = false;
 
@@ -564,14 +632,12 @@ const App = {
       `);
     };
 
-    // expose helpers
     this._toggleBack = () => { showBack = !showBack; render(); };
     this._grade = (g) => {
       const card = due[idx];
       const map = { again: 0, hard: 1, good: 2, easy: 3 };
       Storage.gradeCard(card.id, map[g] ?? 2);
 
-      // next card
       idx++;
       showBack = false;
 
@@ -626,7 +692,7 @@ const App = {
         <hr />
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser (progress + SRS)</button>
+          <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser</button>
           <button class="btn" onclick="Router.go('/')">← Accueil</button>
         </div>
       </section>
