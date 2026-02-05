@@ -3,28 +3,46 @@
 const App = {
   mount: document.getElementById("app"),
 
-  // Contiendra tous les niveaux chargés : { A1: {...}, A2: {...}, B1: {...} }
+  // Niveaux chargés : { A1: {...}, A2: {...}, B1: {...} }
   levels: {},
-
-  // Ordre d’affichage sur l’accueil
   levelsOrder: ["A1", "A2", "B1"],
 
+  // Références (ref.json)
+  refData: null,
+
   async init() {
-    // Nav
-    document.getElementById("nav-home").onclick = () => Router.go("/");
-    document.getElementById("nav-review").onclick = () => Router.go("/review");
-    document.getElementById("nav-stats").onclick = () => Router.go("/stats");
+    // Nav (si un élément n'existe pas, on n'explose pas)
+    const bind = (id, fn) => {
+      const el = document.getElementById(id);
+      if (el) el.onclick = fn;
+    };
+
+    bind("nav-home", () => Router.go("/"));
+    bind("nav-review", () => Router.go("/review"));
+    bind("nav-stats", () => Router.go("/stats"));
+    bind("nav-ref", () => Router.go("/ref")); // ✅ rétabli
 
     // Routes
     Router.on("/", () => this.viewHome());
     Router.on("/level", (p) => this.viewLevel(p.level));
     Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
+
+    // Révision SRS
     Router.on("/review", () => this.viewReview());
+
+    // Stats
     Router.on("/stats", () => this.viewStats());
 
-    // Charger A1 + A2 + B1 (et ignorer proprement un niveau manquant)
+    // Références
+    Router.on("/ref", () => this.viewRef());
+    Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
+
+    // Charger niveaux
     await this.preloadLevels();
     if (Object.keys(this.levels).length === 0) return;
+
+    // Charger ref.json (optionnel : si absent on continue)
+    await this.loadRefSafe();
 
     // Build / refresh SRS cards from JSON
     this.refreshSrsCards();
@@ -81,8 +99,24 @@ const App = {
     };
   },
 
+  async loadRefSafe() {
+    try {
+      const res = await fetch("assets/data/ref.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(`Impossible de charger ref.json (${res.status})`);
+      const json = await res.json();
+
+      // normalisation
+      this.refData = {
+        title: json.title || "Références",
+        modules: Array.isArray(json.modules) ? json.modules : []
+      };
+    } catch (e) {
+      console.warn("[ref] ref.json non chargé:", e.message || e);
+      this.refData = null;
+    }
+  },
+
   refreshSrsCards() {
-    // Build cards from JSON content, then upsert into Storage
     const cards = SRS.buildCardsFromLevels(this.levels);
     Storage.upsertCards(cards);
   },
@@ -95,6 +129,7 @@ const App = {
     return this.levels[level] || null;
   },
 
+  // ---------------- HOME ----------------
   viewHome() {
     const s = Storage.load();
     const doneCount = Object.keys(s.done).length;
@@ -118,27 +153,42 @@ const App = {
       })
       .join("");
 
+    const refCard = `
+      <div class="card">
+        <span class="pill">Références</span>
+        <h3 style="margin-top:10px;">Bescherelle & Vocab</h3>
+        <p class="muted">${this.refData ? "Ouvrir les fiches (verbes / vocab / particules)" : "ref.json non chargé"}</p>
+        <button class="btn" onclick="Router.go('/ref')" ${this.refData ? "" : "disabled"}>Ouvrir</button>
+      </div>
+    `;
+
     this.setView(`
       <section class="card">
         <h2>Bienvenue 👋</h2>
         <p class="muted">Objectif : apprendre le suédois de zéro (A1 → C2) avec cours + exercices + révision.</p>
+
         <div class="kpi">
           <span class="pill">Leçons validées : <b>${doneCount}</b></span>
           <span class="pill">Bonnes réponses : <b>${s.stats.correct}</b></span>
           <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
         </div>
+
         <hr />
+
         <div class="kpi">
           <span class="pill">Cartes SRS : <b>${srsStats.total}</b></span>
           <span class="pill">À réviser : <b>${srsStats.due}</b></span>
           <span class="pill">Limite/jour : <b>${srsStats.dailyLimit}</b></span>
         </div>
-        <div style="margin-top:12px;">
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
           <button class="btn" onclick="Router.go('/review')">🎴 Révision SRS</button>
+          <button class="btn" onclick="Router.go('/ref')" ${this.refData ? "" : "disabled"}>📚 Références</button>
         </div>
       </section>
 
       <section class="grid grid-2" style="margin-top:12px;">
+        ${refCard}
         ${cards || `
           <div class="card">
             <h3>Aucun niveau chargé</h3>
@@ -149,6 +199,7 @@ const App = {
     `);
   },
 
+  // ---------------- LEVELS ----------------
   viewLevel(level) {
     const L = this.getLevelData(level);
 
@@ -275,7 +326,6 @@ const App = {
     if (!host) return;
 
     const quizzes = Array.isArray(lesson.quiz) ? lesson.quiz : (lesson.quiz ? [lesson.quiz] : []);
-
     if (quizzes.length === 0) {
       host.innerHTML = `<p class="muted">Aucun exercice pour cette leçon.</p>`;
       return;
@@ -370,14 +420,13 @@ const App = {
     renderOne();
   },
 
+  // ---------------- SRS REVIEW ----------------
   viewReview() {
-    // Rebuild cards in case JSON changed
     this.refreshSrsCards();
 
     const srsStats = Storage.getSrsStats();
     const levelOptions = ["ALL", ...this.levelsOrder.filter(l => this.getLevelData(l))];
 
-    // default filters
     const selectedLevel = (window.__reviewLevel && levelOptions.includes(window.__reviewLevel)) ? window.__reviewLevel : "ALL";
     window.__reviewLevel = selectedLevel;
 
@@ -430,7 +479,6 @@ const App = {
       </section>
     `);
 
-    // handlers
     document.getElementById("revLevel").onchange = (e) => {
       window.__reviewLevel = e.target.value;
       this.viewReview();
@@ -498,9 +546,7 @@ const App = {
             <button class="btn" id="easy"  ${revealed ? "" : "disabled"}>🚀 Easy</button>
           </div>
 
-          <p class="muted" style="margin-top:10px;">
-            Type : ${c.type}
-          </p>
+          <p class="muted" style="margin-top:10px;">Type : ${c.type}</p>
         </div>
       `;
 
@@ -511,7 +557,6 @@ const App = {
 
       const gradeAndNext = (grade) => {
         Storage.gradeCard(c.id, grade);
-        // move to next
         idx++;
         revealed = false;
 
@@ -545,11 +590,117 @@ const App = {
     render();
   },
 
+  // ---------------- REF ----------------
+  viewRef() {
+    if (!this.refData) {
+      return this.setView(`
+        <section class="card">
+          <h2>Références</h2>
+          <p class="muted">Le fichier <code>assets/data/ref.json</code> n’a pas pu être chargé.</p>
+          <button class="btn" onclick="Router.go('/')">← Retour</button>
+        </section>
+      `);
+    }
+
+    const R = this.refData;
+
+    this.setView(`
+      <section class="card">
+        <span class="pill">Références</span>
+        <h2 style="margin-top:10px;">${R.title || "Références"}</h2>
+        <p class="muted">Choisis un module (verbes / vocab / particules), puis une fiche.</p>
+      </section>
+
+      <section style="margin-top:12px;" class="grid">
+        ${(R.modules || []).map(m => `
+          <div class="card">
+            <h3>${m.title || "Module"}</h3>
+            <p class="muted">Fiches : ${(m.lessons || []).length}</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              ${(m.lessons || []).map(les => `
+                <button class="btn" onclick="Router.go('/ref-lesson',{moduleId:'${m.id || ""}', lessonId:'${les.id || ""}'})">
+                  ${les.title || "Fiche"}
+                </button>
+              `).join("")}
+            </div>
+          </div>
+        `).join("")}
+      </section>
+
+      <div style="margin-top:12px;">
+        <button class="btn" onclick="Router.go('/')">← Retour</button>
+      </div>
+    `);
+  },
+
+  viewRefLesson(moduleId, lessonId) {
+    if (!this.refData) return this.viewRef();
+
+    const mod = (this.refData.modules || []).find(x => (x.id || "") === (moduleId || ""));
+    const lesson =
+      mod && Array.isArray(mod.lessons)
+        ? mod.lessons.find(x => (x.id || "") === (lessonId || ""))
+        : null;
+
+    if (!mod || !lesson) {
+      return this.setView(`
+        <section class="card">
+          <h2>Fiche introuvable</h2>
+          <p class="muted">Vérifie les IDs dans <code>ref.json</code>.</p>
+          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
+        </section>
+      `);
+    }
+
+    const contentHtml = (lesson.content || []).map(p => `<p>${p}</p>`).join("");
+
+    const vocabHtml = (lesson.vocab || []).map(w => `
+      <div class="choice" style="cursor:default;">
+        <div style="min-width:130px;"><b>${w.sv || ""}</b></div>
+        <div class="muted">${w.fr || ""}${w.pron ? ` • <i>${w.pron}</i>` : ""}</div>
+      </div>
+    `).join("");
+
+    const examplesHtml = (lesson.examples || []).map(e => `
+      <div class="choice" style="cursor:default;">
+        <div>
+          <b>${e.sv || ""}</b>
+          <div class="muted">${e.fr || ""}${e.pron ? ` • <i>${e.pron}</i>` : ""}</div>
+        </div>
+      </div>
+    `).join("");
+
+    this.setView(`
+      <section class="card">
+        <span class="pill">Références</span>
+        <h2 style="margin-top:10px;">${lesson.title || "Fiche"}</h2>
+
+        ${contentHtml}
+
+        ${(lesson.examples && lesson.examples.length) ? `
+          <hr />
+          <h3>Exemples</h3>
+          ${examplesHtml}
+        ` : ""}
+
+        ${(lesson.vocab && lesson.vocab.length) ? `
+          <hr />
+          <h3>Vocabulaire</h3>
+          ${vocabHtml}
+        ` : ""}
+
+        <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
+        </div>
+      </section>
+    `);
+  },
+
+  // ---------------- STATS ----------------
   viewStats() {
     const s = Storage.load();
     const total = s.stats.correct + s.stats.wrong;
     const rate = total ? Math.round((s.stats.correct / total) * 100) : 0;
-
     const st = Storage.getSrsStats();
 
     this.setView(`
