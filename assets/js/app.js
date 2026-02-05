@@ -3,11 +3,9 @@
 const App = {
   mount: document.getElementById("app"),
 
-  // Niveaux chargés : { A1: {...}, A2: {...}, B1: {...}, B2: {...} }
   levels: {},
   levelsOrder: ["A1", "A2", "B1", "B2"],
 
-  // Référence
   refData: null,
 
   async init() {
@@ -66,7 +64,6 @@ const App = {
       B1: "assets/data/b1.json",
       B2: "assets/data/b2.json"
     };
-
     const url = map[level];
     if (!url) throw new Error(`Niveau non supporté: ${level}`);
 
@@ -106,39 +103,113 @@ const App = {
       .replaceAll("'", "&#039;");
   },
 
-  // Référence: récupère la liste des “modules” quel que soit le format
+  // Permet d’injecter une string dans onclick sans casser (JSON.stringify safe)
+  jsString(s) {
+    return JSON.stringify(String(s ?? ""));
+  },
+
+  // ----------- RÉFÉRENCE : extraction ultra-tolérante -----------
+
   refGetModules() {
     const r = this.refData;
     if (!r) return [];
 
-    // Formats acceptés :
-    // r.modules / r.sections / r.sheets
-    const mods =
+    return (
       (Array.isArray(r.modules) && r.modules) ||
       (Array.isArray(r.sections) && r.sections) ||
       (Array.isArray(r.sheets) && r.sheets) ||
-      [];
-
-    return mods;
+      (Array.isArray(r.categories) && r.categories) ||
+      []
+    );
   },
 
-  // Référence: récupère les entrées quel que soit le format
+  refGetModuleId(mod, idx) {
+    return String(mod.id || mod.key || mod.slug || mod.name || mod.title || `module_${idx}`);
+  },
+
+  // Détecte si un objet ressemble à une entrée de ref (verbe / vocab / particule)
+  looksLikeRefItem(obj) {
+    if (!obj || typeof obj !== "object" || Array.isArray(obj)) return false;
+    const keys = Object.keys(obj);
+
+    // verbes (bescherelle)
+    const verbKeys = ["infinitive","inf","sv_inf","pres","present","pret","preteritum","past","sup","supinum","imp","imperativ"];
+    // vocab
+    const vocabKeys = ["sv","word","lemma","fr","meaning","translation"];
+    // particules
+    const partKeys = ["expression","verb","particle","fr","meaning","example","pron"];
+
+    const hasAny = (arr) => arr.some(k => keys.includes(k));
+
+    return hasAny(verbKeys) || hasAny(vocabKeys) || hasAny(partKeys);
+  },
+
+  // Extraction standard + deep fallback
   refGetItems(mod) {
     if (!mod) return [];
-    // formats acceptés : items / rows / entries / lessons / data
-    return (
+
+    const direct =
       (Array.isArray(mod.items) && mod.items) ||
       (Array.isArray(mod.rows) && mod.rows) ||
       (Array.isArray(mod.entries) && mod.entries) ||
       (Array.isArray(mod.lessons) && mod.lessons) ||
       (Array.isArray(mod.data) && mod.data) ||
-      []
-    );
+      (Array.isArray(mod.list) && mod.list) ||
+      null;
+
+    if (direct && direct.length && this.looksLikeRefItem(direct[0])) return direct;
+
+    // Fallback deep : on explore l'objet et on récupère la première “grosse” liste d’objets
+    // qui ressemble à des entrées (sv/fr ou infinitive/pres/etc).
+    const visited = new Set();
+    const stack = [mod];
+
+    while (stack.length) {
+      const cur = stack.pop();
+      if (!cur || typeof cur !== "object") continue;
+      if (visited.has(cur)) continue;
+      visited.add(cur);
+
+      if (Array.isArray(cur)) {
+        if (cur.length && this.looksLikeRefItem(cur[0])) return cur;
+        for (const it of cur) stack.push(it);
+        continue;
+      }
+
+      for (const k of Object.keys(cur)) {
+        const v = cur[k];
+        if (Array.isArray(v)) {
+          if (v.length && this.looksLikeRefItem(v[0])) return v;
+          // explore aussi au cas où les objets sont 1 niveau plus bas
+          stack.push(v);
+        } else if (v && typeof v === "object") {
+          stack.push(v);
+        }
+      }
+    }
+
+    // Rien trouvé
+    return direct || [];
   },
 
-  // Identifiant stable pour un module
-  refGetModuleId(mod, idx) {
-    return String(mod.id || mod.key || mod.slug || mod.title || mod.name || `module_${idx}`);
+  // Détection type tableau
+  refDetectTableType(items) {
+    const sample = items[0] || {};
+    const keys = Object.keys(sample);
+
+    const has = (k) => keys.includes(k);
+
+    const isVerb =
+      ["infinitive","inf","sv_inf"].some(has) &&
+      (["pres","present"].some(has) || ["pret","preteritum","past"].some(has) || ["sup","supinum"].some(has));
+
+    const isParticle =
+      ["expression","verb"].some(has) && (has("particle") || has("example") || has("fr") || has("meaning"));
+
+    const isVocab =
+      (["sv","word","lemma"].some(has)) && (["fr","meaning","translation"].some(has));
+
+    return isVerb ? "verb" : isParticle ? "particle" : isVocab ? "vocab" : "generic";
   },
 
   // -------------------- VIEWS --------------------
@@ -153,13 +224,12 @@ const App = {
       .map(L => {
         const modulesCount = (L.modules || []).length;
         const levelTitle = L.title ? `${L.level} — ${L.title}` : L.level;
-
         return `
           <div class="card">
-            <span class="pill">Niveau ${L.level}</span>
+            <span class="pill">Niveau ${this.escapeHtml(L.level)}</span>
             <h3 style="margin-top:10px;">${this.escapeHtml(levelTitle)}</h3>
             <p class="muted">Modules : ${modulesCount}</p>
-            <button class="btn btn-primary" onclick="Router.go('/level',{level:'${L.level}'})">Ouvrir</button>
+            <button class="btn btn-primary" onclick="Router.go('/level',{level:${this.jsString(L.level)}})">Ouvrir</button>
           </div>
         `;
       })
@@ -189,19 +259,11 @@ const App = {
 
   viewLevel(level) {
     const L = this.getLevelData(level);
-    if (!L) {
-      return this.setView(`
-        <section class="card">
-          <h2>Niveau introuvable</h2>
-          <p class="muted">Niveau non chargé : ${this.escapeHtml(level)}</p>
-          <button class="btn" onclick="Router.go('/')">← Retour</button>
-        </section>
-      `);
-    }
+    if (!L) return Router.go("/");
 
     this.setView(`
       <section class="card">
-        <span class="pill">Niveau ${L.level}</span>
+        <span class="pill">Niveau ${this.escapeHtml(L.level)}</span>
         <h2 style="margin-top:10px;">${this.escapeHtml(L.level)} — ${this.escapeHtml(L.title)}</h2>
         <p class="muted">Choisis un module, puis une leçon.</p>
       </section>
@@ -213,7 +275,7 @@ const App = {
             <p class="muted">Leçons : ${(m.lessons || []).length}</p>
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
               ${(m.lessons || []).map(les => `
-                <button class="btn" onclick="Router.go('/lesson',{level:'${L.level}', lessonId:'${les.id}'})">
+                <button class="btn" onclick="Router.go('/lesson',{level:${this.jsString(L.level)}, lessonId:${this.jsString(les.id)}})">
                   ${this.escapeHtml(les.title || "Leçon")}
                 </button>
               `).join("")}
@@ -281,8 +343,8 @@ const App = {
         <div id="quiz"></div>
 
         <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
-          <button class="btn btn-success" onclick="Storage.markDone('${L.level}:${lesson.id}'); Router.go('/level',{level:'${L.level}'})">✔ Marquer comme faite</button>
-          <button class="btn" onclick="Router.go('/level',{level:'${L.level}'})">← Retour</button>
+          <button class="btn btn-success" onclick="Storage.markDone(${this.jsString(L.level + ':' + lesson.id)}); Router.go('/level',{level:${this.jsString(L.level)}})">✔ Marquer comme faite</button>
+          <button class="btn" onclick="Router.go('/level',{level:${this.jsString(L.level)}})">← Retour</button>
         </div>
       </section>
     `);
@@ -321,7 +383,6 @@ const App = {
       const qbox = host.querySelector("#qbox");
       const fb = host.querySelector("#fb");
       const lock = () => answered[idx];
-
       const setFeedback = (ok, extra = "") => {
         fb.textContent = ok ? `✅ Correct. ${extra}` : `❌ Non. ${extra}`;
       };
@@ -388,7 +449,6 @@ const App = {
   },
 
   viewReview() {
-    // C’est normal que ça affiche encore ce message : tu n’as pas encore ajouté de système SRS.
     this.setView(`
       <section class="card">
         <h2>Révision</h2>
@@ -435,7 +495,7 @@ const App = {
       return this.setView(`
         <section class="card">
           <h2>Références (M+)</h2>
-          <p class="muted">Aucun module détecté. Ton <code>ref.json</code> doit contenir <code>modules</code> (ou <code>sections</code>/<code>sheets</code>).</p>
+          <p class="muted">Aucun module détecté dans <code>ref.json</code>.</p>
           <button class="btn" onclick="Router.go('/')">← Retour</button>
         </section>
       `);
@@ -444,7 +504,7 @@ const App = {
     this.setView(`
       <section class="card">
         <h2>Références (M+)</h2>
-        <p class="muted">Choisis un module, puis accède au tableau complet.</p>
+        <p class="muted">Choisis un module, puis ouvre le tableau complet.</p>
       </section>
 
       <section class="grid grid-2" style="margin-top:12px;">
@@ -452,15 +512,16 @@ const App = {
           const id = this.refGetModuleId(m, idx);
           const title = m.title || m.name || "Module";
           const items = this.refGetItems(m);
-          const desc = m.description || m.desc || "";
 
           return `
             <div class="card">
               <span class="pill">Référence</span>
               <h3 style="margin-top:10px;">${this.escapeHtml(title)}</h3>
-              ${desc ? `<p class="muted">${this.escapeHtml(desc)}</p>` : `<p class="muted">${items.length} entrées</p>`}
               <p class="muted"><b>${items.length}</b> entrées détectées</p>
-              <button class="btn btn-primary" onclick="Router.go('/ref-sheet',{moduleId:'${this.escapeHtml(id)}'})">Ouvrir le tableau</button>
+              <button class="btn btn-primary"
+                onclick="Router.go('/ref-sheet',{moduleId:${this.jsString(id)}})">
+                Ouvrir le tableau
+              </button>
             </div>
           `;
         }).join("")}
@@ -472,11 +533,17 @@ const App = {
     if (!this.refData) return Router.go("/ref");
 
     const mods = this.refGetModules();
-    const mod =
-      mods.find((m, idx) => this.refGetModuleId(m, idx) === moduleId) ||
-      mods.find(m => (m.title || m.name || "") === moduleId);
+    const mod = mods.find((m, idx) => this.refGetModuleId(m, idx) === String(moduleId));
 
-    if (!mod) return Router.go("/ref");
+    if (!mod) {
+      return this.setView(`
+        <section class="card">
+          <h2>Référence</h2>
+          <p class="muted">Module introuvable (id: <code>${this.escapeHtml(moduleId)}</code>).</p>
+          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
+        </section>
+      `);
+    }
 
     const title = mod.title || mod.name || "Module";
     const items = this.refGetItems(mod);
@@ -486,32 +553,19 @@ const App = {
         <section class="card">
           <span class="pill">Référence</span>
           <h2 style="margin-top:10px;">${this.escapeHtml(title)}</h2>
-          <p class="muted">Aucune entrée trouvée dans ce module.</p>
-          <p class="muted">Clés attendues : <code>items</code> ou <code>rows</code> ou <code>entries</code> ou <code>data</code>.</p>
+          <p class="muted">Aucune entrée détectée dans ce module (même en mode deep).</p>
+          <p class="muted">➡️ Ça veut dire que tes entrées ne ressemblent pas à des objets “ref” (sv/fr, infinitive/pres/pret, expression...).</p>
           <button class="btn" onclick="Router.go('/ref')">← Retour</button>
         </section>
       `);
     }
 
-    // Détection de type : verbes (bescherelle) vs vocab vs particules vs générique
-    const sample = items[0] || {};
-    const keys = Object.keys(sample);
-
-    const isVerbTable =
-      ["infinitive","inf","sv_inf","pres","present","preteritum","pret","past","supinum","sup","imperativ","imp"]
-        .some(k => keys.includes(k));
-
-    const isVocabTable =
-      ["sv","word","lemma"].some(k => keys.includes(k)) &&
-      ["fr","meaning","translation"].some(k => keys.includes(k));
-
-    const isParticleTable =
-      ["verb","particle","expression"].some(k => keys.includes(k));
+    const type = this.refDetectTableType(items);
 
     let header = [];
     let rowsHtml = "";
 
-    if (isVerbTable) {
+    if (type === "verb") {
       header = ["Infinitif", "Présent", "Prétérit", "Supinum", "Impératif", "FR", "Pron"];
       rowsHtml = items.map(v => `
         <tr>
@@ -524,7 +578,7 @@ const App = {
           <td class="muted">${this.escapeHtml(v.pron || "")}</td>
         </tr>
       `).join("");
-    } else if (isParticleTable) {
+    } else if (type === "particle") {
       header = ["Expression", "FR", "Exemple", "Pron", "Note"];
       rowsHtml = items.map(p => `
         <tr>
@@ -535,7 +589,7 @@ const App = {
           <td class="muted">${this.escapeHtml(p.note || "")}</td>
         </tr>
       `).join("");
-    } else if (isVocabTable) {
+    } else if (type === "vocab") {
       header = ["Suédois", "Français", "Pron", "Genre/Pluriel", "Note"];
       rowsHtml = items.map(w => `
         <tr>
@@ -547,18 +601,15 @@ const App = {
         </tr>
       `).join("");
     } else {
-      // Générique : on affiche les premières clés
-      const cols = keys.slice(0, 6);
-      header = cols.length ? cols : ["Donnée"];
-      rowsHtml = items.map(obj => {
-        const cells = cols.length
-          ? cols.map(k => `<td class="muted">${this.escapeHtml(obj[k])}</td>`).join("")
-          : `<td class="muted">${this.escapeHtml(JSON.stringify(obj))}</td>`;
-        return `<tr>${cells}</tr>`;
-      }).join("");
+      // generic
+      const keys = Object.keys(items[0] || {}).slice(0, 6);
+      header = keys.length ? keys : ["Donnée"];
+      rowsHtml = items.map(obj => `
+        <tr>
+          ${(keys.length ? keys : ["_"]).map(k => `<td class="muted">${this.escapeHtml(k === "_" ? JSON.stringify(obj) : obj[k])}</td>`).join("")}
+        </tr>
+      `).join("");
     }
-
-    const thead = header.map(h => `<th>${this.escapeHtml(h)}</th>`).join("");
 
     this.setView(`
       <section class="card">
@@ -570,7 +621,7 @@ const App = {
 
       <div class="table-wrap" style="margin-top:12px;">
         <table class="zebra">
-          <thead><tr>${thead}</tr></thead>
+          <thead><tr>${header.map(h => `<th>${this.escapeHtml(h)}</th>`).join("")}</tr></thead>
           <tbody>${rowsHtml}</tbody>
         </table>
       </div>
