@@ -1,90 +1,53 @@
 // assets/js/srs.js
-
 const SRS = {
-  buildCardsFromLevels(levelsMap) {
-    const out = [];
+  buildCardsFromLevels(levels) {
+    const cards = [];
     const seen = new Set();
 
-    const add = (c) => {
-      if (!c?.id) return;
-      if (seen.has(c.id)) return;
-      seen.add(c.id);
-      out.push(c);
+    const add = (id, front, back, level) => {
+      if (!id || seen.has(id)) return;
+      seen.add(id);
+      cards.push({ id, front, back, level });
     };
 
-    const t = (x) => String(x || "").trim();
+    for (const lvl of Object.keys(levels || {})) {
+      const L = levels[lvl];
+      if (!L) continue;
 
-    for (const [levelKey, L] of Object.entries(levelsMap || {})) {
-      const modules = Array.isArray(L.modules) ? L.modules : [];
-
-      for (const m of modules) {
-        const moduleId = t(m.id) || t(m.title) || "module";
-        const lessons = Array.isArray(m.lessons) ? m.lessons : [];
-
-        for (const les of lessons) {
-          const lessonId = t(les.id) || t(les.title) || "lesson";
-
-          // vocab -> 2 sens
-          const vocab = Array.isArray(les.vocab) ? les.vocab : [];
-          for (const w of vocab) {
-            const sv = t(w.sv);
-            const fr = t(w.fr);
-            const pron = t(w.pron);
-
-            if (sv && fr) {
-              add({
-                id: `v:${levelKey}:${moduleId}:${lessonId}:${sv}`,
-                type: "VOCAB_SV_FR",
-                level: levelKey,
-                moduleId,
-                lessonId,
-                front: `${sv}${pron ? ` [${pron}]` : ""}`,
-                back: fr
-              });
-              add({
-                id: `v2:${levelKey}:${moduleId}:${lessonId}:${fr}=>${sv}`,
-                type: "VOCAB_FR_SV",
-                level: levelKey,
-                moduleId,
-                lessonId,
-                front: fr,
-                back: `${sv}${pron ? ` [${pron}]` : ""}`
-              });
-            }
+      const lessons = (L.modules || []).flatMap(m => (m.lessons || []));
+      for (const les of lessons) {
+        // vocab cards (sv -> fr + pron)
+        for (const w of (les.vocab || [])) {
+          const sv = (w.sv || "").trim();
+          const fr = (w.fr || "").trim();
+          const pron = (w.pron || "").trim();
+          if (sv && fr) {
+            add(
+              `${lvl}:${les.id}:vocab:${sv}`,
+              `${sv}${pron ? `\n(${pron})` : ""}`,
+              fr,
+              lvl
+            );
           }
+        }
 
-          // examples -> 1 sens
-          const examples = Array.isArray(les.examples) ? les.examples : [];
-          for (let i = 0; i < examples.length; i++) {
-            const e = examples[i] || {};
-            const sv = t(e.sv);
-            const fr = t(e.fr);
-            const pron = t(e.pron);
-            if (!sv || !fr) continue;
-
-            add({
-              id: `ex:${levelKey}:${moduleId}:${lessonId}:${i}`,
-              type: "EX_SV_FR",
-              level: levelKey,
-              moduleId,
-              lessonId,
-              front: `${sv}${pron ? ` [${pron}]` : ""}`,
-              back: fr
-            });
+        // example cards (sv sentence -> fr)
+        for (const e of (les.examples || [])) {
+          const sv = (e.sv || "").trim();
+          const fr = (e.fr || "").trim();
+          const pron = (e.pron || "").trim();
+          if (sv && fr) {
+            add(
+              `${lvl}:${les.id}:ex:${sv.slice(0, 60)}`,
+              `${sv}${pron ? `\n(${pron})` : ""}`,
+              fr,
+              lvl
+            );
           }
         }
       }
     }
 
-    return out;
-  },
-
-  escapeHtml(str) {
-    return String(str || "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+    return cards;
   }
 };
