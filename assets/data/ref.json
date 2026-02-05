@@ -1,0 +1,104 @@
+{
+  "title": "Références",
+  "verbs": [
+    { "inf": "vara", "pres": "är", "pret": "var", "sup": "varit", "imp": "var", "fr": "être", "pron": "va-ra • èr • var • va-rit • var" },
+    { "inf": "ha", "pres": "har", "pret": "hade", "sup": "haft", "imp": "ha", "fr": "avoir", "pron": "ha • har • ha-dè • haft • ha" },
+    { "inf": "göra", "pres": "gör", "pret": "gjorde", "sup": "gjort", "imp": "gör", "fr": "faire", "pron": "yeu-ra • yeur • you-rdè • yourt • yeur" },
+    { "inf": "gå", "pres": "går", "pret": "gick", "sup": "gått", "imp": "gå", "fr": "aller / marcher", "pron": "go • gor • yik • gott • go" },
+    { "inf": "komma", "pres": "kommer", "pret": "kom", "sup": "kommit", "imp": "kom", "fr": "venir / arriver", "pron": "kom-ma • kommèr • kom • kom-mit • kom" },
+    { "inf": "se", "pres": "ser", "pret": "såg", "sup": "sett", "imp": "se", "fr": "voir", "pron": "sé • seer • sog • sètt • sé" },
+    { "inf": "säga", "pres": "säger", "pret": "sa", "sup": "sagt", "imp": "säg", "fr": "dire", "pron": "sèï-ya • sèï-yer • sa • sagt • sèï" },
+    { "inf": "veta", "pres": "vet", "pret": "visste", "sup": "vetat", "imp": "vet", "fr": "savoir (info)", "pron": "vé-ta • vét • vis-tè • vé-tat • vét" },
+    { "inf": "kunna", "pres": "kan", "pret": "kunde", "sup": "kunnat", "imp": "kan", "fr": "pouvoir / savoir faire", "pron": "koun-na • kan • koun-dè • koun-nat • kan" },
+    { "inf": "vilja", "pres": "vill", "pret": "ville", "sup": "velat", "imp": "vill", "fr": "vouloir", "pron": "vil-ya • vill • vil-lè • vé-lat • vill" },
+    { "inf": "måste", "pres": "måste", "pret": "måste", "sup": "måst", "imp": "—", "fr": "devoir (obligation)", "pron": "moss-tè • moss-tè • moss-t • —" },
+    { "inf": "ska", "pres": "ska", "pret": "skulle", "sup": "skulle", "imp": "—", "fr": "aller (intention) / devoir", "pron": "ska • skoul-lè • skoul-lè • —" },
+
+    { "inf": "få", "pres": "får", "pret": "fick", "sup": "fått", "imp": "få", "fr": "recevoir / obtenir", "pron": "fo • for • fik • fott • fo" },
+    { "inf": "ta", "pres": "tar", "pret": "tog", "sup": "tagit", "imp": "ta", "fr": "prendre", "pron": "ta • tar • tog • ta-git • ta" },
+    { "inf": "ge", "pres": "ger", "pret": "gav", "sup": "gett", "imp": "ge", "fr": "donner", "pron": "yé • yèr • gav • yètt • yé" },
+    { "inf": "lägga", "pres": "lägger", "pret": "lade", "sup": "lagt", "imp": "lägg", "fr": "mettre/poser", "pron": "lè-gga • lè-guèr • la-dè • lagt • lèg" },
+    { "inf": "hålla", "pres": "håller", "pret": "höll", "sup": "hållit", "imp": "håll", "fr": "tenir", "pron": "hol-la • heul-lèr • heul • hol-lit • heul" },
+
+    { "inf": "bo", "pres": "bor", "pret": "bodde", "sup": "bott", "imp": "bo", "fr": "habiter", "pron": "bou • bour • bou-dè • bott • bou" },
+    { "inf": "leva", "pres": "lever", "pret": "levde", "sup": "levt", "imp": "lev", "fr": "vivre", "pron": "lé-va • lé-vèr • lév-dè • lévt • lév" },
+    { "inf": "jobba", "pres": "jobbar", "pret": "jobbade", "sup": "jobbat", "imp": "jobba", "fr": "travailler", "pron": "yob-ba • yob-bar • yob-ba-dè • yob-bat • yob-ba" },
+    { "inf": "arbeta", "pres": "arbetar", "pret": "arbetade", "sup": "arbetat", "imp": "arbeta", "fr": "travailler (plus formel)", "pron": "ar-bé-ta • ar-bé-tar • ar-bé-ta-dè • ar-bé-tat • ar-bé-ta" },
+
+    { "inf": "prata", "pres": "pratar", "pret": "pratade", "sup": "pratat", "imp": "prata", "fr": "parler", "pron": "pra-ta • pra-tar • pra-ta-dè • pra-tat • pra-ta" },
+    { "inf": "tala", "pres": "talar", "pret": "talade", "sup": "talat", "imp": "tala", "fr": "parler (plus soutenu)", "pron": "ta-la • ta-lar • ta-la-dè • ta-lat • ta-la" },
+    { "inf": "lyssna", "pres": "lyssnar", "pret": "lyssnade", "sup": "lyssnat", "imp": "lyssna", "fr": "écouter", "pron": "lüss-na • lüss-nar • lüss-na-dè • lüss-nat • lüss-na" },
+    { "inf": "fråga", "pres": "frågar", "pret": "frågade", "sup": "frågat", "imp": "fråga", "fr": "demander / questionner", "pron": "fro-ga • fro-gar • fro-ga-dè • fro-gat • fro-ga" },
+    { "inf": "svara", "pres": "svarar", "pret": "svarade", "sup": "svarat", "imp": "svara", "fr": "répondre", "pron": "sva-ra • sva-rar • sva-ra-dè • sva-rat • sva-ra" },
+
+    { "inf": "äta", "pres": "äter", "pret": "åt", "sup": "ätit", "imp": "ät", "fr": "manger", "pron": "è-ta • è-ter • ot • è-tit • èt" },
+    { "inf": "dricka", "pres": "dricker", "pret": "drack", "sup": "druckit", "imp": "drick", "fr": "boire", "pron": "dri-ka • drik-kèr • drak • drouk-kit • drik" },
+    { "inf": "sova", "pres": "sover", "pret": "sov", "sup": "sovit", "imp": "sov", "fr": "dormir", "pron": "sou-va • sou-vèr • souv • sou-vit • souv" },
+
+    { "inf": "gilla", "pres": "gillar", "pret": "gillade", "sup": "gillat", "imp": "gilla", "fr": "aimer (préférence)", "pron": "yil-la • yil-lar • yil-la-dè • yil-lat • yil-la" },
+    { "inf": "tycka", "pres": "tycker", "pret": "tyckte", "sup": "tyckt", "imp": "tyck", "fr": "penser/trouver (avis)", "pron": "tük-ka • tük-kèr • tük-tè • tük-t • tük" },
+    { "inf": "tro", "pres": "tror", "pret": "trodde", "sup": "trott", "imp": "tro", "fr": "croire", "pron": "trou • trour • trou-dè • trott • trou" },
+    { "inf": "hoppas", "pres": "hoppas", "pret": "hoppades", "sup": "hoppats", "imp": "hoppas", "fr": "espérer", "pron": "hop-pass • hop-pass • hop-pa-dès • hop-pats • hop-pass" },
+
+    { "inf": "lära", "pres": "lär", "pret": "lärde", "sup": "lärt", "imp": "lär", "fr": "apprendre (enseigner aussi selon contexte)", "pron": "lè-ra • lèr • lèrdè • lèr-t • lèr" },
+    { "inf": "lära sig", "pres": "lär sig", "pret": "lärde sig", "sup": "lärt sig", "imp": "lär dig", "fr": "apprendre (soi-même)", "pron": "lèr sèï • lèrdè sèï • lèr-t sèï • lèr dèï" },
+    { "inf": "förstå", "pres": "förstår", "pret": "förstod", "sup": "förstått", "imp": "förstå", "fr": "comprendre", "pron": "feur-sto • feur-stor • feur-stod • feur-stott • feur-sto" },
+    { "inf": "glömma", "pres": "glömmer", "pret": "glömde", "sup": "glömt", "imp": "glöm", "fr": "oublier", "pron": "gleum-ma • gleum-mèr • gleum-dè • gleum-t • gleum" },
+    { "inf": "minnas", "pres": "minns", "pret": "mindes", "sup": "mint", "imp": "minns", "fr": "se souvenir", "pron": "min-nas • minns • min-dès • mint • minns" },
+
+    { "inf": "köpa", "pres": "köper", "pret": "köpte", "sup": "köpt", "imp": "köp", "fr": "acheter", "pron": "tcheu-pa • tcheu-pèr • tcheup-tè • tcheup-t • tcheup" },
+    { "inf": "betala", "pres": "betalar", "pret": "betalade", "sup": "betalat", "imp": "betala", "fr": "payer", "pron": "bé-ta-la • bé-ta-lar • bé-ta-la-dè • bé-ta-lat • bé-ta-la" },
+    { "inf": "sälja", "pres": "säljer", "pret": "sålde", "sup": "sålt", "imp": "sälj", "fr": "vendre", "pron": "sèl-ya • sèl-yer • seuldè • soelt • sèl" },
+    { "inf": "hjälpa", "pres": "hjälper", "pret": "hjälpte", "sup": "hjälpt", "imp": "hjälp", "fr": "aider", "pron": "yèl-pa • yèl-pèr • yèlp-tè • yèlp-t • yèlp" },
+    { "inf": "behöva", "pres": "behöver", "pret": "behövde", "sup": "behövt", "imp": "behöv", "fr": "avoir besoin", "pron": "bé-heu-va • bé-heu-vèr • bé-heu-vdè • bé-heu-vt • bé-heuv" },
+
+    { "inf": "titta", "pres": "tittar", "pret": "tittade", "sup": "tittat", "imp": "titta", "fr": "regarder", "pron": "tit-ta • tit-tar • tit-ta-dè • tit-tat • tit-ta" },
+    { "inf": "visa", "pres": "visar", "pret": "visade", "sup": "visat", "imp": "visa", "fr": "montrer", "pron": "vi-sa • vi-sar • vi-sa-dè • vi-sat • vi-sa" },
+    { "inf": "hitta", "pres": "hittar", "pret": "hittade", "sup": "hittat", "imp": "hitta", "fr": "trouver", "pron": "hit-ta • hit-tar • hit-ta-dè • hit-tat • hit-ta" },
+
+    { "inf": "ringa", "pres": "ringer", "pret": "ringde", "sup": "ringt", "imp": "ring", "fr": "appeler (téléphone)", "pron": "rin-ga • rin-gèr • ring-dè • ring-t • ring" },
+    { "inf": "skriva", "pres": "skriver", "pret": "skrev", "sup": "skrivit", "imp": "skriv", "fr": "écrire", "pron": "skri-va • skri-vèr • skrèv • skri-vit • skriv" },
+    { "inf": "läsa", "pres": "läser", "pret": "läste", "sup": "läst", "imp": "läs", "fr": "lire", "pron": "lè-sa • lè-sèr • lèss-tè • lèss-t • lèss" },
+
+    { "inf": "arbeta", "pres": "arbetar", "pret": "arbetade", "sup": "arbetat", "imp": "arbeta", "fr": "travailler", "pron": "ar-bé-ta • ar-bé-tar • ar-bé-ta-dè • ar-bé-tat • ar-bé-ta" },
+    { "inf": "börja", "pres": "börjar", "pret": "började", "sup": "börjat", "imp": "börja", "fr": "commencer", "pron": "beur-ya • beur-yar • beur-ya-dè • beur-yat • beur-ya" },
+    { "inf": "sluta", "pres": "slutar", "pret": "slutade", "sup": "slutat", "imp": "sluta", "fr": "finir / arrêter", "pron": "slou-ta • slou-tar • slou-ta-dè • slou-tat • slou-ta" },
+    { "inf": "stanna", "pres": "stannar", "pret": "stannade", "sup": "stannat", "imp": "stanna", "fr": "rester / s’arrêter", "pron": "stan-na • stan-nar • stan-na-dè • stan-nat • stan-na" },
+
+    { "inf": "öppna", "pres": "öppnar", "pret": "öppnade", "sup": "öppnat", "imp": "öppna", "fr": "ouvrir", "pron": "eup-na • eup-nar • eup-na-dè • eup-nat • eup-na" },
+    { "inf": "stänga", "pres": "stänger", "pret": "stängde", "sup": "stängt", "imp": "stäng", "fr": "fermer", "pron": "stèng-a • stèng-èr • stèng-dè • stèng-t • stèng" }
+  ],
+
+  "nouns": [
+    { "base": "bok", "indef": "en bok", "def": "boken", "pl_indef": "böcker", "pl_def": "böckerna", "this_sg": "den här boken", "this_pl": "de här böckerna", "fr": "livre", "pron": "bouk • bou-kèn • beuk-èr • beuk-èr-na" },
+    { "base": "bil", "indef": "en bil", "def": "bilen", "pl_indef": "bilar", "pl_def": "bilarna", "this_sg": "den här bilen", "this_pl": "de här bilarna", "fr": "voiture", "pron": "biil • biil-èn • biil-ar • biil-ar-na" },
+    { "base": "stol", "indef": "en stol", "def": "stolen", "pl_indef": "stolar", "pl_def": "stolarna", "this_sg": "den här stolen", "this_pl": "de här stolarna", "fr": "chaise", "pron": "stoul • stou-lèn • stou-lar • stou-lar-na" },
+    { "base": "bord", "indef": "ett bord", "def": "bordet", "pl_indef": "bord", "pl_def": "borden", "this_sg": "det här bordet", "this_pl": "de här borden", "fr": "table", "pron": "bourd • bour-dètt • bourd • bour-dèn" },
+    { "base": "hus", "indef": "ett hus", "def": "huset", "pl_indef": "hus", "pl_def": "husen", "this_sg": "det här huset", "this_pl": "de här husen", "fr": "maison", "pron": "houss • hou-sètt • houss • hou-sèn" },
+    { "base": "barn", "indef": "ett barn", "def": "barnet", "pl_indef": "barn", "pl_def": "barnen", "this_sg": "det här barnet", "this_pl": "de här barnen", "fr": "enfant", "pron": "barn • bar-nètt • barn • bar-nèn" },
+    { "base": "vän", "indef": "en vän", "def": "vännen", "pl_indef": "vänner", "pl_def": "vännerna", "this_sg": "den här vännen", "this_pl": "de här vännerna", "fr": "ami", "pron": "vèn • vèn-nèn • vèn-nèr • vèn-nèr-na" },
+
+    { "base": "person", "indef": "en person", "def": "personen", "pl_indef": "personer", "pl_def": "personerna", "this_sg": "den här personen", "this_pl": "de här personerna", "fr": "personne", "pron": "pèr-chon • pèr-chon-èn • pèr-chon-èr" },
+    { "base": "kvinna", "indef": "en kvinna", "def": "kvinnan", "pl_indef": "kvinnor", "pl_def": "kvinnorna", "this_sg": "den här kvinnan", "this_pl": "de här kvinnorna", "fr": "femme", "pron": "kvin-na • kvin-nan • kvin-nor" },
+    { "base": "man", "indef": "en man", "def": "mannen", "pl_indef": "män", "pl_def": "männen", "this_sg": "den här mannen", "this_pl": "de här männen", "fr": "homme", "pron": "man • man-nèn • mèn • mèn-nèn" },
+
+    { "base": "dag", "indef": "en dag", "def": "dagen", "pl_indef": "dagar", "pl_def": "dagarna", "this_sg": "den här dagen", "this_pl": "de här dagarna", "fr": "jour", "pron": "dag • da-gèn • da-gar" },
+    { "base": "tid", "indef": "en tid", "def": "tiden", "pl_indef": "tider", "pl_def": "tiderna", "this_sg": "den här tiden", "this_pl": "de här tiderna", "fr": "temps (durée)", "pron": "tiid • tii-dèn • tii-dèr" },
+    { "base": "år", "indef": "ett år", "def": "året", "pl_indef": "år", "pl_def": "åren", "this_sg": "det här året", "this_pl": "de här åren", "fr": "an/année", "pron": "or • o-rètt • or • o-rèn" },
+
+    { "base": "mat", "indef": "mat", "def": "maten", "pl_indef": "—", "pl_def": "—", "this_sg": "den här maten", "this_pl": "—", "fr": "nourriture", "pron": "maat • maa-tèn" },
+    { "base": "kaffe", "indef": "kaffe", "def": "kaffet", "pl_indef": "—", "pl_def": "—", "this_sg": "det här kaffet", "this_pl": "—", "fr": "café", "pron": "kafé • ka-fètt" },
+    { "base": "vatten", "indef": "vatten", "def": "vattnet", "pl_indef": "—", "pl_def": "—", "this_sg": "det här vattnet", "this_pl": "—", "fr": "eau", "pron": "vat-tèn • vat-nètt" },
+
+    { "base": "jobb", "indef": "ett jobb", "def": "jobbet", "pl_indef": "jobb", "pl_def": "jobben", "this_sg": "det här jobbet", "this_pl": "de här jobben", "fr": "travail/emploi", "pron": "yobb • yob-bètt • yobb • yob-bèn" },
+    { "base": "butik", "indef": "en butik", "def": "butiken", "pl_indef": "butiker", "pl_def": "butikerna", "this_sg": "den här butiken", "this_pl": "de här butikerna", "fr": "magasin", "pron": "bou-tik • bou-ti-kèn • bou-ti-kèr" },
+    { "base": "restaurang", "indef": "en restaurang", "def": "restaurangen", "pl_indef": "restauranger", "pl_def": "restaurangerna", "this_sg": "den här restaurangen", "this_pl": "de här restaurangerna", "fr": "restaurant", "pron": "rès-tau-rang • …-èn • …-èr" },
+
+    { "base": "telefon", "indef": "en telefon", "def": "telefonen", "pl_indef": "telefoner", "pl_def": "telefonerna", "this_sg": "den här telefonen", "this_pl": "de här telefonerna", "fr": "téléphone", "pron": "té-lé-fon • …-èn • …-èr" },
+    { "base": "mejl", "indef": "ett mejl", "def": "mejlet", "pl_indef": "mejl", "pl_def": "mejlen", "this_sg": "det här mejlet", "this_pl": "de här mejlen", "fr": "mail", "pron": "mèïl • mèï-lèt • mèïl • mèï-lèn" },
+
+    { "base": "toalett", "indef": "en toalett", "def": "toaletten", "pl_indef": "toaletter", "pl_def": "toaletterna", "this_sg": "den här toaletten", "this_pl": "de här toaletterna", "fr": "toilettes", "pron": "tou-a-lètt • tou-a-lètt-èn • …-èr" },
+    { "base": "tunnelbana", "indef": "en tunnelbana", "def": "tunnelbanan", "pl_indef": "tunnelbanor", "pl_def": "tunnelbanorna", "this_sg": "den här tunnelbanan", "this_pl": "de här tunnelbanorna", "fr": "métro", "pron": "toun-nèl-ba-na • …-nan" },
+    { "base": "utgång", "indef": "en utgång", "def": "utgången", "pl_indef": "utgångar", "pl_def": "utgångarna", "this_sg": "den här utgången", "this_pl": "de här utgångarna", "fr": "sortie", "pron": "out-gong • out-gon-guèn • out-gon-gar" }
+  ]
+}
