@@ -59,3 +59,40 @@ input, textarea{
 .choice.correct{ border-color:rgba(99,209,124,.6); }
 .choice.wrong{ border-color:rgba(255,106,106,.6); }
 .footer{ padding:18px; text-align:center; color:var(--muted); }
+
+/* ---------- TABLES ZÉBRÉES ---------- */
+.table-wrap{
+  overflow:auto;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+table.zebra{
+  width:100%;
+  border-collapse:collapse;
+  min-width:820px; /* permet le scroll horizontal sur mobile */
+}
+
+table.zebra th, table.zebra td{
+  padding:10px 12px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  vertical-align:top;
+  font-size:14px;
+}
+
+table.zebra th{
+  position:sticky;
+  top:0;
+  background:rgba(18,26,36,.98);
+  backdrop-filter: blur(8px);
+  text-align:left;
+  font-weight:700;
+}
+
+table.zebra tbody tr:nth-child(even){
+  background:rgba(255,255,255,.03);
+}
+
+table.zebra tbody tr:hover{
+  background:rgba(106,169,255,.08);
+}
