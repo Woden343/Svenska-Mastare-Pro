@@ -1,18 +1,42 @@
 const Storage = {
   key: "svenska_progress_v1",
-  load() {
-    try { return JSON.parse(localStorage.getItem(this.key)) ?? { done:{}, stats:{ correct:0, wrong:0 } }; }
-    catch { return { done:{}, stats:{ correct:0, wrong:0 } }; }
+
+  defaultState() {
+    return { done: {}, stats: { correct: 0, wrong: 0 } };
   },
-  save(state){ localStorage.setItem(this.key, JSON.stringify(state)); },
-  markDone(lessonId){
+
+  load() {
+    try {
+      return JSON.parse(localStorage.getItem(this.key)) ?? this.defaultState();
+    } catch {
+      return this.defaultState();
+    }
+  },
+
+  save(state) {
+    localStorage.setItem(this.key, JSON.stringify(state));
+  },
+
+  markDone(lessonKey) {
+    // lessonKey peut être "a1_intro_1" (ancien) OU "A1:a1_intro_1" (nouveau)
     const s = this.load();
-    s.done[lessonId] = true;
+    s.done[lessonKey] = true;
     this.save(s);
   },
-  addResult(isCorrect){
+
+  isDone(lessonKey) {
     const s = this.load();
-    if(isCorrect) s.stats.correct++;
+    return !!s.done[lessonKey];
+  },
+
+  doneCount() {
+    const s = this.load();
+    return Object.keys(s.done).length;
+  },
+
+  addResult(isCorrect) {
+    const s = this.load();
+    if (isCorrect) s.stats.correct++;
     else s.stats.wrong++;
     this.save(s);
   }
