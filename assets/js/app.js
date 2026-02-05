@@ -10,27 +10,36 @@ const App = {
   refPlus: { title: "Référence+ (tableaux)", verbs: [], vocab: [], particles: [] },
 
   async init() {
+    // Nav (IDs depuis index.html)
+    document.getElementById("nav-home").onclick = () => Router.go("/");
+    document.getElementById("nav-home-btn").onclick = () => Router.go("/");
+    document.getElementById("nav-ref").onclick = () => Router.go("/ref");
+    document.getElementById("nav-review").onclick = () => Router.go("/review");
+    document.getElementById("nav-stats").onclick = () => Router.go("/stats");
+
+    // Routes
     Router.on("/", () => this.viewHome());
     Router.on("/level", (p) => this.viewLevel(p.level));
     Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
-    Router.on("/review", () => this.viewReview());
-    Router.on("/stats", () => this.viewStats());
 
     Router.on("/ref", () => this.viewRef());
     Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
-
-    // ✅ nouvelle page tableaux
     Router.on("/ref-plus", () => this.viewRefPlus());
+
+    // ✅ Révision + Stats (vraies pages)
+    Router.on("/review", () => this.viewReview());
+    Router.on("/stats", () => this.viewStats());
 
     await this.loadAllData();
 
-    // Build SRS cards
+    // SRS cards build
     Storage.upsertCards(SRS.buildCardsFromLevels(this.levels));
 
     Router.start("/");
   },
 
   async loadAllData() {
+    // Levels
     for (const lvl of this.levelsOrder) {
       try {
         this.levels[lvl] = await this.loadJson(`assets/data/${lvl.toLowerCase()}.json`, lvl);
@@ -39,6 +48,7 @@ const App = {
       }
     }
 
+    // ref.json (cartes/fiches)
     try {
       const r = await this.loadJson("assets/data/ref.json", "REF");
       this.ref = this.normalizeRef(r);
@@ -47,22 +57,13 @@ const App = {
       this.ref = { title: "Références", modules: [] };
     }
 
+    // ref_plus.json (tableaux)
     try {
       const rp = await this.loadJson("assets/data/ref_plus.json", "REFPLUS");
       this.refPlus = this.normalizeRefPlus(rp);
     } catch (e) {
       console.warn("[ref_plus] non chargé:", e.message || e);
       this.refPlus = { title: "Référence+ (tableaux)", verbs: [], vocab: [], particles: [] };
-    }
-
-    if (Object.keys(this.levels).length === 0) {
-      this.setView(`
-        <section class="card">
-          <h2>Erreur de chargement</h2>
-          <p class="muted">Aucun niveau n’a pu être chargé.</p>
-          <p class="muted">Vérifie les fichiers dans <code>assets/data/</code> : a1.json, a2.json, b1.json.</p>
-        </section>
-      `);
     }
   },
 
@@ -83,7 +84,6 @@ const App = {
 
   normalizeRef(json) {
     const root = json?.data ? json.data : json;
-
     const modules =
       (Array.isArray(root?.modules) && root.modules) ||
       (Array.isArray(root?.sections) && root.sections) ||
@@ -112,10 +112,7 @@ const App = {
       };
     });
 
-    return {
-      title: root?.title || "Références",
-      modules: normModules
-    };
+    return { title: root?.title || "Références", modules: normModules };
   },
 
   normalizeRefPlus(json) {
@@ -131,7 +128,7 @@ const App = {
     this.mount.innerHTML = html;
   },
 
-  // ---------- HOME ----------
+  // ---------------- HOME ----------------
   viewHome() {
     const s = Storage.load();
     const doneCount = Object.keys(s.done).length;
@@ -154,7 +151,7 @@ const App = {
         <h2>Bienvenue 👋</h2>
         <p class="muted">Objectif : apprendre le suédois (A1 → C2) avec cours + exercices + SRS.</p>
 
-        <div class="kpi">
+        <div class="kpi" style="margin-top:12px;">
           <span class="pill">Leçons validées : <b>${doneCount}</b></span>
           <span class="pill">Bonnes : <b>${s.stats.correct}</b></span>
           <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
@@ -169,34 +166,20 @@ const App = {
         </div>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" onclick="Router.go('/ref')">📚 Référence</button>
+          <button class="btn" onclick="Router.go('/ref-plus')">📋 Référence+</button>
           <button class="btn" onclick="Router.go('/review')">🎴 Révision</button>
-          <button class="btn" onclick="Router.go('/ref')">📚 Références</button>
-          <button class="btn" onclick="Router.go('/ref-plus')">📋 Référence+ (tableaux)</button>
           <button class="btn" onclick="Router.go('/stats')">📈 Stats</button>
         </div>
       </section>
 
       <section class="grid grid-2" style="margin-top:12px;">
-        <div class="card">
-          <span class="pill">Références</span>
-          <h3 style="margin-top:10px;">${this.ref.title || "Références"}</h3>
-          <p class="muted">Modules : ${(this.ref.modules || []).length}</p>
-          <button class="btn" onclick="Router.go('/ref')">Ouvrir</button>
-        </div>
-
-        <div class="card">
-          <span class="pill">Référence+</span>
-          <h3 style="margin-top:10px;">${this.refPlus.title || "Référence+ (tableaux)"}</h3>
-          <p class="muted">Verbes : ${this.refPlus.verbs.length} • Vocab : ${this.refPlus.vocab.length} • Particules : ${this.refPlus.particles.length}</p>
-          <button class="btn" onclick="Router.go('/ref-plus')">Ouvrir</button>
-        </div>
-
         ${levelCards}
       </section>
     `);
   },
 
-  // ---------- LEVEL ----------
+  // ---------------- LEVELS ----------------
   viewLevel(level) {
     const L = this.levels[level];
     if (!L) {
@@ -237,7 +220,6 @@ const App = {
     `);
   },
 
-  // ---------- LESSON ----------
   viewLesson(level, lessonId) {
     const L = this.levels[level];
     if (!L) return this.setView(`<section class="card"><h2>Leçon introuvable</h2></section>`);
@@ -372,24 +354,20 @@ const App = {
     renderOne();
   },
 
-  // ---------- REVIEW / STATS ----------
-  viewReview() { Router.go("/review"); },
-  viewStats() { Router.go("/stats"); },
-
-  // ---------- REF ----------
+  // ---------------- REF (cartes/fiches) ----------------
   viewRef() {
     const R = this.ref;
     const modules = R.modules || [];
 
     this.setView(`
       <section class="card">
-        <span class="pill">Références</span>
+        <span class="pill">Référence</span>
         <h2 style="margin-top:10px;">${R.title || "Références"}</h2>
         <p class="muted">Choisis un module, puis une fiche.</p>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/ref-plus')">📋 Voir aussi Référence+ (tableaux)</button>
-          <button class="btn" onclick="Router.go('/')">← Retour</button>
+          <button class="btn" onclick="Router.go('/ref-plus')">📋 Référence+ (tableaux)</button>
+          <button class="btn" onclick="Router.go('/')">← Accueil</button>
         </div>
       </section>
 
@@ -437,7 +415,7 @@ const App = {
 
     this.setView(`
       <section class="card">
-        <span class="pill">Références</span>
+        <span class="pill">Référence</span>
         <h2 style="margin-top:10px;">${lesson.title || "Fiche"}</h2>
 
         ${contentHtml}
@@ -451,7 +429,7 @@ const App = {
     `);
   },
 
-  // ---------- REF+ (TABLES) ----------
+  // ---------------- REF+ (tables) ----------------
   viewRefPlus() {
     const R = this.refPlus;
 
@@ -496,10 +474,10 @@ const App = {
       <section class="card">
         <span class="pill">Référence+</span>
         <h2 style="margin-top:10px;">${R.title || "Référence+ (tableaux)"}</h2>
-        <p class="muted">Vue “scan rapide” : tables zébrées pour retrouver vite une forme / un mot / un verbe à particule.</p>
+        <p class="muted">Vue scan rapide (tables zébrées).</p>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/ref')">📚 Retour Références (fiches)</button>
+          <button class="btn" onclick="Router.go('/ref')">📚 Retour Référence</button>
           <button class="btn" onclick="Router.go('/')">← Accueil</button>
         </div>
       </section>
@@ -525,6 +503,134 @@ const App = {
     const thead = `<thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>`;
     const tbody = `<tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>`;
     return `<table class="zebra">${thead}${tbody}</table>`;
+  },
+
+  // ---------------- REVIEW (SRS) ----------------
+  viewReview() {
+    const s = Storage.load();
+    const due = Storage.getDueCards(s.srs.dailyLimit || 30);
+
+    if (due.length === 0) {
+      const st = Storage.getSrsStats();
+      return this.setView(`
+        <section class="card">
+          <h2>Révision 🎴</h2>
+          <p class="muted">Aucune carte à réviser pour le moment.</p>
+          <div class="kpi" style="margin-top:12px;">
+            <span class="pill">Cartes SRS : <b>${st.total}</b></span>
+            <span class="pill">À réviser : <b>${st.due}</b></span>
+            <span class="pill">Limite/jour : <b>${st.dailyLimit}</b></span>
+          </div>
+          <hr />
+          <button class="btn" onclick="Router.go('/')">← Accueil</button>
+        </section>
+      `);
+    }
+
+    // Session simple : 1 carte à la fois
+    let idx = 0;
+    let showBack = false;
+
+    const render = () => {
+      const card = due[idx];
+      const progress = `${idx + 1} / ${due.length}`;
+
+      this.setView(`
+        <section class="card">
+          <h2>Révision 🎴</h2>
+          <p class="muted">Carte ${progress}</p>
+
+          <div class="card" style="margin-top:12px;">
+            <h3>${showBack ? "Réponse" : "Question"}</h3>
+            <p style="white-space:pre-line; margin-top:10px;">${showBack ? (card.back || "") : (card.front || "")}</p>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn" onclick="App._toggleBack()">👁️ ${showBack ? "Masquer" : "Voir"} la réponse</button>
+              <button class="btn" onclick="Router.go('/')">Quitter</button>
+            </div>
+          </div>
+
+          ${showBack ? `
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn" onclick="App._grade('again')">Again</button>
+              <button class="btn" onclick="App._grade('hard')">Hard</button>
+              <button class="btn" onclick="App._grade('good')">Good</button>
+              <button class="btn" onclick="App._grade('easy')">Easy</button>
+            </div>
+          ` : `
+            <p class="muted" style="margin-top:12px;">Clique “Voir la réponse” puis choisis une note.</p>
+          `}
+        </section>
+      `);
+    };
+
+    // expose helpers
+    this._toggleBack = () => { showBack = !showBack; render(); };
+    this._grade = (g) => {
+      const card = due[idx];
+      const map = { again: 0, hard: 1, good: 2, easy: 3 };
+      Storage.gradeCard(card.id, map[g] ?? 2);
+
+      // next card
+      idx++;
+      showBack = false;
+
+      if (idx >= due.length) {
+        const st = Storage.getSrsStats();
+        return this.setView(`
+          <section class="card">
+            <h2>Révision terminée ✅</h2>
+            <p class="muted">Bravo — session du jour terminée.</p>
+            <div class="kpi" style="margin-top:12px;">
+              <span class="pill">Cartes totales : <b>${st.total}</b></span>
+              <span class="pill">Encore dues : <b>${st.due}</b></span>
+            </div>
+            <hr />
+            <button class="btn" onclick="Router.go('/')">← Accueil</button>
+          </section>
+        `);
+      }
+
+      render();
+    };
+
+    render();
+  },
+
+  // ---------------- STATS ----------------
+  viewStats() {
+    const s = Storage.load();
+    const total = s.stats.correct + s.stats.wrong;
+    const rate = total ? Math.round((s.stats.correct / total) * 100) : 0;
+    const st = Storage.getSrsStats();
+
+    this.setView(`
+      <section class="card">
+        <h2>Stats 📈</h2>
+
+        <div class="kpi" style="margin-top:12px;">
+          <span class="pill">Total réponses : <b>${total}</b></span>
+          <span class="pill">Taux : <b>${rate}%</b></span>
+          <span class="pill">Bonnes : <b>${s.stats.correct}</b></span>
+          <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
+        </div>
+
+        <hr />
+
+        <div class="kpi">
+          <span class="pill">Cartes SRS : <b>${st.total}</b></span>
+          <span class="pill">À réviser : <b>${st.due}</b></span>
+          <span class="pill">Limite/jour : <b>${st.dailyLimit}</b></span>
+        </div>
+
+        <hr />
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser (progress + SRS)</button>
+          <button class="btn" onclick="Router.go('/')">← Accueil</button>
+        </div>
+      </section>
+    `);
   }
 };
 
