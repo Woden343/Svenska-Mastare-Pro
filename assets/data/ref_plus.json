@@ -1,0 +1,78 @@
+{
+  "title": "Référence+ (tableaux) — verbes / vocab / particules",
+  "verbs": [
+    { "inf": "vara", "pres": "är", "pret": "var", "sup": "varit", "imp": "var!", "fr": "être", "note": "ultra fréquent", "ex_sv": "Jag är här.", "ex_fr": "Je suis ici.", "pron": "ya èr hèr" },
+    { "inf": "ha", "pres": "har", "pret": "hade", "sup": "haft", "imp": "ha!", "fr": "avoir", "note": "auxiliaire parfait har + supin", "ex_sv": "Jag har tid.", "ex_fr": "J'ai le temps.", "pron": "ya har tid" },
+    { "inf": "göra", "pres": "gör", "pret": "gjorde", "sup": "gjort", "imp": "gör!", "fr": "faire", "note": "", "ex_sv": "Vad gör du?", "ex_fr": "Qu'est-ce que tu fais ?", "pron": "vâd yœr dou" },
+    { "inf": "gå", "pres": "går", "pret": "gick", "sup": "gått", "imp": "gå!", "fr": "aller / marcher", "note": "går = ça marche/fonctionne", "ex_sv": "Jag går hem.", "ex_fr": "Je rentre.", "pron": "ya gour hém" },
+    { "inf": "komma", "pres": "kommer", "pret": "kom", "sup": "kommit", "imp": "kom!", "fr": "venir / arriver", "note": "", "ex_sv": "Jag kommer snart.", "ex_fr": "J'arrive bientôt.", "pron": "ya kom-mèr snârt" },
+    { "inf": "säga", "pres": "säger", "pret": "sa", "sup": "sagt", "imp": "säg!", "fr": "dire", "note": "", "ex_sv": "Vad sa du?", "ex_fr": "Qu'est-ce que tu as dit ?", "pron": "vâd sâ dou" },
+    { "inf": "få", "pres": "får", "pret": "fick", "sup": "fått", "imp": "få!", "fr": "recevoir / obtenir", "note": "formule : Kan jag få…?", "ex_sv": "Jag fick ett mail.", "ex_fr": "J'ai reçu un mail.", "pron": "ya fick ètt méyl" },
+    { "inf": "vilja", "pres": "vill", "pret": "ville", "sup": "velat", "imp": "—", "fr": "vouloir", "note": "modal : vill + infinitif (sans att)", "ex_sv": "Jag vill ha kaffe.", "ex_fr": "Je veux du café.", "pron": "ya vill hâ kâf-fé" },
+    { "inf": "kunna", "pres": "kan", "pret": "kunde", "sup": "kunnat", "imp": "—", "fr": "pouvoir / savoir", "note": "modal", "ex_sv": "Jag kan prata lite.", "ex_fr": "Je peux parler un peu.", "pron": "ya kan prâ-ta li-tè" },
+    { "inf": "skola", "pres": "ska", "pret": "skulle", "sup": "skolat", "imp": "—", "fr": "aller / devoir (intention)", "note": "très courant", "ex_sv": "Jag ska åka nu.", "ex_fr": "Je vais partir.", "pron": "ya ska o-ka nou" },
+    { "inf": "måste", "pres": "måste", "pret": "måste / var tvungen att", "sup": "—", "imp": "—", "fr": "devoir (obligation)", "note": "fort", "ex_sv": "Du måste komma.", "ex_fr": "Tu dois venir.", "pron": "dou mœs-tè kom-ma" },
+    { "inf": "behöva", "pres": "behöver", "pret": "behövde", "sup": "behövt", "imp": "behöv!", "fr": "avoir besoin", "note": "behöver + infinitif (sans att) souvent", "ex_sv": "Jag behöver hjälp.", "ex_fr": "J'ai besoin d'aide.", "pron": "ya bè-hœ-vèr yèlp" },
+    { "inf": "ta", "pres": "tar", "pret": "tog", "sup": "tagit", "imp": "ta!", "fr": "prendre", "note": "énorme base pour particules", "ex_sv": "Ta en paus.", "ex_fr": "Fais une pause.", "pron": "tâ èn pows" },
+    { "inf": "ge", "pres": "ger", "pret": "gav", "sup": "gett", "imp": "ge!", "fr": "donner", "note": "", "ex_sv": "Kan du ge mig det?", "ex_fr": "Tu peux me donner ça ?", "pron": "kan dou yé méy dé" },
+    { "inf": "se", "pres": "ser", "pret": "såg", "sup": "sett", "imp": "se!", "fr": "voir", "note": "", "ex_sv": "Jag såg det.", "ex_fr": "Je l'ai vu.", "pron": "ya sog dé" },
+    { "inf": "veta", "pres": "vet", "pret": "visste", "sup": "vetat", "imp": "vet!", "fr": "savoir", "note": "Je sais : Jag vet.", "ex_sv": "Jag vet inte.", "ex_fr": "Je ne sais pas.", "pron": "ya vèt in-tè" },
+    { "inf": "hitta", "pres": "hittar", "pret": "hittade", "sup": "hittat", "imp": "hitta!", "fr": "trouver", "note": "", "ex_sv": "Jag hittade den.", "ex_fr": "Je l'ai trouvée.", "pron": "ya hit-ta-dé dèn" },
+    { "inf": "tänka", "pres": "tänker", "pret": "tänkte", "sup": "tänkt", "imp": "tänk!", "fr": "penser", "note": "tänka på = penser à", "ex_sv": "Jag tänker på dig.", "ex_fr": "Je pense à toi.", "pron": "ya tèn-kèr pô déy" },
+    { "inf": "tycka", "pres": "tycker", "pret": "tyckte", "sup": "tyckt", "imp": "tyck!", "fr": "trouver / aimer", "note": "tycka om / tycka att", "ex_sv": "Jag tycker om kaffe.", "ex_fr": "J'aime le café.", "pron": "ya ty-ckèr om kâf-fé" },
+    { "inf": "bo", "pres": "bor", "pret": "bodde", "sup": "bott", "imp": "bo!", "fr": "habiter", "note": "", "ex_sv": "Jag bor i Paris.", "ex_fr": "J'habite à Paris.", "pron": "ya bor i pâ-riis" }
+  ],
+
+  "vocab": [
+    { "sv": "en bok", "fr": "un livre", "pron": "èn bouk", "enett": "en", "def_sg": "boken", "pl": "böcker", "def_pl": "böckerna" },
+    { "sv": "ett hus", "fr": "une maison", "pron": "ètt hous", "enett": "ett", "def_sg": "huset", "pl": "hus", "def_pl": "husen" },
+    { "sv": "en dag", "fr": "un jour", "pron": "èn dâg", "enett": "en", "def_sg": "dagen", "pl": "dagar", "def_pl": "dagarna" },
+    { "sv": "en vecka", "fr": "une semaine", "pron": "èn vè-ckâ", "enett": "en", "def_sg": "veckan", "pl": "veckor", "def_pl": "veckorna" },
+    { "sv": "ett barn", "fr": "un enfant", "pron": "ètt bâr-n", "enett": "ett", "def_sg": "barnet", "pl": "barn", "def_pl": "barnen" },
+    { "sv": "en man", "fr": "un homme", "pron": "èn man", "enett": "en", "def_sg": "mannen", "pl": "män", "def_pl": "männen" },
+    { "sv": "en kvinna", "fr": "une femme", "pron": "èn kvi-nâ", "enett": "en", "def_sg": "kvinnan", "pl": "kvinnor", "def_pl": "kvinnorna" },
+    { "sv": "en person", "fr": "une personne", "pron": "pèr-sohn", "enett": "en", "def_sg": "personen", "pl": "personer", "def_pl": "personerna" },
+
+    { "sv": "tid", "fr": "temps", "pron": "tid", "enett": "—", "def_sg": "tiden", "pl": "—", "def_pl": "—" },
+    { "sv": "pengar", "fr": "argent", "pron": "pèn-gar", "enett": "pl", "def_sg": "—", "pl": "pengar", "def_pl": "pengarna" },
+
+    { "sv": "idag", "fr": "aujourd’hui", "pron": "i-dâg", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "i går", "fr": "hier", "pron": "i yôr", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "imorgon", "fr": "demain", "pron": "i-mor-gon", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "nu", "fr": "maintenant", "pron": "nou", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+
+    { "sv": "här", "fr": "ici", "pron": "hèr", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "där", "fr": "là-bas", "pron": "dèr", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "hemma", "fr": "à la maison", "pron": "hém-ma", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+
+    { "sv": "mycket", "fr": "beaucoup", "pron": "my-ckè (y≈ü)", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "lite", "fr": "un peu", "pron": "li-tè", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "ofta", "fr": "souvent", "pron": "of-ta", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "ibland", "fr": "parfois", "pron": "i-bland", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+
+    { "sv": "en kaffe", "fr": "un café", "pron": "èn kâf-fé", "enett": "en", "def_sg": "kaffet / kaffekoppen", "pl": "kaffen", "def_pl": "kaffena" },
+    { "sv": "vatten", "fr": "eau", "pron": "vât-tèn", "enett": "ett", "def_sg": "vattnet", "pl": "—", "def_pl": "—" },
+    { "sv": "mat", "fr": "nourriture", "pron": "mât", "enett": "en", "def_sg": "maten", "pl": "—", "def_pl": "—" },
+    { "sv": "ett jobb", "fr": "un travail", "pron": "ètt yobb", "enett": "ett", "def_sg": "jobbet", "pl": "jobb", "def_pl": "jobben" },
+
+    { "sv": "bra", "fr": "bien", "pron": "brâ", "enett": "—", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "dålig", "fr": "mauvais", "pron": "do-lig", "enett": "adj", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "stor", "fr": "grand", "pron": "stour", "enett": "adj", "def_sg": "—", "pl": "—", "def_pl": "—" },
+    { "sv": "liten", "fr": "petit", "pron": "li-tèn", "enett": "adj", "def_sg": "—", "pl": "—", "def_pl": "—" }
+  ],
+
+  "particles": [
+    { "sv": "komma på", "fr": "trouver / se rappeler", "pron": "kom-ma pô", "ex_sv": "Jag kommer på en idé.", "ex_fr": "Je trouve une idée.", "note": "" },
+    { "sv": "ta reda på", "fr": "se renseigner / découvrir", "pron": "tâ ré-da pô", "ex_sv": "Jag tar reda på det.", "ex_fr": "Je me renseigne.", "note": "" },
+    { "sv": "gå ut", "fr": "sortir", "pron": "gour out", "ex_sv": "Jag går ut nu.", "ex_fr": "Je sors maintenant.", "note": "" },
+    { "sv": "gå in", "fr": "entrer", "pron": "gour in", "ex_sv": "Gå in!", "ex_fr": "Entre !", "note": "" },
+    { "sv": "komma fram", "fr": "arriver (destination)", "pron": "kom-ma frâm", "ex_sv": "Vi kom fram sent.", "ex_fr": "Nous sommes arrivés tard.", "note": "" },
+    { "sv": "komma tillbaka", "fr": "revenir", "pron": "kom-ma til-bâ-ka", "ex_sv": "Jag kommer tillbaka snart.", "ex_fr": "Je reviens bientôt.", "note": "" },
+    { "sv": "ta med", "fr": "emmener / prendre avec", "pron": "tâ mé", "ex_sv": "Ta med ditt pass.", "ex_fr": "Prends ton passeport.", "note": "" },
+    { "sv": "ta av", "fr": "enlever (vêtement)", "pron": "tâ âv", "ex_sv": "Jag tar av mig jackan.", "ex_fr": "J'enlève ma veste.", "note": "" },
+    { "sv": "ta på", "fr": "mettre (vêtement)", "pron": "tâ pô", "ex_sv": "Ta på dig jackan.", "ex_fr": "Mets ta veste.", "note": "" },
+    { "sv": "hålla med", "fr": "être d’accord", "pron": "hol-lèr mé", "ex_sv": "Jag håller med.", "ex_fr": "Je suis d’accord.", "note": "" },
+    { "sv": "tycka om", "fr": "aimer", "pron": "ty-ckèr om", "ex_sv": "Jag tycker om kaffe.", "ex_fr": "J'aime le café.", "note": "" },
+    { "sv": "tänka på", "fr": "penser à", "pron": "tèn-kèr pô", "ex_sv": "Jag tänker på dig.", "ex_fr": "Je pense à toi.", "note": "" }
+  ]
+}
