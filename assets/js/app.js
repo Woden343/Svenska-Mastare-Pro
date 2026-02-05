@@ -33,6 +33,62 @@ const App = {
     Router.start("/");
   },
 
+  /* =========================
+     UX helpers
+  ========================= */
+
+  setActiveNav(activeId) {
+    const ids = ["nav-home", "nav-review", "nav-stats", "nav-ref"];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const isActive = id === activeId;
+
+      // Reset minimal
+      el.style.borderColor = "";
+      el.style.background = "";
+      el.style.boxShadow = "";
+
+      if (isActive) {
+        // Active look (works even without CSS class)
+        el.style.borderColor = "rgba(106,169,255,.55)";
+        el.style.background = "rgba(106,169,255,.12)";
+        el.style.boxShadow = "0 8px 20px rgba(0,0,0,.20)";
+      }
+    });
+  },
+
+  breadcrumb(items) {
+    // items: [{label, onClick?}]
+    const parts = items.map((it, idx) => {
+      const isLast = idx === items.length - 1;
+      if (isLast || !it.onClick) {
+        return `<span class="muted">${it.label}</span>`;
+      }
+      // inline link button style
+      return `<button class="btn" style="padding:6px 10px; font-weight:700;" onclick="${it.onClick}">${it.label}</button>`;
+    });
+
+    return `
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:10px;">
+        ${parts.join(`<span class="muted">→</span>`)}
+      </div>
+    `;
+  },
+
+  setView(html) {
+    this.mount.innerHTML = html;
+  },
+
+  getLevelData(level) {
+    return this.levels[level] || null;
+  },
+
+  /* =========================
+     Data loaders
+  ========================= */
+
   async preloadLevels() {
     const toLoad = this.levelsOrder.slice();
 
@@ -45,6 +101,7 @@ const App = {
     }
 
     if (Object.keys(this.levels).length === 0) {
+      this.setActiveNav("nav-home");
       this.setView(`
         <section class="card">
           <h2>Erreur de chargement</h2>
@@ -97,15 +154,13 @@ const App = {
     return this.refData;
   },
 
-  setView(html) {
-    this.mount.innerHTML = html;
-  },
-
-  getLevelData(level) {
-    return this.levels[level] || null;
-  },
+  /* =========================
+     Views
+  ========================= */
 
   viewHome() {
+    this.setActiveNav("nav-home");
+
     const s = Storage.load();
     const doneCount = Object.keys(s.done).length;
 
@@ -150,8 +205,9 @@ const App = {
   },
 
   viewLevel(level) {
-    const L = this.getLevelData(level);
+    this.setActiveNav("nav-home");
 
+    const L = this.getLevelData(level);
     if (!L) {
       const loaded = Object.keys(this.levels).join(", ") || "aucun";
       return this.setView(`
@@ -163,8 +219,14 @@ const App = {
       `);
     }
 
+    const bc = this.breadcrumb([
+      { label: "Accueil", onClick: "Router.go('/')" },
+      { label: `${L.level}` }
+    ]);
+
     this.setView(`
       <section class="card">
+        ${bc}
         <span class="pill">Niveau ${L.level}</span>
         <h2 style="margin-top:10px;">${L.level} — ${L.title}</h2>
         <p class="muted">Choisis un module, puis une leçon.</p>
@@ -187,14 +249,15 @@ const App = {
       </section>
 
       <div style="margin-top:12px;">
-        <button class="btn" onclick="Router.go('/')">← Retour</button>
+        <button class="btn" onclick="Router.go('/')">← Retour accueil</button>
       </div>
     `);
   },
 
   viewLesson(level, lessonId) {
-    const L = this.getLevelData(level);
+    this.setActiveNav("nav-home");
 
+    const L = this.getLevelData(level);
     if (!L) {
       return this.setView(`
         <section class="card">
@@ -219,9 +282,15 @@ const App = {
       `);
     }
 
+    const bc = this.breadcrumb([
+      { label: "Accueil", onClick: "Router.go('/')" },
+      { label: `${L.level}`, onClick: `Router.go('/level',{level:'${L.level}'})` },
+      { label: lesson.title || "Leçon" }
+    ]);
+
     const vocabHtml = (lesson.vocab || []).map(w => `
       <div class="choice" style="cursor:default;">
-        <div style="min-width:110px;"><b>${w.sv || ""}</b></div>
+        <div style="min-width:120px;"><b>${w.sv || ""}</b></div>
         <div class="muted">${w.fr || ""}${w.pron ? ` • <i>${w.pron}</i>` : ""}</div>
       </div>
     `).join("");
@@ -239,6 +308,7 @@ const App = {
 
     this.setView(`
       <section class="card">
+        ${bc}
         <span class="pill">${L.level}</span>
         <h2 style="margin-top:10px;">${lesson.title || "Leçon"}</h2>
 
@@ -262,7 +332,7 @@ const App = {
 
         <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
           <button class="btn" onclick="Storage.markDone('${L.level}:${lesson.id}'); Router.go('/level',{level:'${L.level}'})">✔ Marquer comme faite</button>
-          <button class="btn" onclick="Router.go('/level',{level:'${L.level}'})">← Retour</button>
+          <button class="btn" onclick="Router.go('/level',{level:'${L.level}'})">← Retour au niveau</button>
         </div>
       </section>
     `);
@@ -370,7 +440,54 @@ const App = {
     renderOne();
   },
 
+  viewReview() {
+    this.setActiveNav("nav-review");
+
+    const bc = this.breadcrumb([
+      { label: "Accueil", onClick: "Router.go('/')" },
+      { label: "Révision" }
+    ]);
+
+    this.setView(`
+      <section class="card">
+        ${bc}
+        <h2>Révision</h2>
+        <p class="muted">Bientôt : flashcards + rappel espacée (SRS).</p>
+      </section>
+    `);
+  },
+
+  viewStats() {
+    this.setActiveNav("nav-stats");
+
+    const s = Storage.load();
+    const total = s.stats.correct + s.stats.wrong;
+    const rate = total ? Math.round((s.stats.correct / total) * 100) : 0;
+
+    const bc = this.breadcrumb([
+      { label: "Accueil", onClick: "Router.go('/')" },
+      { label: "Stats" }
+    ]);
+
+    this.setView(`
+      <section class="card">
+        ${bc}
+        <h2>Stats</h2>
+        <div class="kpi">
+          <span class="pill">Total réponses : <b>${total}</b></span>
+          <span class="pill">Taux : <b>${rate}%</b></span>
+          <span class="pill">Bonnes : <b>${s.stats.correct}</b></span>
+          <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
+        </div>
+        <hr />
+        <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser</button>
+      </section>
+    `);
+  },
+
   async viewRef() {
+    this.setActiveNav("nav-ref");
+
     let R;
     try {
       R = await this.loadRef();
@@ -384,18 +501,12 @@ const App = {
       `);
     }
 
-    const renderVerbRows = (items) => items.map(v => `
-      <tr>
-        <td><b>${v.inf || ""}</b><div class="muted">${v.pron ? `<i>${v.pron}</i>` : ""}</div></td>
-        <td>${v.pres || ""}</td>
-        <td>${v.pret || ""}</td>
-        <td>${v.sup || ""}</td>
-        <td>${v.imp || ""}</td>
-        <td class="muted">${v.fr || ""}</td>
-      </tr>
-    `).join("");
+    const bc = this.breadcrumb([
+      { label: "Accueil", onClick: "Router.go('/')" },
+      { label: "Références" }
+    ]);
 
-    const renderPhrasalRows = (items) => items.map(v => `
+    const renderRows = (items) => items.map(v => `
       <tr>
         <td><b>${v.inf || ""}</b><div class="muted">${v.pron ? `<i>${v.pron}</i>` : ""}</div></td>
         <td>${v.pres || ""}</td>
@@ -421,14 +532,16 @@ const App = {
 
     this.setView(`
       <section class="card">
+        ${bc}
         <h2>Références 📚</h2>
         <p class="muted">
-          3 modules : <b>Verbes</b> (conjugaisons), <b>Verbes à particules</b> (très 20/80) et <b>Vocabulaire</b> (articles + accords).
-          Recherche disponible.
+          3 modules : <b>Verbes</b>, <b>Verbes à particules</b>, <b>Vocabulaire</b>.
+          Recherche + filtre.
         </p>
+
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
           <input id="ref-search" placeholder="Rechercher (ex: vara / gjort / gå ut / boken / husen)..." style="flex:1; min-width:240px;" />
-          <select id="ref-scope">
+          <select id="ref-scope" style="width:auto; min-width:190px;">
             <option value="all">Tout</option>
             <option value="verbs">Verbes</option>
             <option value="phrasal">Verbes à particules</option>
@@ -446,14 +559,14 @@ const App = {
                 <th>Infinitif</th><th>Présent</th><th>Prétérit</th><th>Supin</th><th>Impératif</th><th>FR</th>
               </tr>
             </thead>
-            <tbody id="verb-rows">${renderVerbRows(R.verbs)}</tbody>
+            <tbody id="verb-rows">${renderRows(R.verbs)}</tbody>
           </table>
         </div>
       </section>
 
       <section class="card" style="margin-top:12px;">
-        <h3>Module 2 — Verbes à particules (séparables)</h3>
-        <p class="muted">Ex : <i>gå ut</i> (sortir), <i>ta med</i> (emmener), <i>sätta på</i> (mettre/allumer)…</p>
+        <h3>Module 2 — Verbes à particules</h3>
+        <p class="muted">Très utiles au quotidien (ex : <i>gå ut</i>, <i>ta med</i>, <i>sätta på</i>…).</p>
         <div style="overflow:auto;">
           <table>
             <thead>
@@ -461,7 +574,7 @@ const App = {
                 <th>Infinitif</th><th>Présent</th><th>Prétérit</th><th>Supin</th><th>Impératif</th><th>FR</th>
               </tr>
             </thead>
-            <tbody id="phrasal-rows">${renderPhrasalRows(R.phrasalVerbs)}</tbody>
+            <tbody id="phrasal-rows">${renderRows(R.phrasalVerbs)}</tbody>
           </table>
         </div>
       </section>
@@ -469,7 +582,7 @@ const App = {
       <section class="card" style="margin-top:12px;">
         <h3>Module 3 — Vocabulaire (articles + accords)</h3>
         <p class="muted">
-          <b>un</b>=en/ett • <b>le</b>=défini (-en/-et) • <b>des</b>=pluriel indéfini •
+          <b>un</b>=en/ett • <b>le</b>=défini • <b>des</b>=pluriel indéfini •
           <b>les</b>=pluriel défini • <b>ce</b>=den här/det här • <b>ces</b>=de här
         </p>
         <div style="overflow:auto;">
@@ -485,7 +598,7 @@ const App = {
       </section>
 
       <div style="margin-top:12px;">
-        <button class="btn" onclick="Router.go('/')">← Retour</button>
+        <button class="btn" onclick="Router.go('/')">← Retour accueil</button>
       </div>
     `);
 
@@ -497,54 +610,30 @@ const App = {
       const q = norm(input.value).trim();
       const sc = scope.value;
 
+      const inRow = (obj, fields) => {
+        const hay = fields.map(k => norm(obj[k])).join(" | ");
+        return !q || hay.includes(q);
+      };
+
       const verbItems = (sc === "all" || sc === "verbs")
-        ? R.verbs.filter(v => ([v.inf, v.pres, v.pret, v.sup, v.imp, v.fr, v.pron].map(norm).join(" | ")).includes(q) || !q)
+        ? R.verbs.filter(v => inRow(v, ["inf", "pres", "pret", "sup", "imp", "fr", "pron"]))
         : [];
 
       const phrasalItems = (sc === "all" || sc === "phrasal")
-        ? R.phrasalVerbs.filter(v => ([v.inf, v.pres, v.pret, v.sup, v.imp, v.fr, v.pron].map(norm).join(" | ")).includes(q) || !q)
+        ? R.phrasalVerbs.filter(v => inRow(v, ["inf", "pres", "pret", "sup", "imp", "fr", "pron"]))
         : [];
 
       const nounItems = (sc === "all" || sc === "nouns")
-        ? R.nouns.filter(n => ([n.base, n.indef, n.def, n.pl_indef, n.pl_def, n.this_sg, n.this_pl, n.fr, n.pron].map(norm).join(" | ")).includes(q) || !q)
+        ? R.nouns.filter(n => inRow(n, ["base", "indef", "def", "pl_indef", "pl_def", "this_sg", "this_pl", "fr", "pron"]))
         : [];
 
-      document.getElementById("verb-rows").innerHTML = renderVerbRows(verbItems);
-      document.getElementById("phrasal-rows").innerHTML = renderPhrasalRows(phrasalItems);
+      document.getElementById("verb-rows").innerHTML = renderRows(verbItems);
+      document.getElementById("phrasal-rows").innerHTML = renderRows(phrasalItems);
       document.getElementById("noun-rows").innerHTML = renderNounRows(nounItems);
     };
 
     input.addEventListener("input", filter);
     scope.addEventListener("change", filter);
-  },
-
-  viewReview() {
-    this.setView(`
-      <section class="card">
-        <h2>Révision</h2>
-        <p class="muted">Bientôt : flashcards + rappel espacée (SRS).</p>
-      </section>
-    `);
-  },
-
-  viewStats() {
-    const s = Storage.load();
-    const total = s.stats.correct + s.stats.wrong;
-    const rate = total ? Math.round((s.stats.correct / total) * 100) : 0;
-
-    this.setView(`
-      <section class="card">
-        <h2>Stats</h2>
-        <div class="kpi">
-          <span class="pill">Total réponses : <b>${total}</b></span>
-          <span class="pill">Taux : <b>${rate}%</b></span>
-          <span class="pill">Bonnes : <b>${s.stats.correct}</b></span>
-          <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
-        </div>
-        <hr />
-        <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser</button>
-      </section>
-    `);
   }
 };
 
