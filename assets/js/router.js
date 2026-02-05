@@ -1,5 +1,7 @@
 // assets/js/router.js
-// Router hash simple: "#/path?key=value"
+// Router hash robuste: "#/path?key=value"
+// - Supporte "#", "#/", "#/review", "#/ref", etc.
+// - Force le dispatch même si le hash ne change pas
 
 const Router = {
   routes: new Map(),
@@ -11,13 +13,19 @@ const Router = {
 
   go(path, params = {}) {
     const qs = this._toQuery(params);
-    const hash = `#${path}${qs ? "?" + qs : ""}`;
-    if (location.hash === hash) {
-      // Force dispatch si même hash
+    const target = `#${path}${qs ? "?" + qs : ""}`;
+
+    // Si même hash, on force quand même le rendu
+    if (location.hash === target) {
       this._dispatch();
-    } else {
-      location.hash = hash;
+      return;
     }
+
+    location.hash = target;
+
+    // Certains navigateurs (ou cas limites) ne déclenchent pas hashchange immédiatement
+    // => on force un dispatch au prochain tick
+    setTimeout(() => this._dispatch(), 0);
   },
 
   start(fallbackPath = "/") {
@@ -25,31 +33,55 @@ const Router = {
     this.started = true;
 
     window.addEventListener("hashchange", () => this._dispatch());
-    // Premier rendu
+
+    // Si pas de hash, on le met
     if (!location.hash || location.hash === "#") {
       location.hash = `#${fallbackPath}`;
-      return;
     }
+
+    // Premier rendu
     this._dispatch();
   },
 
   _dispatch() {
-    const { path, params } = this._parse(location.hash);
+    try {
+      const { path, params } = this._parse(location.hash);
 
-    const handler = this.routes.get(path);
-    if (!handler) {
-      // fallback si route inconnue
-      const root = this.routes.get("/");
-      if (root) return root({});
-      return;
+      // Normalisation : "" => "/", "#/" => "/"
+      const normalizedPath = (path && path !== "#") ? path : "/";
+
+      const handler =
+        this.routes.get(normalizedPath) ||
+        (normalizedPath === "" ? this.routes.get("/") : null);
+
+      if (!handler) {
+        const root = this.routes.get("/");
+        if (root) return root({});
+        return;
+      }
+
+      handler(params);
+    } catch (e) {
+      console.error("[Router] dispatch error:", e);
+      const mount = document.getElementById("app");
+      if (mount) {
+        mount.innerHTML = `
+          <section class="card">
+            <h2>Erreur Router</h2>
+            <p class="muted">Une erreur JS a empêché l’affichage.</p>
+            <pre style="white-space:pre-wrap; word-break:break-word; margin:0;">${String(e?.message || e)}</pre>
+          </section>
+        `;
+      }
     }
-    handler(params);
   },
 
   _parse(hash) {
-    const raw = (hash || "").replace(/^#/, "");
+    const raw = (hash || "").replace(/^#/, ""); // enlève "#"
+    if (!raw) return { path: "/", params: {} };
+
     const [pathPart, queryPart] = raw.split("?");
-    const path = pathPart || "/";
+    const path = pathPart || "/"; // "#/": pathPart="/" OK ; "#": raw="" => plus haut
     const params = this._fromQuery(queryPart || "");
     return { path, params };
   },
