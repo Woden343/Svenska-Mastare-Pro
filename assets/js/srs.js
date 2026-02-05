@@ -1,37 +1,35 @@
 // assets/js/srs.js
 
 const SRS = {
-  // Build cards from all loaded levels JSON (vocab + examples)
-  // Cards are "front/back" with optional pron included.
   buildCardsFromLevels(levelsMap) {
-    const cards = [];
+    const out = [];
     const seen = new Set();
 
-    const add = (card) => {
-      if (!card || !card.id) return;
-      if (seen.has(card.id)) return;
-      seen.add(card.id);
-      cards.push(card);
+    const add = (c) => {
+      if (!c?.id) return;
+      if (seen.has(c.id)) return;
+      seen.add(c.id);
+      out.push(c);
     };
 
-    const safeText = (x) => String(x || "").trim();
+    const t = (x) => String(x || "").trim();
 
     for (const [levelKey, L] of Object.entries(levelsMap || {})) {
       const modules = Array.isArray(L.modules) ? L.modules : [];
 
       for (const m of modules) {
-        const moduleId = safeText(m.id) || safeText(m.title) || "module";
+        const moduleId = t(m.id) || t(m.title) || "module";
         const lessons = Array.isArray(m.lessons) ? m.lessons : [];
 
         for (const les of lessons) {
-          const lessonId = safeText(les.id) || safeText(les.title) || "lesson";
+          const lessonId = t(les.id) || t(les.title) || "lesson";
 
-          // 1) vocab → 2 cards each: SV→FR and FR→SV (80/20 very good)
+          // vocab -> 2 sens
           const vocab = Array.isArray(les.vocab) ? les.vocab : [];
           for (const w of vocab) {
-            const sv = safeText(w.sv);
-            const fr = safeText(w.fr);
-            const pron = safeText(w.pron);
+            const sv = t(w.sv);
+            const fr = t(w.fr);
+            const pron = t(w.pron);
 
             if (sv && fr) {
               add({
@@ -40,10 +38,9 @@ const SRS = {
                 level: levelKey,
                 moduleId,
                 lessonId,
-                front: `${sv}${pron ? `  [${pron}]` : ""}`,
+                front: `${sv}${pron ? ` [${pron}]` : ""}`,
                 back: fr
               });
-
               add({
                 id: `v2:${levelKey}:${moduleId}:${lessonId}:${fr}=>${sv}`,
                 type: "VOCAB_FR_SV",
@@ -51,18 +48,18 @@ const SRS = {
                 moduleId,
                 lessonId,
                 front: fr,
-                back: `${sv}${pron ? `  [${pron}]` : ""}`
+                back: `${sv}${pron ? ` [${pron}]` : ""}`
               });
             }
           }
 
-          // 2) examples → 1 card: SV sentence → FR (with pron)
+          // examples -> 1 sens
           const examples = Array.isArray(les.examples) ? les.examples : [];
           for (let i = 0; i < examples.length; i++) {
             const e = examples[i] || {};
-            const sv = safeText(e.sv);
-            const fr = safeText(e.fr);
-            const pron = safeText(e.pron);
+            const sv = t(e.sv);
+            const fr = t(e.fr);
+            const pron = t(e.pron);
             if (!sv || !fr) continue;
 
             add({
@@ -71,7 +68,7 @@ const SRS = {
               level: levelKey,
               moduleId,
               lessonId,
-              front: `${sv}${pron ? `  [${pron}]` : ""}`,
+              front: `${sv}${pron ? ` [${pron}]` : ""}`,
               back: fr
             });
           }
@@ -79,10 +76,9 @@ const SRS = {
       }
     }
 
-    return cards;
+    return out;
   },
 
-  // Simple “mask / reveal”
   escapeHtml(str) {
     return String(str || "")
       .replaceAll("&", "&amp;")
