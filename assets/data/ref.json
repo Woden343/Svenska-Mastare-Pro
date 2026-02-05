@@ -1,134 +1,450 @@
 {
   "title": "Références (M+) — Verbes + Verbes à particules + Vocabulaire 20/80",
-  "verbs": [
-    { "inf": "vara", "pres": "är", "pret": "var", "sup": "varit", "imp": "var", "fr": "être", "pron": "va-ra • èr • var • va-rit • var" },
-    { "inf": "ha", "pres": "har", "pret": "hade", "sup": "haft", "imp": "ha", "fr": "avoir", "pron": "ha • har • ha-dè • haft • ha" },
-    { "inf": "göra", "pres": "gör", "pret": "gjorde", "sup": "gjort", "imp": "gör", "fr": "faire", "pron": "yeu-ra • yeur • your-dè • yourt • yeur" },
-    { "inf": "gå", "pres": "går", "pret": "gick", "sup": "gått", "imp": "gå", "fr": "aller / marcher", "pron": "go • gor • yik • gott • go" },
-    { "inf": "komma", "pres": "kommer", "pret": "kom", "sup": "kommit", "imp": "kom", "fr": "venir / arriver", "pron": "kom-ma • kommèr • kom • kom-mit • kom" },
-    { "inf": "se", "pres": "ser", "pret": "såg", "sup": "sett", "imp": "se", "fr": "voir", "pron": "sé • seer • sog • sètt • sé" },
-    { "inf": "säga", "pres": "säger", "pret": "sa", "sup": "sagt", "imp": "säg", "fr": "dire", "pron": "sèï-ya • sèï-yer • sa • sagt • sèï" },
-    { "inf": "veta", "pres": "vet", "pret": "visste", "sup": "vetat", "imp": "vet", "fr": "savoir (info)", "pron": "vé-ta • vét • vis-tè • vé-tat • vét" },
-    { "inf": "kunna", "pres": "kan", "pret": "kunde", "sup": "kunnat", "imp": "kan", "fr": "pouvoir / savoir faire", "pron": "koun-na • kan • koun-dè • koun-nat • kan" },
-    { "inf": "vilja", "pres": "vill", "pret": "ville", "sup": "velat", "imp": "vill", "fr": "vouloir", "pron": "vil-ya • vill • vil-lè • vé-lat • vill" },
-    { "inf": "behöva", "pres": "behöver", "pret": "behövde", "sup": "behövt", "imp": "behöv", "fr": "avoir besoin", "pron": "bé-heu-va • bé-heu-vèr • bé-heu-vdè • bé-heu-vt • bé-heuv" },
-    { "inf": "få", "pres": "får", "pret": "fick", "sup": "fått", "imp": "få", "fr": "recevoir / obtenir", "pron": "fo • for • fik • fott • fo" },
-    { "inf": "ta", "pres": "tar", "pret": "tog", "sup": "tagit", "imp": "ta", "fr": "prendre", "pron": "ta • tar • tog • ta-git • ta" },
-    { "inf": "ge", "pres": "ger", "pret": "gav", "sup": "gett", "imp": "ge", "fr": "donner", "pron": "yé • yèr • gav • yètt • yé" },
-    { "inf": "lägga", "pres": "lägger", "pret": "lade", "sup": "lagt", "imp": "lägg", "fr": "mettre/poser", "pron": "lè-gga • lè-guèr • la-dè • lagt • lèg" },
-    { "inf": "hålla", "pres": "håller", "pret": "höll", "sup": "hållit", "imp": "håll", "fr": "tenir", "pron": "hol-la • heul-lèr • heul • hol-lit • heul" },
-    { "inf": "bo", "pres": "bor", "pret": "bodde", "sup": "bott", "imp": "bo", "fr": "habiter", "pron": "bou • bour • bod-dè • bott • bou" },
-    { "inf": "leva", "pres": "lever", "pret": "levde", "sup": "levt", "imp": "lev", "fr": "vivre", "pron": "lé-va • lé-vèr • lév-dè • lévt • lév" },
-    { "inf": "jobba", "pres": "jobbar", "pret": "jobbade", "sup": "jobbat", "imp": "jobba", "fr": "travailler", "pron": "yob-ba • yob-bar • yob-ba-dè • yob-bat • yob-ba" },
-    { "inf": "arbeta", "pres": "arbetar", "pret": "arbetade", "sup": "arbetat", "imp": "arbeta", "fr": "travailler (formel)", "pron": "ar-bé-ta • ar-bé-tar • ar-bé-ta-dè • ar-bé-tat • ar-bé-ta" },
-    { "inf": "prata", "pres": "pratar", "pret": "pratade", "sup": "pratat", "imp": "prata", "fr": "parler", "pron": "pra-ta • pra-tar • pra-ta-dè • pra-tat • pra-ta" },
-    { "inf": "tala", "pres": "talar", "pret": "talade", "sup": "talat", "imp": "tala", "fr": "parler (soutenu)", "pron": "ta-la • ta-lar • ta-la-dè • ta-lat • ta-la" },
-    { "inf": "lyssna", "pres": "lyssnar", "pret": "lyssnade", "sup": "lyssnat", "imp": "lyssna", "fr": "écouter", "pron": "lüs-na • lüs-nar • lüs-na-dè • lüs-nat • lüs-na" },
-    { "inf": "fråga", "pres": "frågar", "pret": "frågade", "sup": "frågat", "imp": "fråga", "fr": "demander / questionner", "pron": "fro-ga • fro-gar • fro-ga-dè • fro-gat • fro-ga" },
-    { "inf": "svara", "pres": "svarar", "pret": "svarade", "sup": "svarat", "imp": "svara", "fr": "répondre", "pron": "sva-ra • sva-rar • sva-ra-dè • sva-rat • sva-ra" },
-    { "inf": "tänka", "pres": "tänker", "pret": "tänkte", "sup": "tänkt", "imp": "tänk", "fr": "penser", "pron": "tèn-ka • tèn-kèr • tènk-tè • tènk-t • tènk" },
-    { "inf": "tycka", "pres": "tycker", "pret": "tyckte", "sup": "tyckt", "imp": "tyck", "fr": "trouver (avis)", "pron": "tük-ka • tük-kèr • tük-tè • tük-t • tük" },
-    { "inf": "tro", "pres": "tror", "pret": "trodde", "sup": "trott", "imp": "tro", "fr": "croire", "pron": "trou • trour • trod-dè • trott • trou" },
-    { "inf": "hoppas", "pres": "hoppas", "pret": "hoppades", "sup": "hoppats", "imp": "hoppas", "fr": "espérer", "pron": "hop-pass • hop-pa-dès • hop-pats • hop-pass" },
-    { "inf": "äta", "pres": "äter", "pret": "åt", "sup": "ätit", "imp": "ät", "fr": "manger", "pron": "è-ta • è-ter • ot • è-tit • èt" },
-    { "inf": "dricka", "pres": "dricker", "pret": "drack", "sup": "druckit", "imp": "drick", "fr": "boire", "pron": "dri-ka • drik-kèr • drak • drouk-kit • drik" },
-    { "inf": "sova", "pres": "sover", "pret": "sov", "sup": "sovit", "imp": "sov", "fr": "dormir", "pron": "sou-va • sou-vèr • souv • sou-vit • souv" },
-    { "inf": "vakna", "pres": "vaknar", "pret": "vaknade", "sup": "vaknat", "imp": "vakna", "fr": "se réveiller", "pron": "vak-na • vak-nar • vak-na-dè • vak-nat • vak-na" },
-    { "inf": "känna", "pres": "känner", "pret": "kände", "sup": "känt", "imp": "känn", "fr": "sentir / connaître", "pron": "chèn-na • chèn-nèr • chèn-dè • chèn-t • chèn" },
-    { "inf": "förstå", "pres": "förstår", "pret": "förstod", "sup": "förstått", "imp": "förstå", "fr": "comprendre", "pron": "feur-sto • feur-stor • feur-stod • feur-stott • feur-sto" },
-    { "inf": "lära", "pres": "lär", "pret": "lärde", "sup": "lärt", "imp": "lär", "fr": "apprendre / enseigner", "pron": "lè-ra • lèr • lèrdè • lèr-t • lèr" },
-    { "inf": "glömma", "pres": "glömmer", "pret": "glömde", "sup": "glömt", "imp": "glöm", "fr": "oublier", "pron": "gleum-ma • gleum-mèr • gleum-dè • gleum-t • gleum" },
-    { "inf": "minnas", "pres": "minns", "pret": "mindes", "sup": "mint", "imp": "minns", "fr": "se souvenir", "pron": "min-nas • minns • min-dès • mint • minns" },
+  "modules": [
+    {
+      "id": "ref_verbs",
+      "title": "1) Bescherelle — verbes essentiels (M+)",
+      "lessons": [
+        {
+          "id": "v0_readme",
+          "title": "Mode d'emploi (comment utiliser ce Bescherelle)",
+          "content": [
+            "Objectif : te donner une référence rapide et fiable pour conjuguer et construire des phrases.",
+            "Tu trouveras ici :",
+            "• Présent / Prétérit / Supin (donc parfait avec har + supin)",
+            "• Impératif, infinitif, participes utiles",
+            "• Négation (inte), ordre V2, questions",
+            "• Exemples prêts à l’emploi + mini-exercices",
+            "",
+            "Conseil 20/80 :",
+            "1) Apprends d’abord les 15 verbes les plus fréquents (vara, ha, göra, komma, gå, säga…).",
+            "2) Pour chacun : mémorise le trio PRESENT–PRET–SUPIN.",
+            "3) Réutilise en phrases V2 (verbe en position 2)."
+          ],
+          "examples": [
+            { "sv": "Jag är här.", "fr": "Je suis ici.", "pron": "ya é(h) här" },
+            { "sv": "I går var jag här.", "fr": "Hier j'étais ici.", "pron": "i yôr vâr ya här" },
+            { "sv": "Jag har varit här.", "fr": "J'ai été ici.", "pron": "ya har vârit här" }
+          ],
+          "vocab": [
+            { "sv": "i går", "fr": "hier", "pron": "i yôr" },
+            { "sv": "här", "fr": "ici", "pron": "hèr" }
+          ]
+        },
+        {
+          "id": "v1_tenses_core",
+          "title": "Temps indispensables : présent, prétérit, supin (har + supin)",
+          "content": [
+            "En suédois, les 3 formes à connaître par cœur pour chaque verbe :",
+            "1) Infinitif : att göra (faire)",
+            "2) Présent : gör",
+            "3) Prétérit : gjorde",
+            "4) Supin : gjort (utilisé avec har/hade)",
+            "",
+            "Structure du parfait :",
+            "• Jag har + supin",
+            "Ex : Jag har gjort det. = Je l'ai fait.",
+            "",
+            "À ne pas confondre :",
+            "• Participe passé (souvent proche du supin) sert surtout comme adjectif.",
+            "Ex : en stängd dörr (une porte fermée)."
+          ],
+          "examples": [
+            { "sv": "Jag gör det nu.", "fr": "Je le fais maintenant.", "pron": "ya yœr dé nou" },
+            { "sv": "Jag gjorde det i går.", "fr": "Je l’ai fait hier (passé simple).", "pron": "ya your-dé dé i yôr" },
+            { "sv": "Jag har gjort det.", "fr": "Je l’ai fait (parfait).", "pron": "ya har yourt dé" },
+            { "sv": "Vi hade gjort allt.", "fr": "Nous avions tout fait.", "pron": "vi hâ-dé yourt âlt" }
+          ],
+          "vocab": [
+            { "sv": "nu", "fr": "maintenant", "pron": "nou" },
+            { "sv": "allt", "fr": "tout", "pron": "âlt" }
+          ]
+        },
 
-    { "inf": "köpa", "pres": "köper", "pret": "köpte", "sup": "köpt", "imp": "köp", "fr": "acheter", "pron": "tcheu-pa • tcheu-pèr • tcheup-tè • tcheup-t • tcheup" },
-    { "inf": "betala", "pres": "betalar", "pret": "betalade", "sup": "betalat", "imp": "betala", "fr": "payer", "pron": "bé-ta-la • bé-ta-lar • bé-ta-la-dè • bé-ta-lat • bé-ta-la" },
-    { "inf": "sälja", "pres": "säljer", "pret": "sålde", "sup": "sålt", "imp": "sälj", "fr": "vendre", "pron": "sèl-ya • sèl-yer • seul-dè • seult • sèl" },
-    { "inf": "hjälpa", "pres": "hjälper", "pret": "hjälpte", "sup": "hjälpt", "imp": "hjälp", "fr": "aider", "pron": "yèl-pa • yèl-pèr • yèlp-tè • yèlp-t • yèlp" },
-    { "inf": "titta", "pres": "tittar", "pret": "tittade", "sup": "tittat", "imp": "titta", "fr": "regarder", "pron": "tit-ta • tit-tar • tit-ta-dè • tit-tat • tit-ta" },
-    { "inf": "visa", "pres": "visar", "pret": "visade", "sup": "visat", "imp": "visa", "fr": "montrer", "pron": "vi-sa • vi-sar • vi-sa-dè • vi-sat • vi-sa" },
-    { "inf": "hitta", "pres": "hittar", "pret": "hittade", "sup": "hittat", "imp": "hitta", "fr": "trouver", "pron": "hit-ta • hit-tar • hit-ta-dè • hit-tat • hit-ta" },
-    { "inf": "leta", "pres": "letar", "pret": "letade", "sup": "letat", "imp": "leta", "fr": "chercher", "pron": "lé-ta • lé-tar • lé-ta-dè • lé-tat • lé-ta" },
+        {
+          "id": "v2_vara",
+          "title": "Vara — être (irré-gulier fondamental)",
+          "content": [
+            "Formes :",
+            "• Infinitif : vara (être)",
+            "• Présent : är",
+            "• Prétérit : var",
+            "• Supin : varit",
+            "• Impératif : var!",
+            "",
+            "Ultra fréquent : identité, état, localisation, profession.",
+            "Attention prononciation :",
+            "• jag = 'ya' (le g ne se prononce pas)",
+            "• är se prononce souvent 'èr' (r léger)."
+          ],
+          "examples": [
+            { "sv": "Jag är trött.", "fr": "Je suis fatigué.", "pron": "ya èr trœtt" },
+            { "sv": "Hon är lärare.", "fr": "Elle est prof.", "pron": "hon èr lè-ra-ré" },
+            { "sv": "Var är du?", "fr": "Où es-tu ?", "pron": "vâr èr dou" },
+            { "sv": "Jag var hemma i går.", "fr": "J'étais à la maison hier.", "pron": "ya vâr hém-ma i yôr" },
+            { "sv": "Jag har varit i Stockholm.", "fr": "J'ai été à Stockholm.", "pron": "ya har vârit i stôk-holm" }
+          ],
+          "vocab": [
+            { "sv": "trött", "fr": "fatigué", "pron": "trœtt" },
+            { "sv": "hemma", "fr": "à la maison", "pron": "hém-ma" },
+            { "sv": "lärare", "fr": "professeur", "pron": "lè-ra-ré" }
+          ]
+        },
 
-    { "inf": "ringa", "pres": "ringer", "pret": "ringde", "sup": "ringt", "imp": "ring", "fr": "appeler (téléphone)", "pron": "rin-ga • rin-gèr • ring-dè • ring-t • ring" },
-    { "inf": "skriva", "pres": "skriver", "pret": "skrev", "sup": "skrivit", "imp": "skriv", "fr": "écrire", "pron": "skri-va • skri-vèr • skrèv • skri-vit • skriv" },
-    { "inf": "läsa", "pres": "läser", "pret": "läste", "sup": "läst", "imp": "läs", "fr": "lire", "pron": "lè-sa • lè-sèr • lèss-tè • lèss-t • lèss" },
-    { "inf": "skicka", "pres": "skickar", "pret": "skickade", "sup": "skickat", "imp": "skicka", "fr": "envoyer", "pron": "chi-ka • chi-kar • chi-ka-dè • chi-kat • chi-ka" },
+        {
+          "id": "v3_ha",
+          "title": "Ha — avoir (essentiel)",
+          "content": [
+            "Formes :",
+            "• Infinitif : ha (avoir)",
+            "• Présent : har",
+            "• Prétérit : hade",
+            "• Supin : haft",
+            "• Impératif : ha!",
+            "",
+            "har sert aussi d'auxiliaire du parfait : har gjort, har varit, har gått…"
+          ],
+          "examples": [
+            { "sv": "Jag har tid.", "fr": "J'ai le temps.", "pron": "ya har tid" },
+            { "sv": "Har du pengar?", "fr": "As-tu de l'argent ?", "pron": "har dou pèn-gar" },
+            { "sv": "Jag hade ingen tid.", "fr": "Je n'avais pas de temps.", "pron": "ya hâ-dé in-gen tid" },
+            { "sv": "Jag har haft mycket att göra.", "fr": "J'ai eu beaucoup à faire.", "pron": "ya har haft my-cké att yœ-ra" }
+          ],
+          "vocab": [
+            { "sv": "tid", "fr": "temps", "pron": "tid" },
+            { "sv": "pengar", "fr": "argent", "pron": "pèn-gar" },
+            { "sv": "ingen", "fr": "aucun(e)", "pron": "in-gen" },
+            { "sv": "mycket", "fr": "beaucoup", "pron": "my-ckè (y≈ü)" }
+          ]
+        },
 
-    { "inf": "börja", "pres": "börjar", "pret": "började", "sup": "börjat", "imp": "börja", "fr": "commencer", "pron": "beur-ya • beur-yar • beur-ya-dè • beur-yat • beur-ya" },
-    { "inf": "sluta", "pres": "slutar", "pret": "slutade", "sup": "slutat", "imp": "sluta", "fr": "finir / arrêter", "pron": "slou-ta • slou-tar • slou-ta-dè • slou-tat • slou-ta" },
-    { "inf": "stanna", "pres": "stannar", "pret": "stannade", "sup": "stannat", "imp": "stanna", "fr": "rester / s’arrêter", "pron": "stan-na • stan-nar • stan-na-dè • stan-nat • stan-na" },
+        {
+          "id": "v4_gora",
+          "title": "Göra — faire",
+          "content": [
+            "Formes : göra – gör – gjorde – gjort",
+            "Très utile pour : faire, rendre (göra någon glad), bricoler, préparer…",
+            "",
+            "Expression 20/80 :",
+            "• Vad gör du? = Qu'est-ce que tu fais ?",
+            "• Jag gör det senare. = Je le fais plus tard."
+          ],
+          "examples": [
+            { "sv": "Vad gör du?", "fr": "Qu'est-ce que tu fais ?", "pron": "vâd yœr dou" },
+            { "sv": "Jag gör en kaffe.", "fr": "Je fais un café.", "pron": "ya yœr èn kâf-fé" },
+            { "sv": "Jag gjorde det snabbt.", "fr": "Je l'ai fait vite.", "pron": "ya your-dé dé snabt" },
+            { "sv": "Jag har gjort mitt bästa.", "fr": "J'ai fait de mon mieux.", "pron": "ya har yourt mitt bès-ta" }
+          ],
+          "vocab": [
+            { "sv": "snabbt", "fr": "vite", "pron": "snabt" },
+            { "sv": "mitt bästa", "fr": "mon mieux", "pron": "mitt bès-ta" }
+          ]
+        },
 
-    { "inf": "öppna", "pres": "öppnar", "pret": "öppnade", "sup": "öppnat", "imp": "öppna", "fr": "ouvrir", "pron": "eup-na • eup-nar • eup-na-dè • eup-nat • eup-na" },
-    { "inf": "stänga", "pres": "stänger", "pret": "stängde", "sup": "stängt", "imp": "stäng", "fr": "fermer", "pron": "stèng-a • stèng-èr • stèng-dè • stèng-t • stèng" },
+        {
+          "id": "v5_ga_komma",
+          "title": "Gå & Komma — aller / venir (les plus utiles)",
+          "content": [
+            "Gå (aller / marcher) : gå – går – gick – gått",
+            "Komma (venir / arriver) : komma – kommer – kom – kommit",
+            "",
+            "Très fréquents dans la vie quotidienne :",
+            "• Jag går hem. (je rentre à pied / je vais à la maison)",
+            "• Jag kommer snart. (j'arrive bientôt)",
+            "",
+            "Attention : 'går' sert aussi pour des choses qui 'marchent/fonctionnent'."
+          ],
+          "examples": [
+            { "sv": "Jag går hem nu.", "fr": "Je rentre à la maison maintenant.", "pron": "ya gour hém nou" },
+            { "sv": "Jag gick hem i går.", "fr": "Je suis rentré hier.", "pron": "ya yick hém i yôr" },
+            { "sv": "Jag har gått.", "fr": "Je suis allé / j’ai marché.", "pron": "ya har gott" },
+            { "sv": "Jag kommer om fem minuter.", "fr": "J'arrive dans cinq minutes.", "pron": "ya kom-mèr om fém mi-nou-tèr" },
+            { "sv": "Han kom sent.", "fr": "Il est arrivé tard.", "pron": "han kom sènt" },
+            { "sv": "Vi har kommit hem.", "fr": "Nous sommes rentrés.", "pron": "vi har kom-mit hém" }
+          ],
+          "vocab": [
+            { "sv": "snart", "fr": "bientôt", "pron": "snart" },
+            { "sv": "sent", "fr": "tard", "pron": "sènt" },
+            { "sv": "minut", "fr": "minute", "pron": "mi-nout" }
+          ]
+        },
 
-    { "inf": "behöva", "pres": "behöver", "pret": "behövde", "sup": "behövt", "imp": "behöv", "fr": "avoir besoin", "pron": "bé-heu-va • bé-heu-vèr • bé-heu-vdè • bé-heu-vt • bé-heuv" },
-    { "inf": "använda", "pres": "använder", "pret": "använde", "sup": "använt", "imp": "använd", "fr": "utiliser", "pron": "an-vèn-da • an-vèn-dèr • an-vèn-dè • an-vèn-t • an-vènd" },
-    { "inf": "fungera", "pres": "fungerar", "pret": "fungerade", "sup": "fungerat", "imp": "fungera", "fr": "fonctionner", "pron": "foun-yé-ra • foun-yé-rar • foun-yé-ra-dè • foun-yé-rat • foun-yé-ra" }
-  ],
+        {
+          "id": "v6_saga_fa_vilja",
+          "title": "Säga, Få, Vilja — dire / obtenir / vouloir",
+          "content": [
+            "Säga (dire) : säga – säger – sa – sagt",
+            "Få (recevoir / pouvoir obtenir) : få – får – fick – fått",
+            "Vilja (vouloir) : vilja – vill – ville – velat",
+            "",
+            "Formules 20/80 :",
+            "• Jag vill ha… (Je veux…)",
+            "• Kan jag få…? (Est-ce que je peux avoir… ?)",
+            "• Vad sa du? (Qu’est-ce que tu as dit ?)"
+          ],
+          "examples": [
+            { "sv": "Jag säger det nu.", "fr": "Je le dis maintenant.", "pron": "ya sè-yer dé nou" },
+            { "sv": "Vad sa du?", "fr": "Qu’est-ce que tu as dit ?", "pron": "vâd sâ dou" },
+            { "sv": "Jag har sagt det.", "fr": "Je l’ai dit.", "pron": "ya har sakt dé" },
+            { "sv": "Jag får ett mail.", "fr": "Je reçois un mail.", "pron": "ya for ètt méyl" },
+            { "sv": "Jag fick en idé.", "fr": "J'ai eu une idée.", "pron": "ya fick èn i-dé" },
+            { "sv": "Jag vill ha en kaffe.", "fr": "Je veux un café.", "pron": "ya vill hâ èn kâf-fé" }
+          ],
+          "vocab": [
+            { "sv": "idé", "fr": "idée", "pron": "i-dé" },
+            { "sv": "mail", "fr": "mail", "pron": "méyl" }
+          ]
+        },
 
-  "phrasalVerbs": [
-    { "inf": "gå ut", "pres": "går ut", "pret": "gick ut", "sup": "gått ut", "imp": "gå ut", "fr": "sortir (dehors)", "pron": "go out • gor out • yik out • gott out • go out" },
-    { "inf": "gå in", "pres": "går in", "pret": "gick in", "sup": "gått in", "imp": "gå in", "fr": "entrer", "pron": "go inn • gor inn • yik inn • gott inn • go inn" },
-    { "inf": "komma in", "pres": "kommer in", "pret": "kom in", "sup": "kommit in", "imp": "kom in", "fr": "entrer (venir à l’intérieur)", "pron": "kommèr inn • kom inn • kom-mit inn • kom inn" },
-    { "inf": "komma tillbaka", "pres": "kommer tillbaka", "pret": "kom tillbaka", "sup": "kommit tillbaka", "imp": "kom tillbaka", "fr": "revenir", "pron": "kommèr till-ba-ka • kom till-ba-ka • kom-mit till-ba-ka • kom till-ba-ka" },
+        {
+          "id": "v7_modal_kan_ska_maste",
+          "title": "Modaux 20/80 : kan, ska, måste, bör",
+          "content": [
+            "Les verbes modaux sont ultra fréquents et suivent souvent :",
+            "• modal + infinitif (sans 'att')",
+            "Ex : Jag kan komma. (Je peux venir.)",
+            "",
+            "kan (pouvoir / savoir) : kan – kunde – kunnat",
+            "ska (devoir / intention / futur proche) : ska – skulle – skolat (rare)",
+            "måste (devoir obligation) : måste (présent) – måste (passé souvent 'var tvungen att')",
+            "bör (devrait) : bör – borde – bort",
+            "",
+            "Différence clé :",
+            "• ska = intention / plan / devoir social",
+            "• måste = obligation forte"
+          ],
+          "examples": [
+            { "sv": "Jag kan prata lite.", "fr": "Je peux parler un peu.", "pron": "ya kan prâ-ta li-tè" },
+            { "sv": "Jag ska åka nu.", "fr": "Je vais partir maintenant.", "pron": "ya ska o-ka nou" },
+            { "sv": "Du måste komma.", "fr": "Tu dois venir (obligation).", "pron": "dou mœs-tè kom-ma" },
+            { "sv": "Jag borde sova.", "fr": "Je devrais dormir.", "pron": "ya bour-dé sou-va" }
+          ],
+          "vocab": [
+            { "sv": "lite", "fr": "un peu", "pron": "li-tè" },
+            { "sv": "åka", "fr": "aller (en transport)", "pron": "o-ka" },
+            { "sv": "sova", "fr": "dormir", "pron": "sou-va" }
+          ]
+        }
+      ]
+    },
 
-    { "inf": "ta med", "pres": "tar med", "pret": "tog med", "sup": "tagit med", "imp": "ta med", "fr": "emmener / apporter (avec soi)", "pron": "tar mèd • tog mèd • ta-git mèd • ta mèd" },
-    { "inf": "ta fram", "pres": "tar fram", "pret": "tog fram", "sup": "tagit fram", "imp": "ta fram", "fr": "sortir (de son sac/tiroir)", "pron": "tar fram • tog fram • ta-git fram • ta fram" },
-    { "inf": "ta bort", "pres": "tar bort", "pret": "tog bort", "sup": "tagit bort", "imp": "ta bort", "fr": "enlever", "pron": "tar bort • tog bort • ta-git bort • ta bort" },
+    {
+      "id": "ref_vocab",
+      "title": "2) Vocabulaire 20/80 + accords (en/ett, pluriels, défini)",
+      "lessons": [
+        {
+          "id": "n1_en_ett",
+          "title": "Genre : en / ett — le réflexe (et comment deviner)",
+          "content": [
+            "En suédois, les noms ont 2 genres :",
+            "• en-ord (genre commun) : en bok",
+            "• ett-ord (neutre) : ett hus",
+            "",
+            "Règle pratique : il faut apprendre le nom AVEC son article.",
+            "Astuces (pas 100% fiables, mais utiles) :",
+            "• Beaucoup de mots pour personnes → en (en man, en kvinna, en lärare)",
+            "• Beaucoup de mots en -ande / -else / -het → en (en fråga, en lösning, en möjlighet)",
+            "• Beaucoup d’objets/abstraits courts peuvent être ett (ett barn, ett bord) mais ce n’est pas une règle.",
+            "",
+            "Formes :",
+            "• Indéfini : en bok / ett hus",
+            "• Défini (suffixe) : boken / huset",
+            "• Pluriel indéfini : böcker / hus",
+            "• Pluriel défini : böckerna / husen"
+          ],
+          "examples": [
+            { "sv": "en bok → boken", "fr": "un livre → le livre", "pron": "èn bouk → bou-kèn" },
+            { "sv": "ett hus → huset", "fr": "une maison → la maison", "pron": "ètt hous → hou-sèt" },
+            { "sv": "böckerna", "fr": "les livres", "pron": "bœ-ckèr-na" }
+          ],
+          "vocab": [
+            { "sv": "en bok", "fr": "un livre", "pron": "èn bouk" },
+            { "sv": "ett hus", "fr": "une maison", "pron": "ètt hous" },
+            { "sv": "ett barn", "fr": "un enfant", "pron": "ètt bâr-n" }
+          ]
+        },
 
-    { "inf": "sätta på", "pres": "sätter på", "pret": "satte på", "sup": "satt på", "imp": "sätt på", "fr": "mettre (vêtement) / allumer (appareil)", "pron": "sèt-tèr po • sat-tè po • satt po • sèt po" },
-    { "inf": "stänga av", "pres": "stänger av", "pret": "stängde av", "sup": "stängt av", "imp": "stäng av", "fr": "éteindre", "pron": "stèng-èr av • stèng-dè av • stèng-t av • stèng av" },
-    { "inf": "slå på", "pres": "slår på", "pret": "slog på", "sup": "slagit på", "imp": "slå på", "fr": "allumer (interrupteur)", "pron": "slo po • slog po • sla-git po • slo po" },
+        {
+          "id": "n2_plurals",
+          "title": "Pluriels (les 5 familles principales) + exemples 20/80",
+          "content": [
+            "Les pluriels suédois suivent des familles. Les plus courantes :",
+            "",
+            "1) en-ord → -or : en flicka → flickor (fille)",
+            "2) en-ord → -ar : en bil → bilar (voiture)",
+            "3) en-ord → -er : en telefon → telefoner",
+            "4) ett-ord → -n / -en : ett äpple → äpplen ; ett öga → ögon",
+            "5) zéro (inchangé) : ett hus → hus",
+            "",
+            "Ensuite forme définie pluriel : -na / -en",
+            "• flickorna, bilarna, telefonerna, äpplena, husen"
+          ],
+          "examples": [
+            { "sv": "en flicka → flickor → flickorna", "fr": "une fille → des filles → les filles", "pron": "èn fli-ckâ → fli-ckor → fli-ckor-na" },
+            { "sv": "en bil → bilar → bilarna", "fr": "une voiture → des voitures → les voitures", "pron": "èn bil → bi-lar → bi-lar-na" },
+            { "sv": "ett hus → hus → husen", "fr": "une maison → des maisons → les maisons", "pron": "ètt hous → hous → hou-sèn" }
+          ],
+          "vocab": [
+            { "sv": "en bil", "fr": "une voiture", "pron": "èn bil" },
+            { "sv": "en telefon", "fr": "un téléphone", "pron": "èn tè-lè-fon" },
+            { "sv": "ett äpple", "fr": "une pomme", "pron": "ètt èp-plè" }
+          ]
+        },
 
-    { "inf": "vakna upp", "pres": "vaknar upp", "pret": "vaknade upp", "sup": "vaknat upp", "imp": "vakna upp", "fr": "se réveiller (complètement)", "pron": "vak-nar upp • vak-na-dè upp • vak-nat upp • vak-na upp" },
-    { "inf": "klä på sig", "pres": "klär på sig", "pret": "klädde på sig", "sup": "klätt på sig", "imp": "klä på dig", "fr": "s’habiller", "pron": "klèr po sèï • klèd-dè po sèï • klètt po sèï • klé po dèï" },
-    { "inf": "ta av sig", "pres": "tar av sig", "pret": "tog av sig", "sup": "tagit av sig", "imp": "ta av dig", "fr": "enlever (vêtement)", "pron": "tar av sèï • tog av sèï • ta-git av sèï • ta av dèï" },
+        {
+          "id": "n3_demonstratives_possessives",
+          "title": "Articles + démonstratifs + possessifs (ce/cette/ces, mon/ma/mes)",
+          "content": [
+            "Démonstratifs :",
+            "• den (ce/cette) + en-ord défini : den här boken (ce livre-ci)",
+            "• det (ce/cette) + ett-ord défini : det här huset",
+            "• de (ces) + pluriel défini : de här böckerna",
+            "",
+            "Possessifs (indéfini) :",
+            "• min/mitt/mina = mon/ma/mes",
+            "• din/ditt/dina = ton/ta/tes",
+            "• hans / hennes / dess = son/sa/ses (selon possesseur)",
+            "",
+            "Très fréquent : possessif + nom indéfini :",
+            "• min bok, mitt hus, mina böcker"
+          ],
+          "examples": [
+            { "sv": "den här boken", "fr": "ce livre-ci", "pron": "dèn hèr bou-kèn" },
+            { "sv": "det här huset", "fr": "cette maison-ci", "pron": "dè hèr hou-sèt" },
+            { "sv": "de här barnen", "fr": "ces enfants", "pron": "dé hèr bâr-nèn" },
+            { "sv": "min bok / mitt hus / mina böcker", "fr": "mon livre / ma maison / mes livres", "pron": "min bouk / mitt hous / mi-na bœ-ckèr" }
+          ],
+          "vocab": [
+            { "sv": "den här", "fr": "ce/cette …-ci", "pron": "dèn hèr" },
+            { "sv": "det här", "fr": "ce/cette …-ci (neutre)", "pron": "dè hèr" },
+            { "sv": "de här", "fr": "ces …-ci", "pron": "dé hèr" }
+          ]
+        },
 
-    { "inf": "titta på", "pres": "tittar på", "pret": "tittade på", "sup": "tittat på", "imp": "titta på", "fr": "regarder (un film, etc.)", "pron": "tit-tar po • tit-ta-dè po • tit-tat po • tit-ta po" },
-    { "inf": "lyssna på", "pres": "lyssnar på", "pret": "lyssnade på", "sup": "lyssnat på", "imp": "lyssna på", "fr": "écouter (musique, etc.)", "pron": "lüs-nar po • lüs-na-dè po • lüs-nat po • lüs-na po" },
+        {
+          "id": "n4_core_200",
+          "title": "Vocabulaire 20/80 — les mots ultra fréquents (thèmes)",
+          "content": [
+            "But : te donner une base 20/80 (ce que tu verras et utiliseras tout le temps).",
+            "Astuce : apprends en collocations (mots qui vont ensemble) :",
+            "• ha tid (avoir le temps), göra fel (faire une erreur), ta en paus (faire une pause)",
+            "",
+            "Thèmes :",
+            "1) Personnes : jag, du, han, hon, vi, ni, de",
+            "2) Temps : nu, idag, i går, imorgon, ofta, alltid, ibland",
+            "3) Lieu : här, där, hemma, hit, dit",
+            "4) Connecteurs : och, men, för att, därför, eftersom",
+            "5) Vie quotidienne : mat, vatten, kaffe, jobb, pengar, bil, buss, tåg"
+          ],
+          "examples": [
+            { "sv": "Jag är här nu.", "fr": "Je suis ici maintenant.", "pron": "ya èr hèr nou" },
+            { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yôb-bar i-dâg" },
+            { "sv": "Jag åker hem imorgon.", "fr": "Je rentre demain.", "pron": "ya o-kèr hém i-mor-gon" },
+            { "sv": "Jag gör ofta fel.", "fr": "Je fais souvent des erreurs.", "pron": "ya yœr of-ta fél" }
+          ],
+          "vocab": [
+            { "sv": "idag", "fr": "aujourd’hui", "pron": "i-dâg" },
+            { "sv": "imorgon", "fr": "demain", "pron": "i-mor-gon" },
+            { "sv": "ofta", "fr": "souvent", "pron": "of-ta" },
+            { "sv": "ibland", "fr": "parfois", "pron": "i-bland" },
+            { "sv": "därför", "fr": "donc / c'est pourquoi", "pron": "dèr-fœr" },
+            { "sv": "eftersom", "fr": "parce que", "pron": "èf-tèr-som" }
+          ]
+        }
+      ]
+    },
 
-    { "inf": "hålla med", "pres": "håller med", "pret": "höll med", "sup": "hållit med", "imp": "håll med", "fr": "être d’accord", "pron": "heul-lèr mèd • heul mèd • hol-lit mèd • heul mèd" },
-    { "inf": "komma ihåg", "pres": "kommer ihåg", "pret": "kom ihåg", "sup": "kommit ihåg", "imp": "kom ihåg", "fr": "se souvenir / se rappeler", "pron": "kommèr i-hog • kom i-hog • kom-mit i-hog • kom i-hog" },
-    { "inf": "glömma bort", "pres": "glömmer bort", "pret": "glömde bort", "sup": "glömt bort", "imp": "glöm bort", "fr": "oublier complètement", "pron": "gleum-mèr bort • gleum-dè bort • gleum-t bort • gleum bort" }
-  ],
+    {
+      "id": "ref_particles",
+      "title": "3) Verbes à particules (M+) — 20/80 du suédois courant",
+      "lessons": [
+        {
+          "id": "p1_what_are_particles",
+          "title": "Comprendre les verbes à particules (mini-guide)",
+          "content": [
+            "Un verbe à particule = verbe + petit mot (souvent préposition/adverbe) qui change le sens :",
+            "• komma (venir) + på = komma på (trouver / se rappeler)",
+            "• ta (prendre) + reda på = ta reda på (découvrir / se renseigner)",
+            "",
+            "Très important : le sens n'est PAS toujours devinable mot à mot.",
+            "Réflexe : apprendre le bloc entier comme un verbe.",
+            "",
+            "Ordre :",
+            "• Jag kommer på det. (Je m'en souviens / je trouve.)",
+            "• Jag tar reda på det. (Je me renseigne / je découvre.)"
+          ],
+          "examples": [
+            { "sv": "Jag kommer på en idé.", "fr": "Je trouve une idée / J'ai une idée.", "pron": "ya kom-mèr pô en i-dé" },
+            { "sv": "Jag tar reda på det.", "fr": "Je me renseigne / Je découvre.", "pron": "ya târ ré-da pô dé" }
+          ],
+          "vocab": [
+            { "sv": "komma på", "fr": "trouver / se rappeler", "pron": "kom-ma pô" },
+            { "sv": "ta reda på", "fr": "se renseigner / découvrir", "pron": "tâ ré-da pô" }
+          ]
+        },
 
-  "nouns": [
-    { "base": "bok", "indef": "en bok", "def": "boken", "pl_indef": "böcker", "pl_def": "böckerna", "this_sg": "den här boken", "this_pl": "de här böckerna", "fr": "livre", "pron": "bouk • bou-kèn • beuk-èr • beuk-èr-na" },
-    { "base": "bil", "indef": "en bil", "def": "bilen", "pl_indef": "bilar", "pl_def": "bilarna", "this_sg": "den här bilen", "this_pl": "de här bilarna", "fr": "voiture", "pron": "biil • biil-èn • biil-ar • biil-ar-na" },
-    { "base": "stol", "indef": "en stol", "def": "stolen", "pl_indef": "stolar", "pl_def": "stolarna", "this_sg": "den här stolen", "this_pl": "de här stolarna", "fr": "chaise", "pron": "stoul • stou-lèn • stou-lar • stou-lar-na" },
-    { "base": "bord", "indef": "ett bord", "def": "bordet", "pl_indef": "bord", "pl_def": "borden", "this_sg": "det här bordet", "this_pl": "de här borden", "fr": "table", "pron": "bourd • bour-dètt • bourd • bour-dèn" },
-    { "base": "hus", "indef": "ett hus", "def": "huset", "pl_indef": "hus", "pl_def": "husen", "this_sg": "det här huset", "this_pl": "de här husen", "fr": "maison", "pron": "houss • hou-sètt • houss • hou-sèn" },
-    { "base": "lägenhet", "indef": "en lägenhet", "def": "lägenheten", "pl_indef": "lägenheter", "pl_def": "lägenheterna", "this_sg": "den här lägenheten", "this_pl": "de här lägenheterna", "fr": "appartement", "pron": "lè-yèn-hèt • …-èn • …-èr • …-èr-na" },
-    { "base": "rum", "indef": "ett rum", "def": "rummet", "pl_indef": "rum", "pl_def": "rummen", "this_sg": "det här rummet", "this_pl": "de här rummen", "fr": "pièce / chambre", "pron": "roum • rou-mètt • roum • rou-mèn" },
+        {
+          "id": "p2_come_go_take",
+          "title": "Komma / Gå / Ta — les particules les plus utiles",
+          "content": [
+            "Bloc 20/80 :",
+            "• komma in = entrer",
+            "• komma ut = sortir",
+            "• komma fram = arriver (destination)",
+            "• komma tillbaka = revenir",
+            "• gå in = entrer",
+            "• gå ut = sortir",
+            "• gå upp = monter",
+            "• gå ner = descendre",
+            "• ta med = emmener / prendre avec soi",
+            "• ta av = enlever (vêtement)",
+            "• ta på = mettre (vêtement)",
+            "• ta över = reprendre / prendre le contrôle"
+          ],
+          "examples": [
+            { "sv": "Kom in!", "fr": "Entre !", "pron": "kom in" },
+            { "sv": "Jag går ut nu.", "fr": "Je sors maintenant.", "pron": "ya gour out nou" },
+            { "sv": "Vi kom fram sent.", "fr": "Nous sommes arrivés tard.", "pron": "vi kom frâm sènt" },
+            { "sv": "Ta med ditt pass.", "fr": "Prends ton passeport avec toi.", "pron": "tâ mé ditt pass" },
+            { "sv": "Jag tar av mig jackan.", "fr": "J'enlève ma veste.", "pron": "ya târ âv méy yâ-ckân" }
+          ],
+          "vocab": [
+            { "sv": "komma in", "fr": "entrer", "pron": "kom-ma in" },
+            { "sv": "komma fram", "fr": "arriver (destination)", "pron": "kom-ma frâm" },
+            { "sv": "ta med", "fr": "emmener / prendre avec", "pron": "tâ mé" },
+            { "sv": "ta av", "fr": "enlever", "pron": "tâ âv" },
+            { "sv": "ta på", "fr": "mettre (vêtement)", "pron": "tâ pô" }
+          ]
+        },
 
-    { "base": "barn", "indef": "ett barn", "def": "barnet", "pl_indef": "barn", "pl_def": "barnen", "this_sg": "det här barnet", "this_pl": "de här barnen", "fr": "enfant", "pron": "barn • bar-nètt • barn • bar-nèn" },
-    { "base": "vän", "indef": "en vän", "def": "vännen", "pl_indef": "vänner", "pl_def": "vännerna", "this_sg": "den här vännen", "this_pl": "de här vännerna", "fr": "ami", "pron": "vèn • vèn-nèn • vèn-nèr • vèn-nèr-na" },
-    { "base": "familj", "indef": "en familj", "def": "familjen", "pl_indef": "familjer", "pl_def": "familjerna", "this_sg": "den här familjen", "this_pl": "de här familjerna", "fr": "famille", "pron": "fa-mil-ye • fa-mil-yèn • fa-mil-yèr" },
-
-    { "base": "jobb", "indef": "ett jobb", "def": "jobbet", "pl_indef": "jobb", "pl_def": "jobben", "this_sg": "det här jobbet", "this_pl": "de här jobben", "fr": "travail/emploi", "pron": "yobb • yob-bètt • yobb • yob-bèn" },
-    { "base": "chef", "indef": "en chef", "def": "chefen", "pl_indef": "chefer", "pl_def": "cheferna", "this_sg": "den här chefen", "this_pl": "de här cheferna", "fr": "chef (manager)", "pron": "chèf • chè-fèn • chè-fèr" },
-    { "base": "möte", "indef": "ett möte", "def": "mötet", "pl_indef": "möten", "pl_def": "mötena", "this_sg": "det här mötet", "this_pl": "de här mötena", "fr": "réunion", "pron": "meu-tè • meu-tètt • meu-tèn • meu-tè-na" },
-
-    { "base": "butik", "indef": "en butik", "def": "butiken", "pl_indef": "butiker", "pl_def": "butikerna", "this_sg": "den här butiken", "this_pl": "de här butikerna", "fr": "magasin", "pron": "bou-tik • bou-ti-kèn • bou-ti-kèr • bou-ti-kèr-na" },
-    { "base": "pris", "indef": "ett pris", "def": "priset", "pl_indef": "priser", "pl_def": "priserna", "this_sg": "det här priset", "this_pl": "de här priserna", "fr": "prix", "pron": "priis • pri-sètt • pri-sèr • pri-sèr-na" },
-    { "base": "pengar", "indef": "pengar", "def": "pengarna", "pl_indef": "pengar", "pl_def": "pengarna", "this_sg": "de här pengarna", "this_pl": "de här pengarna", "fr": "argent", "pron": "pèng-ar • pèng-ar-na" },
-
-    { "base": "telefon", "indef": "en telefon", "def": "telefonen", "pl_indef": "telefoner", "pl_def": "telefonerna", "this_sg": "den här telefonen", "this_pl": "de här telefonerna", "fr": "téléphone", "pron": "té-lé-fon • …-èn • …-èr • …-èr-na" },
-    { "base": "mejl", "indef": "ett mejl", "def": "mejlet", "pl_indef": "mejl", "pl_def": "mejlen", "this_sg": "det här mejlet", "this_pl": "de här mejlen", "fr": "mail", "pron": "mèïl • mèï-lèt • mèïl • mèï-lèn" },
-
-    { "base": "dag", "indef": "en dag", "def": "dagen", "pl_indef": "dagar", "pl_def": "dagarna", "this_sg": "den här dagen", "this_pl": "de här dagarna", "fr": "jour", "pron": "dag • da-gèn • da-gar • da-gar-na" },
-    { "base": "tid", "indef": "en tid", "def": "tiden", "pl_indef": "tider", "pl_def": "tiderna", "this_sg": "den här tiden", "this_pl": "de här tiderna", "fr": "temps (durée)", "pron": "tiid • tii-dèn • tii-dèr • tii-dèr-na" },
-    { "base": "år", "indef": "ett år", "def": "året", "pl_indef": "år", "pl_def": "åren", "this_sg": "det här året", "this_pl": "de här åren", "fr": "an/année", "pron": "or • o-rètt • or • o-rèn" },
-
-    { "base": "mat", "indef": "mat", "def": "maten", "pl_indef": "—", "pl_def": "—", "this_sg": "den här maten", "this_pl": "—", "fr": "nourriture", "pron": "maat • maa-tèn" },
-    { "base": "vatten", "indef": "vatten", "def": "vattnet", "pl_indef": "—", "pl_def": "—", "this_sg": "det här vattnet", "this_pl": "—", "fr": "eau", "pron": "vat-tèn • vat-nètt" },
-    { "base": "kaffe", "indef": "kaffe", "def": "kaffet", "pl_indef": "—", "pl_def": "—", "this_sg": "det här kaffet", "this_pl": "—", "fr": "café", "pron": "ka-fé • ka-fèt" },
-
-    { "base": "restaurang", "indef": "en restaurang", "def": "restaurangen", "pl_indef": "restauranger", "pl_def": "restaurangerna", "this_sg": "den här restaurangen", "this_pl": "de här restaurangerna", "fr": "restaurant", "pron": "rès-tau-rang • …-èn • …-èr • …-èr-na" },
-    { "base": "nota", "indef": "notan", "def": "notan", "pl_indef": "notor", "pl_def": "notorna", "this_sg": "den här notan", "this_pl": "de här notorna", "fr": "addition", "pron": "nou-ta • nou-tan • nou-tor • nou-tor-na" },
-
-    { "base": "tåg", "indef": "ett tåg", "def": "tåget", "pl_indef": "tåg", "pl_def": "tågen", "this_sg": "det här tåget", "this_pl": "de här tågen", "fr": "train", "pron": "tog • to-gètt • tog • to-gèn" },
-    { "base": "buss", "indef": "en buss", "def": "bussen", "pl_indef": "bussar", "pl_def": "bussarna", "this_sg": "den här bussen", "this_pl": "de här bussarna", "fr": "bus", "pron": "bouss • bou-sèn • bou-sar • bou-sar-na" },
-    { "base": "flygplats", "indef": "en flygplats", "def": "flygplatsen", "pl_indef": "flygplatser", "pl_def": "flygplatserna", "this_sg": "den här flygplatsen", "this_pl": "de här flygplatserna", "fr": "aéroport", "pron": "flüg-plats • …-èn • …-èr • …-èr-na" }
+        {
+          "id": "p3_think_talk_agree",
+          "title": "Tycka / Tänka / Hålla med — opinions (très fréquent)",
+          "content": [
+            "Verbes utiles :",
+            "• tycka om = aimer (quelque chose)",
+            "• tycka att = penser que / trouver que (opinion)",
+            "• tänka på = penser à (quelqu'un / quelque chose)",
+            "• hålla med = être d'accord",
+            "• hålla med dig = être d'accord avec toi",
+            "",
+            "Différence :",
+            "• Jag tycker om kaffe. = J'aime le café.",
+            "• Jag tycker att det är bra. = Je trouve que c'est bien."
+          ],
+          "examples": [
+            { "sv": "Jag tycker om kaffe.", "fr": "J'aime le café.", "pron": "ya ty-ckèr om kâf-fé" },
+            { "sv": "Jag tycker att det är bra.", "fr": "Je trouve que c’est bien.", "pron": "ya ty-ckèr att dè èr brâ" },
+            { "sv": "Jag tänker på dig.", "fr": "Je pense à toi.", "pron": "ya tèn-kèr pô déy" },
+            { "sv": "Jag håller med.", "fr": "Je suis d’accord.", "pron": "ya hol-lèr mé" }
+          ],
+          "vocab": [
+            { "sv": "tycka om", "fr": "aimer", "pron": "ty-ckâ om" },
+            { "sv": "tycka att", "fr": "penser que / trouver que", "pron": "ty-ckâ att" },
+            { "sv": "hålla med", "fr": "être d'accord", "pron": "hol-lâ mé" }
+          ]
+        }
+      ]
+    }
   ]
 }
