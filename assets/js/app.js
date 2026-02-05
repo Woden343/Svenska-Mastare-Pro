@@ -6,94 +6,74 @@ const App = {
   levels: {},
   levelsOrder: ["A1", "A2", "B1"],
 
-  refData: null,
+  ref: { title: "Références", modules: [] },
 
   async init() {
-    const bind = (id, fn) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      // Support <button> (onclick) + <a href> (hash)
-      el.onclick = (e) => {
-        // si c'est un lien <a>, on laisse le hash faire son boulot
-        // sinon on route nous-même
-        if (el.tagName === "A") return;
-        e.preventDefault();
-        fn();
-      };
-    };
-
-    bind("nav-home", () => Router.go("/"));
-    bind("nav-review", () => Router.go("/review"));
-    bind("nav-ref", () => Router.go("/ref"));
-    bind("nav-stats", () => Router.go("/stats"));
-
     Router.on("/", () => this.viewHome());
     Router.on("/level", (p) => this.viewLevel(p.level));
     Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
-
     Router.on("/review", () => this.viewReview());
     Router.on("/stats", () => this.viewStats());
-
     Router.on("/ref", () => this.viewRef());
     Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
 
-    await this.preloadLevels();
-    if (Object.keys(this.levels).length === 0) return;
+    await this.loadAllData();
 
-    await this.loadRefSafe();     // ✅ ref.json (robuste)
-    this.refreshSrsCards();       // ✅ SRS depuis niveaux
+    // Build SRS cards
+    Storage.upsertCards(SRS.buildCardsFromLevels(this.levels));
 
     Router.start("/");
   },
 
-  async preloadLevels() {
+  async loadAllData() {
+    // levels
     for (const lvl of this.levelsOrder) {
       try {
-        this.levels[lvl] = await this.loadLevel(lvl);
+        this.levels[lvl] = await this.loadJson(`assets/data/${lvl.toLowerCase()}.json`, lvl);
       } catch (e) {
-        console.warn(`[loadLevel] ${lvl} non chargé:`, e.message || e);
+        console.warn("[level] non chargé:", lvl, e.message || e);
       }
+    }
+
+    // ref
+    try {
+      const r = await this.loadJson("assets/data/ref.json", "REF");
+      this.ref = this.normalizeRef(r);
+    } catch (e) {
+      console.warn("[ref] non chargé:", e.message || e);
+      this.ref = { title: "Références", modules: [] };
     }
 
     if (Object.keys(this.levels).length === 0) {
       this.setView(`
         <section class="card">
           <h2>Erreur de chargement</h2>
-          <p class="muted">Aucun niveau n’a pu être chargé. Vérifie <code>assets/data/</code>.</p>
-          <ul>
-            <li><code>assets/data/a1.json</code></li>
-            <li><code>assets/data/a2.json</code></li>
-            <li><code>assets/data/b1.json</code></li>
-          </ul>
+          <p class="muted">Aucun niveau n’a pu être chargé.</p>
+          <p class="muted">Vérifie les fichiers dans <code>assets/data/</code> : a1.json, a2.json, b1.json.</p>
         </section>
       `);
     }
   },
 
-  async loadLevel(level) {
-    const map = {
-      A1: "assets/data/a1.json",
-      A2: "assets/data/a2.json",
-      B1: "assets/data/b1.json"
-    };
-
-    const url = map[level];
-    if (!url) throw new Error(`Niveau non supporté: ${level}`);
-
+  async loadJson(url, fallbackLevel = "") {
     const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) throw new Error(`Impossible de charger ${url} (${res.status})`);
+    if (!res.ok) throw new Error(`Fetch fail ${url} (${res.status})`);
     const json = await res.json();
 
-    return {
-      level: json.level || level,
-      title: json.title || "",
-      modules: Array.isArray(json.modules) ? json.modules : []
-    };
+    // Level normalization (A1/A2/B1)
+    if (fallbackLevel !== "REF") {
+      return {
+        level: json.level || fallbackLevel,
+        title: json.title || "",
+        modules: Array.isArray(json.modules) ? json.modules : []
+      };
+    }
+
+    return json;
   },
 
-  // --------- REF (robuste) ----------
-  normalizeRefJson(json) {
-    // Accepte différentes formes possibles
+  normalizeRef(json) {
+    // accepte modules/sections + lessons/items/entries/fiches
     const root = json?.data ? json.data : json;
 
     const modules =
@@ -111,22 +91,16 @@ const App = {
 
       const moduleId = (m?.id && String(m.id)) || `m${mi + 1}`;
 
-      const normLessons = lessons.map((l, li) => {
-        const lessonId = (l?.id && String(l.id)) || `l${li + 1}`;
-
-        return {
-          id: lessonId,
+      return {
+        id: moduleId,
+        title: m?.title || m?.name || `Module ${mi + 1}`,
+        lessons: lessons.map((l, li) => ({
+          id: (l?.id && String(l.id)) || `l${li + 1}`,
           title: l?.title || l?.name || `Fiche ${li + 1}`,
           content: Array.isArray(l?.content) ? l.content : (l?.content ? [String(l.content)] : []),
           vocab: Array.isArray(l?.vocab) ? l.vocab : [],
           examples: Array.isArray(l?.examples) ? l.examples : []
-        };
-      });
-
-      return {
-        id: moduleId,
-        title: m?.title || m?.name || `Module ${mi + 1}`,
-        lessons: normLessons
+        }))
       };
     });
 
@@ -136,41 +110,18 @@ const App = {
     };
   },
 
-  async loadRefSafe() {
-    try {
-      const res = await fetch("assets/data/ref.json", { cache: "no-store" });
-      if (!res.ok) throw new Error(`Impossible de charger ref.json (${res.status})`);
-      const json = await res.json();
-
-      this.refData = this.normalizeRefJson(json);
-    } catch (e) {
-      console.warn("[ref] ref.json non chargé:", e.message || e);
-      this.refData = null;
-    }
-  },
-
-  // --------- SRS ----------
-  refreshSrsCards() {
-    const cards = SRS.buildCardsFromLevels(this.levels);
-    Storage.upsertCards(cards);
-  },
-
   setView(html) {
     this.mount.innerHTML = html;
   },
 
-  getLevelData(level) {
-    return this.levels[level] || null;
-  },
-
-  // --------- HOME ----------
+  // ---------- HOME ----------
   viewHome() {
     const s = Storage.load();
     const doneCount = Object.keys(s.done).length;
-    const srsStats = Storage.getSrsStats();
+    const st = Storage.getSrsStats();
 
     const levelCards = this.levelsOrder
-      .map(lvl => this.getLevelData(lvl))
+      .map(l => this.levels[l])
       .filter(Boolean)
       .map(L => `
         <div class="card">
@@ -184,34 +135,35 @@ const App = {
     this.setView(`
       <section class="card">
         <h2>Bienvenue 👋</h2>
-        <p class="muted">Objectif : apprendre le suédois de zéro (A1 → C2) avec cours + exercices + révision.</p>
+        <p class="muted">Objectif : apprendre le suédois (A1 → C2) avec cours + exercices + SRS.</p>
 
         <div class="kpi">
           <span class="pill">Leçons validées : <b>${doneCount}</b></span>
-          <span class="pill">Bonnes réponses : <b>${s.stats.correct}</b></span>
+          <span class="pill">Bonnes : <b>${s.stats.correct}</b></span>
           <span class="pill">Erreurs : <b>${s.stats.wrong}</b></span>
         </div>
 
         <hr />
 
         <div class="kpi">
-          <span class="pill">Cartes SRS : <b>${srsStats.total}</b></span>
-          <span class="pill">À réviser : <b>${srsStats.due}</b></span>
-          <span class="pill">Limite/jour : <b>${srsStats.dailyLimit}</b></span>
+          <span class="pill">Cartes SRS : <b>${st.total}</b></span>
+          <span class="pill">À réviser : <b>${st.due}</b></span>
+          <span class="pill">Limite/jour : <b>${st.dailyLimit}</b></span>
         </div>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/review')">🎴 Révision SRS</button>
-          <button class="btn" onclick="Router.go('/ref')" ${this.refData ? "" : "disabled"}>📚 Références</button>
+          <button class="btn" onclick="Router.go('/review')">🎴 Révision</button>
+          <button class="btn" onclick="Router.go('/ref')" ${this.ref.modules.length ? "" : ""}>📚 Références</button>
+          <button class="btn" onclick="Router.go('/stats')">📈 Stats</button>
         </div>
       </section>
 
       <section class="grid grid-2" style="margin-top:12px;">
         <div class="card">
           <span class="pill">Références</span>
-          <h3 style="margin-top:10px;">Bescherelle & Vocab</h3>
-          <p class="muted">${this.refData ? `Modules : ${(this.refData.modules || []).length}` : "ref.json non chargé"}</p>
-          <button class="btn" onclick="Router.go('/ref')" ${this.refData ? "" : "disabled"}>Ouvrir</button>
+          <h3 style="margin-top:10px;">${this.ref.title || "Références"}</h3>
+          <p class="muted">Modules : ${(this.ref.modules || []).length}</p>
+          <button class="btn" onclick="Router.go('/ref')">Ouvrir</button>
         </div>
 
         ${levelCards}
@@ -219,15 +171,17 @@ const App = {
     `);
   },
 
-  // --------- LEVEL / LESSON ----------
+  // ---------- LEVEL ----------
   viewLevel(level) {
-    const L = this.getLevelData(level);
-    if (!L) return this.setView(`
-      <section class="card">
-        <h2>Niveau introuvable</h2>
-        <button class="btn" onclick="Router.go('/')">← Retour</button>
-      </section>
-    `);
+    const L = this.levels[level];
+    if (!L) {
+      return this.setView(`
+        <section class="card">
+          <h2>Niveau introuvable</h2>
+          <button class="btn" onclick="Router.go('/')">← Retour</button>
+        </section>
+      `);
+    }
 
     this.setView(`
       <section class="card">
@@ -258,22 +212,28 @@ const App = {
     `);
   },
 
+  // ---------- LESSON ----------
   viewLesson(level, lessonId) {
-    const L = this.getLevelData(level);
+    const L = this.levels[level];
     if (!L) return this.setView(`<section class="card"><h2>Leçon introuvable</h2></section>`);
 
     const lesson = (L.modules || []).flatMap(m => (m.lessons || [])).find(x => x.id === lessonId);
-    if (!lesson) return this.setView(`
-      <section class="card">
-        <h2>Leçon introuvable</h2>
-        <button class="btn" onclick="Router.go('/level',{level:'${L.level}'})">← Retour</button>
-      </section>
-    `);
+    if (!lesson) {
+      return this.setView(`
+        <section class="card">
+          <h2>Leçon introuvable</h2>
+          <button class="btn" onclick="Router.go('/level',{level:'${L.level}'})">← Retour</button>
+        </section>
+      `);
+    }
 
     const contentHtml = (lesson.content || []).map(p => `<p>${p}</p>`).join("");
     const examplesHtml = (lesson.examples || []).map(e => `
       <div class="choice" style="cursor:default;">
-        <div><b>${e.sv || ""}</b><div class="muted">${e.fr || ""}${e.pron ? ` • <i>${e.pron}</i>` : ""}</div></div>
+        <div>
+          <b>${e.sv || ""}</b>
+          <div class="muted">${e.fr || ""}${e.pron ? ` • <i>${e.pron}</i>` : ""}</div>
+        </div>
       </div>
     `).join("");
     const vocabHtml = (lesson.vocab || []).map(w => `
@@ -322,7 +282,6 @@ const App = {
 
     const renderOne = () => {
       const q = quizzes[idx];
-
       host.innerHTML = `
         <div class="card" style="margin-top:10px;">
           <div class="muted" style="margin-bottom:8px;">Exercice ${idx + 1} / ${quizzes.length}</div>
@@ -337,9 +296,8 @@ const App = {
 
       const qbox = host.querySelector("#qbox");
       const fb = host.querySelector("#fb");
-
-      const setFeedback = (ok, extra = "") => { fb.textContent = ok ? `✅ Correct. ${extra}` : `❌ Non. ${extra}`; };
-      const lockIfAnswered = () => answered[idx];
+      const setFeedback = (ok, extra="") => fb.textContent = ok ? `✅ Correct. ${extra}` : `❌ Non. ${extra}`;
+      const locked = () => answered[idx];
 
       if (q.type === "mcq") {
         qbox.innerHTML = `
@@ -351,15 +309,15 @@ const App = {
         const nodes = qbox.querySelectorAll(".choice");
         nodes.forEach(node => {
           node.onclick = () => {
-            if (lockIfAnswered()) return;
+            if (locked()) return;
             const i = Number(node.dataset.i);
             const ok = i === q.answerIndex;
             Storage.addResult(ok);
             answered[idx] = true;
-            nodes.forEach(n => n.classList.remove("correct", "wrong"));
+            nodes.forEach(n => n.classList.remove("correct","wrong"));
             node.classList.add(ok ? "correct" : "wrong");
-            const answer = (q.choices && q.choices[q.answerIndex] != null) ? q.choices[q.answerIndex] : "";
-            setFeedback(ok, ok ? "" : `Réponse : ${answer}`);
+            const ans = (q.choices && q.choices[q.answerIndex] != null) ? q.choices[q.answerIndex] : "";
+            setFeedback(ok, ok ? "" : `Réponse : ${ans}`);
           };
         });
       } else if (q.type === "gap") {
@@ -370,10 +328,10 @@ const App = {
         `;
         const input = qbox.querySelector("#gap");
         qbox.querySelector("#check").onclick = () => {
-          if (lockIfAnswered()) return;
+          if (locked()) return;
           const val = (input.value || "").trim().toLowerCase();
-          const expected = (q.answer || "").trim().toLowerCase();
-          const ok = val === expected;
+          const exp = (q.answer || "").trim().toLowerCase();
+          const ok = val === exp;
           Storage.addResult(ok);
           answered[idx] = true;
           setFeedback(ok, ok ? "" : `Attendu : ${q.answer || ""}`);
@@ -389,10 +347,229 @@ const App = {
     renderOne();
   },
 
-  // --------- REVIEW / STATS (inchangés) ----------
-  viewReview() { Router.go("/review"); }, // garde ta version SRS précédente si tu veux,
-  // (si tu veux, je te remets ton viewReview complet ici aussi, mais on reste focus sur la ref)
+  // ---------- REVIEW (SRS) ----------
+  viewReview() {
+    // refresh SRS cards each time (safe)
+    Storage.upsertCards(SRS.buildCardsFromLevels(this.levels));
 
+    const st = Storage.getSrsStats();
+    const levelOptions = ["ALL", ...this.levelsOrder.filter(l => this.levels[l])];
+    const selected = (window.__reviewLevel && levelOptions.includes(window.__reviewLevel)) ? window.__reviewLevel : "ALL";
+    window.__reviewLevel = selected;
+
+    const due = Storage.getDueCards({ level: selected, limit: st.dailyLimit });
+
+    this.setView(`
+      <section class="card">
+        <h2>Révision SRS 🎴</h2>
+        <p class="muted">Cartes générées depuis tes leçons (vocab + exemples).</p>
+
+        <div class="kpi">
+          <span class="pill">Cartes : <b>${st.total}</b></span>
+          <span class="pill">À réviser : <b>${st.due}</b></span>
+          <span class="pill">Limite/jour : <b>${st.dailyLimit}</b></span>
+        </div>
+
+        <hr />
+
+        <div class="grid grid-2">
+          <div class="card">
+            <label class="muted" style="display:block; margin-bottom:6px;">Niveau</label>
+            <select id="revLevel" style="width:100%; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,.04); color:var(--text); border:1px solid rgba(255,255,255,.10);">
+              ${levelOptions.map(l => `<option value="${l}" ${l===selected?"selected":""}>${l==="ALL"?"Tous":l}</option>`).join("")}
+            </select>
+
+            <div style="margin-top:10px;">
+              <label class="muted" style="display:block; margin-bottom:6px;">Limite / jour (5 → 50)</label>
+              <input id="dailyLimit" type="number" min="5" max="50" value="${st.dailyLimit}" />
+              <button class="btn" style="margin-top:10px;" id="saveLimit">Enregistrer</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Session</h3>
+            <p class="muted">Dues (filtrées) : <b>${due.length}</b></p>
+            <button class="btn" id="start" ${due.length ? "" : "disabled"}>Commencer</button>
+          </div>
+        </div>
+
+        <div id="srsHost" style="margin-top:12px;"></div>
+
+        <div style="margin-top:12px;">
+          <button class="btn" onclick="Router.go('/')">← Retour</button>
+        </div>
+      </section>
+    `);
+
+    document.getElementById("revLevel").onchange = (e) => {
+      window.__reviewLevel = e.target.value;
+      Router.go("/review");
+    };
+
+    document.getElementById("saveLimit").onclick = () => {
+      Storage.setDailyLimit(document.getElementById("dailyLimit").value);
+      Router.go("/review");
+    };
+
+    document.getElementById("start").onclick = () => this.runSrsSession(selected);
+  },
+
+  runSrsSession(level) {
+    const host = document.getElementById("srsHost");
+    if (!host) return;
+
+    const st = Storage.getSrsStats();
+    const cards = Storage.getDueCards({ level, limit: st.dailyLimit });
+    if (!cards.length) {
+      host.innerHTML = `<p class="muted">Aucune carte à réviser.</p>`;
+      return;
+    }
+
+    let idx = 0;
+    let revealed = false;
+
+    const render = () => {
+      const c = cards[idx];
+      const front = SRS.escapeHtml(c.front);
+      const back = SRS.escapeHtml(c.back);
+
+      host.innerHTML = `
+        <div class="card" style="margin-top:12px;">
+          <div class="muted" style="margin-bottom:8px;">Carte ${idx+1} / ${cards.length} • <span class="pill" style="margin-left:8px;">${c.level}</span></div>
+
+          <div>
+            <div class="muted">Recto</div>
+            <div style="font-size:18px; margin-top:6px;"><b>${front}</b></div>
+          </div>
+
+          <div style="margin-top:12px; display:${revealed ? "block":"none"};">
+            <hr />
+            <div class="muted">Verso</div>
+            <div style="font-size:18px; margin-top:6px;"><b>${back}</b></div>
+          </div>
+
+          <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
+            <button class="btn" id="reveal">${revealed ? "Masquer" : "Voir la réponse"}</button>
+            <div style="flex:1;"></div>
+            <button class="btn" id="again" ${revealed ? "" : "disabled"}>🔁 Again</button>
+            <button class="btn" id="hard"  ${revealed ? "" : "disabled"}>😅 Hard</button>
+            <button class="btn" id="good"  ${revealed ? "" : "disabled"}>✅ Good</button>
+            <button class="btn" id="easy"  ${revealed ? "" : "disabled"}>🚀 Easy</button>
+          </div>
+        </div>
+      `;
+
+      host.querySelector("#reveal").onclick = () => { revealed = !revealed; render(); };
+
+      const grade = (g) => {
+        Storage.gradeCard(c.id, g);
+        idx++;
+        revealed = false;
+
+        if (idx >= cards.length) {
+          const st2 = Storage.getSrsStats();
+          host.innerHTML = `
+            <div class="card" style="margin-top:12px;">
+              <h3>Session terminée ✅</h3>
+              <p class="muted">À réviser maintenant : <b>${st2.due}</b></p>
+              <button class="btn" onclick="Router.go('/review')">↻ Retour Révision</button>
+            </div>
+          `;
+          return;
+        }
+        render();
+      };
+
+      host.querySelector("#again").onclick = () => grade("again");
+      host.querySelector("#hard").onclick  = () => grade("hard");
+      host.querySelector("#good").onclick  = () => grade("good");
+      host.querySelector("#easy").onclick  = () => grade("easy");
+    };
+
+    render();
+  },
+
+  // ---------- REF ----------
+  viewRef() {
+    const R = this.ref;
+    const modules = R.modules || [];
+
+    this.setView(`
+      <section class="card">
+        <span class="pill">Références</span>
+        <h2 style="margin-top:10px;">${R.title || "Références"}</h2>
+        <p class="muted">Choisis un module, puis une fiche.</p>
+      </section>
+
+      <section style="margin-top:12px;" class="grid">
+        ${modules.length ? modules.map(m => `
+          <div class="card">
+            <h3>${m.title || "Module"}</h3>
+            <p class="muted">Fiches : ${(m.lessons || []).length}</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              ${(m.lessons || []).map(les => `
+                <button class="btn" onclick="Router.go('/ref-lesson',{moduleId:'${m.id}', lessonId:'${les.id}'})">${les.title || "Fiche"}</button>
+              `).join("")}
+            </div>
+          </div>
+        `).join("") : `
+          <div class="card">
+            <h3>Aucun module trouvé</h3>
+            <p class="muted">Ton <code>ref.json</code> est chargé mais ne contient pas de modules lisibles (modules/sections + lessons/items...).</p>
+          </div>
+        `}
+      </section>
+
+      <div style="margin-top:12px;">
+        <button class="btn" onclick="Router.go('/')">← Retour</button>
+      </div>
+    `);
+  },
+
+  viewRefLesson(moduleId, lessonId) {
+    const mod = (this.ref.modules || []).find(x => x.id === moduleId);
+    const lesson = mod?.lessons?.find(x => x.id === lessonId);
+
+    if (!mod || !lesson) {
+      return this.setView(`
+        <section class="card">
+          <h2>Fiche introuvable</h2>
+          <p class="muted">Vérifie les <code>id</code> dans ref.json.</p>
+          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
+        </section>
+      `);
+    }
+
+    const contentHtml = (lesson.content || []).map(p => `<p>${p}</p>`).join("");
+    const examplesHtml = (lesson.examples || []).map(e => `
+      <div class="choice" style="cursor:default;">
+        <div><b>${e.sv || ""}</b><div class="muted">${e.fr || ""}${e.pron ? ` • <i>${e.pron}</i>` : ""}</div></div>
+      </div>
+    `).join("");
+    const vocabHtml = (lesson.vocab || []).map(w => `
+      <div class="choice" style="cursor:default;">
+        <div style="min-width:130px;"><b>${w.sv || ""}</b></div>
+        <div class="muted">${w.fr || ""}${w.pron ? ` • <i>${w.pron}</i>` : ""}</div>
+      </div>
+    `).join("");
+
+    this.setView(`
+      <section class="card">
+        <span class="pill">Références</span>
+        <h2 style="margin-top:10px;">${lesson.title || "Fiche"}</h2>
+
+        ${contentHtml}
+        ${(lesson.examples && lesson.examples.length) ? `<hr /><h3>Exemples</h3>${examplesHtml}` : ""}
+        ${(lesson.vocab && lesson.vocab.length) ? `<hr /><h3>Vocabulaire</h3>${vocabHtml}` : ""}
+
+        <div style="margin-top:12px;">
+          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
+        </div>
+      </section>
+    `);
+  },
+
+  // ---------- STATS ----------
   viewStats() {
     const s = Storage.load();
     const total = s.stats.correct + s.stats.wrong;
@@ -410,7 +587,6 @@ const App = {
         </div>
 
         <hr />
-
         <h3>SRS</h3>
         <div class="kpi">
           <span class="pill">Cartes : <b>${st.total}</b></span>
@@ -420,111 +596,6 @@ const App = {
 
         <hr />
         <button class="btn" onclick="localStorage.removeItem(Storage.key); location.reload()">Réinitialiser</button>
-      </section>
-    `);
-  },
-
-  // --------- REF views ----------
-  viewRef() {
-    if (!this.refData) {
-      return this.setView(`
-        <section class="card">
-          <h2>Références</h2>
-          <p class="muted">Le fichier <code>assets/data/ref.json</code> n’a pas pu être chargé.</p>
-          <button class="btn" onclick="Router.go('/')">← Retour</button>
-        </section>
-      `);
-    }
-
-    const R = this.refData;
-    const modules = R.modules || [];
-
-    if (modules.length === 0) {
-      return this.setView(`
-        <section class="card">
-          <h2>Références</h2>
-          <p class="muted">${R.title || ""}</p>
-          <hr />
-          <p class="muted">
-            Ton <code>ref.json</code> est chargé, mais je ne trouve aucun module.
-            <br/>Vérifie que ton fichier contient bien <code>modules</code> (ou <code>sections</code>) et à l’intérieur <code>lessons</code> (ou <code>items</code>).
-          </p>
-          <button class="btn" onclick="Router.go('/')">← Retour</button>
-        </section>
-      `);
-    }
-
-    this.setView(`
-      <section class="card">
-        <span class="pill">Références</span>
-        <h2 style="margin-top:10px;">${R.title || "Références"}</h2>
-        <p class="muted">Choisis un module (verbes / vocab / particules), puis une fiche.</p>
-      </section>
-
-      <section style="margin-top:12px;" class="grid">
-        ${modules.map(m => `
-          <div class="card">
-            <h3>${m.title || "Module"}</h3>
-            <p class="muted">Fiches : ${(m.lessons || []).length}</p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-              ${(m.lessons || []).map(les => `
-                <button class="btn" onclick="Router.go('/ref-lesson',{moduleId:'${m.id}', lessonId:'${les.id}'})">
-                  ${les.title || "Fiche"}
-                </button>
-              `).join("")}
-            </div>
-          </div>
-        `).join("")}
-      </section>
-
-      <div style="margin-top:12px;">
-        <button class="btn" onclick="Router.go('/')">← Retour</button>
-      </div>
-    `);
-  },
-
-  viewRefLesson(moduleId, lessonId) {
-    if (!this.refData) return this.viewRef();
-
-    const mod = (this.refData.modules || []).find(x => x.id === moduleId);
-    const lesson = mod?.lessons?.find(x => x.id === lessonId);
-
-    if (!mod || !lesson) {
-      return this.setView(`
-        <section class="card">
-          <h2>Fiche introuvable</h2>
-          <p class="muted">Vérifie les <code>id</code> dans <code>ref.json</code>.</p>
-          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
-        </section>
-      `);
-    }
-
-    const contentHtml = (lesson.content || []).map(p => `<p>${p}</p>`).join("");
-    const vocabHtml = (lesson.vocab || []).map(w => `
-      <div class="choice" style="cursor:default;">
-        <div style="min-width:130px;"><b>${w.sv || ""}</b></div>
-        <div class="muted">${w.fr || ""}${w.pron ? ` • <i>${w.pron}</i>` : ""}</div>
-      </div>
-    `).join("");
-    const examplesHtml = (lesson.examples || []).map(e => `
-      <div class="choice" style="cursor:default;">
-        <div><b>${e.sv || ""}</b><div class="muted">${e.fr || ""}${e.pron ? ` • <i>${e.pron}</i>` : ""}</div></div>
-      </div>
-    `).join("");
-
-    this.setView(`
-      <section class="card">
-        <span class="pill">Références</span>
-        <h2 style="margin-top:10px;">${lesson.title || "Fiche"}</h2>
-
-        ${contentHtml}
-
-        ${(lesson.examples && lesson.examples.length) ? `<hr /><h3>Exemples</h3>${examplesHtml}` : ""}
-        ${(lesson.vocab && lesson.vocab.length) ? `<hr /><h3>Vocabulaire</h3>${vocabHtml}` : ""}
-
-        <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
-          <button class="btn" onclick="Router.go('/ref')">← Retour</button>
-        </div>
       </section>
     `);
   }
