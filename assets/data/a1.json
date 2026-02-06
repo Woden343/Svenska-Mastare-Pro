@@ -1,0 +1,6065 @@
+{
+  "id": "a1_unified_ultra",
+  "title": "Suédois A1 — Version Ultra Complète",
+  "meta": {
+    "pedagogy": "spiral",
+    "focus": [
+      "prononciation",
+      "phrases modèles",
+      "V2",
+      "ska",
+      "articles",
+      "situations réelles"
+    ],
+    "notes": "y se prononce toujours ≈ ü",
+    "level": "A1",
+    "version": "phase_2_ultra_dense"
+  },
+  "modules": [
+    {
+      "id": "basics",
+      "title": "Bases & survie",
+      "lessons": [
+        {
+          "id": "basics_1",
+          "title": "Bases & survie – leçon 1",
+          "content": [
+            "🎯 Bases & survie – leçon 1",
+            "Objectif : Bases & survie – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "basics_2",
+          "title": "Bases & survie – leçon 2",
+          "content": [
+            "🎯 Bases & survie – leçon 2",
+            "Objectif : Bases & survie – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "basics_3",
+          "title": "Bases & survie – leçon 3",
+          "content": [
+            "🎯 Bases & survie – leçon 3",
+            "Objectif : Bases & survie – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "basics_4",
+          "title": "Bases & survie – leçon 4",
+          "content": [
+            "🎯 Bases & survie – leçon 4",
+            "Objectif : Bases & survie – leçon 4",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "basics_5",
+          "title": "Bases & survie – leçon 5",
+          "content": [
+            "🎯 Bases & survie – leçon 5",
+            "Objectif : Bases & survie – leçon 5",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "basics_6",
+          "title": "Bases & survie – leçon 6",
+          "content": [
+            "🎯 Bases & survie – leçon 6",
+            "Objectif : Bases & survie – leçon 6",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pron",
+      "title": "Prononciation",
+      "lessons": [
+        {
+          "id": "pron_1",
+          "title": "Prononciation – leçon 1",
+          "content": [
+            "🎯 Prononciation – leçon 1",
+            "Objectif : Prononciation – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "pron_2",
+          "title": "Prononciation – leçon 2",
+          "content": [
+            "🎯 Prononciation – leçon 2",
+            "Objectif : Prononciation – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "pron_3",
+          "title": "Prononciation – leçon 3",
+          "content": [
+            "🎯 Prononciation – leçon 3",
+            "Objectif : Prononciation – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "pron_4",
+          "title": "Prononciation – leçon 4",
+          "content": [
+            "🎯 Prononciation – leçon 4",
+            "Objectif : Prononciation – leçon 4",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "pron_5",
+          "title": "Prononciation – leçon 5",
+          "content": [
+            "🎯 Prononciation – leçon 5",
+            "Objectif : Prononciation – leçon 5",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nouns",
+      "title": "Noms & articles",
+      "lessons": [
+        {
+          "id": "nouns_1",
+          "title": "Noms & articles – leçon 1",
+          "content": [
+            "🎯 Noms & articles – leçon 1",
+            "Objectif : Noms & articles – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "nouns_2",
+          "title": "Noms & articles – leçon 2",
+          "content": [
+            "🎯 Noms & articles – leçon 2",
+            "Objectif : Noms & articles – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "nouns_3",
+          "title": "Noms & articles – leçon 3",
+          "content": [
+            "🎯 Noms & articles – leçon 3",
+            "Objectif : Noms & articles – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "nouns_4",
+          "title": "Noms & articles – leçon 4",
+          "content": [
+            "🎯 Noms & articles – leçon 4",
+            "Objectif : Noms & articles – leçon 4",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "nouns_5",
+          "title": "Noms & articles – leçon 5",
+          "content": [
+            "🎯 Noms & articles – leçon 5",
+            "Objectif : Noms & articles – leçon 5",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "title": "Adjectifs",
+      "lessons": [
+        {
+          "id": "adjectives_1",
+          "title": "Adjectifs – leçon 1",
+          "content": [
+            "🎯 Adjectifs – leçon 1",
+            "Objectif : Adjectifs – leçon 1",
+            "",
+            "À retenir :",
+            "• Accord simple : en (stor), ett (stort), pluriel (stora).",
+            "• Attention aux exceptions fréquentes (liten/litet/små).",
+            "• Objectif : décrire (grand/petit, nouveau/ancien, etc.).",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "adjectives_2",
+          "title": "Adjectifs – leçon 2",
+          "content": [
+            "🎯 Adjectifs – leçon 2",
+            "Objectif : Adjectifs – leçon 2",
+            "",
+            "À retenir :",
+            "• Accord simple : en (stor), ett (stort), pluriel (stora).",
+            "• Attention aux exceptions fréquentes (liten/litet/små).",
+            "• Objectif : décrire (grand/petit, nouveau/ancien, etc.).",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "adjectives_3",
+          "title": "Adjectifs – leçon 3",
+          "content": [
+            "🎯 Adjectifs – leçon 3",
+            "Objectif : Adjectifs – leçon 3",
+            "",
+            "À retenir :",
+            "• Accord simple : en (stor), ett (stort), pluriel (stora).",
+            "• Attention aux exceptions fréquentes (liten/litet/små).",
+            "• Objectif : décrire (grand/petit, nouveau/ancien, etc.).",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbs",
+      "title": "Verbes essentiels",
+      "lessons": [
+        {
+          "id": "verbs_1",
+          "title": "Verbes essentiels – leçon 1",
+          "content": [
+            "🎯 Verbes essentiels – leçon 1",
+            "Objectif : Verbes essentiels – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "verbs_2",
+          "title": "Verbes essentiels – leçon 2",
+          "content": [
+            "🎯 Verbes essentiels – leçon 2",
+            "Objectif : Verbes essentiels – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "verbs_3",
+          "title": "Verbes essentiels – leçon 3",
+          "content": [
+            "🎯 Verbes essentiels – leçon 3",
+            "Objectif : Verbes essentiels – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "verbs_4",
+          "title": "Verbes essentiels – leçon 4",
+          "content": [
+            "🎯 Verbes essentiels – leçon 4",
+            "Objectif : Verbes essentiels – leçon 4",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time_place",
+      "title": "Temps & lieu",
+      "lessons": [
+        {
+          "id": "time_place_1",
+          "title": "Temps & lieu – leçon 1",
+          "content": [
+            "🎯 Temps & lieu – leçon 1",
+            "Objectif : Temps & lieu – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "time_place_2",
+          "title": "Temps & lieu – leçon 2",
+          "content": [
+            "🎯 Temps & lieu – leçon 2",
+            "Objectif : Temps & lieu – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "time_place_3",
+          "title": "Temps & lieu – leçon 3",
+          "content": [
+            "🎯 Temps & lieu – leçon 3",
+            "Objectif : Temps & lieu – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "situations",
+      "title": "Situations courantes",
+      "lessons": [
+        {
+          "id": "situations_1",
+          "title": "Situations courantes – leçon 1",
+          "content": [
+            "🎯 Situations courantes – leçon 1",
+            "Objectif : Situations courantes – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "situations_2",
+          "title": "Situations courantes – leçon 2",
+          "content": [
+            "🎯 Situations courantes – leçon 2",
+            "Objectif : Situations courantes – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "situations_3",
+          "title": "Situations courantes – leçon 3",
+          "content": [
+            "🎯 Situations courantes – leçon 3",
+            "Objectif : Situations courantes – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Révisions cumulées",
+      "lessons": [
+        {
+          "id": "review_1",
+          "title": "Révisions cumulées – leçon 1",
+          "content": [
+            "🎯 Révisions cumulées – leçon 1",
+            "Objectif : Révisions cumulées – leçon 1",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "review_2",
+          "title": "Révisions cumulées – leçon 2",
+          "content": [
+            "🎯 Révisions cumulées – leçon 2",
+            "Objectif : Révisions cumulées – leçon 2",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "review_3",
+          "title": "Révisions cumulées – leçon 3",
+          "content": [
+            "🎯 Révisions cumulées – leçon 3",
+            "Objectif : Révisions cumulées – leçon 3",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        },
+        {
+          "id": "review_4",
+          "title": "Révisions cumulées – leçon 4",
+          "content": [
+            "🎯 Révisions cumulées – leçon 4",
+            "Objectif : Révisions cumulées – leçon 4",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Exemples clés (à automatiser) :",
+            "• Jag bor i Paris. = J’habite à Paris.",
+            "• Jag ska jobba imorgon. = Je vais travailler demain.",
+            "• Idag jobbar jag. = Aujourd’hui je travaille.",
+            "",
+            "Mini-check :",
+            "• Quiz : Complète : Jag ___",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ],
+          "examples": [
+            {
+              "sv": "Jag bor i Paris.",
+              "fr": "J’habite à Paris.",
+              "pron": "ya bour i pari"
+            },
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yobb-a i-mor-ron"
+            },
+            {
+              "sv": "Idag jobbar jag.",
+              "fr": "Aujourd’hui je travaille.",
+              "pron": "i-dag yobb-ar ya"
+            },
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Var är toaletten?",
+              "fr": "Où sont les toilettes ?",
+              "pron": "var èr tou-a-lèttèn"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan in-tè komm-a"
+            },
+            {
+              "sv": "Vi note: mycket (y≈ü)",
+              "fr": "beaucoup",
+              "pron": "mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Lis puis cache le suédois :",
+              "items": [
+                "Jag bor i Paris.",
+                "Jag ska jobba imorgon.",
+                "Idag jobbar jag.",
+                "Jag gillar kaffe."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___",
+              "answer": "bor"
+            }
+          ],
+          "review": [
+            "Je comprends la règle.",
+            "Je peux dire 3 phrases sans lire."
+          ],
+          "tips": [
+            "Répète à voix haute.",
+            "Change un seul mot pour créer 5 phrases."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micro_patterns",
+      "title": "Micro-patterns fondamentaux",
+      "lessons": [
+        {
+          "id": "mp_1",
+          "title": "Jag är / Jag har / Jag vill",
+          "patterns": [
+            "Jag är trött.",
+            "Jag är här.",
+            "Jag har en bil.",
+            "Jag har tid.",
+            "Jag vill ha kaffe.",
+            "Jag vill inte gå."
+          ],
+          "drills": [
+            "Jag är hemma.",
+            "Jag har en bok.",
+            "Jag vill ha vatten.",
+            "Jag vill inte jobba."
+          ],
+          "content": [
+            "🎯 Jag är / Jag har / Jag vill",
+            "Objectif : Jag är / Jag har / Jag vill",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ]
+        },
+        {
+          "id": "mp_2",
+          "title": "Det är / Det finns",
+          "patterns": [
+            "Det är bra.",
+            "Det är en butik.",
+            "Det finns kaffe.",
+            "Det finns en toalett här."
+          ],
+          "content": [
+            "🎯 Det är / Det finns",
+            "Objectif : Det är / Det finns",
+            "",
+            "À retenir :",
+            "• Apprends en phrases (pas en mots isolés).",
+            "• Répète à voix haute et change un seul mot à la fois.",
+            "• Objectif : automatiser 3 phrases prêtes à l'emploi.",
+            "",
+            "",
+            "Production (30 secondes) :",
+            "• Répète 2 exemples, puis change le sujet (jag/du/han/hon).",
+            "• Re-fais la même chose en négatif si possible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dialogue_bank",
+      "title": "Banque de dialogues courts A1",
+      "dialogs": [
+        {
+          "id": "d1",
+          "sv": [
+            "Hej!",
+            "Hej! Hur mår du?",
+            "Bra, tack. Och du?",
+            "Bra."
+          ]
+        },
+        {
+          "id": "d2",
+          "sv": [
+            "Ursäkta, var är toaletten?",
+            "Där.",
+            "Tack!",
+            "Varsågod."
+          ]
+        },
+        {
+          "id": "d3",
+          "sv": [
+            "Vad ska du göra idag?",
+            "Idag ska jag jobba.",
+            "När slutar du?",
+            "Klockan fem."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oral_only",
+      "title": "Parcours oral uniquement",
+      "blocks": [
+        [
+          "Jag är här.",
+          "Jag är trött.",
+          "Jag är redo."
+        ],
+        [
+          "Jag har kaffe.",
+          "Jag har tid.",
+          "Jag har ett barn."
+        ],
+        [
+          "Jag vill gå.",
+          "Jag vill ha mat.",
+          "Jag vill inte jobba."
+        ]
+      ]
+    },
+    {
+      "id": "phrase_bank_massive",
+      "title": "Banque massive de phrases A1",
+      "phrases": [
+        "Jag bor i Sverige.",
+        "Jag bor i Paris.",
+        "Jag gillar kaffe.",
+        "Jag gillar inte te.",
+        "Jag ska jobba imorgon.",
+        "Idag jobbar jag.",
+        "Imorgon kommer han.",
+        "Vi går till jobbet.",
+        "Jag kommer från Frankrike.",
+        "Det finns en butik här.",
+        "Var är toaletten?",
+        "Jag har två böcker.",
+        "Bilarna är stora.",
+        "Barnen är små.",
+        "Min bil är här.",
+        "Jag kan inte komma.",
+        "Jag måste gå nu.",
+        "Ska du komma?",
+        "Klockan är fem.",
+        "Hur mycket kostar det?"
+      ]
+    }
+  ],
+  "banks": {
+    "sentence_bank": [
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      },
+      {
+        "sv": "Jag bor i Paris.",
+        "fr": "J’habite à Paris.",
+        "pron": "ya bour i pari"
+      },
+      {
+        "sv": "Jag ska jobba imorgon.",
+        "fr": "Je vais travailler demain.",
+        "pron": "ya ska yobb-a i-mor-ron"
+      },
+      {
+        "sv": "Idag jobbar jag.",
+        "fr": "Aujourd’hui je travaille.",
+        "pron": "i-dag yobb-ar ya"
+      },
+      {
+        "sv": "Jag gillar kaffe.",
+        "fr": "J’aime le café.",
+        "pron": "ya yil-lar kafé"
+      },
+      {
+        "sv": "Var är toaletten?",
+        "fr": "Où sont les toilettes ?",
+        "pron": "var èr tou-a-lèttèn"
+      },
+      {
+        "sv": "Jag kan inte komma.",
+        "fr": "Je ne peux pas venir.",
+        "pron": "ya kan in-tè komm-a"
+      },
+      {
+        "sv": "Vi note: mycket (y≈ü)",
+        "fr": "beaucoup",
+        "pron": "mü-kèt"
+      }
+    ],
+    "vocab_core": [
+      {
+        "sv": "kaffe",
+        "fr": "café"
+      },
+      {
+        "sv": "vatten",
+        "fr": "eau"
+      },
+      {
+        "sv": "bil",
+        "fr": "voiture"
+      },
+      {
+        "sv": "hus",
+        "fr": "maison"
+      },
+      {
+        "sv": "mycket",
+        "fr": "beaucoup (y≈ü)"
+      }
+    ]
+  },
+  "engine": {
+    "version": "A1 Phase 3 – Learning Engine",
+    "sentence_engine": {
+      "subjects": [
+        "Jag",
+        "Du",
+        "Han",
+        "Hon",
+        "Vi"
+      ],
+      "modals": [
+        "kan",
+        "vill",
+        "ska",
+        "måste"
+      ],
+      "negation": [
+        "",
+        "inte"
+      ],
+      "actions": [
+        "gå hem",
+        "jobba",
+        "köpa mat",
+        "dricka kaffe"
+      ],
+      "times": [
+        "idag",
+        "imorgon",
+        "nu"
+      ]
+    },
+    "shadowing": [
+      {
+        "sv": "Jag ska gå hem.",
+        "pace": [
+          "slow",
+          "normal",
+          "fast"
+        ]
+      },
+      {
+        "sv": "Du kan inte komma idag.",
+        "pace": [
+          "slow",
+          "normal",
+          "fast"
+        ]
+      },
+      {
+        "sv": "Hon vill dricka kaffe.",
+        "pace": [
+          "slow",
+          "normal",
+          "fast"
+        ]
+      }
+    ],
+    "mini_stories": [
+      {
+        "title": "Anna",
+        "lines": [
+          "Anna vaknar.",
+          "Hon dricker kaffe.",
+          "Idag ska hon jobba.",
+          "Hon går till jobbet."
+        ]
+      }
+    ],
+    "dialogs": [
+      {
+        "A": "Vill du ha kaffe?",
+        "choices": {
+          "Ja": "Bra! Här är kaffe.",
+          "Nej": "Okej, kanske te."
+        }
+      }
+    ],
+    "srs_template": {
+      "ease": 2.5,
+      "interval": 1,
+      "repetitions": 0
+    },
+    "tags": {
+      "cefr": "A1",
+      "skills": [
+        "speaking",
+        "listening",
+        "reading"
+      ]
+    }
+  }
+}
