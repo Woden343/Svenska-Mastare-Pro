@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Svenska Mästare</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Svenska Mästare — Apprentissage progressif du suédois A1→B2">
+  <title>Svenska Mästare Pro</title>
+  
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- ✅ HEADER -->
   <header class="topbar">
-    <div class="brand" style="cursor:pointer" id="nav-home">Svenska Mästare</div>
+    <div class="brand" style="cursor:pointer" id="nav-home">🇸🇪 Svenska Mästare</div>
     <nav class="topnav">
       <button class="btn" id="nav-home-btn">Accueil</button>
       <button class="btn" id="nav-ref">Référence</button>
@@ -17,17 +21,34 @@
     </nav>
   </header>
 
+  <!-- ✅ MAIN CONTENT -->
   <main class="container">
-    <div id="app"></div>
+    <div id="app">
+      <!-- Loading initial -->
+      <div class="card" style="text-align:center; padding:40px;">
+        <div style="font-size:48px; margin-bottom:20px;">⏳</div>
+        <h2>Chargement...</h2>
+        <p class="muted">Préparation des leçons en cours</p>
+      </div>
+    </div>
   </main>
 
+  <!-- ✅ FOOTER -->
   <footer class="footer">
-    <span class="muted">Svenska Mästare — apprentissage progressif A1 → C2.</span>
+    <span class="muted">Svenska Mästare — Apprentissage progressif A1 → B2 • Offline-ready</span>
   </footer>
 
+  <!-- ✅ SCRIPTS DANS LE BON ORDRE -->
+  <!-- 1. Router (pas de dépendances) -->
   <script src="assets/js/router.js"></script>
+  
+  <!-- 2. Storage (pas de dépendances) -->
   <script src="assets/js/storage.js"></script>
+  
+  <!-- 3. SRS (pas de dépendances) -->
   <script src="assets/js/srs.js"></script>
+  
+  <!-- 4. App (dépend de Router, Storage, SRS) -->
   <script src="assets/js/app.js"></script>
 </body>
 </html>
