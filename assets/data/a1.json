@@ -1,0 +1,596 @@
+{
+  "id": "a1_06",
+  "title": "Noms : EN/ETT, défini, pluriels (+ exceptions courantes)",
+  "content": [
+    "Les noms suédois ont 2 GENRES : EN (commun, ~75%) et ETT (neutre, ~25%).",
+    "Chaque genre a des règles différentes pour l'article défini et le pluriel.",
+    "Cette leçon est ESSENTIELLE : tu vas utiliser ces règles dans CHAQUE phrase.",
+    "",
+    "📌 PLAN DE LA LEÇON :",
+    "1) Les 2 genres EN/ETT (révision rapide)",
+    "2) L'article DÉFINI (forme -EN, -ET, -N, -T)",
+    "3) Les PLURIELS (5 groupes principaux)",
+    "4) Exceptions fréquentes A1",
+    "5) Tableau récapitulatif complet",
+    "6) 40+ exemples pratiques",
+    "7) 15 exercices variés",
+    "",
+    "⏱️ Durée : 90-120 min (leçon dense !)",
+    "",
+    "═══════════════════════════════════════",
+    "PARTIE 1 : LES 2 GENRES (RÉVISION)",
+    "═══════════════════════════════════════",
+    "",
+    "Rappel rapide :",
+    "• EN-ord (commun) = ~75% des noms → en bok (un livre)",
+    "• ETT-ord (neutre) = ~25% des noms → ett hus (une maison)",
+    "",
+    "❗ IL N'Y A PAS DE RÈGLE MAGIQUE pour deviner le genre.",
+    "→ Tu dois APPRENDRE chaque nom avec son article.",
+    "→ Mémorise toujours : \"en bok\" (pas juste \"bok\")",
+    "",
+    "Quelques indices (PAS des règles absolues) :",
+    "• EN-ord : souvent les PERSONNES, ANIMAUX, OUTILS",
+    "• ETT-ord : souvent les LIEUX, CONCEPTS ABSTRAITS, DIMINUTIFS (-um, -ium)",
+    "",
+    "═══════════════════════════════════════",
+    "PARTIE 2 : L'ARTICLE DÉFINI",
+    "═══════════════════════════════════════",
+    "",
+    "En français : \"le/la\" se met DEVANT le nom.",
+    "En suédois : l'article défini s'AJOUTE À LA FIN du nom !",
+    "",
+    "📊 TABLEAU ARTICLE DÉFINI :",
+    "",
+    "┌─────────────┬──────────────┬─────────────────┬──────────────────┐",
+    "│ Genre       │ Indéfini     │ Défini          │ Traduction       │",
+    "├─────────────┼──────────────┼─────────────────┼──────────────────┤",
+    "│ EN-ord      │ en bok       │ bok + EN        │ le/la livre      │",
+    "│ (commun)    │              │ = bokEN         │                  │",
+    "├─────────────┼──────────────┼─────────────────┼──────────────────┤",
+    "│ ETT-ord     │ ett hus      │ hus + ET        │ la maison        │",
+    "│ (neutre)    │              │ = husET         │                  │",
+    "└─────────────┴──────────────┴─────────────────┴──────────────────┘",
+    "",
+    "🔹 EN-ord → ajoute -EN à la fin",
+    "   en bok → bokEN (le livre)",
+    "   en bil → bilEN (la voiture)",
+    "   en hund → hundEN (le chien)",
+    "",
+    "🔹 ETT-ord → ajoute -ET à la fin",
+    "   ett hus → husET (la maison)",
+    "   ett barn → barnET (l'enfant)",
+    "   ett äpple → äppleT (la pomme)",
+    "",
+    "⚠️ ATTENTION AUX VARIATIONS :",
+    "",
+    "Si le nom EN-ord finit par une VOYELLE → ajoute -N (pas -EN)",
+    "• en flicka (une fille) → flickaN (la fille) [pas flickaEN ❌]",
+    "• en pojke (un garçon) → pojkeN (le garçon)",
+    "• en familj (une famille) → familjeN (la famille)",
+    "",
+    "Si le nom ETT-ord finit par une VOYELLE → ajoute -T (pas -ET)",
+    "• ett äpple (une pomme) → äppleT (la pomme) [pas äppleET ❌]",
+    "• ett garage (un garage) → garageT (le garage)",
+    "",
+    "═══════════════════════════════════════",
+    "PARTIE 3 : LES PLURIELS (5 GROUPES)",
+    "═══════════════════════════════════════",
+    "",
+    "Le suédois a 5 GROUPES de pluriels principaux.",
+    "Chaque groupe a une terminaison différente.",
+    "",
+    "📊 TABLEAU DES 5 GROUPES :",
+    "",
+    "┌────────┬────────────┬──────────────┬─────────────────┬──────────────┐",
+    "│ Groupe │ Singulier  │ Pluriel      │ Défini pluriel  │ Exemple FR   │",
+    "├────────┼────────────┼──────────────┼─────────────────┼──────────────┤",
+    "│ 1      │ en bil     │ bil + AR     │ bilarNA         │ les voitures │",
+    "│ (-AR)  │ en stol    │ = bilar      │ stolarNA        │ les chaises  │",
+    "├────────┼────────────┼──────────────┼─────────────────┼──────────────┤",
+    "│ 2      │ en pojke   │ pojke + R    │ pojkarNA        │ les garçons  │",
+    "│ (-R)   │ en flicka  │ = pojkar     │ flickorNA       │ les filles   │",
+    "├────────┼────────────┼──────────────┼─────────────────┼──────────────┤",
+    "│ 3      │ ett hus    │ hus (AUCUN)  │ huseN           │ les maisons  │",
+    "│ (Ø)    │ ett barn   │ barn         │ barneN          │ les enfants  │",
+    "├────────┼────────────┼──────────────┼─────────────────┼──────────────┤",
+    "│ 4      │ ett äpple  │ äpple + N    │ äppleNA         │ les pommes   │",
+    "│ (-N)   │ ett rike   │ = äpplen     │ rikena          │ les royaumes │",
+    "├────────┼────────────┼──────────────┼─────────────────┼──────────────┤",
+    "│ 5      │ en bok     │ bök + ER     │ böckerNA        │ les livres   │",
+    "│ (-ER)  │ en hand    │ = böcker     │ händerNA        │ les mains    │",
+    "│        │            │ [mutation!]  │                 │              │",
+    "└────────┴────────────┴──────────────┴─────────────────┴──────────────┘",
+    "",
+    "🔹 GROUPE 1 (-AR) : EN-ord d'une syllabe + consonne finale",
+    "   en bil → bilar (voitures)",
+    "   en stol → stolar (chaises)",
+    "   en dag → dagar (jours)",
+    "   en sko → skor (chaussures) [perd le -o avant -ar]",
+    "",
+    "🔹 GROUPE 2 (-R) : EN-ord finissant par VOYELLE",
+    "   en flicka → flickor (filles) [a→o avant -r]",
+    "   en pojke → pojkar (garçons) [e→a avant -r]",
+    "   en timme → timmar (heures) [e→a avant -r]",
+    "",
+    "🔹 GROUPE 3 (Ø) : ETT-ord sans changement au pluriel",
+    "   ett hus → hus (maisons)",
+    "   ett barn → barn (enfants)",
+    "   ett rum → rum (pièces)",
+    "   → TRÈS FRÉQUENT avec ETT-ord !",
+    "",
+    "🔹 GROUPE 4 (-N) : ETT-ord finissant par VOYELLE",
+    "   ett äpple → äpplen (pommes)",
+    "   ett garage → garage → garagen (garages)",
+    "",
+    "🔹 GROUPE 5 (-ER) : Groupe IRRÉGULIER avec mutation voyelle",
+    "   en bok → böcker (livres) [o→ö]",
+    "   en hand → händer (mains) [a→ä]",
+    "   en man → män (hommes) [a→ä, pas de -er]",
+    "   en fot → fötter (pieds) [o→ö]",
+    "",
+    "⚠️ Le groupe 5 nécessite de MÉMORISER chaque mot.",
+    "",
+    "═══════════════════════════════════════",
+    "PARTIE 4 : EXCEPTIONS COURANTES A1",
+    "═══════════════════════════════════════",
+    "",
+    "Voici les exceptions que tu DOIS connaître niveau A1 :",
+    "",
+    "🔴 PERSONNES (très irrégulières) :",
+    "• en man → män (hommes) [pas manar ❌]",
+    "• en kvinna → kvinnor (femmes)",
+    "• ett barn → barn (enfants) [pas change]",
+    "• en person → personer (personnes)",
+    "",
+    "🔴 FAMILLE :",
+    "• en mamma → mammor (mamans)",
+    "• en pappa → pappor (papas)",
+    "• en bror → bröder (frères) [o→ö]",
+    "• en syster → systrar (sœurs)",
+    "",
+    "🔴 PARTIES DU CORPS :",
+    "• en hand → händer (mains) [a→ä]",
+    "• en fot → fötter (pieds) [o→ö]",
+    "• ett öga → ögon (yeux) [TRÈS irrégulier]",
+    "• ett öra → öron (oreilles)",
+    "",
+    "🔴 OBJETS QUOTIDIENS :",
+    "• en bok → böcker (livres) [o→ö]",
+    "• ett glas → glas (verres) [pas change]",
+    "• en natt → nätter (nuits) [a→ä]",
+    "• en stad → städer (villes) [a→ä]",
+    "",
+    "🔴 NOMS EN -ARE (professions) → toujours EN, pluriel = même",
+    "• en lärare → lärare (professeurs) [pas change]",
+    "• en läkare → läkare (médecins)",
+    "",
+    "═══════════════════════════════════════",
+    "PARTIE 5 : TABLEAU RÉCAPITULATIF COMPLET",
+    "═══════════════════════════════════════",
+    "",
+    "Format : Indéfini → Défini → Pluriel → Défini pluriel",
+    "",
+    "┌─────────────┬─────────────┬──────────────┬────────────────┐",
+    "│ Indéfini    │ Défini      │ Pluriel      │ Défini plur.   │",
+    "├─────────────┼─────────────┼──────────────┼────────────────┤",
+    "│ en bil      │ bilen       │ bilar        │ bilarna        │",
+    "│ en hund     │ hunden      │ hundar       │ hundarna       │",
+    "│ en flicka   │ flickan     │ flickor      │ flickorna      │",
+    "│ en pojke    │ pojken      │ pojkar       │ pojkarna       │",
+    "│ en bok      │ boken       │ böcker       │ böckerna       │",
+    "│ en man      │ mannen      │ män          │ männen         │",
+    "│ ett hus     │ huset       │ hus          │ husen          │",
+    "│ ett barn    │ barnet      │ barn         │ barnen         │",
+    "│ ett äpple   │ äpplet      │ äpplen       │ äpplena        │",
+    "│ ett öga     │ ögat        │ ögon         │ ögonen         │",
+    "└─────────────┴─────────────┴──────────────┴────────────────┘"
+  ],
+  
+  "examples": [
+    {
+      "sv": "Boken ligger på bordet.",
+      "fr": "Le livre est sur la table.",
+      "pron": "(bou-kèn lig-gèr po bour-dèt)",
+      "note": "bok (EN) → boken (défini) / bord (ETT) → bordet"
+    },
+    {
+      "sv": "Böckerna är dyra.",
+      "fr": "Les livres sont chers.",
+      "pron": "(beu-kèr-na èr dy-ra)",
+      "note": "bok → böcker (pluriel irrégulier) → böckerna (défini pluriel)"
+    },
+    {
+      "sv": "Huset är stort.",
+      "fr": "La maison est grande.",
+      "pron": "(hou-sèt èr stourt)",
+      "note": "hus (ETT) → huset (défini)"
+    },
+    {
+      "sv": "Husen är stora.",
+      "fr": "Les maisons sont grandes.",
+      "pron": "(hou-sèn èr stou-ra)",
+      "note": "hus → hus (pluriel identique) → husen (défini pluriel)"
+    },
+    {
+      "sv": "Flickan heter Anna.",
+      "fr": "La fille s'appelle Anna.",
+      "pron": "(fli-kan hè-tèr an-na)",
+      "note": "flicka (EN, finit par -a) → flickan (défini avec -n)"
+    },
+    {
+      "sv": "Flickorna går i skolan.",
+      "fr": "Les filles vont à l'école.",
+      "pron": "(fli-kor-na gor i skou-lan)",
+      "note": "flicka → flickor (a→o) → flickorna"
+    },
+    {
+      "sv": "Barnet leker i trädgården.",
+      "fr": "L'enfant joue dans le jardin.",
+      "pron": "(bar-nèt lè-kèr i trèd-gor-dèn)",
+      "note": "barn (ETT) → barnet / trädgård (EN) → trädgården"
+    },
+    {
+      "sv": "Barnen leker ute.",
+      "fr": "Les enfants jouent dehors.",
+      "pron": "(bar-nèn lè-kèr ou-tè)",
+      "note": "barn → barn (pluriel identique) → barnen"
+    },
+    {
+      "sv": "Jag köper äpplet.",
+      "fr": "J'achète la pomme.",
+      "pron": "(ya tcheu-pèr èp-lèt)",
+      "note": "äpple (ETT, finit par -e) → äpplet (défini avec -t)"
+    },
+    {
+      "sv": "Jag köper äpplena.",
+      "fr": "J'achète les pommes.",
+      "pron": "(ya tcheu-pèr èp-lè-na)",
+      "note": "äpple → äpplen → äpplena"
+    },
+    {
+      "sv": "Mannen arbetar på kontoret.",
+      "fr": "L'homme travaille au bureau.",
+      "pron": "(man-nèn ar-bè-tar po kon-tou-rèt)",
+      "note": "man → mannen (double -n) / kontor (ETT) → kontoret"
+    },
+    {
+      "sv": "Männen spelar fotboll.",
+      "fr": "Les hommes jouent au football.",
+      "pron": "(mèn-nèn spè-lar fout-bol)",
+      "note": "man → män (irrégulier) → männen"
+    },
+    {
+      "sv": "Bilen är röd.",
+      "fr": "La voiture est rouge.",
+      "pron": "(bi-lèn èr reud)",
+      "note": "bil (EN) → bilen"
+    },
+    {
+      "sv": "Bilarna står i garaget.",
+      "fr": "Les voitures sont dans le garage.",
+      "pron": "(bi-lar-na stor i ga-ra-jèt)",
+      "note": "bil → bilar → bilarna / garage (ETT) → garaget"
+    },
+    {
+      "sv": "Hunden sover på soffan.",
+      "fr": "Le chien dort sur le canapé.",
+      "pron": "(houn-dèn sou-vèr po sof-fan)",
+      "note": "hund → hunden / soffa → soffan"
+    },
+    {
+      "sv": "Hundarna springer i parken.",
+      "fr": "Les chiens courent dans le parc.",
+      "pron": "(houn-dar-na spring-èr i par-kèn)",
+      "note": "hund → hundar → hundarna / park → parken"
+    },
+    {
+      "sv": "Stolen är bekväm.",
+      "fr": "La chaise est confortable.",
+      "pron": "(stou-lèn èr bè-kvèm)",
+      "note": "stol (EN) → stolen"
+    },
+    {
+      "sv": "Stolarna är nya.",
+      "fr": "Les chaises sont neuves.",
+      "pron": "(stou-lar-na èr ny-a)",
+      "note": "stol → stolar → stolarna"
+    },
+    {
+      "sv": "Pojken läser boken.",
+      "fr": "Le garçon lit le livre.",
+      "pron": "(poy-kèn lè-sèr bou-kèn)",
+      "note": "pojke → pojken / bok → boken"
+    },
+    {
+      "sv": "Pojkarna spelar på gården.",
+      "fr": "Les garçons jouent dans la cour.",
+      "pron": "(poy-kar-na spè-lar po gor-dèn)",
+      "note": "pojke → pojkar (e→a) → pojkarna / gård → gården"
+    },
+    {
+      "sv": "Rummet är stort.",
+      "fr": "La pièce est grande.",
+      "pron": "(roum-mèt èr stourt)",
+      "note": "rum (ETT) → rummet (double -m)"
+    },
+    {
+      "sv": "Rummen är rena.",
+      "fr": "Les pièces sont propres.",
+      "pron": "(roum-mèn èr rè-na)",
+      "note": "rum → rum (identique) → rummen"
+    },
+    {
+      "sv": "Glasseten smälter.",
+      "fr": "La glace fond.",
+      "pron": "(glas-sèn smèl-tèr)",
+      "note": "glass (EN) → glassen"
+    },
+    {
+      "sv": "Händerna är kalla.",
+      "fr": "Les mains sont froides.",
+      "pron": "(hèn-dèr-na èr kal-la)",
+      "note": "hand → händer (a→ä, irrégulier) → händerna"
+    },
+    {
+      "sv": "Fötterna gör ont.",
+      "fr": "Les pieds font mal.",
+      "pron": "(feut-tèr-na yeur ount)",
+      "note": "fot → fötter (o→ö, irrégulier) → fötterna"
+    },
+    {
+      "sv": "Systern bor i Stockholm.",
+      "fr": "La sœur habite à Stockholm.",
+      "pron": "(sys-tèrn bour i stok-holm)",
+      "note": "syster (EN) → systern"
+    },
+    {
+      "sv": "Systrarna studerar svenska.",
+      "fr": "Les sœurs étudient le suédois.",
+      "pron": "(sys-trar-na stou-dè-rar svens-ka)",
+      "note": "syster → systrar → systrarna"
+    },
+    {
+      "sv": "Ögat är blått.",
+      "fr": "L'œil est bleu.",
+      "pron": "(eu-gat èr blôt)",
+      "note": "öga (ETT) → ögat"
+    },
+    {
+      "sv": "Ögonen är gröna.",
+      "fr": "Les yeux sont verts.",
+      "pron": "(eu-gou-nèn èr greu-na)",
+      "note": "öga → ögon (TRÈS irrégulier) → ögonen"
+    },
+    {
+      "sv": "Natten är mörk.",
+      "fr": "La nuit est sombre.",
+      "pron": "(nat-tèn èr meurk)",
+      "note": "natt (EN) → natten (double -t)"
+    },
+    {
+      "sv": "Nätterna är långa.",
+      "fr": "Les nuits sont longues.",
+      "pron": "(nèt-tèr-na èr long-ga)",
+      "note": "natt → nätter (a→ä) → nätterna"
+    },
+    {
+      "sv": "Staden växer snabbt.",
+      "fr": "La ville grandit rapidement.",
+      "pron": "(sta-dèn vèk-sèr snabt)",
+      "note": "stad (EN) → staden"
+    },
+    {
+      "sv": "Städerna är stora.",
+      "fr": "Les villes sont grandes.",
+      "pron": "(stè-dèr-na èr stou-ra)",
+      "note": "stad → städer (a→ä) → städerna"
+    },
+    {
+      "sv": "Läraren undervisar.",
+      "fr": "Le professeur enseigne.",
+      "pron": "(lè-ra-rèn oun-dèr-vi-sar)",
+      "note": "lärare (EN, profession en -are) → läraren"
+    },
+    {
+      "sv": "Lärarna är kompetenta.",
+      "fr": "Les professeurs sont compétents.",
+      "pron": "(lè-rar-na èr kom-pè-tèn-ta)",
+      "note": "lärare → lärare (identique au pluriel) → lärarna"
+    },
+    {
+      "sv": "Kvinnan talar svenska.",
+      "fr": "La femme parle suédois.",
+      "pron": "(kvin-nan ta-lar svens-ka)",
+      "note": "kvinna (EN) → kvinnan"
+    },
+    {
+      "sv": "Kvinnorna arbetar här.",
+      "fr": "Les femmes travaillent ici.",
+      "pron": "(kvin-nor-na ar-bè-tar hèr)",
+      "note": "kvinna → kvinnor (a→o) → kvinnorna"
+    },
+    {
+      "sv": "Timmen går fort.",
+      "fr": "L'heure passe vite.",
+      "pron": "(tim-mèn gor fort)",
+      "note": "timme (EN) → timmen (double -m)"
+    },
+    {
+      "sv": "Timmarna flyger förbi.",
+      "fr": "Les heures passent à toute vitesse.",
+      "pron": "(tim-mar-na fly-gèr feur-bi)",
+      "note": "timme → timmar (e→a) → timmarna"
+    },
+    {
+      "sv": "Dagen är lång.",
+      "fr": "La journée est longue.",
+      "pron": "(da-gèn èr long)",
+      "note": "dag (EN) → dagen"
+    },
+    {
+      "sv": "Dagarna är varma.",
+      "fr": "Les jours sont chauds.",
+      "pron": "(da-gar-na èr var-ma)",
+      "note": "dag → dagar → dagarna"
+    },
+    {
+      "sv": "Skorna är nya.",
+      "fr": "Les chaussures sont neuves.",
+      "pron": "(skou-rna èr ny-a)",
+      "note": "sko → skor (perd -o avant pluriel) → skorna"
+    },
+    {
+      "sv": "Brödet är färskt.",
+      "fr": "Le pain est frais.",
+      "pron": "(breu-dèt èr fèrskt)",
+      "note": "bröd (ETT) → brödet"
+    }
+  ],
+  
+  "vocab": [
+    { "sv": "en bil", "fr": "une voiture", "pron": "(èn bil)", "note": "→ bilen, bilar, bilarna" },
+    { "sv": "en bok", "fr": "un livre", "pron": "(èn bouk)", "note": "→ boken, böcker, böckerna (mutation o→ö)" },
+    { "sv": "en flicka", "fr": "une fille", "pron": "(èn fli-ka)", "note": "→ flickan, flickor, flickorna" },
+    { "sv": "en pojke", "fr": "un garçon", "pron": "(èn poy-kè)", "note": "→ pojken, pojkar, pojkarna" },
+    { "sv": "en hund", "fr": "un chien", "pron": "(èn hound)", "note": "→ hunden, hundar, hundarna" },
+    { "sv": "en stol", "fr": "une chaise", "pron": "(èn stoul)", "note": "→ stolen, stolar, stolarna" },
+    { "sv": "en dag", "fr": "un jour", "pron": "(èn dag)", "note": "→ dagen, dagar, dagarna" },
+    { "sv": "en man", "fr": "un homme", "pron": "(èn man)", "note": "→ mannen, män, männen (irrégulier)" },
+    { "sv": "en kvinna", "fr": "une femme", "pron": "(èn kvin-na)", "note": "→ kvinnan, kvinnor, kvinnorna" },
+    { "sv": "en hand", "fr": "une main", "pron": "(èn hand)", "note": "→ handen, händer, händerna (a→ä)" },
+    { "sv": "en fot", "fr": "un pied", "pron": "(èn fout)", "note": "→ foten, fötter, fötterna (o→ö)" },
+    { "sv": "en bror", "fr": "un frère", "pron": "(èn brour)", "note": "→ brodern, bröder, bröderna (o→ö)" },
+    { "sv": "en syster", "fr": "une sœur", "pron": "(èn sys-tèr)", "note": "→ systern, systrar, systrarna" },
+    { "sv": "en natt", "fr": "une nuit", "pron": "(èn nat)", "note": "→ natten, nätter, nätterna (a→ä)" },
+    { "sv": "en stad", "fr": "une ville", "pron": "(èn stad)", "note": "→ staden, städer, städerna (a→ä)" },
+    { "sv": "en timme", "fr": "une heure", "pron": "(èn tim-mè)", "note": "→ timmen, timmar, timmarna" },
+    { "sv": "en lärare", "fr": "un professeur", "pron": "(èn lè-ra-rè)", "note": "→ läraren, lärare, lärarna (pas de changement au pluriel)" },
+    { "sv": "en läkare", "fr": "un médecin", "pron": "(èn lè-ka-rè)", "note": "→ läkaren, läkare, läkarna" },
+    { "sv": "ett hus", "fr": "une maison", "pron": "(èt hous)", "note": "→ huset, hus, husen (pluriel identique)" },
+    { "sv": "ett barn", "fr": "un enfant", "pron": "(èt barn)", "note": "→ barnet, barn, barnen (pluriel identique)" },
+    { "sv": "ett äpple", "fr": "une pomme", "pron": "(èt èp-lè)", "note": "→ äpplet, äpplen, äpplena" },
+    { "sv": "ett rum", "fr": "une pièce", "pron": "(èt roum)", "note": "→ rummet, rum, rummen" },
+    { "sv": "ett glas", "fr": "un verre", "pron": "(èt glass)", "note": "→ glaset, glas, glasen" },
+    { "sv": "ett öga", "fr": "un œil", "pron": "(èt eu-ga)", "note": "→ ögat, ögon, ögonen (TRÈS irrégulier)" },
+    { "sv": "ett öra", "fr": "une oreille", "pron": "(èt eu-ra)", "note": "→ örat, öron, öronen" },
+    { "sv": "ett bord", "fr": "une table", "pron": "(èt bourd)", "note": "→ bordet, bord, borden" },
+    { "sv": "ett kontor", "fr": "un bureau", "pron": "(èt kon-tour)", "note": "→ kontoret, kontor, kontoren" },
+    { "sv": "ett garage", "fr": "un garage", "pron": "(èt ga-raj)", "note": "→ garaget, garage/garagen" },
+    { "sv": "ett bröd", "fr": "un pain", "pron": "(èt breud)", "note": "→ brödet, bröd, bröden" },
+    { "sv": "en soffa", "fr": "un canapé", "pron": "(èn sof-fa)", "note": "→ soffan, soffor, sofforna" },
+    { "sv": "en park", "fr": "un parc", "pron": "(èn park)", "note": "→ parken, parker, parkerna" },
+    { "sv": "en gård", "fr": "une cour", "pron": "(èn gord)", "note": "→ gården, gårdar, gårdarna" },
+    { "sv": "en sko", "fr": "une chaussure", "pron": "(èn skou)", "note": "→ skon, skor, skorna (perd le -o)" },
+    { "sv": "en mamma", "fr": "une maman", "pron": "(èn mam-ma)", "note": "→ mamman, mammor, mammorna" },
+    { "sv": "en pappa", "fr": "un papa", "pron": "(èn pap-pa)", "note": "→ pappan, pappor, papporna" },
+    { "sv": "en person", "fr": "une personne", "pron": "(èn pèr-soun)", "note": "→ personen, personer, personerna" },
+    { "sv": "en familj", "fr": "une famille", "pron": "(èn fa-milj)", "note": "→ familjen, familjer, familjerna" },
+    { "sv": "en glass", "fr": "une glace (dessert)", "pron": "(èn glass)", "note": "→ glassen, glassar, glassarna" },
+    { "sv": "en skola", "fr": "une école", "pron": "(èn skou-la)", "note": "→ skolan, skolor, skolorna" },
+    { "sv": "en trädgård", "fr": "un jardin", "pron": "(èn trèd-gord)", "note": "→ trädgården, trädgårdar, trädgårdarna" }
+  ],
+  
+  "quiz": [
+    {
+      "type": "mcq",
+      "q": "Quelle est la forme DÉFINIE de 'en bok' ?",
+      "choices": ["boken", "boka", "boken", "boket"],
+      "answerIndex": 0,
+      "explanation": "EN-ord + EN à la fin → boken (le livre)"
+    },
+    {
+      "type": "mcq",
+      "q": "Quelle est la forme DÉFINIE de 'ett hus' ?",
+      "choices": ["husen", "huset", "husan", "husen"],
+      "answerIndex": 1,
+      "explanation": "ETT-ord + ET à la fin → huset (la maison)"
+    },
+    {
+      "type": "mcq",
+      "q": "Quelle est la forme DÉFINIE de 'en flicka' (fille) ?",
+      "choices": ["flickaen", "flickan", "flicken", "flicka"],
+      "answerIndex": 1,
+      "explanation": "EN-ord finissant par voyelle → + N seulement → flickan"
+    },
+    {
+      "type": "mcq",
+      "q": "Quel est le PLURIEL de 'en bil' (voiture) ?",
+      "choices": ["bilen", "bilar", "biler", "bila"],
+      "answerIndex": 1,
+      "explanation": "EN-ord, groupe 1 → + AR → bilar"
+    },
+    {
+      "type": "mcq",
+      "q": "Quel est le PLURIEL de 'ett barn' (enfant) ?",
+      "choices": ["barnar", "barnen", "barn", "barnor"],
+      "answerIndex": 2,
+      "explanation": "ETT-ord, groupe 3 → pas de changement → barn"
+    },
+    {
+      "type": "mcq",
+      "q": "Quel est le PLURIEL de 'en flicka' (fille) ?",
+      "choices": ["flickar", "flickor", "flickan", "flickas"],
+      "answerIndex": 1,
+      "explanation": "EN-ord finissant par -a, groupe 2 → a→o avant +R → flickor"
+    },
+    {
+      "type": "mcq",
+      "q": "Quel est le PLURIEL irrégulier de 'en bok' (livre) ?",
+      "choices": ["bokar", "boken", "böcker", "bokerna"],
+      "answerIndex": 2,
+      "explanation": "Groupe 5 irrégulier → mutation o→ö → böcker"
+    },
+    {
+      "type": "mcq",
+      "q": "Quel est le PLURIEL irrégulier de 'en man' (homme) ?",
+      "choices": ["manar", "mannar", "män", "maner"],
+      "answerIndex": 2,
+      "explanation": "Très irrégulier → mutation a→ä, pas de -er → män"
+    },
+    {
+      "type": "gap",
+      "q": "Forme définie : en hund → ____",
+      "answer": "hunden",
+      "explanation": "EN-ord → + EN → hunden (le chien)"
+    },
+    {
+      "type": "gap",
+      "q": "Forme définie : ett äpple → ____",
+      "answer": "äpplet",
+      "explanation": "ETT-ord finissant par -e → + T → äpplet"
+    },
+    {
+      "type": "gap",
+      "q": "Pluriel : en stol → ____",
+      "answer": "stolar",
+      "explanation": "Groupe 1 → + AR → stolar"
+    },
+    {
+      "type": "gap",
+      "q": "Pluriel : ett hus → ____",
+      "answer": "hus",
+      "explanation": "Groupe 3 → identique → hus"
+    },
+    {
+      "type": "gap",
+      "q": "Pluriel : en hand → ____ (irrégulier)",
+      "answer": "händer",
+      "explanation": "Groupe 5 → mutation a→ä + ER → händer"
+    },
+    {
+      "type": "mcq",
+      "q": "Forme DÉFINIE PLURIELLE : en bil → bilar → ____",
+      "choices": ["bilaren", "bilarna", "bilarena", "bilarer"],
+      "answerIndex": 1,
+      "explanation": "Pluriel + NA → bilarna (les voitures)"
+    },
+    {
+      "type": "mcq",
+      "q": "Forme DÉFINIE PLURIELLE : ett barn → barn → ____",
+      "choices": ["barnarna", "barnen", "barnerna", "barnet"],
+      "answerIndex": 1,
+      "explanation": "Pluriel ETT-ord → + EN → barnen (les enfants)"
+    }
+  ]
+}
