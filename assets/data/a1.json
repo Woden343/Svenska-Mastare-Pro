@@ -668,6 +668,233 @@
       ]
     }
   ]
+},
+{
+  "id": "cafe_restaurant",
+  "title": "Café & restaurant — commander, payer, survivre",
+  "lessons": [
+    {
+      "id": "cr_1",
+      "title": "Je voudrais… / Je prends… (Jag vill ha / Jag tar)",
+      "content": [
+        "🎯 Objectif : commander simplement.",
+        "",
+        "Structures ultra rentables :",
+        "• Jag vill ha X. = Je veux X / Je voudrais X.",
+        "• Jag tar X. = Je prends X.",
+        "• Kan jag få X? = Je peux avoir X ?",
+        "",
+        "Mini-dialogue :",
+        "A: Hej! Vad vill du ha?",
+        "B: Jag vill ha en kaffe, tack.",
+        "A: Något mer?",
+        "B: Nej tack."
+      ],
+      "vocab": [
+        { "sv": "vad vill du ha?", "fr": "tu veux quoi ?", "pron": "vad vill dou ha" },
+        { "sv": "jag vill ha", "fr": "je veux / je voudrais", "pron": "ya vill ha" },
+        { "sv": "jag tar", "fr": "je prends", "pron": "ya tar" },
+        { "sv": "kan jag få", "fr": "je peux avoir", "pron": "kan ya fo" },
+        { "sv": "tack", "fr": "merci", "pron": "takk" },
+        { "sv": "något mer", "fr": "autre chose", "pron": "no-gott mèr" },
+        { "sv": "nej tack", "fr": "non merci", "pron": "néï takk" }
+      ],
+      "examples": [
+        { "sv": "Jag vill ha en kaffe, tack.", "fr": "Je voudrais un café, merci.", "pron": "ya vill ha en ka-fe takk" },
+        { "sv": "Jag tar en vatten.", "fr": "Je prends une eau.", "pron": "ya tar en vat-ten" },
+        { "sv": "Kan jag få en kaffe?", "fr": "Je peux avoir un café ?", "pron": "kan ya fo en ka-fe" },
+        { "sv": "Något mer?", "fr": "Autre chose ?", "pron": "no-gott mèr" },
+        { "sv": "Nej tack.", "fr": "Non merci.", "pron": "néï takk" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : remplace 'kaffe' par te / vatten / en bulle (brioché).", "items": ["Jag vill ha en kaffe, tack."] },
+        { "instruction": "Variante : reformule avec 'Jag tar ...' (x5).", "items": ["Jag vill ha en kaffe, tack."] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ ha en kaffe.", "answer": "vill" },
+        { "type": "gap", "q": "Complète : Kan jag ___ en kaffe?", "answer": "få" },
+        { "type": "gap", "q": "Complète : Nej ___ .", "answer": "tack" }
+      ]
+    },
+    {
+      "id": "cr_2",
+      "title": "Prix & paiement (Hur mycket? / Jag betalar)",
+      "content": [
+        "🎯 Objectif : demander le prix et payer.",
+        "",
+        "Structures :",
+        "• Hur mycket kostar det? = Ça coûte combien ?",
+        "• Jag betalar. = Je paie.",
+        "• Kan jag betala med kort? = Je peux payer par carte ?",
+        "",
+        "Mini-dialogue :",
+        "A: Hur mycket kostar det?",
+        "B: Det kostar fyrtio kronor.",
+        "A: Okej. Jag betalar med kort."
+      ],
+      "vocab": [
+        { "sv": "hur mycket", "fr": "combien", "pron": "hur mü-kèt" },
+        { "sv": "kostar", "fr": "coûte", "pron": "kos-tar" },
+        { "sv": "det", "fr": "ça / cela", "pron": "dett" },
+        { "sv": "kronor", "fr": "couronnes", "pron": "krou-nor" },
+        { "sv": "betalar", "fr": "paye", "pron": "be-ta-lar" },
+        { "sv": "med kort", "fr": "par carte", "pron": "mèd kort" }
+      ],
+      "examples": [
+        { "sv": "Hur mycket kostar det?", "fr": "Ça coûte combien ?", "pron": "hur mü-kèt kos-tar dett" },
+        { "sv": "Det kostar tio kronor.", "fr": "Ça coûte dix couronnes.", "pron": "dett kos-tar ti-o krou-nor" },
+        { "sv": "Jag betalar.", "fr": "Je paie.", "pron": "ya be-ta-lar" },
+        { "sv": "Kan jag betala med kort?", "fr": "Je peux payer par carte ?", "pron": "kan ya be-ta-la mèd kort" }
+      ],
+      "mini_drills": [
+        { "instruction": "Réponse courte : Hur mycket kostar det? → Det kostar ... kronor (x5).", "items": ["Hur mycket kostar det?"] },
+        { "instruction": "Choix : Jag betalar / Jag betalar med kort (x5).", "items": ["Jag betalar."] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Hur mycket ___ det?", "answer": "kostar" },
+        { "type": "gap", "q": "Complète : Jag ___ med kort.", "answer": "betalar" }
+      ]
+    },
+    {
+      "id": "cr_3",
+      "title": "Allergies, préférences, et problèmes (utan / jag är allergisk)",
+      "content": [
+        "🎯 Objectif : gérer un besoin spécial (A1).",
+        "",
+        "Structures :",
+        "• Jag är allergisk mot X. = Je suis allergique à X.",
+        "• Utan X, tack. = Sans X, merci.",
+        "• Jag vill inte ha X. = Je ne veux pas X."
+      ],
+      "vocab": [
+        { "sv": "allergisk", "fr": "allergique", "pron": "al-ler-risk" },
+        { "sv": "mot", "fr": "à / contre (allergie)", "pron": "mott" },
+        { "sv": "utan", "fr": "sans", "pron": "u-tan" },
+        { "sv": "mjölk", "fr": "lait", "pron": "myölk" },
+        { "sv": "socker", "fr": "sucre", "pron": "sok-kèr" }
+      ],
+      "examples": [
+        { "sv": "Jag är allergisk mot mjölk.", "fr": "Je suis allergique au lait.", "pron": "ya èr al-ler-risk mott myölk" },
+        { "sv": "Utan mjölk, tack.", "fr": "Sans lait, merci.", "pron": "u-tan myölk takk" },
+        { "sv": "Jag vill inte ha socker.", "fr": "Je ne veux pas de sucre.", "pron": "ya vill intè ha sok-kèr" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : remplace mjölk par socker / gluten / nötter (noix).", "items": ["Utan mjölk, tack."] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Utan ___, tack.", "answer": "mjölk" },
+        { "type": "gap", "q": "Complète : Jag vill ___ ha socker.", "answer": "inte" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "transport_direction",
+  "title": "Transport & direction — trouver, demander, aller",
+  "lessons": [
+    {
+      "id": "td_1",
+      "title": "Où est… ? (Var är…?) + lieux essentiels",
+      "content": [
+        "🎯 Objectif : demander où se trouve quelque chose.",
+        "",
+        "Structure :",
+        "• Var är X? = Où est X ?",
+        "",
+        "Réponses simples :",
+        "• Där. = Là.",
+        "• Där borta. = Là-bas.",
+        "• Jag vet inte. = Je ne sais pas."
+      ],
+      "vocab": [
+        { "sv": "var", "fr": "où", "pron": "var" },
+        { "sv": "där", "fr": "là", "pron": "dèr" },
+        { "sv": "där borta", "fr": "là-bas", "pron": "dèr bor-ta" },
+        { "sv": "stationen", "fr": "la gare", "pron": "sta-chon-en" },
+        { "sv": "bussen", "fr": "le bus (défini)", "pron": "buss-en" },
+        { "sv": "utgången", "fr": "la sortie", "pron": "out-gon-en" }
+      ],
+      "examples": [
+        { "sv": "Var är stationen?", "fr": "Où est la gare ?", "pron": "var èr sta-chon-en" },
+        { "sv": "Var är utgången?", "fr": "Où est la sortie ?", "pron": "var èr out-gon-en" },
+        { "sv": "Där borta.", "fr": "Là-bas.", "pron": "dèr bor-ta" },
+        { "sv": "Jag vet inte.", "fr": "Je ne sais pas.", "pron": "ya vét intè" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : remplace stationen par utgången / bussen / toaletten.", "items": ["Var är stationen?"] },
+        { "instruction": "Réponses : réponds avec Där / Där borta / Jag vet inte (x6).", "items": ["Var är ...?"] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Var ___ stationen?", "answer": "är" },
+        { "type": "gap", "q": "Complète : Jag ___ inte.", "answer": "vet" }
+      ]
+    },
+    {
+      "id": "td_2",
+      "title": "Aller à… (Jag ska till / Jag går till)",
+      "content": [
+        "🎯 Objectif : dire où tu vas.",
+        "",
+        "Structures :",
+        "• Jag ska till X. = Je vais à X (intention).",
+        "• Jag går till X. = Je vais à X (à pied / action)."
+      ],
+      "vocab": [
+        { "sv": "till", "fr": "à / vers", "pron": "till" },
+        { "sv": "jag ska till", "fr": "je vais à (futur)", "pron": "ya ska till" },
+        { "sv": "jag går till", "fr": "je vais à (je marche vers)", "pron": "ya gor till" },
+        { "sv": "hotellet", "fr": "l’hôtel", "pron": "ho-tell-et" },
+        { "sv": "centrum", "fr": "centre-ville", "pron": "sen-troum" }
+      ],
+      "examples": [
+        { "sv": "Jag ska till hotellet.", "fr": "Je vais à l’hôtel.", "pron": "ya ska till ho-tell-et" },
+        { "sv": "Jag går till centrum.", "fr": "Je vais au centre (à pied).", "pron": "ya gor till sen-troum" },
+        { "sv": "Ska du till Stockholm?", "fr": "Tu vas à Stockholm ?", "pron": "ska dou till stok-holm" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : remplace hotellet par stationen / centrum / toaletten.", "items": ["Jag ska till hotellet."] },
+        { "instruction": "Question : Ska du till ...? → Ja/Nej (x6).", "items": ["Ska du till Stockholm?"] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ska ___ centrum.", "answer": "till" },
+        { "type": "gap", "q": "Complète : Jag ___ till centrum.", "answer": "går" }
+      ]
+    },
+    {
+      "id": "td_3",
+      "title": "Billets & besoins (en biljett / jag behöver)",
+      "content": [
+        "🎯 Objectif : demander un billet et exprimer un besoin.",
+        "",
+        "Structures :",
+        "• Jag vill ha en biljett. = Je veux un billet.",
+        "• Jag behöver hjälp. = J’ai besoin d’aide.",
+        "• Kan du hjälpa mig? = Tu peux m’aider ?"
+      ],
+      "vocab": [
+        { "sv": "biljett", "fr": "billet", "pron": "bil-yett" },
+        { "sv": "behöver", "fr": "ai besoin", "pron": "be-höv-er" },
+        { "sv": "hjälp", "fr": "aide", "pron": "yèlp" },
+        { "sv": "hjälpa", "fr": "aider", "pron": "yèl-pa" },
+        { "sv": "mig", "fr": "moi", "pron": "mèï" }
+      ],
+      "examples": [
+        { "sv": "Jag vill ha en biljett.", "fr": "Je veux un billet.", "pron": "ya vill ha en bil-yett" },
+        { "sv": "Jag behöver hjälp.", "fr": "J’ai besoin d’aide.", "pron": "ya be-höv-er yèlp" },
+        { "sv": "Kan du hjälpa mig?", "fr": "Tu peux m’aider ?", "pron": "kan dou yèl-pa mèï" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : remplace biljett par karta (carte) / hjälp (aide).", "items": ["Jag vill ha en biljett."] },
+        { "instruction": "Politesse : ajoute 'snälla' au début (x5).", "items": ["Kan du hjälpa mig?"] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ hjälp.", "answer": "behöver" },
+        { "type": "gap", "q": "Complète : Kan du ___ mig?", "answer": "hjälpa" }
+      ]
+    }
+  ]
 }
   ]
 }
+
