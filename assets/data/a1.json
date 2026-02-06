@@ -1148,8 +1148,331 @@
       ]
     }
   ]
+},
+{
+  "id": "grammar_v2",
+  "title": "Ordre des mots (V2) — parler comme un Suédois",
+  "lessons": [
+    {
+      "id": "v2_1",
+      "title": "Phrase simple → inversion",
+      "content": [
+        "🎯 Objectif : comprendre l’ordre V2.",
+        "",
+        "En suédois, le verbe est TOUJOURS en 2ème position.",
+        "",
+        "Exemples :",
+        "Jag jobbar idag.",
+        "Idag jobbar jag.",
+        "",
+        "Même sens, ordre différent.",
+        "",
+        "Structure :",
+        "[temps] + verbe + sujet"
+      ],
+      "examples": [
+        { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yobb-ar i-dag" },
+        { "sv": "Idag jobbar jag.", "fr": "Aujourd’hui je travaille.", "pron": "i-dag yobb-ar ya" },
+        { "sv": "Imorgon ska jag jobba.", "fr": "Demain je vais travailler.", "pron": "i-mor-ron ska ya yobb-a" }
+      ],
+      "mini_drills": [
+        { "instruction": "Inverse : Jag äter idag → Idag äter jag.", "items": ["Jag äter idag."] },
+        { "instruction": "Crée 3 phrases avec Imorgon + verbe.", "items": ["Imorgon ska jag ..."] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Idag ___ jag.", "answer": "jobbar" },
+        { "type": "gap", "q": "Complète : Imorgon ___ jag jobba.", "answer": "ska" }
+      ]
+    },
+    {
+      "id": "v2_2",
+      "title": "Questions V2 (Vad gör du?)",
+      "content": [
+        "🎯 Objectif : poser des questions naturelles.",
+        "",
+        "Structure A1 :",
+        "Mot interrogatif + verbe + sujet",
+        "",
+        "Vad gör du?",
+        "Var bor du?"
+      ],
+      "examples": [
+        { "sv": "Vad gör du?", "fr": "Que fais-tu ?", "pron": "vad yeuor dou" },
+        { "sv": "Var bor du?", "fr": "Tu habites où ?", "pron": "var bour dou" },
+        { "sv": "När börjar du?", "fr": "Tu commences quand ?", "pron": "nèr bör-yar dou" }
+      ],
+      "mini_drills": [
+        { "instruction": "Transforme en question : Jag jobbar → Vad gör du?", "items": ["Jag jobbar."] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Vad ___ du?", "answer": "gör" },
+        { "type": "gap", "q": "Complète : Var ___ du?", "answer": "bor" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "adjectives",
+  "title": "Adjectifs & accords (A1)",
+  "lessons": [
+    {
+      "id": "adj_1",
+      "title": "Adjectif simple (en / ett)",
+      "content": [
+        "🎯 Objectif : décrire avec un adjectif.",
+        "",
+        "Règle A1 :",
+        "en-ord → adjectif sans t",
+        "ett-ord → adjectif + t",
+        "",
+        "en stor bok",
+        "ett stort hus"
+      ],
+      "examples": [
+        { "sv": "en stor bok", "fr": "un grand livre", "pron": "en stor bouk" },
+        { "sv": "ett stort hus", "fr": "une grande maison", "pron": "ett stort hous" },
+        { "sv": "Jag har en stor bok.", "fr": "J’ai un grand livre.", "pron": "ya har en stor bouk" }
+      ],
+      "mini_drills": [
+        { "instruction": "Transformation : stor bok → liten bok / stort hus → litet hus.", "items": ["en stor bok", "ett stort hus"] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : ett ___ hus.", "answer": "stort" },
+        { "type": "gap", "q": "Complète : en ___ bok.", "answer": "stor" }
+      ]
+    },
+    {
+      "id": "adj_2",
+      "title": "Adjectifs fréquents",
+      "content": [
+        "🎯 Objectif : utiliser les adjectifs courants.",
+        "",
+        "bra = bon",
+        "dålig = mauvais",
+        "ny = nouveau",
+        "gammal = vieux"
+      ],
+      "examples": [
+        { "sv": "en bra dag", "fr": "une bonne journée", "pron": "en bra dag" },
+        { "sv": "ett nytt hus", "fr": "une nouvelle maison", "pron": "ett nytt hous" },
+        { "sv": "Jag har en bra dag.", "fr": "Je passe une bonne journée.", "pron": "ya har en bra dag" }
+      ],
+      "mini_drills": [
+        { "instruction": "Substitution : bra → dålig / ny → gammal.", "items": ["en bra dag", "ett nytt hus"] }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : ett ___ hus.", "answer": "nytt" },
+        { "type": "gap", "q": "Complète : en ___ dag.", "answer": "bra" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "srs_booster",
+  "title": "Renforcement SRS A1 — phrases clés",
+  "lessons": [
+    {
+      "id": "srs_1",
+      "title": "Automatisation quotidienne",
+      "examples": [
+        { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yobb-ar i-dag" },
+        { "sv": "Imorgon ska jag vila.", "fr": "Demain je vais me reposer.", "pron": "i-mor-ron ska ya vi-la" },
+        { "sv": "Jag vill ha en kaffe.", "fr": "Je voudrais un café.", "pron": "ya vill ha en ka-fe" },
+        { "sv": "Var är toaletten?", "fr": "Où sont les toilettes ?", "pron": "var èr tou-a-lètt-en" },
+        { "sv": "Jag behöver hjälp.", "fr": "J’ai besoin d’aide.", "pron": "ya be-höv-er yèlp" },
+        { "sv": "Jag är ledig idag.", "fr": "Je suis off aujourd’hui.", "pron": "ya èr le-dig i-dag" },
+        { "sv": "Vad gör du?", "fr": "Que fais-tu ?", "pron": "vad yeuor dou" },
+        { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan intè komm-a" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ idag.", "answer": "jobbar" },
+        { "type": "gap", "q": "Complète : Imorgon ___ jag vila.", "answer": "ska" },
+        { "type": "gap", "q": "Complète : Jag ___ hjälp.", "answer": "behöver" },
+        { "type": "gap", "q": "Complète : Vad ___ du?", "answer": "gör" },
+        { "type": "gap", "q": "Complète : Jag kan ___ komma.", "answer": "inte" }
+      ]
+    }
+  ]
+},
+{
+  "id": "prep_weather_emotions",
+  "title": "Prépositions + météo & émotions",
+  "lessons": [
+    {
+      "id": "pwe_1",
+      "title": "Prépositions essentielles (i / på / till / med)",
+      "content": [
+        "🎯 Objectif : utiliser les 4 prépositions A1.",
+        "",
+        "• i = dans / à (ville/pays)",
+        "• på = sur / à (lieu précis)",
+        "• till = vers / à (direction)",
+        "• med = avec",
+        "",
+        "Exemples :",
+        "Jag bor i Paris.",
+        "Jag jobbar på flygplatsen.",
+        "Jag går till centrum.",
+        "Jag betalar med kort."
+      ],
+      "examples": [
+        { "sv": "Jag bor i Paris.", "fr": "J’habite à Paris.", "pron": "ya bour i pari" },
+        { "sv": "Jag jobbar på flygplatsen.", "fr": "Je travaille à l’aéroport.", "pron": "ya yobb-ar po flyg-plats-en" },
+        { "sv": "Jag går till centrum.", "fr": "Je vais au centre.", "pron": "ya gor till sen-troum" },
+        { "sv": "Jag betalar med kort.", "fr": "Je paie par carte.", "pron": "ya be-ta-lar mèd kort" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag bor ___ Sverige.", "answer": "i" },
+        { "type": "gap", "q": "Complète : Jag går ___ centrum.", "answer": "till" },
+        { "type": "gap", "q": "Complète : Jag betalar ___ kort.", "answer": "med" }
+      ]
+    },
+    {
+      "id": "pwe_2",
+      "title": "Météo + émotions simples",
+      "content": [
+        "🎯 Objectif : parler du temps et de ton état.",
+        "",
+        "• Det är kallt. = Il fait froid.",
+        "• Det är varmt. = Il fait chaud.",
+        "• Det regnar. = Il pleut.",
+        "",
+        "Émotions :",
+        "• Jag är glad. / trött / stressad / lugn"
+      ],
+      "examples": [
+        { "sv": "Det är kallt idag.", "fr": "Il fait froid aujourd’hui.", "pron": "dett èr kallt i-dag" },
+        { "sv": "Det regnar.", "fr": "Il pleut.", "pron": "dett règn-ar" },
+        { "sv": "Jag är glad.", "fr": "Je suis content.", "pron": "ya èr glad" },
+        { "sv": "Jag är stressad.", "fr": "Je suis stressé.", "pron": "ya èr strès-sad" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Det ___ kallt.", "answer": "är" },
+        { "type": "gap", "q": "Complète : Jag är ___ .", "answer": "glad" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "long_dialogues",
+  "title": "Dialogues longs A1 — situations réelles",
+  "lessons": [
+    {
+      "id": "ld_1",
+      "title": "À l’aéroport (client + vendeur)",
+      "content": [
+        "🎯 Objectif : tenir un échange complet.",
+        "",
+        "Dialogue :",
+        "Client: Hej! Var är toaletten?",
+        "Alex: Där borta.",
+        "Client: Tack!",
+        "Alex: Varsågod.",
+        "",
+        "Client: Jag vill ha en kaffe.",
+        "Alex: Självklart. Något mer?",
+        "Client: Nej tack.",
+        "",
+        "Mission :",
+        "1) Lis à voix haute.",
+        "2) Joue les deux rôles."
+      ],
+      "examples": [
+        { "sv": "Var är toaletten?", "fr": "Où sont les toilettes ?", "pron": "var èr tou-a-lètt-en" },
+        { "sv": "Jag vill ha en kaffe.", "fr": "Je voudrais un café.", "pron": "ya vill ha en ka-fe" },
+        { "sv": "Något mer?", "fr": "Autre chose ?", "pron": "no-gott mèr" },
+        { "sv": "Varsågod.", "fr": "Je vous en prie.", "pron": "var-so-god" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ ha en kaffe.", "answer": "vill" },
+        { "type": "gap", "q": "Complète : ___ är toaletten?", "answer": "Var" }
+      ]
+    },
+    {
+      "id": "ld_2",
+      "title": "Organisation personnelle",
+      "content": [
+        "🎯 Objectif : parler de ton planning.",
+        "",
+        "Texte :",
+        "Idag jobbar jag.",
+        "Jag slutar klockan fem.",
+        "Imorgon är jag ledig.",
+        "Jag ska vila."
+      ],
+      "examples": [
+        { "sv": "Idag jobbar jag.", "fr": "Aujourd’hui je travaille.", "pron": "i-dag yobb-ar ya" },
+        { "sv": "Jag slutar klockan fem.", "fr": "Je finis à cinq heures.", "pron": "ya slou-tar klock-an fém" },
+        { "sv": "Imorgon är jag ledig.", "fr": "Demain je suis off.", "pron": "i-mor-ron èr ya le-dig" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Imorgon ___ jag ledig.", "answer": "är" },
+        { "type": "gap", "q": "Complète : Jag ___ vila.", "answer": "ska" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "a1_cecr_check",
+  "title": "Validation A1 — checklist CECR",
+  "lessons": [
+    {
+      "id": "a1_check",
+      "title": "Es-tu A1 ?",
+      "content": [
+        "🎯 Tu es A1 si tu peux :",
+        "",
+        "✔ Te présenter.",
+        "✔ Commander au café.",
+        "✔ Demander un lieu.",
+        "✔ Dire où tu habites.",
+        "✔ Parler de ton travail.",
+        "✔ Dire ce que tu fais aujourd’hui / demain.",
+        "✔ Poser des questions simples.",
+        "✔ Comprendre un mini-dialogue.",
+        "",
+        "Production finale :",
+        "Présente-toi en 6 phrases :",
+        "Nom, ville, travail, aujourd’hui, demain, émotion."
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ i Paris.", "answer": "bor" },
+        { "type": "gap", "q": "Complète : Jag ___ på flygplatsen.", "answer": "jobbar" },
+        { "type": "gap", "q": "Complète : Vad ___ du?", "answer": "gör" }
+      ]
+    }
+  ]
+}
+,
+{
+  "id": "a1_srs_final",
+  "title": "SRS Final A1 — consolidation",
+  "lessons": [
+    {
+      "id": "a1_srs",
+      "title": "Phrases clés finales",
+      "examples": [
+        { "sv": "Jag bor i Paris.", "fr": "J’habite à Paris.", "pron": "ya bour i pari" },
+        { "sv": "Jag jobbar på flygplatsen.", "fr": "Je travaille à l’aéroport.", "pron": "ya yobb-ar po flyg-plats-en" },
+        { "sv": "Jag vill ha en kaffe.", "fr": "Je voudrais un café.", "pron": "ya vill ha en ka-fe" },
+        { "sv": "Var är toaletten?", "fr": "Où sont les toilettes ?", "pron": "var èr tou-a-lètt-en" },
+        { "sv": "Imorgon ska jag vila.", "fr": "Demain je vais me reposer.", "pron": "i-mor-ron ska ya vi-la" },
+        { "sv": "Jag behöver hjälp.", "fr": "J’ai besoin d’aide.", "pron": "ya be-höv-er yèlp" },
+        { "sv": "Jag är ledig idag.", "fr": "Je suis off aujourd’hui.", "pron": "ya èr le-dig i-dag" },
+        { "sv": "Vad gör du?", "fr": "Que fais-tu ?", "pron": "vad yeuor dou" }
+      ],
+      "quiz": [
+        { "type": "gap", "q": "Complète : Jag ___ i Paris.", "answer": "bor" },
+        { "type": "gap", "q": "Complète : Jag ___ ha en kaffe.", "answer": "vill" },
+        { "type": "gap", "q": "Complète : Imorgon ___ jag vila.", "answer": "ska" },
+        { "type": "gap", "q": "Complète : Jag ___ hjälp.", "answer": "behöver" }
+      ]
+    }
+  ]
 }
   ]
 }
-
-
