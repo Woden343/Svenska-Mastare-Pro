@@ -1,4 +1,4 @@
-// assets/js/app.js — VERSION COMPLÈTE (STRUCTURE JSON RÉELLE + SRS FIX + REF/REF+ FIX)
+// assets/js/app.js — VERSION COMPLÈTE (JSON RÉEL + SRS FIX + REF/REF+ OK)
 
 const App = {
   mount: null,
@@ -28,7 +28,7 @@ const App = {
     }
     console.log("[App] Mount trouvé:", this.mount);
 
-    // NAV (IDs alignés index.html)
+    // Nav (IDs = index.html)
     const navHomeBrand = document.getElementById("nav-home");
     const navHomeBtn   = document.getElementById("nav-home-btn");
     const navRef       = document.getElementById("nav-ref");
@@ -43,19 +43,19 @@ const App = {
 
     console.log("[App] Navigation configurée");
 
-    // ROUTES
+    // Routes
     Router.add("/", () => this.viewHome());
-    Router.add("/level", (p) => this.viewLevel(p));
-    Router.add("/lesson", (p) => this.viewLesson(p));
-    Router.add("/ref", () => this.viewRef());
-    Router.add("/ref-lesson", (p) => this.viewRefLesson(p));
-    Router.add("/ref-plus", (p) => this.viewRefPlus(p));
+    Router.add("/level", (params) => this.viewLevel(params));
+    Router.add("/lesson", (params) => this.viewLesson(params));
+    Router.add("/ref", (params) => this.viewRef(params));
+    Router.add("/ref-lesson", (params) => this.viewRefLesson(params));
+    Router.add("/ref-plus", (params) => this.viewRefPlus(params));
     Router.add("/review", () => this.viewReview());
     Router.add("/stats", () => this.viewStats());
 
     console.log("[App] Routes configurées");
 
-    // LOAD DATA
+    // Load JSON
     try {
       const [a1, a2, b1, b2] = await Promise.all([
         fetch("assets/data/a1.json").then(r => r.json()),
@@ -84,14 +84,15 @@ const App = {
 
       console.log("[App] Données chargées");
 
-      // SRS INIT ✅ (fix: buildCardsFromLevels)
+      // ✅ SRS init (FIX: buildCardsFromLevels)
       try {
-        const cards = (SRS && typeof SRS.buildCardsFromLevels === "function")
-          ? SRS.buildCardsFromLevels(this.levels)
-          : [];
-
-        AppStorage.upsertCards(cards);
-        console.log("[App] SRS initialisé (cards:", cards.length, ")");
+        if (window.SRS && typeof SRS.buildCardsFromLevels === "function") {
+          const cards = SRS.buildCardsFromLevels(this.levels);
+          AppStorage.upsertCards(cards);
+          console.log("[App] SRS initialisé:", cards.length, "cartes");
+        } else {
+          console.warn("[App] SRS indisponible (SRS.buildCardsFromLevels introuvable)");
+        }
       } catch (e) {
         console.error("[App] Erreur SRS:", e);
       }
@@ -99,7 +100,7 @@ const App = {
     } catch (e) {
       console.error("[App] Erreur chargement JSON:", e);
       this.setView(`
-        <div class="card">
+        <div class="card error">
           <h2>Erreur de chargement</h2>
           <p class="muted">Impossible de charger les fichiers JSON.</p>
           <pre class="muted">${this.esc(e && e.stack ? e.stack : String(e))}</pre>
@@ -131,31 +132,26 @@ const App = {
       .replaceAll("'", "&#039;");
   },
 
-  pill(txt, cls = "") {
-    return `<span class="pill ${cls}">${this.esc(txt)}</span>`;
-  },
-
   // ======================
   // HOME
   // ======================
   viewHome() {
-    const levelCards = this.levelsOrder
-      .filter(k => this.levels[k] && Array.isArray(this.levels[k].modules))
-      .map(k => {
-        const L = this.levels[k];
-        const modulesCount = L.modules.length;
-        const lessonsCount = L.modules.reduce((acc, m) => acc + ((m.lessons || []).length), 0);
+    const levelsCards = this.levelsOrder
+      .filter(lvl => this.levels[lvl] && this.levels[lvl].modules && this.levels[lvl].modules.length)
+      .map(lvl => {
+        const L = this.levels[lvl];
+        const modulesCount = (L.modules || []).length;
+        const lessonsCount = (L.modules || []).reduce((acc, m) => acc + ((m.lessons || []).length), 0);
 
         return `
           <div class="card">
-            <div class="header">
+            <div class="row between">
               <div>
-                <div class="brand">${this.esc(k)} — ${this.esc(L.title || "")}</div>
-                <div class="sub muted">${modulesCount} modules • ${lessonsCount} leçons</div>
+                <h2>${this.esc(lvl)} — ${this.esc(L.title || "")}</h2>
+                <p class="muted">${modulesCount} modules • ${lessonsCount} leçons</p>
               </div>
-              <button class="btn" data-go="/level" data-level="${this.esc(k)}">Ouvrir</button>
+              <button class="btn" data-go="/level" data-level="${this.esc(lvl)}">Ouvrir</button>
             </div>
-            ${L.description ? `<p class="muted">${this.esc(L.description)}</p>` : ""}
           </div>
         `;
       })
@@ -165,30 +161,30 @@ const App = {
     const due = srsStats.due || 0;
 
     this.setView(`
-      <div class="card">
-        <div class="header">
-          <div>
-            <div class="brand">🇸🇪 Svenska Mästare Pro</div>
-            <div class="sub muted">Apprentissage progressif A1 → B2 • + Références • + SRS</div>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn" data-go="/review">Révision SRS ${due ? this.pill(due, "") : ""}</button>
-            <button class="btn" data-go="/stats">Stats</button>
+      <div class="stack">
+        <div class="hero">
+          <h1>Svenska Mästare Pro</h1>
+          <p class="muted">Apprentissage du suédois • Leçons • Vocabulaire • SRS</p>
+          <div class="hero-actions">
+            <button class="btn primary" data-go="/review">Révision SRS ${due ? `<span class="badge warn">${due}</span>` : ""}</button>
+            <button class="btn" data-go="/stats">Statistiques</button>
           </div>
         </div>
-      </div>
 
-      ${levelCards || `<div class="card"><p class="muted">Aucun niveau chargé.</p></div>`}
+        <div class="grid">
+          ${levelsCards || `<div class="card"><p class="muted">Aucun niveau chargé.</p></div>`}
+        </div>
 
-      <div class="card">
-        <div class="header">
-          <div>
-            <div class="brand">Références</div>
-            <div class="sub muted">Bescherelle vocabulaire, verbes à particules, etc.</div>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div class="grid grid-2">
+          <div class="card">
+            <h2>Références</h2>
+            <p class="muted">Bescherelles, verbes, particules…</p>
             <button class="btn" data-go="/ref">Ouvrir</button>
-            <button class="btn" data-go="/ref-plus">Référence+</button>
+          </div>
+          <div class="card">
+            <h2>Référence+</h2>
+            <p class="muted">Tableaux, listes, synthèses</p>
+            <button class="btn" data-go="/ref-plus">Ouvrir</button>
           </div>
         </div>
       </div>
@@ -199,7 +195,7 @@ const App = {
         const go = btn.getAttribute("data-go");
         const level = btn.getAttribute("data-level");
         if (go === "/level") Router.go("/level", { level });
-        else Router.go(go);
+        else Router.go(go, {});
       });
     });
   },
@@ -213,28 +209,29 @@ const App = {
 
     if (!L) {
       this.setView(`
-        <div class="card">
+        <div class="card error">
           <h2>Niveau introuvable</h2>
-          <button class="btn" id="goHome">Accueil</button>
+          <p class="muted">Le niveau ${this.esc(levelKey)} n’a pas été chargé.</p>
+          <button class="btn" data-go="/">Retour</button>
         </div>
       `);
-      document.getElementById("goHome")?.addEventListener("click", () => Router.go("/"));
+      this.mount.querySelector("[data-go]")?.addEventListener("click", () => Router.go("/"));
       return;
     }
 
     const modulesHtml = (L.modules || []).map((m) => {
       const lessons = (m.lessons || []).map((ls) => {
-        const doneKey = `${levelKey}:${ls.id}`;
-        const done = AppStorage.isDone(doneKey);
+        const key = `${levelKey}:${ls.id}`;
+        const done = AppStorage.isDone(key);
 
         return `
-          <div class="item">
-            <div>
-              <div><b>${this.esc(ls.title)}</b></div>
-              <div class="muted sub">${this.esc(ls.type || "")}</div>
+          <div class="lesson-row ${done ? "done" : ""}">
+            <div class="lesson-info">
+              <div class="lesson-title">${this.esc(ls.title)}</div>
+              <div class="muted">${this.esc(ls.type || "")}</div>
             </div>
-            <div style="display:flex; gap:10px; align-items:center;">
-              ${done ? this.pill("Terminé") : this.pill("À faire")}
+            <div class="lesson-actions">
+              ${done ? `<span class="badge ok">Terminé</span>` : `<span class="badge">À faire</span>`}
               <button class="btn" data-go="/lesson" data-level="${this.esc(levelKey)}" data-lesson="${this.esc(ls.id)}">Ouvrir</button>
             </div>
           </div>
@@ -243,26 +240,23 @@ const App = {
 
       return `
         <div class="card">
-          <div class="lesson-heading">${this.esc(m.title || "")}</div>
-          <div class="list">
-            ${lessons || `<div class="muted">Aucune leçon.</div>`}
-          </div>
+          <h2>${this.esc(m.title || "")}</h2>
+          <div class="stack">${lessons || `<p class="muted">Aucune leçon dans ce module.</p>`}</div>
         </div>
       `;
     }).join("");
 
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">${this.esc(levelKey)} — ${this.esc(L.title || "")}</div>
-            ${L.description ? `<div class="sub muted">${this.esc(L.description)}</div>` : ""}
+            <h1>${this.esc(levelKey)} — ${this.esc(L.title || "")}</h1>
+            <p class="muted">${this.esc(L.description || "")}</p>
           </div>
           <button class="btn" id="backBtn">← Retour</button>
         </div>
+        ${modulesHtml || `<div class="card"><p class="muted">Aucun module.</p></div>`}
       </div>
-
-      ${modulesHtml || `<div class="card"><div class="muted">Aucun module.</div></div>`}
     `);
 
     document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
@@ -278,7 +272,7 @@ const App = {
   },
 
   // ======================
-  // LESSON (structure réelle: content/vocab/examples/mini_drills/quiz)
+  // LESSON (JSON réel)
   // ======================
   viewLesson(params) {
     const levelKey = params?.level;
@@ -286,7 +280,7 @@ const App = {
 
     const L = this.levels[levelKey];
     if (!L) {
-      this.setView(`<div class="card"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`);
+      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`);
       return;
     }
 
@@ -299,193 +293,211 @@ const App = {
     }
 
     if (!lesson) {
-      this.setView(`<div class="card"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
+      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
       return;
     }
 
-    const doneKey = `${levelKey}:${lesson.id}`;
+    const key = `${levelKey}:${lesson.id}`;
 
-    const contentBlock = this.renderContent(lesson.content);
-    const examplesBlock = this.renderExamples(lesson.examples);
-    const vocabBlock = this.renderVocab(lesson.vocab);
-    const drillsBlock = this.renderDrills(lesson.mini_drills);
-    const quizBlock = this.renderQuiz(lesson.quiz);
+    const contentHtml  = this.renderContent(lesson.content);
+    const examplesHtml = this.renderExamples(lesson.examples);
+    const vocabHtml    = this.renderVocab(lesson.vocab);
+    const drillsHtml   = this.renderMiniDrills(lesson.mini_drills);
+    const quizHtml     = this.renderQuiz(lesson.quiz);
 
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">${this.esc(lesson.title || "")}</div>
-            <div class="sub muted">${this.esc(levelKey)} • ${this.esc(moduleTitle)} • ${this.esc(lesson.type || "")}</div>
+            <h1>${this.esc(lesson.title || "")}</h1>
+            <p class="muted">${this.esc(levelKey)} • ${this.esc(moduleTitle)} • ${this.esc(lesson.type || "")}</p>
           </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="row">
             <button class="btn" id="backBtn">← Retour</button>
             <button class="btn" id="homeBtn">Accueil</button>
-            <button class="btn" id="doneBtn">Marquer terminé</button>
+            <button class="btn primary" id="markDoneBtn">Marquer terminé</button>
           </div>
         </div>
-      </div>
 
-      ${contentBlock}
-      ${examplesBlock}
-      ${vocabBlock}
-      ${drillsBlock}
-      ${quizBlock}
+        ${contentHtml}
+        ${examplesHtml}
+        ${vocabHtml}
+        ${drillsHtml}
+        ${quizHtml}
+      </div>
     `);
 
-    document.getElementById("backBtn")?.addEventListener("click", () => Router.back(`/level?level=${encodeURIComponent(levelKey)}`));
+    document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
     document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
-    document.getElementById("doneBtn")?.addEventListener("click", () => {
-      AppStorage.markDone(doneKey);
+
+    document.getElementById("markDoneBtn")?.addEventListener("click", () => {
+      AppStorage.markDone(key);
       alert("✅ Leçon marquée comme terminée !");
       Router.go("/level", { level: levelKey });
     });
 
-    // Quiz: reveal answer
+    // Quiz reveal
     this.mount.querySelectorAll("[data-reveal]").forEach(btn => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-reveal");
-        const ans = document.getElementById(id);
-        if (ans) ans.style.display = (ans.style.display === "none" ? "block" : "none");
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.display = (el.style.display === "none" ? "block" : "none");
       });
     });
   },
 
   renderContent(lines) {
-    if (!Array.isArray(lines) || !lines.filter(x => String(x || "").trim()).length) return "";
-    const items = lines
-      .filter(x => String(x || "").trim())
-      .map(x => `<div class="lesson-block">${this.esc(x)}</div>`)
-      .join("");
+    if (!Array.isArray(lines)) return "";
+    const clean = lines.map(x => String(x ?? "")).filter(x => x.trim().length);
+    if (!clean.length) return "";
 
     return `
       <div class="card">
-        <div class="lesson-heading">Contenu</div>
-        ${items}
+        <h2>Contenu</h2>
+        <div class="stack">
+          ${clean.map(t => `<div>${this.esc(t)}</div>`).join("")}
+        </div>
       </div>
     `;
   },
 
   renderExamples(examples) {
     if (!Array.isArray(examples) || !examples.length) return "";
-    const rows = examples.map(ex => `
-      <div class="lesson-block">
-        <div class="lesson-sv">${this.esc(ex.sv || "")}</div>
-        ${ex.pron ? `<div class="lesson-phon muted">${this.esc(ex.pron)}</div>` : ""}
-        ${ex.fr ? `<div class="sub">${this.esc(ex.fr)}</div>` : ""}
-      </div>
-    `).join("");
 
     return `
       <div class="card">
-        <div class="lesson-heading">Exemples</div>
-        ${rows}
+        <h2>Exemples</h2>
+        <div class="stack">
+          ${examples.map(ex => `
+            <div class="card" style="padding:14px;">
+              <div class="sw">${this.esc(ex.sv || "")}</div>
+              ${ex.pron ? `<div class="muted">${this.esc(ex.pron)}</div>` : ""}
+              ${ex.fr ? `<div class="fr">${this.esc(ex.fr)}</div>` : ""}
+            </div>
+          `).join("")}
+        </div>
       </div>
     `;
   },
 
   renderVocab(vocab) {
     if (!Array.isArray(vocab) || !vocab.length) return "";
-    const rows = vocab.map(v => `
-      <div class="item">
-        <div>
-          <div><b>${this.esc(v.sv || "")}</b> <span class="muted">${v.enett ? this.esc(`(${v.enett})`) : ""}</span></div>
-          <div class="sub muted">${this.esc(v.fr || "")}</div>
-          ${v.pron ? `<div class="sub muted">${this.esc(v.pron)}</div>` : ""}
-        </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
-          ${v.def_sg ? this.pill(v.def_sg) : ""}
-          ${v.pl ? this.pill(v.pl) : ""}
-          ${v.def_pl ? this.pill(v.def_pl) : ""}
-        </div>
-      </div>
-    `).join("");
 
     return `
       <div class="card">
-        <div class="lesson-heading">Vocabulaire</div>
-        <div class="list">${rows}</div>
+        <h2>Vocabulaire</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>SV</th><th>FR</th><th>Pron</th><th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${vocab.map(v => `
+                <tr>
+                  <td class="sw">${this.esc(v.sv || "")}</td>
+                  <td>${this.esc(v.fr || "")}</td>
+                  <td class="muted">${this.esc(v.pron || "")}</td>
+                  <td class="muted">${this.esc(v.note || "")}</td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
       </div>
     `;
   },
 
-  renderDrills(drills) {
+  renderMiniDrills(drills) {
     if (!Array.isArray(drills) || !drills.length) return "";
-    const blocks = drills.map(d => `
-      <div class="lesson-block">
-        <div><b>${this.esc(d.instruction || "")}</b></div>
-        <div class="list" style="margin-top:10px;">
-          ${(d.items || []).map(it => `<div class="item">${this.esc(it)}</div>`).join("")}
-        </div>
-      </div>
-    `).join("");
 
     return `
       <div class="card">
-        <div class="lesson-heading">Mini-drills</div>
-        ${blocks}
+        <h2>Mini-drills</h2>
+        <div class="stack">
+          ${drills.map(d => `
+            <div class="card" style="padding:14px;">
+              <div><b>${this.esc(d.instruction || "")}</b></div>
+              ${Array.isArray(d.items) && d.items.length
+                ? `<ul>${d.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul>`
+                : `<div class="muted">Aucun item.</div>`}
+            </div>
+          `).join("")}
+        </div>
       </div>
     `;
   },
 
   renderQuiz(quiz) {
     if (!Array.isArray(quiz) || !quiz.length) return "";
-    const blocks = quiz.map((q, idx) => {
-      const ansId = `quiz_ans_${Math.random().toString(16).slice(2)}_${idx}`;
-      return `
-        <div class="lesson-block">
-          <div><b>${this.esc(q.q || "")}</b></div>
-          <button class="btn btn-ghost" data-reveal="${ansId}" style="margin-top:10px;">Afficher la réponse</button>
-          <div id="${ansId}" class="sub muted" style="display:none; margin-top:10px;">
-            ✅ ${this.esc(q.answer || "")}
-          </div>
-        </div>
-      `;
-    }).join("");
 
     return `
       <div class="card">
-        <div class="lesson-heading">Quiz</div>
-        ${blocks}
+        <h2>Quiz</h2>
+        <div class="stack">
+          ${quiz.map((q, i) => {
+            const id = `ans_${Math.random().toString(16).slice(2)}_${i}`;
+            return `
+              <div class="card" style="padding:14px;">
+                <div><b>${this.esc(q.q || "")}</b></div>
+                <button class="btn" style="margin-top:10px;" data-reveal="${id}">Afficher la réponse</button>
+                <div id="${id}" class="muted" style="display:none; margin-top:10px;">
+                  ✅ ${this.esc(q.answer || "")}
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
       </div>
     `;
   },
 
   // ======================
-  // REF (modules -> lessons cliquables)
+  // REF
   // ======================
   viewRef() {
     const mods = (this.ref.modules || []).map(m => {
       const lessons = (m.lessons || []).map(ls => `
-        <div class="item">
-          <div><b>${this.esc(ls.title || "")}</b></div>
-          <button class="btn" data-go="/ref-lesson" data-module="${this.esc(m.id)}" data-lesson="${this.esc(ls.id)}">Ouvrir</button>
+        <div class="lesson-row">
+          <div class="lesson-info">
+            <div class="lesson-title">${this.esc(ls.title || "")}</div>
+            <div class="muted">${this.esc(ls.type || "")}</div>
+          </div>
+          <div class="lesson-actions">
+            <button class="btn" data-go="/ref-lesson" data-module="${this.esc(m.id)}" data-lesson="${this.esc(ls.id)}">Ouvrir</button>
+          </div>
         </div>
       `).join("");
 
       return `
         <div class="card">
-          <div class="lesson-heading">${this.esc(m.title || "")}</div>
-          <div class="list">${lessons || `<div class="muted">Aucune leçon.</div>`}</div>
+          <h2>${this.esc(m.title || "")}</h2>
+          <div class="stack">${lessons || `<p class="muted">Aucune leçon.</p>`}</div>
         </div>
       `;
     }).join("");
 
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">${this.esc(this.ref.title || "Références")}</div>
-            <div class="sub muted">Fiches et “bescherelles”</div>
+            <h1>${this.esc(this.ref.title || "Références")}</h1>
+            <p class="muted">Bescherelles, verbes, particules…</p>
           </div>
-          <button class="btn" id="homeBtn">Accueil</button>
+          <div class="row">
+            <button class="btn" id="backBtn">← Retour</button>
+            <button class="btn" id="homeBtn">Accueil</button>
+          </div>
         </div>
-      </div>
 
-      ${mods || `<div class="card"><div class="muted">Aucune référence.</div></div>`}
+        ${mods || `<div class="card"><p class="muted">Aucune référence.</p></div>`}
+      </div>
     `);
 
     document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
+    document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
 
     this.mount.querySelectorAll("[data-go='/ref-lesson']").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -503,37 +515,37 @@ const App = {
 
     const mod = (this.ref.modules || []).find(m => String(m.id) === String(moduleId));
     if (!mod) {
-      this.setView(`<div class="card"><h2>Erreur</h2><p class="muted">Module référence introuvable.</p></div>`);
+      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Module introuvable.</p></div>`);
       return;
     }
 
     const lesson = (mod.lessons || []).find(ls => String(ls.id) === String(lessonId));
     if (!lesson) {
-      this.setView(`<div class="card"><h2>Erreur</h2><p class="muted">Leçon référence introuvable.</p></div>`);
+      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
       return;
     }
 
-    const contentBlock = this.renderContent(lesson.content);
-    const examplesBlock = this.renderExamples(lesson.examples);
-    const vocabBlock = this.renderVocab(lesson.vocab);
+    const contentHtml  = this.renderContent(lesson.content);
+    const examplesHtml = this.renderExamples(lesson.examples);
+    const vocabHtml    = this.renderVocab(lesson.vocab);
 
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">${this.esc(lesson.title || "")}</div>
-            <div class="sub muted">Référence • ${this.esc(mod.title || "")}</div>
+            <h1>${this.esc(lesson.title || "")}</h1>
+            <p class="muted">Référence • ${this.esc(mod.title || "")}</p>
           </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="row">
             <button class="btn" id="backBtn">← Retour</button>
             <button class="btn" id="homeBtn">Accueil</button>
           </div>
         </div>
-      </div>
 
-      ${contentBlock}
-      ${examplesBlock}
-      ${vocabBlock}
+        ${contentHtml}
+        ${examplesHtml}
+        ${vocabHtml}
+      </div>
     `);
 
     document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
@@ -541,173 +553,76 @@ const App = {
   },
 
   // ======================
-  // REF+
+  // REF+ (affichage “best effort”)
   // ======================
-  viewRefPlus(params) {
-    const tab = params?.tab || "verbs";
-    const theme = params?.theme || "all";
+  viewRefPlus() {
+    const fp = this.refPlus || {};
 
-    const themes = Array.isArray(this.refPlus.themes) ? this.refPlus.themes : [];
-    const themeLabel = (themes.find(t => t.id === theme)?.label) || "Tous";
-
-    const tabs = [
-      ["verbs", "Verbes"],
-      ["vocab", "Vocabulaire"],
-      ["particles", "Particules"],
-      ["articles", "Articles"],
-      ["articles_guide", "Guide articles"]
-    ];
-
-    const themePills = themes.map(t => `
-      <button class="btn btn-ghost" data-theme="${this.esc(t.id)}">${this.esc(t.label || t.id)}</button>
-    `).join("");
-
-    const tabButtons = tabs.map(([id, label]) => `
-      <button class="btn ${tab === id ? "" : "btn-ghost"}" data-tab="${this.esc(id)}">${this.esc(label)}</button>
-    `).join("");
-
-    const filterByTheme = (arr) => {
-      if (!Array.isArray(arr)) return [];
-      if (theme === "all") return arr;
-      return arr.filter(x => String(x.theme || "") === String(theme));
-    };
-
-    const table = (headers, rows, rowFn) => {
-      const head = headers.map(h => `<th>${this.esc(h)}</th>`).join("");
-      const body = rows.map(rowFn).join("");
+    const renderAutoTable = (items) => {
+      if (!Array.isArray(items) || !items.length) return `<p class="muted">Aucun contenu.</p>`;
+      if (typeof items[0] !== "object") {
+        return `<ul>${items.map(x => `<li>${this.esc(x)}</li>`).join("")}</ul>`;
+      }
+      const keys = Array.from(new Set(items.flatMap(o => Object.keys(o || {})))).slice(0, 10);
       return `
-        <div class="lesson-block">
-          <div class="sub muted">Thème: ${this.esc(themeLabel)}</div>
-        </div>
-        <div class="lesson-block" style="overflow:auto;">
-          <table style="width:100%; border-collapse:collapse;">
-            <thead><tr>${head}</tr></thead>
-            <tbody>${body || `<tr><td class="muted" colspan="${headers.length}">Aucun contenu.</td></tr>`}</tbody>
+        <div class="table-wrap">
+          <table>
+            <thead><tr>${keys.map(k => `<th>${this.esc(k)}</th>`).join("")}</tr></thead>
+            <tbody>
+              ${items.map(o => `<tr>${keys.map(k => `<td class="muted">${this.esc(o?.[k] ?? "")}</td>`).join("")}</tr>`).join("")}
+            </tbody>
           </table>
         </div>
       `;
     };
 
-    let contentHtml = "";
-
-    if (tab === "verbs") {
-      const rows = filterByTheme(this.refPlus.verbs);
-      contentHtml = table(
-        ["Inf", "Prés", "Prét", "Sup", "FR", "Note", "Ex (SV)", "Ex (FR)"],
-        rows,
-        (v) => `
-          <tr>
-            <td>${this.esc(v.inf || "")}</td>
-            <td>${this.esc(v.pres || "")}</td>
-            <td>${this.esc(v.pret || "")}</td>
-            <td>${this.esc(v.sup || "")}</td>
-            <td>${this.esc(v.fr || "")}</td>
-            <td class="muted">${this.esc(v.note || "")}</td>
-            <td>${this.esc(v.ex_sv || "")}</td>
-            <td class="muted">${this.esc(v.ex_fr || "")}</td>
-          </tr>
-        `
-      );
-    } else if (tab === "vocab") {
-      const rows = filterByTheme(this.refPlus.vocab);
-      contentHtml = table(
-        ["SV", "FR", "Pron", "Def SG", "PL", "Def PL"],
-        rows,
-        (v) => `
-          <tr>
-            <td>${this.esc(v.sv || "")}</td>
-            <td>${this.esc(v.fr || "")}</td>
-            <td class="muted">${this.esc(v.pron || "")}</td>
-            <td>${this.esc(v.def_sg || "")}</td>
-            <td>${this.esc(v.pl || "")}</td>
-            <td>${this.esc(v.def_pl || "")}</td>
-          </tr>
-        `
-      );
-    } else if (tab === "particles") {
-      const rows = filterByTheme(this.refPlus.particles);
-      contentHtml = table(
-        ["Particule", "Sens", "Ex (SV)", "Ex (FR)"],
-        rows,
-        (p) => `
-          <tr>
-            <td>${this.esc(p.sv || p.particle || "")}</td>
-            <td>${this.esc(p.fr || p.meaning || "")}</td>
-            <td>${this.esc(p.ex_sv || "")}</td>
-            <td class="muted">${this.esc(p.ex_fr || "")}</td>
-          </tr>
-        `
-      );
-    } else if (tab === "articles") {
-      const rows = Array.isArray(this.refPlus.articles) ? this.refPlus.articles : [];
-      contentHtml = table(
-        ["Mot", "Genre", "Indéf", "Déf", "PL", "Déf PL", "Ex"],
-        rows,
-        (a) => `
-          <tr>
-            <td>${this.esc(a.word || a.sv || "")}</td>
-            <td class="muted">${this.esc(a.gender || a.enett || "")}</td>
-            <td>${this.esc(a.indef || "")}</td>
-            <td>${this.esc(a.def || a.def_sg || "")}</td>
-            <td>${this.esc(a.pl || "")}</td>
-            <td>${this.esc(a.def_pl || "")}</td>
-            <td class="muted">${this.esc(a.example || a.ex || "")}</td>
-          </tr>
-        `
-      );
-    } else if (tab === "articles_guide") {
-      const rows = Array.isArray(this.refPlus.articles_guide) ? this.refPlus.articles_guide : [];
-      contentHtml = table(
-        ["Règle", "Exemple"],
-        rows,
-        (g) => `
-          <tr>
-            <td>${this.esc(g.rule || g.title || "")}</td>
-            <td class="muted">${this.esc(g.example || g.ex || "")}</td>
-          </tr>
-        `
-      );
-    }
-
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">${this.esc(this.refPlus.title || "Référence+")}</div>
-            <div class="sub muted">Filtres par thème + tableaux propres</div>
+            <h1>${this.esc(fp.title || "Référence+")}</h1>
+            <p class="muted">Tableaux & listes</p>
           </div>
-          <button class="btn" id="homeBtn">Accueil</button>
+          <div class="row">
+            <button class="btn" id="backBtn">← Retour</button>
+            <button class="btn" id="homeBtn">Accueil</button>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="lesson-heading">Onglets</div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">${tabButtons}</div>
-      </div>
+        <div class="card">
+          <h2>Thèmes</h2>
+          ${renderAutoTable(fp.themes)}
+        </div>
 
-      <div class="card">
-        <div class="lesson-heading">Thèmes</div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">${themePills}</div>
-      </div>
+        <div class="card">
+          <h2>Verbes</h2>
+          ${renderAutoTable(fp.verbs)}
+        </div>
 
-      <div class="card">
-        ${contentHtml}
+        <div class="card">
+          <h2>Vocabulaire</h2>
+          ${renderAutoTable(fp.vocab)}
+        </div>
+
+        <div class="card">
+          <h2>Particules</h2>
+          ${renderAutoTable(fp.particles)}
+        </div>
+
+        <div class="card">
+          <h2>Articles</h2>
+          ${renderAutoTable(fp.articles)}
+        </div>
+
+        <div class="card">
+          <h2>Guide des articles</h2>
+          ${renderAutoTable(fp.articles_guide)}
+        </div>
       </div>
     `);
 
     document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
-
-    this.mount.querySelectorAll("[data-tab]").forEach(b => {
-      b.addEventListener("click", () => {
-        Router.go("/ref-plus", { tab: b.getAttribute("data-tab"), theme });
-      });
-    });
-
-    this.mount.querySelectorAll("[data-theme]").forEach(b => {
-      b.addEventListener("click", () => {
-        Router.go("/ref-plus", { tab, theme: b.getAttribute("data-theme") });
-      });
-    });
+    document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
   },
 
   // ======================
@@ -718,18 +633,22 @@ const App = {
 
     if (!due.length) {
       this.setView(`
-        <div class="card">
-          <div class="header">
+        <div class="stack">
+          <div class="row between">
             <div>
-              <div class="brand">Révision SRS</div>
-              <div class="sub muted">Aucune carte à réviser pour le moment.</div>
+              <h1>Révision SRS</h1>
+              <p class="muted">Aucune carte à réviser pour le moment.</p>
             </div>
-            <button class="btn" id="homeBtn">Accueil</button>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+            </div>
           </div>
+          <div class="card"><p>✅ Tu es à jour !</p></div>
         </div>
-        <div class="card"><div class="muted">✅ Tu es à jour !</div></div>
       `);
       document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
+      document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
       return;
     }
 
@@ -740,37 +659,35 @@ const App = {
       const c = due[idx];
 
       this.setView(`
-        <div class="card">
-          <div class="header">
+        <div class="stack">
+          <div class="row between">
             <div>
-              <div class="brand">Révision SRS</div>
-              <div class="sub muted">Carte ${idx + 1}/${due.length}</div>
+              <h1>Révision SRS</h1>
+              <p class="muted">Carte ${idx + 1}/${due.length}</p>
             </div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
               <button class="btn" id="homeBtn">Accueil</button>
             </div>
           </div>
-        </div>
 
-        <div class="card">
-          <div class="lesson-block">
-            <div class="lesson-sv">${this.esc(c.front || "")}</div>
-            ${showBack ? `<div class="lesson-spacer"></div><div class="sub">${this.esc(c.back || "")}</div>` : `<div class="sub muted">Clique sur “Afficher”</div>`}
-          </div>
-
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn" id="toggleBtn">${showBack ? "Cacher" : "Afficher"}</button>
+          <div class="card">
+            <div class="sw">${this.esc(c.front || "")}</div>
+            ${showBack ? `<div class="fr" style="margin-top:10px;">${this.esc(c.back || "")}</div>` : `<div class="muted" style="margin-top:10px;">Clique sur “Afficher”</div>`}
+            <div class="row" style="margin-top:14px;">
+              <button class="btn" id="toggleBtn">${showBack ? "Cacher" : "Afficher"}</button>
+            </div>
           </div>
 
           ${showBack ? `
-            <div class="lesson-spacer"></div>
-            <div class="sub muted">Auto-évaluation</div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
-              <button class="btn" data-grade="0">0 — Oublié</button>
-              <button class="btn" data-grade="1">1 — Difficile</button>
-              <button class="btn" data-grade="2">2 — OK</button>
-              <button class="btn" data-grade="3">3 — Facile</button>
+            <div class="card">
+              <h2>Auto-évaluation</h2>
+              <div class="row wrap" style="gap:10px;">
+                <button class="btn" data-grade="0">0 — Oublié</button>
+                <button class="btn" data-grade="1">1 — Difficile</button>
+                <button class="btn" data-grade="2">2 — OK</button>
+                <button class="btn" data-grade="3">3 — Facile</button>
+              </div>
             </div>
           ` : ""}
         </div>
@@ -778,7 +695,11 @@ const App = {
 
       document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
       document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
-      document.getElementById("toggleBtn")?.addEventListener("click", () => { showBack = !showBack; render(); });
+
+      document.getElementById("toggleBtn")?.addEventListener("click", () => {
+        showBack = !showBack;
+        render();
+      });
 
       this.mount.querySelectorAll("[data-grade]").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -807,47 +728,45 @@ const App = {
     const srs = AppStorage.getSrsStats();
 
     this.setView(`
-      <div class="card">
-        <div class="header">
+      <div class="stack">
+        <div class="row between">
           <div>
-            <div class="brand">Statistiques</div>
-            <div class="sub muted">Progression + SRS</div>
+            <h1>Statistiques</h1>
+            <p class="muted">Progression & SRS</p>
           </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="row">
             <button class="btn" id="backBtn">← Retour</button>
             <button class="btn" id="homeBtn">Accueil</button>
           </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="lesson-heading">Résultats</div>
-        <div class="list">
-          <div class="item"><div>✅ Bonnes réponses</div><div><b>${st.correct || 0}</b></div></div>
-          <div class="item"><div>❌ Mauvaises réponses</div><div><b>${st.wrong || 0}</b></div></div>
-          <div class="item"><div>🔥 Streak</div><div><b>${st.streak || 0}</b> jour(s)</div></div>
-          <div class="item"><div>📅 Dernière étude</div><div class="muted">${this.esc(st.lastStudyDate || "—")}</div></div>
-        </div>
-      </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h2>Résultats</h2>
+            <p>✅ Bonnes réponses : <b>${st.correct || 0}</b></p>
+            <p>❌ Mauvaises réponses : <b>${st.wrong || 0}</b></p>
+            <p>🔥 Streak : <b>${st.streak || 0}</b> jour(s)</p>
+            <p class="muted">Dernière étude : ${this.esc(st.lastStudyDate || "—")}</p>
+          </div>
 
-      <div class="card">
-        <div class="lesson-heading">SRS</div>
-        <div class="list">
-          <div class="item"><div>Total cartes</div><div><b>${srs.total}</b></div></div>
-          <div class="item"><div>À réviser</div><div><b>${srs.due}</b></div></div>
-          <div class="item"><div>Nouvelles</div><div><b>${srs.newCards}</b></div></div>
-          <div class="item"><div>En apprentissage</div><div><b>${srs.learning}</b></div></div>
-          <div class="item"><div>Matures</div><div><b>${srs.mature}</b></div></div>
+          <div class="card">
+            <h2>SRS</h2>
+            <p>Total cartes : <b>${srs.total}</b></p>
+            <p>À réviser : <b>${srs.due}</b></p>
+            <p>Nouvelles : <b>${srs.newCards}</b></p>
+            <p>En apprentissage : <b>${srs.learning}</b></p>
+            <p>Matures : <b>${srs.mature}</b></p>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="lesson-heading">Actions</div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" id="reviewBtn">Réviser</button>
-          <button class="btn" id="resetBtn">Réinitialiser</button>
+        <div class="card">
+          <h2>Actions</h2>
+          <div class="row wrap" style="gap:10px;">
+            <button class="btn primary" id="reviewBtn">Réviser maintenant</button>
+            <button class="btn bad" id="resetBtn">Réinitialiser</button>
+          </div>
+          <p class="muted">⚠️ La réinitialisation efface toutes les données (progression + SRS).</p>
         </div>
-        <div class="sub muted" style="margin-top:10px;">⚠️ Efface progression + SRS.</div>
       </div>
     `);
 
@@ -858,5 +777,5 @@ const App = {
   }
 };
 
-// BOOT
+// Boot
 window.addEventListener("DOMContentLoaded", () => App.init());
