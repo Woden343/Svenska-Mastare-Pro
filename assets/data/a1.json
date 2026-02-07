@@ -334,11 +334,124 @@
     { "type": "gap", "q": "Det ___ kallt.", "answer": "är" },
     { "type": "gap", "q": "Jag är ___ .", "answer": "trött" }
       ]
+    },
+{
+  "id": "a1_premium_09",
+  "title": "Noms — en / ett",
+  "content": [
+    "🎯 Objectif : utiliser le bon article.",
+    "",
+    "=== Règle A1 ===",
+    "en = genre commun",
+    "ett = genre neutre",
+    "",
+    "Exemples :",
+    "en bok (un livre)",
+    "ett hus (une maison)",
+    "",
+    "=== Production ===",
+    "Dis 6 objets avec en / ett."
+  ],
+  "vocab": [
+    { "sv": "bok", "fr": "livre", "pron": "bouk" },
+    { "sv": "hus", "fr": "maison", "pron": "hous" },
+    { "sv": "bil", "fr": "voiture", "pron": "bil" },
+    { "sv": "bord", "fr": "table", "pron": "bourd" }
+  ],
+  "examples": [
+    { "sv": "en bok", "fr": "un livre", "pron": "en bouk" },
+    { "sv": "ett hus", "fr": "une maison", "pron": "ett hous" },
+    { "sv": "Jag har en bil.", "fr": "J’ai une voiture.", "pron": "ya har en bil" }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "___ hus", "answer": "ett" },
+    { "type": "gap", "q": "___ bok", "answer": "en" }
+  ]
+}
+,
+{
+  "id": "a1_premium_10",
+  "title": "Forme définie — boken / huset",
+  "content": [
+    "🎯 Objectif : dire 'le' / 'la'.",
+    "",
+    "=== Règle A1 ===",
+    "en bok → boken",
+    "ett hus → huset",
+    "",
+    "=== Production ===",
+    "Transforme 4 noms en forme définie."
+  ],
+  "examples": [
+    { "sv": "boken", "fr": "le livre", "pron": "bouk-en" },
+    { "sv": "huset", "fr": "la maison", "pron": "hou-set" },
+    { "sv": "Jag läser boken.", "fr": "Je lis le livre.", "pron": "ya lè-sèr bouk-en" }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Transformation : en bok → boken / ett hus → huset.",
+      "items": ["en bok", "ett hus"]
     }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "bok → ___", "answer": "boken" },
+    { "type": "gap", "q": "hus → ___", "answer": "huset" }
+  ]
+}
+,
+{
+  "id": "a1_premium_11",
+  "title": "Pluriel simple",
+  "content": [
+    "🎯 Objectif : parler de plusieurs objets.",
+    "",
+    "=== Règle A1 ===",
+    "bok → böcker",
+    "hus → hus",
+    "",
+    "=== Production ===",
+    "Dis 4 phrases avec plusieurs objets."
+  ],
+  "examples": [
+    { "sv": "böcker", "fr": "livres", "pron": "beuk-er" },
+    { "sv": "hus", "fr": "maisons", "pron": "hous" },
+    { "sv": "Jag har böcker.", "fr": "J’ai des livres.", "pron": "ya har beuk-er" }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "bok → ___", "answer": "böcker" },
+    { "type": "gap", "q": "Jag har ___ .", "answer": "böcker" }
+  ]
+}
+,
+{
+  "id": "a1_premium_12",
+  "title": "Adjectifs — stor / stort",
+  "content": [
+    "🎯 Objectif : décrire avec un adjectif.",
+    "",
+    "=== Règle A1 ===",
+    "en-ord → stor bok",
+    "ett-ord → stort hus",
+    "",
+    "=== Production ===",
+    "Décris 4 objets."
+  ],
+  "examples": [
+    { "sv": "en stor bok", "fr": "un grand livre", "pron": "en stor bouk" },
+    { "sv": "ett stort hus", "fr": "une grande maison", "pron": "ett stort hous" },
+    { "sv": "Jag har ett stort hus.", "fr": "J’ai une grande maison.", "pron": "ya har ett stort hous" }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "ett ___ hus", "answer": "stort" },
+    { "type": "gap", "q": "en ___ bok", "answer": "stor" }
+  ]
+}
+
   ]
 }
   ]
 }
+
 
 
 
