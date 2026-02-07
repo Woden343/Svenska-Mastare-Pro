@@ -1,4 +1,4 @@
-// assets/js/app.js — VERSION COMPLÈTE (JSON RÉEL + SRS FIX + REF/REF+ OK)
+// assets/js/app.js — VERSION COMPLÈTE (UI PRO + SRS "FORCER SESSION")
 
 const App = {
   mount: null,
@@ -41,19 +41,15 @@ const App = {
     if (navReview)    navReview.addEventListener("click", () => Router.go("/review"));
     if (navStats)     navStats.addEventListener("click", () => Router.go("/stats"));
 
-    console.log("[App] Navigation configurée");
-
     // Routes
     Router.add("/", () => this.viewHome());
     Router.add("/level", (params) => this.viewLevel(params));
     Router.add("/lesson", (params) => this.viewLesson(params));
-    Router.add("/ref", (params) => this.viewRef(params));
+    Router.add("/ref", () => this.viewRef());
     Router.add("/ref-lesson", (params) => this.viewRefLesson(params));
-    Router.add("/ref-plus", (params) => this.viewRefPlus(params));
+    Router.add("/ref-plus", () => this.viewRefPlus());
     Router.add("/review", () => this.viewReview());
     Router.add("/stats", () => this.viewStats());
-
-    console.log("[App] Routes configurées");
 
     // Load JSON
     try {
@@ -69,22 +65,13 @@ const App = {
       if (b1 && b1.modules) this.levels.B1 = b1;
       if (b2 && b2.modules) this.levels.B2 = b2;
 
-      console.log("[App] Niveau A1 chargé:", this.levels.A1);
-      console.log("[App] Niveau A2 chargé:", this.levels.A2);
-      console.log("[App] Niveau B1 chargé:", this.levels.B1);
-      console.log("[App] Niveau B2 chargé:", this.levels.B2);
-
       const ref = await fetch("assets/data/ref.json").then(r => r.json());
       if (ref && ref.modules) this.ref = ref;
-      console.log("[App] Références chargées:", this.ref);
 
       const refPlus = await fetch("assets/data/ref_plus.json").then(r => r.json());
       if (refPlus) this.refPlus = refPlus;
-      console.log("[App] Référence+ chargée:", this.refPlus);
 
-      console.log("[App] Données chargées");
-
-      // ✅ SRS init (FIX: buildCardsFromLevels)
+      // SRS init
       try {
         if (window.SRS && typeof SRS.buildCardsFromLevels === "function") {
           const cards = SRS.buildCardsFromLevels(this.levels);
@@ -111,17 +98,12 @@ const App = {
       return;
     }
 
-    console.log("[App] Démarrage du router...");
     Router.start();
     console.log("[App] Application prête !");
   },
 
-  // ======================
-  // Helpers
-  // ======================
-  setView(html) {
-    this.mount.innerHTML = html;
-  },
+  // ===== helpers =====
+  setView(html) { this.mount.innerHTML = html; },
 
   esc(s) {
     return String(s ?? "")
@@ -132,16 +114,14 @@ const App = {
       .replaceAll("'", "&#039;");
   },
 
-  // ======================
-  // HOME
-  // ======================
+  // ===== HOME =====
   viewHome() {
     const levelsCards = this.levelsOrder
-      .filter(lvl => this.levels[lvl] && this.levels[lvl].modules && this.levels[lvl].modules.length)
+      .filter(lvl => this.levels[lvl]?.modules?.length)
       .map(lvl => {
         const L = this.levels[lvl];
-        const modulesCount = (L.modules || []).length;
-        const lessonsCount = (L.modules || []).reduce((acc, m) => acc + ((m.lessons || []).length), 0);
+        const modulesCount = L.modules.length;
+        const lessonsCount = L.modules.reduce((acc, m) => acc + ((m.lessons || []).length), 0);
 
         return `
           <div class="card">
@@ -154,8 +134,7 @@ const App = {
             </div>
           </div>
         `;
-      })
-      .join("");
+      }).join("");
 
     const srsStats = AppStorage.getSrsStats();
     const due = srsStats.due || 0;
@@ -164,7 +143,7 @@ const App = {
       <div class="stack">
         <div class="hero">
           <h1>Svenska Mästare Pro</h1>
-          <p class="muted">Apprentissage du suédois • Leçons • Vocabulaire • SRS</p>
+          <p class="muted">Leçons • Vocabulaire • Références • SRS</p>
           <div class="hero-actions">
             <button class="btn primary" data-go="/review">Révision SRS ${due ? `<span class="badge warn">${due}</span>` : ""}</button>
             <button class="btn" data-go="/stats">Statistiques</button>
@@ -200,9 +179,7 @@ const App = {
     });
   },
 
-  // ======================
-  // LEVEL
-  // ======================
+  // ===== LEVEL =====
   viewLevel(params) {
     const levelKey = params?.level || "A1";
     const L = this.levels[levelKey];
@@ -211,16 +188,15 @@ const App = {
       this.setView(`
         <div class="card error">
           <h2>Niveau introuvable</h2>
-          <p class="muted">Le niveau ${this.esc(levelKey)} n’a pas été chargé.</p>
-          <button class="btn" data-go="/">Retour</button>
+          <button class="btn" id="homeBtn">Accueil</button>
         </div>
       `);
-      this.mount.querySelector("[data-go]")?.addEventListener("click", () => Router.go("/"));
+      document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
       return;
     }
 
-    const modulesHtml = (L.modules || []).map((m) => {
-      const lessons = (m.lessons || []).map((ls) => {
+    const modulesHtml = (L.modules || []).map(m => {
+      const lessons = (m.lessons || []).map(ls => {
         const key = `${levelKey}:${ls.id}`;
         const done = AppStorage.isDone(key);
 
@@ -241,21 +217,23 @@ const App = {
       return `
         <div class="card">
           <h2>${this.esc(m.title || "")}</h2>
-          <div class="stack">${lessons || `<p class="muted">Aucune leçon dans ce module.</p>`}</div>
+          <div class="stack">${lessons || `<p class="muted">Aucune leçon.</p>`}</div>
         </div>
       `;
     }).join("");
 
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>${this.esc(levelKey)} — ${this.esc(L.title || "")}</h1>
-            <p class="muted">${this.esc(L.description || "")}</p>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>${this.esc(levelKey)} — ${this.esc(L.title || "")}</h1>
+              <p class="muted">${this.esc(L.description || "")}</p>
+            </div>
+            <button class="btn" id="backBtn">← Retour</button>
           </div>
-          <button class="btn" id="backBtn">← Retour</button>
         </div>
-        ${modulesHtml || `<div class="card"><p class="muted">Aucun module.</p></div>`}
+        ${modulesHtml}
       </div>
     `);
 
@@ -271,66 +249,51 @@ const App = {
     });
   },
 
-  // ======================
-  // LESSON (JSON réel)
-  // ======================
+  // ===== LESSON =====
   viewLesson(params) {
     const levelKey = params?.level;
     const lessonId = params?.lesson;
 
     const L = this.levels[levelKey];
-    if (!L) {
-      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`);
-      return;
-    }
+    if (!L) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`); return; }
 
     let lesson = null;
     let moduleTitle = "";
-
     for (const m of (L.modules || [])) {
       const found = (m.lessons || []).find(ls => String(ls.id) === String(lessonId));
       if (found) { lesson = found; moduleTitle = m.title || ""; break; }
     }
-
-    if (!lesson) {
-      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
-      return;
-    }
+    if (!lesson) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`); return; }
 
     const key = `${levelKey}:${lesson.id}`;
 
-    const contentHtml  = this.renderContent(lesson.content);
-    const examplesHtml = this.renderExamples(lesson.examples);
-    const vocabHtml    = this.renderVocab(lesson.vocab);
-    const drillsHtml   = this.renderMiniDrills(lesson.mini_drills);
-    const quizHtml     = this.renderQuiz(lesson.quiz);
-
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>${this.esc(lesson.title || "")}</h1>
-            <p class="muted">${this.esc(levelKey)} • ${this.esc(moduleTitle)} • ${this.esc(lesson.type || "")}</p>
-          </div>
-          <div class="row">
-            <button class="btn" id="backBtn">← Retour</button>
-            <button class="btn" id="homeBtn">Accueil</button>
-            <button class="btn primary" id="markDoneBtn">Marquer terminé</button>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>${this.esc(lesson.title || "")}</h1>
+              <p class="muted">${this.esc(levelKey)} • ${this.esc(moduleTitle)} • ${this.esc(lesson.type || "")}</p>
+            </div>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn primary" id="doneBtn">Marquer terminé</button>
+            </div>
           </div>
         </div>
 
-        ${contentHtml}
-        ${examplesHtml}
-        ${vocabHtml}
-        ${drillsHtml}
-        ${quizHtml}
+        ${this.renderContent(lesson.content)}
+        ${this.renderExamples(lesson.examples)}
+        ${this.renderVocab(lesson.vocab)}
+        ${this.renderMiniDrills(lesson.mini_drills)}
+        ${this.renderQuiz(lesson.quiz)}
       </div>
     `);
 
     document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
     document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
-
-    document.getElementById("markDoneBtn")?.addEventListener("click", () => {
+    document.getElementById("doneBtn")?.addEventListener("click", () => {
       AppStorage.markDone(key);
       alert("✅ Leçon marquée comme terminée !");
       Router.go("/level", { level: levelKey });
@@ -347,6 +310,7 @@ const App = {
     });
   },
 
+  // ===== Rendering: Contenu (amélioré) =====
   renderContent(lines) {
     if (!Array.isArray(lines)) return "";
     const clean = lines.map(x => String(x ?? "")).filter(x => x.trim().length);
@@ -354,25 +318,26 @@ const App = {
 
     return `
       <div class="card">
-        <h2>Contenu</h2>
-        <div class="stack">
-          ${clean.map(t => `<div>${this.esc(t)}</div>`).join("")}
+        <div class="section-title"><span class="chip"></span><h2>Contenu</h2></div>
+        <div class="prose">
+          ${clean.map(t => `<div class="line">${this.esc(t)}</div>`).join("")}
         </div>
       </div>
     `;
   },
 
+  // ===== Rendering: Exemples (amélioré) =====
   renderExamples(examples) {
     if (!Array.isArray(examples) || !examples.length) return "";
 
     return `
       <div class="card">
-        <h2>Exemples</h2>
-        <div class="stack">
+        <div class="section-title"><span class="chip"></span><h2>Exemples</h2></div>
+        <div class="examples">
           ${examples.map(ex => `
-            <div class="card" style="padding:14px;">
-              <div class="sw">${this.esc(ex.sv || "")}</div>
-              ${ex.pron ? `<div class="muted">${this.esc(ex.pron)}</div>` : ""}
+            <div class="example">
+              <div class="sv">${this.esc(ex.sv || "")}</div>
+              ${ex.pron ? `<div class="pron">${this.esc(ex.pron)}</div>` : ""}
               ${ex.fr ? `<div class="fr">${this.esc(ex.fr)}</div>` : ""}
             </div>
           `).join("")}
@@ -381,19 +346,15 @@ const App = {
     `;
   },
 
+  // ===== Vocab / Drills / Quiz (déjà “ok”, juste harmonisé par le CSS) =====
   renderVocab(vocab) {
     if (!Array.isArray(vocab) || !vocab.length) return "";
-
     return `
       <div class="card">
-        <h2>Vocabulaire</h2>
+        <div class="section-title"><span class="chip"></span><h2>Vocabulaire</h2></div>
         <div class="table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>SV</th><th>FR</th><th>Pron</th><th>Notes</th>
-              </tr>
-            </thead>
+            <thead><tr><th>SV</th><th>FR</th><th>Pron</th><th>Note</th></tr></thead>
             <tbody>
               ${vocab.map(v => `
                 <tr>
@@ -412,13 +373,12 @@ const App = {
 
   renderMiniDrills(drills) {
     if (!Array.isArray(drills) || !drills.length) return "";
-
     return `
       <div class="card">
-        <h2>Mini-drills</h2>
+        <div class="section-title"><span class="chip"></span><h2>Mini-drills</h2></div>
         <div class="stack">
           ${drills.map(d => `
-            <div class="card" style="padding:14px;">
+            <div class="card" style="box-shadow:none; border-radius:16px; padding:14px;">
               <div><b>${this.esc(d.instruction || "")}</b></div>
               ${Array.isArray(d.items) && d.items.length
                 ? `<ul>${d.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul>`
@@ -432,15 +392,14 @@ const App = {
 
   renderQuiz(quiz) {
     if (!Array.isArray(quiz) || !quiz.length) return "";
-
     return `
       <div class="card">
-        <h2>Quiz</h2>
+        <div class="section-title"><span class="chip"></span><h2>Quiz</h2></div>
         <div class="stack">
           ${quiz.map((q, i) => {
             const id = `ans_${Math.random().toString(16).slice(2)}_${i}`;
             return `
-              <div class="card" style="padding:14px;">
+              <div class="card" style="box-shadow:none; border-radius:16px; padding:14px;">
                 <div><b>${this.esc(q.q || "")}</b></div>
                 <button class="btn" style="margin-top:10px;" data-reveal="${id}">Afficher la réponse</button>
                 <div id="${id}" class="muted" style="display:none; margin-top:10px;">
@@ -454,9 +413,7 @@ const App = {
     `;
   },
 
-  // ======================
-  // REF
-  // ======================
+  // ===== REF / REF LESSON (inchangé fonctionnel) =====
   viewRef() {
     const mods = (this.ref.modules || []).map(m => {
       const lessons = (m.lessons || []).map(ls => `
@@ -481,17 +438,18 @@ const App = {
 
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>${this.esc(this.ref.title || "Références")}</h1>
-            <p class="muted">Bescherelles, verbes, particules…</p>
-          </div>
-          <div class="row">
-            <button class="btn" id="backBtn">← Retour</button>
-            <button class="btn" id="homeBtn">Accueil</button>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>${this.esc(this.ref.title || "Références")}</h1>
+              <p class="muted">Bescherelles, verbes, particules…</p>
+            </div>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+            </div>
           </div>
         </div>
-
         ${mods || `<div class="card"><p class="muted">Aucune référence.</p></div>`}
       </div>
     `);
@@ -514,37 +472,29 @@ const App = {
     const lessonId = params?.lesson;
 
     const mod = (this.ref.modules || []).find(m => String(m.id) === String(moduleId));
-    if (!mod) {
-      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Module introuvable.</p></div>`);
-      return;
-    }
+    if (!mod) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Module introuvable.</p></div>`); return; }
 
     const lesson = (mod.lessons || []).find(ls => String(ls.id) === String(lessonId));
-    if (!lesson) {
-      this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
-      return;
-    }
-
-    const contentHtml  = this.renderContent(lesson.content);
-    const examplesHtml = this.renderExamples(lesson.examples);
-    const vocabHtml    = this.renderVocab(lesson.vocab);
+    if (!lesson) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`); return; }
 
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>${this.esc(lesson.title || "")}</h1>
-            <p class="muted">Référence • ${this.esc(mod.title || "")}</p>
-          </div>
-          <div class="row">
-            <button class="btn" id="backBtn">← Retour</button>
-            <button class="btn" id="homeBtn">Accueil</button>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>${this.esc(lesson.title || "")}</h1>
+              <p class="muted">Référence • ${this.esc(mod.title || "")}</p>
+            </div>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+            </div>
           </div>
         </div>
 
-        ${contentHtml}
-        ${examplesHtml}
-        ${vocabHtml}
+        ${this.renderContent(lesson.content)}
+        ${this.renderExamples(lesson.examples)}
+        ${this.renderVocab(lesson.vocab)}
       </div>
     `);
 
@@ -552,9 +502,7 @@ const App = {
     document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/ref"));
   },
 
-  // ======================
-  // REF+ (affichage “best effort”)
-  // ======================
+  // ===== REF+ (laisse “best effort” pour l’instant) =====
   viewRefPlus() {
     const fp = this.refPlus || {};
 
@@ -578,46 +526,25 @@ const App = {
 
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>${this.esc(fp.title || "Référence+")}</h1>
-            <p class="muted">Tableaux & listes</p>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>${this.esc(fp.title || "Référence+")}</h1>
+              <p class="muted">Tableaux & listes</p>
+            </div>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+            </div>
           </div>
-          <div class="row">
-            <button class="btn" id="backBtn">← Retour</button>
-            <button class="btn" id="homeBtn">Accueil</button>
-          </div>
         </div>
 
-        <div class="card">
-          <h2>Thèmes</h2>
-          ${renderAutoTable(fp.themes)}
-        </div>
-
-        <div class="card">
-          <h2>Verbes</h2>
-          ${renderAutoTable(fp.verbs)}
-        </div>
-
-        <div class="card">
-          <h2>Vocabulaire</h2>
-          ${renderAutoTable(fp.vocab)}
-        </div>
-
-        <div class="card">
-          <h2>Particules</h2>
-          ${renderAutoTable(fp.particles)}
-        </div>
-
-        <div class="card">
-          <h2>Articles</h2>
-          ${renderAutoTable(fp.articles)}
-        </div>
-
-        <div class="card">
-          <h2>Guide des articles</h2>
-          ${renderAutoTable(fp.articles_guide)}
-        </div>
+        <div class="card"><h2>Thèmes</h2>${renderAutoTable(fp.themes)}</div>
+        <div class="card"><h2>Verbes</h2>${renderAutoTable(fp.verbs)}</div>
+        <div class="card"><h2>Vocabulaire</h2>${renderAutoTable(fp.vocab)}</div>
+        <div class="card"><h2>Particules</h2>${renderAutoTable(fp.particles)}</div>
+        <div class="card"><h2>Articles</h2>${renderAutoTable(fp.articles)}</div>
+        <div class="card"><h2>Guide des articles</h2>${renderAutoTable(fp.articles_guide)}</div>
       </div>
     `);
 
@@ -625,49 +552,108 @@ const App = {
     document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
   },
 
-  // ======================
-  // REVIEW (SRS)
-  // ======================
+  // ===== REVIEW (SRS) — FIX: session possible même “à jour” =====
   viewReview() {
-    const due = AppStorage.getDueCards(30);
+    const makeSession = ({ mode }) => {
+      const state = AppStorage.load();
+      const all = Object.values(state.srs?.cards || {});
+      const now = Date.now();
 
-    if (!due.length) {
+      const due = all.filter(c => (c.nextDue || 0) <= now);
+      const fresh = all.filter(c => (c.reps || 0) === 0);
+      const randomPool = all.filter(c => (c.reps || 0) > 0);
+
+      if (mode === "due") return due.slice(0, 30);
+      if (mode === "new") return fresh.slice(0, 20);
+      if (mode === "random") {
+        // shuffle simple
+        for (let i = randomPool.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [randomPool[i], randomPool[j]] = [randomPool[j], randomPool[i]];
+        }
+        return randomPool.slice(0, 20);
+      }
+      return [];
+    };
+
+    let session = makeSession({ mode: "due" });
+
+    // État “à jour” → menu de démarrage (nouveau / aléatoire)
+    if (!session.length) {
+      const state = AppStorage.load();
+      const all = Object.values(state.srs?.cards || {});
+      const freshCount = all.filter(c => (c.reps || 0) === 0).length;
+
       this.setView(`
         <div class="stack">
-          <div class="row between">
-            <div>
-              <h1>Révision SRS</h1>
-              <p class="muted">Aucune carte à réviser pour le moment.</p>
-            </div>
-            <div class="row">
-              <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+          <div class="card">
+            <div class="row between">
+              <div>
+                <h1>Révision SRS</h1>
+                <p class="muted">Tu es à jour ✅</p>
+              </div>
+              <div class="row">
+                <button class="btn" id="backBtn">← Retour</button>
+                <button class="btn" id="homeBtn">Accueil</button>
+              </div>
             </div>
           </div>
-          <div class="card"><p>✅ Tu es à jour !</p></div>
+
+          <div class="card">
+            <h2>Démarrer quand même</h2>
+            <p class="muted">
+              Tu peux apprendre des nouvelles cartes ou faire une session aléatoire.
+            </p>
+            <div class="row">
+              <button class="btn primary" id="startNewBtn">Apprendre des nouvelles (${freshCount})</button>
+              <button class="btn" id="startRandomBtn">Révision aléatoire</button>
+            </div>
+            <p class="muted" style="margin-top:10px;">
+              Astuce : si “nouvelles” est à 0, c’est que toutes les cartes ont déjà été vues au moins une fois.
+            </p>
+          </div>
         </div>
       `);
+
       document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
       document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
+      document.getElementById("startNewBtn")?.addEventListener("click", () => {
+        session = makeSession({ mode: "new" });
+        if (!session.length) { alert("Aucune nouvelle carte disponible."); return; }
+        this._runReviewSession(session);
+      });
+      document.getElementById("startRandomBtn")?.addEventListener("click", () => {
+        session = makeSession({ mode: "random" });
+        if (!session.length) { alert("Pas assez de cartes pour une révision aléatoire."); return; }
+        this._runReviewSession(session);
+      });
+
       return;
     }
 
+    // Session normale (due)
+    this._runReviewSession(session);
+  },
+
+  _runReviewSession(session) {
     let idx = 0;
     let showBack = false;
 
     const render = () => {
-      const c = due[idx];
+      const c = session[idx];
 
       this.setView(`
         <div class="stack">
-          <div class="row between">
-            <div>
-              <h1>Révision SRS</h1>
-              <p class="muted">Carte ${idx + 1}/${due.length}</p>
-            </div>
-            <div class="row">
-              <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+          <div class="card">
+            <div class="row between">
+              <div>
+                <h1>Révision SRS</h1>
+                <p class="muted">Carte ${idx + 1}/${session.length}</p>
+              </div>
+              <div class="row">
+                <button class="btn" id="backBtn">← Retour</button>
+                <button class="btn" id="homeBtn">Accueil</button>
+              </div>
             </div>
           </div>
 
@@ -682,11 +668,11 @@ const App = {
           ${showBack ? `
             <div class="card">
               <h2>Auto-évaluation</h2>
-              <div class="row wrap" style="gap:10px;">
-                <button class="btn" data-grade="0">0 — Oublié</button>
-                <button class="btn" data-grade="1">1 — Difficile</button>
+              <div class="row" style="gap:10px;">
+                <button class="btn bad" data-grade="0">0 — Oublié</button>
+                <button class="btn warn" data-grade="1">1 — Difficile</button>
                 <button class="btn" data-grade="2">2 — OK</button>
-                <button class="btn" data-grade="3">3 — Facile</button>
+                <button class="btn good" data-grade="3">3 — Facile</button>
               </div>
             </div>
           ` : ""}
@@ -695,11 +681,7 @@ const App = {
 
       document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
       document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
-
-      document.getElementById("toggleBtn")?.addEventListener("click", () => {
-        showBack = !showBack;
-        render();
-      });
+      document.getElementById("toggleBtn")?.addEventListener("click", () => { showBack = !showBack; render(); });
 
       this.mount.querySelectorAll("[data-grade]").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -710,7 +692,7 @@ const App = {
           idx++;
           showBack = false;
 
-          if (idx >= due.length) Router.go("/stats");
+          if (idx >= session.length) Router.go("/stats");
           else render();
         });
       });
@@ -719,9 +701,7 @@ const App = {
     render();
   },
 
-  // ======================
-  // STATS
-  // ======================
+  // ===== STATS =====
   viewStats() {
     const s = AppStorage.load();
     const st = s.stats || { correct: 0, wrong: 0, streak: 0, lastStudyDate: null };
@@ -729,14 +709,16 @@ const App = {
 
     this.setView(`
       <div class="stack">
-        <div class="row between">
-          <div>
-            <h1>Statistiques</h1>
-            <p class="muted">Progression & SRS</p>
-          </div>
-          <div class="row">
-            <button class="btn" id="backBtn">← Retour</button>
-            <button class="btn" id="homeBtn">Accueil</button>
+        <div class="card">
+          <div class="row between">
+            <div>
+              <h1>Statistiques</h1>
+              <p class="muted">Progression & SRS</p>
+            </div>
+            <div class="row">
+              <button class="btn" id="backBtn">← Retour</button>
+              <button class="btn" id="homeBtn">Accueil</button>
+            </div>
           </div>
         </div>
 
@@ -761,7 +743,7 @@ const App = {
 
         <div class="card">
           <h2>Actions</h2>
-          <div class="row wrap" style="gap:10px;">
+          <div class="row" style="gap:10px;">
             <button class="btn primary" id="reviewBtn">Réviser maintenant</button>
             <button class="btn bad" id="resetBtn">Réinitialiser</button>
           </div>
