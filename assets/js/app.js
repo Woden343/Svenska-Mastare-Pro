@@ -1,4 +1,4 @@
-// assets/js/app.js — VERSION COMPLÈTE (CONTENU PRO: ARTICLE + DIALOGUE + DÉCOMPOSITION)
+// assets/js/app.js — VERSION COMPLÈTE (Theme-ready: Paper + Ink + Highlighter)
 
 const App = {
   mount: null,
@@ -27,7 +27,15 @@ const App = {
       return;
     }
 
-    // Nav (IDs = index.html)
+    // Inject tiny brand dot if present
+    const brand = document.getElementById("nav-home");
+    if (brand && !brand.querySelector(".brand-badge")) {
+      const dot = document.createElement("span");
+      dot.className = "brand-badge";
+      brand.prepend(dot);
+    }
+
+    // Nav
     const navHomeBrand = document.getElementById("nav-home");
     const navHomeBtn   = document.getElementById("nav-home-btn");
     const navRef       = document.getElementById("nav-ref");
@@ -70,7 +78,7 @@ const App = {
       const refPlus = await fetch("assets/data/ref_plus.json").then(r => r.json());
       if (refPlus) this.refPlus = refPlus;
 
-      // SRS init (si srs.js expose window.SRS)
+      // SRS init
       try {
         if (window.SRS && typeof SRS.buildCardsFromLevels === "function") {
           const cards = SRS.buildCardsFromLevels(this.levels);
@@ -127,7 +135,7 @@ const App = {
                 <h2>${this.esc(lvl)} — ${this.esc(L.title || "")}</h2>
                 <p class="muted">${modulesCount} modules • ${lessonsCount} leçons</p>
               </div>
-              <button class="btn" data-go="/level" data-level="${this.esc(lvl)}">Ouvrir</button>
+              <button class="btn primary" data-go="/level" data-level="${this.esc(lvl)}">Ouvrir</button>
             </div>
           </div>
         `;
@@ -140,7 +148,7 @@ const App = {
       <div class="stack">
         <div class="hero">
           <h1>Svenska Mästare Pro</h1>
-          <p class="muted">Leçons • Vocabulaire • Références • SRS</p>
+          <p class="muted">Apprentissage clair, esthétique “carnet”, et SRS intégré.</p>
           <div class="hero-actions">
             <button class="btn primary" data-go="/review">Révision SRS ${due ? `<span class="badge warn">${due}</span>` : ""}</button>
             <button class="btn" data-go="/stats">Statistiques</button>
@@ -274,7 +282,7 @@ const App = {
             </div>
             <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn ghost" id="homeBtn">Accueil</button>
               <button class="btn primary" id="doneBtn">Marquer terminé</button>
             </div>
           </div>
@@ -296,7 +304,6 @@ const App = {
       Router.go("/level", { level: levelKey });
     });
 
-    // Quiz reveal
     this.mount.querySelectorAll("[data-reveal]").forEach(btn => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-reveal");
@@ -307,14 +314,13 @@ const App = {
     });
   },
 
-  // ===== CONTENU (ARTICLE + DIALOGUE + DÉCOMPOSITION) =====
+  // ===== CONTENT RENDERER =====
   renderContent(lines) {
     if (!Array.isArray(lines)) return "";
     const raw = lines
       .map(x => String(x ?? "").trim())
       .filter(Boolean)
-      // ignore separators like "======" or "-----"
-      .filter(x => !/^[=\-_*]{6,}$/.test(x));
+      .filter(x => !/^[=\-_*]{6,}$/.test(x)); // ignore separators
 
     if (!raw.length) return "";
 
@@ -325,12 +331,11 @@ const App = {
       if (t.endsWith(":")) return true;
       const letters = t.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ]/g, "");
       const upperRatio = letters ? (letters.replace(/[^A-ZÀ-ÖØ-Þ]/g, "").length / letters.length) : 0;
-      return (t.length <= 40 && upperRatio >= 0.75);
+      return (t.length <= 44 && upperRatio >= 0.75);
     };
 
     const isListItem = (s) => /^[-•]\s+/.test(s);
 
-    // callout: only for explicit markers or arrow-like rules (NOT "=" translations)
     const isCallout = (s) => {
       const low = norm(s);
       return (
@@ -345,22 +350,15 @@ const App = {
 
     const isObjective = (s) => norm(s).startsWith("objectif");
 
-    // Detect dialogue tokens inside a single long string (A: ... B: ... A: ...)
     const splitDialogueTurns = (text) => {
       const t = text.replace(/\s+/g, " ").trim();
-      // supports A: B: etc
       const re = /(^|[\s])([A-ZÅÄÖ]):\s*/g;
-      const parts = [];
-      let lastIdx = 0;
-      let m;
-
-      // Find first speaker marker
       const matches = [];
-      while ((m = re.exec(t)) !== null) {
-        matches.push({ idx: m.index + (m[1] ? 1 : 0), speaker: m[2] });
-      }
+      let m;
+      while ((m = re.exec(t)) !== null) matches.push({ idx: m.index + (m[1] ? 1 : 0), speaker: m[2] });
       if (!matches.length) return null;
 
+      const parts = [];
       for (let i = 0; i < matches.length; i++) {
         const cur = matches[i];
         const next = matches[i + 1];
@@ -372,7 +370,6 @@ const App = {
       return parts.length ? parts : null;
     };
 
-    // For decomposition lines like "Hej! = Salut !"
     const splitBreakdown = (s) => {
       const idx = s.indexOf("=");
       if (idx === -1) return null;
@@ -382,7 +379,6 @@ const App = {
       return { left, right };
     };
 
-    // Build blocks with section modes
     const blocks = [];
     let paragraph = [];
     let list = [];
@@ -414,49 +410,32 @@ const App = {
     for (const line of raw) {
       const n = norm(line);
 
-      // headings switch modes
       if (isHeading(line)) {
-        // flush whatever is open
-        flushList();
-        flushParagraph();
-        flushDialogue();
-        flushBreakdown();
+        flushList(); flushParagraph(); flushDialogue(); flushBreakdown();
 
         blocks.push({ type: "h", text: line.replace(/:$/, "") });
 
-        // switch mode depending on heading text
         if (n.includes("dialogue")) mode = "dialogue";
-        else if (n.includes("decomposition") || n.includes("decomposition")) mode = "breakdown";
+        else if (n.includes("decomposition")) mode = "breakdown";
         else mode = "normal";
 
         continue;
       }
 
       if (mode === "dialogue") {
-        // Try split A:/B: from this line
         const turns = splitDialogueTurns(line);
-        if (turns) {
-          // store as turns; we can accept multiple lines
-          for (const t of turns) dialogueTurns.push(t);
-        } else {
-          // if no A:/B:, keep as paragraph in dialogue (rare)
-          dialogueTurns.push({ speaker: "•", text: line });
-        }
+        if (turns) turns.forEach(t => dialogueTurns.push(t));
+        else dialogueTurns.push({ speaker: "•", text: line });
         continue;
       }
 
       if (mode === "breakdown") {
         const row = splitBreakdown(line);
         if (row) breakdownRows.push(row);
-        else {
-          // if a non "=" line appears, treat it as paragraph inside article
-          flushBreakdown();
-          paragraph.push(line);
-        }
+        else { flushBreakdown(); paragraph.push(line); }
         continue;
       }
 
-      // normal mode
       if (isObjective(line)) {
         flushList(); flushParagraph();
         blocks.push({ type: "lead", text: line });
@@ -475,24 +454,16 @@ const App = {
         continue;
       }
 
-      // If line looks like a breakdown but we're not in that section, keep it as paragraph (or you can uncomment to auto-breakdown)
-      // const maybe = splitBreakdown(line);
-      // if (maybe) { flushList(); flushParagraph(); blocks.push({ type: "breakdown", rows: [maybe] }); continue; }
-
       flushList();
       paragraph.push(line);
     }
 
-    flushList();
-    flushParagraph();
-    flushDialogue();
-    flushBreakdown();
+    flushList(); flushParagraph(); flushDialogue(); flushBreakdown();
 
     const renderBlocks = blocks.map(b => {
-      if (b.type === "h") return `<h3>${this.esc(b.text)}</h3>`;
+      if (b.type === "h") return `<h3><span class="hl">${this.esc(b.text)}</span></h3>`;
 
       if (b.type === "lead") {
-        // "Objectif: ..." -> cleaner
         const t = b.text.replace(/^\s*Objectif\s*:\s*/i, "").trim();
         return `
           <div class="lead">
@@ -503,13 +474,11 @@ const App = {
       }
 
       if (b.type === "ul") {
-        return `<ul>${b.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul>`;
+        return `<div class="sheet"><ul>${b.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul></div>`;
       }
 
       if (b.type === "callout") {
-        const cleaned = b.text
-          .replace(/^\s*(Astuce|Note|À retenir|A retenir|Attention)\s*[:\-]\s*/i, "")
-          .trim();
+        const cleaned = b.text.replace(/^\s*(Astuce|Note|À retenir|A retenir|Attention)\s*[:\-]\s*/i, "").trim();
         const label = (/^\s*attention/i.test(norm(b.text))) ? "Attention" : "À retenir";
         return `
           <div class="callout">
@@ -520,14 +489,11 @@ const App = {
       }
 
       if (b.type === "dialogue") {
-        // turn text may contain "(pron)" and translation maybe separated by "."
-        const bubbles = b.turns.map((t, i) => {
+        const bubbles = b.turns.map(t => {
           const speaker = (t.speaker || "").trim();
           const cls = (speaker === "B") ? "b" : "a";
 
-          // Optional: split pron in parentheses at end
           const text = t.text || "";
-          // Try to extract "(...)" chunks as pron
           const pronMatch = text.match(/\(([^)]+)\)\s*$/);
           const pron = pronMatch ? pronMatch[1].trim() : "";
           const main = pronMatch ? text.replace(/\(([^)]+)\)\s*$/, "").trim() : text;
@@ -554,7 +520,7 @@ const App = {
         return `<div class="breakdown">${rows}</div>`;
       }
 
-      if (b.type === "p") return `<p>${this.esc(b.text)}</p>`;
+      if (b.type === "p") return `<div class="sheet"><p>${this.esc(b.text)}</p></div>`;
       return "";
     }).join("\n");
 
@@ -600,9 +566,9 @@ const App = {
             <tbody>
               ${vocab.map(v => `
                 <tr>
-                  <td style="font-weight:850;">${this.esc(v.sv || "")}</td>
+                  <td style="font-weight:900;">${this.esc(v.sv || "")}</td>
                   <td>${this.esc(v.fr || "")}</td>
-                  <td class="muted">${this.esc(v.pron || "")}</td>
+                  <td class="muted" style="font-family:var(--mono);">${this.esc(v.pron || "")}</td>
                   <td class="muted">${this.esc(v.note || "")}</td>
                 </tr>
               `).join("")}
@@ -620,11 +586,11 @@ const App = {
         <div class="section-title"><span class="chip"></span><h2>Mini-drills</h2></div>
         <div class="stack">
           ${drills.map(d => `
-            <div class="card" style="box-shadow:none; border-radius:16px; padding:14px;">
-              <div><b>${this.esc(d.instruction || "")}</b></div>
+            <div class="card" style="box-shadow:none; border-radius:18px; padding:14px; border-color: rgba(255,255,255,0.10); background: rgba(255,255,255,0.045);">
+              <div style="font-weight:900;">${this.esc(d.instruction || "")}</div>
               ${Array.isArray(d.items) && d.items.length
-                ? `<ul>${d.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul>`
-                : `<div class="muted">Aucun item.</div>`}
+                ? `<ul style="margin-top:10px;">${d.items.map(it => `<li>${this.esc(it)}</li>`).join("")}</ul>`
+                : `<div class="muted" style="margin-top:10px;">Aucun item.</div>`}
             </div>
           `).join("")}
         </div>
@@ -641,8 +607,8 @@ const App = {
           ${quiz.map((q, i) => {
             const id = `ans_${Math.random().toString(16).slice(2)}_${i}`;
             return `
-              <div class="card" style="box-shadow:none; border-radius:16px; padding:14px;">
-                <div><b>${this.esc(q.q || "")}</b></div>
+              <div class="card" style="box-shadow:none; border-radius:18px; padding:14px; border-color: rgba(255,255,255,0.10); background: rgba(255,255,255,0.045);">
+                <div style="font-weight:900;">${this.esc(q.q || "")}</div>
                 <button class="btn" style="margin-top:10px;" data-reveal="${id}">Afficher la réponse</button>
                 <div id="${id}" class="muted" style="display:none; margin-top:10px;">
                   ✅ ${this.esc(q.answer || "")}
@@ -688,7 +654,7 @@ const App = {
             </div>
             <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn ghost" id="homeBtn">Accueil</button>
             </div>
           </div>
         </div>
@@ -729,7 +695,7 @@ const App = {
             </div>
             <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn ghost" id="homeBtn">Accueil</button>
             </div>
           </div>
         </div>
@@ -774,7 +740,7 @@ const App = {
             </div>
             <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn ghost" id="homeBtn">Accueil</button>
             </div>
           </div>
         </div>
@@ -832,17 +798,17 @@ const App = {
               </div>
               <div class="row">
                 <button class="btn" id="backBtn">← Retour</button>
-                <button class="btn" id="homeBtn">Accueil</button>
+                <button class="btn ghost" id="homeBtn">Accueil</button>
               </div>
             </div>
           </div>
 
           <div class="card">
             <h2>Démarrer quand même</h2>
-            <p class="muted">Tu peux apprendre des nouvelles cartes ou faire une session aléatoire.</p>
+            <p class="muted">Apprends des nouvelles cartes ou lance une session aléatoire.</p>
             <div class="row">
-              <button class="btn primary" id="startNewBtn">Apprendre des nouvelles (${freshCount})</button>
-              <button class="btn" id="startRandomBtn">Révision aléatoire</button>
+              <button class="btn primary" id="startNewBtn">Nouvelles (${freshCount})</button>
+              <button class="btn" id="startRandomBtn">Aléatoire</button>
             </div>
           </div>
         </div>
@@ -884,13 +850,13 @@ const App = {
               </div>
               <div class="row">
                 <button class="btn" id="backBtn">← Retour</button>
-                <button class="btn" id="homeBtn">Accueil</button>
+                <button class="btn ghost" id="homeBtn">Accueil</button>
               </div>
             </div>
           </div>
 
           <div class="card">
-            <div style="font-weight:850; letter-spacing:.2px;">${this.esc(c.front || "")}</div>
+            <div style="font-weight:900; letter-spacing:.2px;">${this.esc(c.front || "")}</div>
             ${showBack ? `<div style="margin-top:10px;">${this.esc(c.back || "")}</div>` : `<div class="muted" style="margin-top:10px;">Clique sur “Afficher”</div>`}
             <div class="row" style="margin-top:14px;">
               <button class="btn" id="toggleBtn">${showBack ? "Cacher" : "Afficher"}</button>
@@ -901,10 +867,10 @@ const App = {
             <div class="card">
               <h2>Auto-évaluation</h2>
               <div class="row" style="gap:10px;">
-                <button class="btn" data-grade="0" style="border-color: rgba(251,113,133,0.35); background: rgba(251,113,133,0.10);">0 — Oublié</button>
-                <button class="btn" data-grade="1" style="border-color: rgba(251,191,36,0.35); background: rgba(251,191,36,0.10);">1 — Difficile</button>
+                <button class="btn danger" data-grade="0">0 — Oublié</button>
+                <button class="btn" data-grade="1" style="border-color: rgba(251,191,36,0.32); background: rgba(251,191,36,0.10);">1 — Difficile</button>
                 <button class="btn" data-grade="2">2 — OK</button>
-                <button class="btn" data-grade="3" style="border-color: rgba(34,197,94,0.35); background: rgba(34,197,94,0.10);">3 — Facile</button>
+                <button class="btn" data-grade="3" style="border-color: rgba(34,197,94,0.30); background: rgba(34,197,94,0.10);">3 — Facile</button>
               </div>
             </div>
           ` : ""}
@@ -947,7 +913,7 @@ const App = {
             </div>
             <div class="row">
               <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn" id="homeBtn">Accueil</button>
+              <button class="btn ghost" id="homeBtn">Accueil</button>
             </div>
           </div>
         </div>
@@ -975,7 +941,7 @@ const App = {
           <h2>Actions</h2>
           <div class="row" style="gap:10px;">
             <button class="btn primary" id="reviewBtn">Réviser maintenant</button>
-            <button class="btn" id="resetBtn" style="border-color: rgba(251,113,133,0.35); background: rgba(251,113,133,0.10);">Réinitialiser</button>
+            <button class="btn danger" id="resetBtn">Réinitialiser</button>
           </div>
           <p class="muted">⚠️ La réinitialisation efface toutes les données (progression + SRS).</p>
         </div>
