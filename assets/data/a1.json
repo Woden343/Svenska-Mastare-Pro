@@ -197,8 +197,148 @@
   ]
 }
       ]
+    },
+{
+  "id": "a1_premium_05",
+  "title": "Café & restaurant — commander",
+  "content": [
+    "🎯 Objectif : commander quelque chose simplement.",
+    "",
+    "=== Situation ===",
+    "A: Hej! Vad vill du ha?",
+    "B: Jag vill ha en kaffe, tack.",
+    "A: Något mer?",
+    "B: Nej tack.",
+    "",
+    "=== Décomposition ===",
+    "Jag vill ha = je veux / je voudrais",
+    "Något mer? = autre chose ?",
+    "",
+    "=== Production ===",
+    "Dis 5 commandes : Jag vill ha ..."
+  ],
+  "vocab": [
+    { "sv": "vill ha", "fr": "veux / voudrais", "pron": "vill ha" },
+    { "sv": "något", "fr": "quelque chose", "pron": "no-gott" },
+    { "sv": "mer", "fr": "plus", "pron": "mèr" },
+    { "sv": "tack", "fr": "merci", "pron": "takk" }
+  ],
+  "examples": [
+    { "sv": "Jag vill ha en kaffe.", "fr": "Je voudrais un café.", "pron": "ya vill ha en ka-fe" },
+    { "sv": "Något mer?", "fr": "Autre chose ?", "pron": "no-gott mèr" },
+    { "sv": "Nej tack.", "fr": "Non merci.", "pron": "néï takk" }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Substitution : kaffe → te / vatten / juice.",
+      "items": ["Jag vill ha en kaffe."]
     }
-
+  ],
+  "quiz": [
+    { "type": "gap", "q": "Jag ___ ha en kaffe.", "answer": "vill" },
+    { "type": "gap", "q": "Något ___?", "answer": "mer" }
   ]
 }
+,
+{
+  "id": "a1_premium_06",
+  "title": "Demander un lieu — Var är…?",
+  "content": [
+    "🎯 Objectif : demander où se trouve quelque chose.",
+    "",
+    "=== Situation ===",
+    "A: Var är toaletten?",
+    "B: Där borta.",
+    "",
+    "=== Décomposition ===",
+    "Var är X? = Où est X ?",
+    "Där borta = là-bas",
+    "",
+    "=== Production ===",
+    "Pose 5 questions : Var är ...?"
+  ],
+  "vocab": [
+    { "sv": "var", "fr": "où", "pron": "var" },
+    { "sv": "där", "fr": "là", "pron": "dèr" },
+    { "sv": "borta", "fr": "là-bas", "pron": "bor-ta" },
+    { "sv": "toalett", "fr": "toilettes", "pron": "tou-a-lètt" }
+  ],
+  "examples": [
+    { "sv": "Var är toaletten?", "fr": "Où sont les toilettes ?", "pron": "var èr tou-a-lètt-en" },
+    { "sv": "Där borta.", "fr": "Là-bas.", "pron": "dèr bor-ta" }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Substitution : toaletten → stationen / centrum / hotellet.",
+      "items": ["Var är toaletten?"]
+    }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "___ är toaletten?", "answer": "Var" }
+  ]
+}
+,
+{
+  "id": "a1_premium_07",
+  "title": "Temps — aujourd’hui, demain, heures",
+  "content": [
+    "🎯 Objectif : parler du temps.",
+    "",
+    "=== Situation ===",
+    "Jag jobbar idag.",
+    "Imorgon är jag ledig.",
+    "Jag börjar klockan åtta.",
+    "",
+    "=== Production ===",
+    "Dis 4 phrases avec idag / imorgon / klockan."
+  ],
+  "vocab": [
+    { "sv": "idag", "fr": "aujourd’hui", "pron": "i-dag" },
+    { "sv": "imorgon", "fr": "demain", "pron": "i-mor-ron" },
+    { "sv": "klockan", "fr": "à (heure)", "pron": "klok-kan" },
+    { "sv": "börjar", "fr": "commence", "pron": "bör-yar" }
+  ],
+  "examples": [
+    { "sv": "Jag jobbar idag.", "fr": "Je travaille aujourd’hui.", "pron": "ya yobb-ar i-dag" },
+    { "sv": "Imorgon är jag ledig.", "fr": "Demain je suis off.", "pron": "i-mor-ron èr ya le-dig" },
+    { "sv": "Jag börjar klockan åtta.", "fr": "Je commence à huit heures.", "pron": "ya bör-yar klok-kan ot-ta" }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "Jag ___ idag.", "answer": "jobbar" },
+    { "type": "gap", "q": "Imorgon ___ jag ledig.", "answer": "är" }
+  ]
+}
+,
+{
+  "id": "a1_premium_08",
+  "title": "Météo & émotions",
+  "content": [
+    "🎯 Objectif : dire comment tu te sens et le temps qu’il fait.",
+    "",
+    "=== Situation ===",
+    "Det är kallt.",
+    "Jag är trött.",
+    "",
+    "=== Production ===",
+    "Dis 4 phrases : Det är ... / Jag är ..."
+  ],
+  "vocab": [
+    { "sv": "kallt", "fr": "froid", "pron": "kallt" },
+    { "sv": "varmt", "fr": "chaud", "pron": "varmt" },
+    { "sv": "trött", "fr": "fatigué", "pron": "treutt" },
+    { "sv": "glad", "fr": "content", "pron": "glad" }
+  ],
+  "examples": [
+    { "sv": "Det är kallt.", "fr": "Il fait froid.", "pron": "dett èr kallt" },
+    { "sv": "Jag är trött.", "fr": "Je suis fatigué.", "pron": "ya èr treutt" },
+    { "sv": "Jag är glad.", "fr": "Je suis content.", "pron": "ya èr glad" }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "Det ___ kallt.", "answer": "är" },
+    { "type": "gap", "q": "Jag är ___ .", "answer": "trött" }
+  ]
+}
+  ]
+}
+
 
