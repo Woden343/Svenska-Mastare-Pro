@@ -19,46 +19,81 @@ const App = {
   },
 
   async init() {
-    // ✅ Initialiser mount après chargement DOM
-    this.mount = document.getElementById("app");
-    if (!this.mount) {
-      console.error("[App] Element #app introuvable");
-      return;
-    }
+  console.log("[App] Démarrage...");
+  
+  // ✅ Initialiser mount
+  this.mount = document.getElementById("app");
+  if (!this.mount) {
+    console.error("[App] Element #app introuvable");
+    alert("Erreur : Element #app introuvable dans le DOM");
+    return;
+  }
+  console.log("[App] Mount trouvé:", this.mount);
 
-    // ✅ Navigation avec vérifications
-    const navHome = document.getElementById("navHome");
-    const navRef = document.getElementById("navRef");
-    const navRefPlus = document.getElementById("navRefPlus");
-    const navReview = document.getElementById("navReview");
-    const navStats = document.getElementById("navStats");
+  // ✅ Navigation
+  const navHome = document.getElementById("navHome");
+  const navRef = document.getElementById("navRef");
+  const navRefPlus = document.getElementById("navRefPlus");
+  const navReview = document.getElementById("navReview");
+  const navStats = document.getElementById("navStats");
 
-    if (navHome) navHome.addEventListener("click", () => Router.go("/"));
-    if (navRef) navRef.addEventListener("click", () => Router.go("/ref"));
-    if (navRefPlus) navRefPlus.addEventListener("click", () => Router.go("/ref-plus", {}));
-    if (navReview) navReview.addEventListener("click", () => Router.go("/review"));
-    if (navStats) navStats.addEventListener("click", () => Router.go("/stats"));
+  if (navHome) navHome.addEventListener("click", () => Router.go("/"));
+  if (navRef) navRef.addEventListener("click", () => Router.go("/ref"));
+  if (navRefPlus) navRefPlus.addEventListener("click", () => Router.go("/ref-plus", {}));
+  if (navReview) navReview.addEventListener("click", () => Router.go("/review"));
+  if (navStats) navStats.addEventListener("click", () => Router.go("/stats"));
 
-    // Router
-    Router.on("/", () => this.viewHome());
-    Router.on("/level", (p) => this.viewLevel(p.level));
-    Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
+  console.log("[App] Navigation configurée");
 
-    Router.on("/ref", () => this.viewRef());
-    Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
-    Router.on("/ref-plus", (p) => this.viewRefPlus(p));
+  // ✅ Router
+  Router.on("/", () => this.viewHome());
+  Router.on("/level", (p) => this.viewLevel(p.level));
+  Router.on("/lesson", (p) => this.viewLesson(p.level, p.lessonId));
+  Router.on("/ref", () => this.viewRef());
+  Router.on("/ref-lesson", (p) => this.viewRefLesson(p.moduleId, p.lessonId));
+  Router.on("/ref-plus", (p) => this.viewRefPlus(p));
+  Router.on("/review", () => this.viewReview());
+  Router.on("/stats", () => this.viewStats());
 
-    Router.on("/review", () => this.viewReview());
-    Router.on("/stats", () => this.viewStats());
+  console.log("[App] Routes configurées");
 
-    // Load data
+  // ✅ Load data avec meilleure gestion d'erreurs
+  try {
     await this.loadAllData();
+    console.log("[App] Données chargées");
+  } catch (e) {
+    console.error("[App] Erreur critique lors du chargement:", e);
+    this.setView(`
+      <section class="card">
+        <h2>❌ Erreur de chargement</h2>
+        <p class="muted">Impossible de charger les données de formation.</p>
+        <pre style="background:rgba(255,0,0,0.1); padding:12px; border-radius:8px; overflow:auto;">${e.message}</pre>
+        <p style="margin-top:12px;"><b>Vérifiez que :</b></p>
+        <ul>
+          <li>Le dossier <code>assets/data/</code> existe</li>
+          <li>Le fichier <code>a1.json</code> est présent</li>
+          <li>Les fichiers JSON sont valides (pas d'erreur de syntaxe)</li>
+        </ul>
+        <button class="btn" onclick="location.reload()">🔄 Recharger</button>
+      </section>
+    `);
+    return;
+  }
 
-    // Build SRS cards
-    Storage.upsertCards(SRS.buildCardsFromLevels(this.levels));
+  // ✅ Build SRS cards
+  try {
+    const cards = SRS.buildCardsFromLevels(this.levels);
+    Storage.upsertCards(cards);
+    console.log("[App] SRS initialisé:", cards.length, "cartes");
+  } catch (e) {
+    console.error("[App] Erreur SRS:", e);
+  }
 
-    Router.start("/");
-  },
+  // ✅ Start router
+  console.log("[App] Démarrage du router...");
+  Router.start("/");
+  console.log("[App] Application prête !");
+},
 
   // ✅ Chargement avec bon chemin
   async loadAllData() {
