@@ -1,11 +1,4 @@
-// Ajouter dans storage.js après la fonction markDone()
-
-isDone(lessonKey) {
-  const s = this.load();
-  return !!s.done[lessonKey];
-},
-Voici le storage.js complet corrigé :
-// assets/js/storage.js
+// assets/js/storage.js - VERSION COMPLÈTE CORRIGÉE
 
 const Storage = {
   key: "svenska_progress_v2",
@@ -120,7 +113,6 @@ const Storage = {
     this.save(s);
   },
 
-  // ✅ FONCTION MANQUANTE AJOUTÉE
   isDone(lessonKey) {
     const s = this.load();
     return !!s.done[lessonKey];
@@ -140,7 +132,10 @@ const Storage = {
   // ==================== SRS ====================
 
   upsertCards(newCards) {
-    if (!Array.isArray(newCards) || newCards.length === 0) return;
+    if (!Array.isArray(newCards) || newCards.length === 0) {
+      console.log("[Storage] Aucune carte à insérer");
+      return;
+    }
     
     const s = this.load();
     const cards = s.srs.cards || {};
@@ -172,6 +167,7 @@ const Storage = {
 
     s.srs.cards = cards;
     this.save(s);
+    console.log(`[Storage] ${Object.keys(cards).length} cartes SRS enregistrées`);
   },
 
   getDueCards(limit = 30) {
