@@ -1,15 +1,15 @@
 {
   "level": "A1",
-  "title": "Suédois A1 — Méthode Premium",
+  "title": "Suédois A1",
   "description": "Méthode complète A1 basée sur situations réelles, explications pédagogiques, drills FSI, approche Assimil, phonétique francophone et répétition espacée.",
   "modules": [
     {
       "id": "intro_premium",
-      "title": "Fondations — Présentations",
+      "title": "Fondations - Présentations",
       "lessons": [
         {
           "id": "a1_premium_01",
-          "title": "Se présenter — nom, origine, lieu (v3 phonétique)",
+          "title": "Se présenter - nom, origine, lieu",
           "content": [
             "🎯 Objectif : te présenter naturellement (avec une prononciation claire pour francophone).",
             "",
@@ -213,7 +213,7 @@
         },
         {
   "id": "a1_premium_02",
-  "title": "Dire ce que tu fais — présent simple + questions (v3 phonétique)",
+  "title": "Dire ce que tu fais - présent simple + questions",
   "content": [
     "🎯 Objectif : dire ce que tu fais et demander à quelqu’un ce qu’il fait.",
     "",
@@ -387,7 +387,7 @@
 },
         {
   "id": "a1_premium_03",
-  "title": "Aller / intention — ska + till (v3 phonétique)",
+  "title": "Aller / intention - ska + till",
   "content": [
     "🎯 Objectif : dire où tu vas et ce que tu vas faire.",
     "",
@@ -548,7 +548,7 @@
 },
         {
   "id": "a1_premium_04",
-  "title": "Pouvoir / négation — kan + inte (v3 phonétique)",
+  "title": "Pouvoir / négation - kan + inte",
   "content": [
     "🎯 Objectif : dire que tu peux ou que tu ne peux pas faire quelque chose.",
     "",
@@ -703,7 +703,7 @@
 },
         {
   "id": "a1_premium_05",
-  "title": "Commander / demander — Jag vill ha (v3 phonétique)",
+  "title": "Commander / demander - Jag vill ha",
   "content": [
     "🎯 Objectif : demander quelque chose poliment (au café, au magasin, etc.).",
     "",
@@ -854,7 +854,7 @@
 },
         {
   "id": "a1_premium_06",
-  "title": "Articles en / ett + pluriel (v3 phonétique)",
+  "title": "Articles en / ett + pluriel",
   "content": [
     "🎯 Objectif : utiliser en / ett et former le pluriel simple.",
     "",
@@ -1026,7 +1026,7 @@
 },
 {
   "id": "a1_premium_07",
-  "title": "Forme définie — boken / huset (v3 phonétique)",
+  "title": "Forme définie - boken / huset",
   "content": [
     "🎯 Objectif : dire « le / la » en suédois avec la forme définie.",
     "",
@@ -1214,4 +1214,5 @@
     }
   ]
 }
+
 
