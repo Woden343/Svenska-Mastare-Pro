@@ -1,551 +1,341 @@
 {
   "level": "A2",
-  "title": "A2 — Manuel complet (V1) : règles développées + beaucoup d’exemples + séries d’exercices",
+  "title": "Suédois A2",
+  "description": "A2 complet : consolidation A1->A2, V2 automatisé, narration (passé), projets, compréhension et production. Style manuel (explications développées), drills FSI, mini-stories, phonétique simplifiée francophone.",
   "modules": [
     {
       "id": "a2_bridge",
-      "title": "0) Pont A1 → A2 (consolidation + automatismes)",
+      "title": "0) Pont A1 -> A2 (consolidation + automatismes)",
       "lessons": [
         {
-          "id": "a2_bridge_1",
-          "title": "Rappels essentiels : V2 + inte + questions (A2 = vitesse)",
+          "id": "a2_bridge_01",
+          "title": "Rappels essentiels - V2 + inte + questions (A2 = vitesse)",
           "content": [
-            "A2 = tu sais déjà construire des phrases A1, maintenant tu dois gagner en AUTOMATISME.",
-            "Rappel V2 (phrase principale) : 1 élément + verbe conjugué + sujet…",
-            "Rappel négation : inte après le verbe (ou après le modal).",
-            "Rappel questions : inversion (oui/non) et interrogatifs (V2 aussi).",
-            "Objectif de cette leçon : faire 10–15 phrases correctes sans réfléchir."
-          ],
-          "examples": [
-            { "sv": "Idag jobbar jag inte.", "fr": "Aujourd’hui je ne travaille pas.", "pron": "idag yobb-ar ya innté" },
-            { "sv": "Imorgon ska vi åka.", "fr": "Demain on va partir (aller).", "pron": "i-mor-ron ska vi o-ka" },
-            { "sv": "Var bor du nu?", "fr": "Où habites-tu maintenant ?", "pron": "var bour dou nou" },
-            { "sv": "När kommer hon?", "fr": "Quand arrive-t-elle ?", "pron": "nèr kommèr houn" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "Quelle phrase respecte V2 ?",
-              "choices": ["Idag jag jobbar inte.", "Idag jobbar jag inte."],
-              "answerIndex": 1
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag kan ___ komma. (Je ne peux pas venir.)",
-              "answer": "inte"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : ___ bor du? (Où habites-tu?)",
-              "answer": "Var"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_past",
-      "title": "1) Passé : perfekt (har + supin) — base A2",
-      "lessons": [
-        {
-          "id": "a2_perfect_1",
-          "title": "Perfekt : har/har inte + supin (jag har varit…)",
-          "content": [
-            "En A2, tu parles souvent du passé proche : ce que tu as fait, vu, acheté, appris.",
-            "Le passé le plus utile au début = PERFEKT : har/har inte + supin.",
-            "Structure :",
-            "• Jag har jobbat. = J’ai travaillé.",
-            "• Jag har inte jobbat. = Je n’ai pas travaillé.",
-            "Supin (forme à mémoriser) :",
-            "• jobba → jobbat",
-            "• prata → pratat",
-            "Beaucoup de verbes réguliers finissent en -at ou -t au supin, mais il y a des irréguliers (vara → varit).",
-            "Astuce : au début, mémorise des blocs : har varit, har gjort, har gått, har sett, har fått."
-          ],
-          "examples": [
-            { "sv": "Jag har jobbat idag.", "fr": "J’ai travaillé aujourd’hui.", "pron": "ya har yobb-at idag" },
-            { "sv": "Jag har pratat med henne.", "fr": "J’ai parlé avec elle.", "pron": "ya har praa-tat mèd hèn-nè" },
-            { "sv": "Jag har inte ätit.", "fr": "Je n’ai pas mangé.", "pron": "ya har innté è-tit" },
-            { "sv": "Har du varit i Sverige?", "fr": "Tu es déjà allé en Suède ?", "pron": "har dou va-rit i svè-ri-ye" }
-          ],
-          "quiz": [
-            {
-              "type": "gap",
-              "q": "Complète : Jag har ___. (J’ai travaillé.)",
-              "answer": "jobbat"
-            },
-            {
-              "type": "mcq",
-              "q": "Négation correcte :",
-              "choices": ["Jag inte har jobbat.", "Jag har inte jobbat."],
-              "answerIndex": 1
-            },
-            {
-              "type": "mcq",
-              "q": "« Tu as été en Suède ? »",
-              "choices": ["Har du varit i Sverige?", "Är du varit i Sverige?"],
-              "answerIndex": 0
-            }
-          ]
-        },
-
-        {
-          "id": "a2_perfect_2",
-          "title": "Supins irréguliers essentiels (har varit/gjort/gått/sett/fått)",
-          "content": [
-            "Ces formes sont indispensables en A2 (fréquence énorme) :",
-            "• vara → varit (être/avoir été)",
-            "• göra → gjort (faire/avoir fait)",
-            "• gå → gått (aller/avoir été allé)",
-            "• se → sett (voir/avoir vu)",
-            "• få → fått (recevoir/obtenir/avoir eu)",
-            "Astuce : répète ces 5 blocs : har varit / har gjort / har gått / har sett / har fått."
-          ],
-          "examples": [
-            { "sv": "Jag har varit hemma.", "fr": "J’ai été à la maison.", "pron": "ya har va-rit hèm-ma" },
-            { "sv": "Jag har gjort mat.", "fr": "J’ai fait à manger.", "pron": "ya har yourt maat" },
-            { "sv": "Jag har gått till jobbet.", "fr": "Je suis allé au travail.", "pron": "ya har gott till yobbèt" },
-            { "sv": "Jag har sett en film.", "fr": "J’ai vu un film.", "pron": "ya har sètt èn film" },
-            { "sv": "Jag har fått ett mejl.", "fr": "J’ai reçu un mail.", "pron": "ya har fott ètt mèïl" }
-          ],
-          "quiz": [
-            {
-              "type": "gap",
-              "q": "Complète : göra → ___. (supin)",
-              "answer": "gjort"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : se → ___. (supin)",
-              "answer": "sett"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag har ___ ett mejl. (J’ai reçu)",
-              "answer": "fått"
-            }
-          ]
-        },
-
-        {
-          "id": "a2_perfect_3",
-          "title": "Déjà / jamais : redan / aldrig + perfekt",
-          "content": [
-            "redan = déjà",
-            "aldrig = jamais",
-            "Ces mots vont très bien avec le perfekt :",
-            "• Jag har redan ätit. (J’ai déjà mangé.)",
-            "• Jag har aldrig varit i Norge. (Je n’ai jamais été en Norvège.)",
-            "Position A2 simple : souvent après har (har redan…, har aldrig…)."
-          ],
-          "examples": [
-            { "sv": "Jag har redan ätit.", "fr": "J’ai déjà mangé.", "pron": "ya har re-dan è-tit" },
-            { "sv": "Jag har aldrig varit i Norge.", "fr": "Je n’ai jamais été en Norvège.", "pron": "ya har ald-rig va-rit i nor-yè" },
-            { "sv": "Har du redan sett filmen?", "fr": "Tu as déjà vu le film ?", "pron": "har dou re-dan sètt film-en" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "« déjà » =",
-              "choices": ["aldrig", "redan"],
-              "answerIndex": 1
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag har ___ varit i Norge. (Je n’ai jamais été…)",
-              "answer": "aldrig"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag har ___ ätit. (J’ai déjà mangé.)",
-              "answer": "redan"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_future",
-      "title": "2) Futur & projet : ska / kommer att",
-      "lessons": [
-        {
-          "id": "a2_future_1",
-          "title": "ska (intention) vs kommer att (prédiction)",
-          "content": [
-            "A1 : ska = je vais (intention/plan).",
-            "A2 : on ajoute kommer att = va probablement (prédiction/ce qui va arriver).",
-            "Ex : Jag ska resa imorgon. (plan)",
-            "Ex : Det kommer att regna. (prédiction : il va pleuvoir)",
-            "Remarque : à l’oral, on entend parfois « kommer » sans « att », mais en A2 tu peux garder « kommer att »."
-          ],
-          "examples": [
-            { "sv": "Jag ska resa imorgon.", "fr": "Je vais voyager demain (plan).", "pron": "ya ska re-sa i-mor-ron" },
-            { "sv": "Det kommer att regna.", "fr": "Il va pleuvoir (prédiction).", "pron": "dè kommèr att rèïn-na" },
-            { "sv": "Du kommer att gilla det.", "fr": "Tu vas aimer ça (prédiction).", "pron": "dou kommèr att yil-la dè" },
-            { "sv": "Idag ska jag stanna hemma.", "fr": "Aujourd’hui je vais rester à la maison.", "pron": "idag ska ya stan-na hèm-ma" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "Pour un plan/intention, on utilise plutôt…",
-              "choices": ["ska", "kommer att"],
-              "answerIndex": 0
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Det kommer att ___. (Il va pleuvoir.)",
-              "answer": "regna"
-            },
-            {
-              "type": "mcq",
-              "q": "Quelle phrase est une prédiction ?",
-              "choices": ["Jag ska resa imorgon.", "Det kommer att regna."],
-              "answerIndex": 1
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_reflexive",
-      "title": "3) Pronoms objets & réflexifs (mig/dig/honom/henne/oss/er/dem, sig)",
-      "lessons": [
-        {
-          "id": "a2_obj_1",
-          "title": "Pronoms objets (me/te/le/la/nous/vous/les)",
-          "content": [
-            "Très utile en A2 : dire qui tu vois, qui tu appelles, qui tu aides.",
-            "Pronoms objets :",
-            "mig (me), dig (te), honom (le), henne (la), oss (nous), er (vous), dem (les) — à l’oral souvent « dom ».",
-            "Structure : sujet + verbe + pronom objet.",
-            "Ex : Jag ser dig. (Je te vois.)"
-          ],
-          "examples": [
-            { "sv": "Jag ser dig.", "fr": "Je te vois.", "pron": "ya seer dèï" },
-            { "sv": "Hon ringer mig.", "fr": "Elle m’appelle.", "pron": "houn rin-gèr mèï" },
-            { "sv": "Vi hjälper honom.", "fr": "On l’aide (lui).", "pron": "vi yèl-pèr ho-nom" },
-            { "sv": "Jag känner henne.", "fr": "Je la connais.", "pron": "ya chen-nèr hèn-nè" },
-            { "sv": "De ser oss.", "fr": "Ils nous voient.", "pron": "dom seer oss" }
-          ],
-          "quiz": [
-            {
-              "type": "gap",
-              "q": "Complète : Hon ringer ___. (Elle m’appelle.)",
-              "answer": "mig"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag ser ___. (Je te vois.)",
-              "answer": "dig"
-            },
-            {
-              "type": "mcq",
-              "q": "« les » (objet) =",
-              "choices": ["dem", "de"],
-              "answerIndex": 0
-            }
-          ]
-        },
-
-        {
-          "id": "a2_reflexive_1",
-          "title": "sig : se… / s’habiller, se sentir (approche A2)",
-          "content": [
-            "sig = pronom réfléchi (se) : används när subjektet och objektet är samma (même personne).",
-            "Ex : Han tvättar sig. (Il se lave.)",
-            "Très utile en routines : s’habiller, se laver, se dépêcher.",
-            "A2 : mémorise des blocs : klä på sig (s’habiller), tvätta sig (se laver), känna sig (se sentir)."
-          ],
-          "examples": [
-            { "sv": "Jag tvättar mig.", "fr": "Je me lave.", "pron": "ya tva-ttàr mèï" },
-            { "sv": "Han tvättar sig.", "fr": "Il se lave.", "pron": "han tva-ttàr sèï" },
-            { "sv": "Jag känner mig trött.", "fr": "Je me sens fatigué.", "pron": "ya chen-nèr mèï treutt" },
-            { "sv": "Hon klär på sig.", "fr": "Elle s’habille.", "pron": "houn klèr po sèï" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "Dans « Han tvättar ___ », on met…",
-              "choices": ["mig", "sig"],
-              "answerIndex": 1
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag känner ___ trött. (Je me sens fatigué.)",
-              "answer": "mig"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Hon klär på ___.",
-              "answer": "sig"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_adverbs",
-      "title": "4) Adverbes de fréquence & place (alltid/ofta/ibland/aldrig, här/där/hem)",
-      "lessons": [
-        {
-          "id": "a2_adv_1",
-          "title": "Fréquence : alltid, ofta, ibland, sällan, aldrig",
-          "content": [
-            "Toujours : alltid",
-            "Souvent : ofta",
-            "Parfois : ibland",
-            "Rarement : sällan",
-            "Jamais : aldrig",
-            "Position A2 simple : souvent après le verbe (ou après har) : Jag jobbar ofta… / Jag har aldrig…",
-            "Mais en V2, le verbe reste 2e (important)."
-          ],
-          "examples": [
-            { "sv": "Jag jobbar ofta här.", "fr": "Je travaille souvent ici.", "pron": "ya yobb-ar of-ta hèr" },
-            { "sv": "Jag är alltid trött.", "fr": "Je suis toujours fatigué.", "pron": "ya èr all-tid treutt" },
-            { "sv": "Jag går ibland dit.", "fr": "J’y vais parfois.", "pron": "ya gour i-bland diit" },
-            { "sv": "Jag har aldrig sett det.", "fr": "Je n’ai jamais vu ça.", "pron": "ya har ald-rig sètt dè" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "« parfois » =",
-              "choices": ["aldrig", "ibland", "alltid"],
-              "answerIndex": 1
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag har ___ sett det. (Je n’ai jamais vu ça.)",
-              "answer": "aldrig"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag är ___ trött. (Je suis toujours fatigué.)",
-              "answer": "alltid"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_comparisons",
-      "title": "5) Comparatifs & superlatifs (större, bäst, mer…)",
-      "lessons": [
-        {
-          "id": "a2_comp_1",
-          "title": "Comparatif : -are / mer + än",
-          "content": [
-            "Pour comparer :",
-            "• souvent adjectifs courts : -are : stor → större (plus grand), snabb → snabbare (plus rapide).",
-            "• souvent adjectifs longs : mer : intressant → mer intressant.",
-            "Après comparatif : än = que.",
-            "Ex : Sverige är större än Danmark.",
-            "Piège : certains comparatifs sont irréguliers : bra → bättre (meilleur)."
-          ],
-          "examples": [
-            { "sv": "Den här bilen är större än den där.", "fr": "Cette voiture est plus grande que celle-là.", "pron": "dèn hèr biil-èn èr stœr-rè èn dèn dèr" },
-            { "sv": "Det är mer intressant.", "fr": "C’est plus intéressant.", "pron": "dè èr mer in-tre-sant" },
-            { "sv": "Idag mår jag bättre.", "fr": "Aujourd’hui je vais mieux.", "pron": "idag mor ya bèt-trè" }
-          ],
-          "quiz": [
-            {
-              "type": "gap",
-              "q": "Complète : bra → ___. (comparatif)",
-              "answer": "bättre"
-            },
-            {
-              "type": "mcq",
-              "q": "Après un comparatif, « que » =",
-              "choices": ["än", "att", "som"],
-              "answerIndex": 0
-            },
-            {
-              "type": "gap",
-              "q": "Complète : större ___ (plus grand que)",
-              "answer": "än"
-            }
-          ]
-        },
-
-        {
-          "id": "a2_super_1",
-          "title": "Superlatif : -ast / mest (le plus…)",
-          "content": [
-            "Superlatif :",
-            "• adjectifs courts : -ast : snabb → snabbast (le plus rapide).",
-            "• adjectifs longs : mest : mest intressant (le plus intéressant).",
-            "Irrégulier important : bra → bäst (le meilleur)."
-          ],
-          "examples": [
-            { "sv": "Det här är bäst.", "fr": "C’est le meilleur / c’est le top.", "pron": "dè hèr èr bèst" },
-            { "sv": "Han springer snabbast.", "fr": "Il court le plus vite.", "pron": "han spring-èr snab-bast" },
-            { "sv": "Det är mest intressant.", "fr": "C’est le plus intéressant.", "pron": "dè èr mèst in-tre-sant" }
-          ],
-          "quiz": [
-            {
-              "type": "gap",
-              "q": "Complète : bra → ___. (superlatif)",
-              "answer": "bäst"
-            },
-            {
-              "type": "mcq",
-              "q": "« le plus intéressant » :",
-              "choices": ["mest intressant", "intressantast", "mer intressant"],
-              "answerIndex": 0
-            },
-            {
-              "type": "gap",
-              "q": "Complète : snabb → ___. (superlatif)",
-              "answer": "snabbast"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_subclauses",
-      "title": "6) Subordonnées : att, eftersom, när + ordre (inte avant verbe)",
-      "lessons": [
-        {
-          "id": "a2_sub_1",
-          "title": "Subordonnée : ordinaire mais changement de place de inte",
-          "content": [
-            "A2 : tu commences à relier des idées : « parce que », « quand », « que ».",
-            "Mots clés : att (que), eftersom (parce que), när (quand).",
-            "Différence cruciale : en subordonnée, « inte » se place souvent AVANT le verbe principal de la subordonnée.",
-            "Ex : Jag tror att han inte kommer. (Je crois qu’il ne vient pas.)",
-            "Compare : Han kommer inte. (principale : inte après verbe) vs …att han inte kommer (subordonnée : inte avant verbe).",
-            "A2 : cette règle est un gros saut, mais on la travaille avec des modèles."
-          ],
-          "examples": [
-            { "sv": "Jag tror att han kommer.", "fr": "Je crois qu’il vient.", "pron": "ya trour att han kommèr" },
-            { "sv": "Jag tror att han inte kommer.", "fr": "Je crois qu’il ne vient pas.", "pron": "ya trour att han innté kommèr" },
-            { "sv": "Jag stannar hemma eftersom jag är trött.", "fr": "Je reste à la maison parce que je suis fatigué.", "pron": "ya stan-nar hèm-ma èf-ter-som ya èr treutt" },
-            { "sv": "När jag har tid, ringer jag dig.", "fr": "Quand j’ai le temps, je t’appelle.", "pron": "nèr ya har tiid rin-gèr ya dèï" }
-          ],
-          "quiz": [
-            {
-              "type": "mcq",
-              "q": "Dans une subordonnée (att…), où se place souvent « inte » ?",
-              "choices": ["après le verbe", "avant le verbe principal"],
-              "answerIndex": 1
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag tror att han ___ kommer. (Je crois qu’il ne vient pas.)",
-              "answer": "inte"
-            },
-            {
-              "type": "gap",
-              "q": "Complète : Jag stannar hemma ___ jag är trött. (parce que)",
-              "answer": "eftersom"
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "a2_dialogues",
-      "title": "7) Dialogues A2 (plus longs, plus naturels)",
-      "lessons": [
-        {
-          "id": "a2_dial_1",
-          "title": "Raconter un passé proche (perfekt) + déjà/jamais",
-          "content": [
-            "A: Har du varit i Sverige?",
-            "B: Ja, jag har varit i Stockholm.",
-            "A: Har du redan sett Gamla stan?",
-            "B: Ja, men jag har aldrig varit där på vintern.",
-            "A2 objectif : utiliser har + supin, redan, aldrig."
-          ],
-          "examples": [
-            { "sv": "Har du varit i Stockholm?", "fr": "Tu as été à Stockholm ?", "pron": "har dou va-rit i stokk-holm" },
-            { "sv": "Jag har aldrig varit där på vintern.", "fr": "Je n’y ai jamais été en hiver.", "pron": "ya har ald-rig va-rit dèr po vin-tèrn" }
-          ],
-          "quiz": [
-            { "type": "gap", "q": "Complète : Har du ___ i Sverige? (Tu as été…)", "answer": "varit" },
-            { "type": "gap", "q": "Complète : Jag har ___ sett det. (Je n’ai jamais vu…)", "answer": "aldrig" },
-            { "type": "gap", "q": "Complète : Jag har ___ ätit. (J’ai déjà mangé.)", "answer": "redan" }
-          ]
-        },
-
-        {
-          "id": "a2_dial_2",
-          "title": "Plan + prédiction (ska / kommer att) + V2",
-          "content": [
-            "A: Vad ska du göra i helgen?",
-            "B: På lördag ska jag träffa en vän.",
-            "A: Kul! Tror du att det kommer att regna?",
-            "B: Kanske, men jag tar en jacka.",
-            "Notes A2 : i helgen (ce week-end), på lördag (samedi), tror du att… (penses-tu que…)."
+            "🎯 Objectif : parler plus vite et plus juste en automatisant 3 piliers : V2, la négation, les questions.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• appliquer V2 sans réfléchir dans une phrase principale",
+            "• placer inte au bon endroit (verbe simple / modal / temps composé)",
+            "• poser des questions oui/non et des questions avec mot interrogatif",
+            "",
+            "==============================",
+            "SITUATION - Conversation rapide",
+            "",
+            "Dialogue :",
+            "A: Jobbar du idag?",
+            "(yobb-ar dou i-dag ?)",
+            "B: Nej, idag jobbar jag inte.",
+            "(néj, i-dag yobb-ar ya intè)",
+            "A: När kommer du?",
+            "(nèr komm-er dou ?)",
+            "B: Jag kommer imorgon.",
+            "(ya komm-er i-mor-gon)",
+            "A: Var bor du nu?",
+            "(var bour dou nou ?)",
+            "B: Nu bor jag i Paris.",
+            "(nou bour ya i pari)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 = même grammaire, plus d’automatismes",
+            "",
+            "Tu connais déjà les briques A1. En A2, on ne rajoute pas “beaucoup de règles” d’un coup : on rend les règles A1 plus rapides et plus fiables. L’objectif est simple : faire des phrases correctes sans avoir besoin de réfléchir à chaque mot.",
+            "",
+            "Ce pont A1->A2 repose sur trois réflexes :",
+            "1) V2 en phrase principale",
+            "2) la place de inte",
+            "3) la mécanique des questions",
+            "",
+            "",
+            "👉 1) V2 (règle centrale)",
+            "",
+            "En suédois, dans une phrase principale, le verbe conjugué arrive presque toujours en 2e position (V2). Concrètement : tu peux mettre un élément au début (temps, lieu, adverbe), mais le verbe doit venir juste après.",
+            "",
+            "Exemples :",
+            "Idag jobbar jag.",
+            "Imorgon kommer han.",
+            "Nu bor vi i Paris.",
+            "",
+            "Piège francophone : en français, on peut dire “Aujourd’hui je travaille…”. En suédois, si tu commences par “Idag”, tu dois enchaîner directement avec le verbe : “Idag jobbar…”.",
+            "",
+            "",
+            "👉 2) La négation inte : où la mettre ?",
+            "",
+            "Règle A2 : inte se place après le verbe conjugué (ou après le modal). C’est ce placement qui donne une phrase naturelle.",
+            "",
+            "• Verbe simple : Idag jobbar jag inte.",
+            "• Modal : Jag kan inte komma.",
+            "• Temps composé : Jag har inte jobbat idag.",
+            "",
+            "Piège francophone : mettre “inte” trop tôt ou trop tard. Pour t’aider, repère le verbe conjugué (jobbar / kan / har). Inte vient juste après.",
+            "",
+            "",
+            "👉 3) Les questions : deux types",
+            "",
+            "A) Question oui/non : le verbe passe en 1re position.",
+            "Jobbar du idag?",
+            "Kan du komma?",
+            "Har du ätit?",
+            "",
+            "B) Question avec mot interrogatif : le mot interrogatif prend la 1re place, et le verbe reste en 2e (V2).",
+            "När kommer du?",
+            "Var bor du?",
+            "Vad gör du?",
+            "",
+            "Astuce : en A2, entraîne-toi à produire 10 phrases d’affilée. La vitesse vient de la répétition, pas de la théorie.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Phrase principale : (élément) + verbe + sujet + …",
+            "inte : après le verbe conjugué / après le modal",
+            "question oui/non : verbe en 1er",
+            "question interrogative : mot interrogatif + verbe (V2)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "1) V2 : commence par un mot de temps",
+            "Idag ... / Imorgon ... / Nu ... / Ibland ...",
+            "",
+            "2) Ajoute inte",
+            "Idag ... inte.",
+            "",
+            "3) Transforme en question",
+            "... du idag?",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Fais 12 phrases :",
+            "• 6 affirmatives (avec un mot au début)",
+            "• 3 négatives (inte bien placé)",
+            "• 3 questions (oui/non ou interrogatives)"
           ],
           "vocab": [
-            { "sv": "i helgen", "fr": "ce week-end", "pron": "i hèl-yèn" },
-            { "sv": "på lördag", "fr": "samedi", "pron": "po leu-dag" },
-            { "sv": "tror du att", "fr": "penses-tu que", "pron": "trour dou att" },
-            { "sv": "kanske", "fr": "peut-être", "pron": "kan-chè" },
-            { "sv": "ta", "fr": "prendre", "pron": "ta" },
-            { "sv": "en jacka", "fr": "une veste", "pron": "èn yak-ka" }
+            { "sv": "idag", "fr": "aujourd’hui", "pron": "i-dag" },
+            { "sv": "imorgon", "fr": "demain", "pron": "i-mor-gon" },
+            { "sv": "nu", "fr": "maintenant", "pron": "nou" },
+            { "sv": "inte", "fr": "ne pas", "pron": "intè" },
+            { "sv": "när", "fr": "quand", "pron": "nèr" },
+            { "sv": "var", "fr": "où", "pron": "var" }
+          ],
+          "examples": [
+            { "sv": "Idag jobbar jag inte.", "fr": "Aujourd’hui je ne travaille pas.", "pron": "i-dag yobb-ar ya intè" },
+            { "sv": "Imorgon kommer han.", "fr": "Demain il vient.", "pron": "i-mor-gon komm-er han" },
+            { "sv": "Var bor du nu?", "fr": "Où habites-tu maintenant ?", "pron": "var bour dou nou" },
+            { "sv": "När kommer hon?", "fr": "Quand arrive-t-elle ?", "pron": "nèr komm-er hon" }
+          ],
+          "mini_drills": [
+            { "instruction": "V2 : commence par idag / imorgon / nu.", "items": ["Idag ...", "Imorgon ...", "Nu ..."] },
+            { "instruction": "Ajoute inte au bon endroit.", "items": ["Idag jobbar jag.", "Jag kan komma.", "Jag har jobbat idag."] },
+            { "instruction": "Transforme en question.", "items": ["Du jobbar idag.", "Du kan komma.", "Du har ätit."] }
           ],
           "quiz": [
-            { "type": "mcq", "q": "Pour une prédiction :", "choices": ["ska", "kommer att"], "answerIndex": 1 },
-            { "type": "mcq", "q": "V2 : quelle phrase est correcte ?", "choices": ["På lördag jag ska träffa…", "På lördag ska jag träffa…"], "answerIndex": 1 },
-            { "type": "gap", "q": "Complète : Det kommer att ___. (Il va pleuvoir.)", "answer": "regna" }
+            { "type": "mcq", "q": "Quelle phrase respecte V2 ?", "choices": ["Idag jag jobbar inte.", "Idag jobbar jag inte."], "answerIndex": 1 },
+            { "type": "gap", "q": "Complète : Jag kan ___ komma. (Je ne peux pas venir.)", "answer": "inte" },
+            { "type": "gap", "q": "Complète : ___ kommer du? (Quand viens-tu ?)", "answer": "När" }
+          ]
+        },
+
+        {
+          "id": "a2_bridge_02",
+          "title": "Inte - placement avancé (verbe simple / modal / har)",
+          "content": [
+            "🎯 Objectif : placer inte correctement dans 90% des phrases A2.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• repérer le verbe conjugué",
+            "• placer inte juste après ce verbe",
+            "• éviter les erreurs typiques francophones",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 La règle est simple, mais il faut la sentir",
+            "",
+            "Le placement de inte n’est pas “un détail”. C’est un marqueur de phrase naturelle. En A2, tu dois apprendre à le placer automatiquement, comme si tu suivais une voie ferrée : tu repères le verbe conjugué, et inte arrive juste après.",
+            "",
+            "1) Verbe simple (présent / passé simple narratif) :",
+            "Idag jobbar jag inte.",
+            "Igår jobbade jag inte.",
+            "",
+            "2) Modal (kan / vill / måste / ska) :",
+            "Jag kan inte komma.",
+            "Jag vill inte äta.",
+            "",
+            "3) Temps composé (har + supinum) :",
+            "Jag har inte jobbat idag.",
+            "Hon har inte ätit.",
+            "",
+            "Piège classique : mettre inte après le complément, comme en français. En suédois, inte vient tôt, juste après le verbe conjugué.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Repère le verbe conjugué : jobbar / kan / har",
+            "inte vient juste après."
+          ],
+          "examples": [
+            { "sv": "Jag jobbar inte idag.", "fr": "Je ne travaille pas aujourd’hui.", "pron": "ya yobb-ar intè i-dag" },
+            { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan intè kom-ma" },
+            { "sv": "Jag har inte ätit.", "fr": "Je n’ai pas mangé.", "pron": "ya har intè è-tit" }
+          ],
+          "mini_drills": [
+            { "instruction": "Ajoute inte au bon endroit.", "items": ["Jag jobbar idag.", "Jag kan komma.", "Jag har ätit."] },
+            { "instruction": "Transforme en négatif (oral rapide).", "items": ["Hon kommer.", "Vi ska åka.", "De har jobbat."] }
+          ],
+          "quiz": [
+            { "type": "mcq", "q": "Choisis la phrase correcte.", "choices": ["Jag har ätit inte.", "Jag har inte ätit."], "answerIndex": 1 },
+            { "type": "gap", "q": "Complète : Jag ___ inte komma. (Je ne veux pas venir.)", "answer": "vill" }
+          ]
+        },
+
+        {
+          "id": "a2_bridge_03",
+          "title": "Questions A2 - mots interrogatifs + V2 (où, quand, pourquoi, comment)",
+          "content": [
+            "🎯 Objectif : poser des questions naturelles sans casser V2.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser var / när / vad / varför / hur",
+            "• garder le verbe en 2e position (V2)",
+            "• répondre avec des phrases courtes mais correctes",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 La règle : mot interrogatif + verbe (V2)",
+            "",
+            "Dans une question avec un mot interrogatif, le mot interrogatif prend la 1re place. Ensuite, comme en phrase principale, le verbe conjugué arrive en 2e position.",
+            "",
+            "Var bor du? (où habites-tu ?)",
+            "När kommer du? (quand viens-tu ?)",
+            "Varför jobbar du? (pourquoi tu travailles ?)",
+            "Hur mår du? (comment vas-tu ?)",
+            "",
+            "Piège francophone : vouloir conserver l’ordre français. En suédois, garde ton réflexe : 1er élément + verbe.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Var/När/Vad/Varför/Hur + verbe + sujet + …"
+          ],
+          "vocab": [
+            { "sv": "varför", "fr": "pourquoi", "pron": "var-feur" },
+            { "sv": "hur", "fr": "comment", "pron": "hour" },
+            { "sv": "mår", "fr": "vais (se sentir)", "pron": "mor" }
+          ],
+          "examples": [
+            { "sv": "Varför kommer du inte?", "fr": "Pourquoi tu ne viens pas ?", "pron": "var-feur komm-er dou intè" },
+            { "sv": "Hur mår du idag?", "fr": "Comment vas-tu aujourd’hui ?", "pron": "hour mor dou i-dag" }
+          ],
+          "mini_drills": [
+            { "instruction": "Crée 5 questions (var / när / varför / hur / vad).", "items": ["Var ...?", "När ...?", "Varför ...?", "Hur ...?", "Vad ...?"] }
+          ],
+          "quiz": [
+            { "type": "mcq", "q": "Quelle question est correcte ?", "choices": ["Var du bor?", "Var bor du?"], "answerIndex": 1 },
+            { "type": "gap", "q": "Complète : ___ mår du? (Comment vas-tu ?)", "answer": "Hur" }
           ]
         }
       ]
     },
 
     {
-      "id": "a2_review",
-      "title": "8) Pack de révision A2 (gros volume ciblé)",
+      "id": "a2_core_01",
+      "title": "1) Narration A2 - raconter (hier, la semaine dernière, expérience)",
       "lessons": [
         {
-          "id": "a2_rev_1",
-          "title": "Révision — perfekt (réguliers + irréguliers)",
+          "id": "a2_core_01_01",
+          "title": "Le passé narratif - igår + verbes fréquents (jobba, åka, köpa, se)",
+          "content": [
+            "🎯 Objectif : raconter une mini-histoire simple au passé (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• raconter hier avec une structure claire",
+            "• utiliser quelques verbes très fréquents au passé",
+            "• enchaîner 4-6 phrases cohérentes",
+            "",
+            "==============================",
+            "SITUATION - Raconter sa journée",
+            "",
+            "Dialogue :",
+            "A: Vad gjorde du igår?",
+            "(vad you-ré dou i-gor ?)",
+            "B: Igår jobbade jag på morgonen.",
+            "(i-gor yob-bad-è ya po mor-gon-en)",
+            "B: Sen åkte jag till stan och köpte en bok.",
+            "(sèn o-ktè ya til stan ok shöpt-è èn bouk)",
+            "A: Såg du någon vän?",
+            "(sog dou no-gon vèn ?)",
+            "B: Ja, jag såg Sara. Vi drack kaffe.",
+            "(ya, ya sog sara. vi drak kafé)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 = raconter, pas seulement répondre",
+            "",
+            "En A1, tu sais répondre : “Jag har jobbat.” En A2, tu dois raconter avec une chronologie simple. Tu vas donc apprendre à enchaîner des phrases courtes, reliées par des mots très simples : sen (ensuite), och (et), sedan (puis), till slut (à la fin).",
+            "",
+            "Le but n’est pas d’avoir un passé parfait, mais de produire un récit clair et compréhensible. En suédois, un récit A2 est souvent composé de 5 ou 6 phrases très simples, mais bien ordonnées.",
+            "",
+            "",
+            "👉 Deux options de passé (A2 début)",
+            "",
+            "1) Le passé composé (har + supinum) : utile pour dire “j’ai fait” sans raconter.",
+            "Jag har jobbat.",
+            "",
+            "2) Le passé narratif (prétérit) : utile pour raconter “hier, j’ai fait X puis Y”.",
+            "Igår jobbade jag. Sen åkte jag…",
+            "",
+            "Dans cette leçon, on utilise surtout le passé narratif parce qu’on veut raconter.",
+            "",
+            "",
+            "👉 Verbes fréquents au passé (à automatiser)",
+            "",
+            "jobba -> jobbade (j’ai travaillé / je travaillais)",
+            "åka -> åkte (je suis allé / je suis parti)",
+            "köpa -> köpte (j’ai acheté)",
+            "se -> såg (j’ai vu)",
+            "dricka -> drack (j’ai bu)",
+            "",
+            "Tu n’as pas besoin de mémoriser des tables : commence par 5 verbes ultra fréquents et entraîne-les en phrases.",
+            "",
+            "",
+            "👉 V2 et mots de temps : attention",
+            "",
+            "Quand tu commences par un mot de temps (igår, i helgen, förra veckan), tu gardes V2 :",
+            "Igår jobbade jag...",
+            "",
+            "Piège : dire *Igår jag jobbade...* (ordre français).",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Récit A2 = temps + action 1 + sen + action 2 + (och) + action 3.",
+            "Commence petit, puis répète."
+          ],
+          "vocab": [
+            { "sv": "igår", "fr": "hier", "pron": "i-gor" },
+            { "sv": "sen", "fr": "ensuite", "pron": "sèn" },
+            { "sv": "åkte", "fr": "je suis allé (åka)", "pron": "o-ktè" },
+            { "sv": "köpte", "fr": "j’ai acheté (köpa)", "pron": "shöpt-è" },
+            { "sv": "såg", "fr": "j’ai vu (se)", "pron": "sog" },
+            { "sv": "drack", "fr": "j’ai bu (dricka)", "pron": "drak" }
+          ],
+          "examples": [
+            { "sv": "Igår jobbade jag.", "fr": "Hier j’ai travaillé.", "pron": "i-gor yob-bad-è ya" },
+            { "sv": "Sen åkte jag till stan.", "fr": "Ensuite je suis allé en ville.", "pron": "sèn o-ktè ya til stan" },
+            { "sv": "Jag köpte en bok.", "fr": "J’ai acheté un livre.", "pron": "ya shöpt-è èn bouk" },
+            { "sv": "Jag såg Sara.", "fr": "J’ai vu Sara.", "pron": "ya sog sara" }
+          ],
+          "mini_drills": [
+            { "instruction": "Récit en 4 phrases (oral) : Igår + action / Sen + action / Och + action / Till slut + action.", "items": ["Igår ...", "Sen ...", "Och ...", "Till slut ..."] },
+            { "instruction": "Substitution verbes : remplace 'jobba' par 'åka / köpa / se / dricka'.", "items": ["Igår jobbade jag."] }
+          ],
           "quiz": [
-            { "type": "gap", "q": "jobba → ___. (supin)", "answer": "jobbat" },
-            { "type": "gap", "q": "vara → ___. (supin)", "answer": "varit" },
-            { "type": "gap", "q": "göra → ___. (supin)", "answer": "gjort" },
-            { "type": "gap", "q": "gå → ___. (supin)", "answer": "gått" },
-            { "type": "gap", "q": "se → ___. (supin)", "answer": "sett" }
-          ]
-        },
-        {
-          "id": "a2_rev_2",
-          "title": "Révision — fréquence + déjà/jamais",
-          "quiz": [
-            { "type": "gap", "q": "« toujours » = ___", "answer": "alltid" },
-            { "type": "gap", "q": "« parfois » = ___", "answer": "ibland" },
-            { "type": "gap", "q": "« jamais » = ___", "answer": "aldrig" },
-            { "type": "gap", "q": "« déjà » = ___", "answer": "redan" },
-            { "type": "mcq", "q": "Dans « Jag har aldrig… », jamais se place…", "choices": ["après le supin", "après har"], "answerIndex": 1 }
-          ]
-        },
-        {
-          "id": "a2_rev_3",
-          "title": "Révision — subordonnées (inte avant verbe)",
-          "quiz": [
-            { "type": "gap", "q": "Complète : Jag tror att han ___ kommer.", "answer": "inte" },
-            { "type": "gap", "q": "Complète : Jag stannar hemma ___ jag är trött. (parce que)", "answer": "eftersom" },
-            { "type": "gap", "q": "Complète : ___ jag har tid, ringer jag dig. (quand)", "answer": "När" }
-          ]
-        },
-        {
-          "id": "a2_rev_4",
-          "title": "Révision — comparatifs/superlatifs",
-          "quiz": [
-            { "type": "gap", "q": "bra → ___. (comparatif)", "answer": "bättre" },
-            { "type": "gap", "q": "bra → ___. (superlatif)", "answer": "bäst" },
-            { "type": "gap", "q": "snabb → ___. (superlatif)", "answer": "snabbast" },
-            { "type": "gap", "q": "Complète : större ___. (plus grand que)", "answer": "än" },
-            { "type": "mcq", "q": "« le plus intéressant » :", "choices": ["mest intressant", "mer intressant"], "answerIndex": 0 }
+            { "type": "mcq", "q": "Quelle phrase est correcte (V2) ?", "choices": ["Igår jag jobbade.", "Igår jobbade jag."], "answerIndex": 1 },
+            { "type": "gap", "q": "Complète : Sen ___ jag till stan. (je suis allé)", "answer": "åkte" },
+            { "type": "gap", "q": "Complète : Jag ___ en bok. (j’ai acheté)", "answer": "köpte" }
           ]
         }
       ]
