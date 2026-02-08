@@ -2031,6 +2031,161 @@
     { "type": "gap", "q": "Complète : Jag ___ resa i sommar. (intention)", "answer": "tänker" },
     { "type": "mcq", "q": "Quelle phrase parle d’une prévision ?", "choices": ["Jag tänker resa.", "Det kommer att regna."], "answerIndex": 1 }
   ]
+},
+{
+  "id": "a2_core_02_04",
+  "title": "Futur mixte - phrases longues (temps + plan + raison + conséquence)",
+  "content": [
+    "🎯 Objectif : construire des phrases longues et naturelles au futur en combinant temps, plan, intention, prévision et raison (A2).",
+    "",
+    "À la fin de cette leçon tu sais :",
+    "• combiner ska / tänker / kommer att dans une même phrase",
+    "• structurer une phrase longue sans te perdre",
+    "• parler de projets futurs de manière fluide et réaliste",
+    "",
+    "==============================",
+    "SITUATION - Expliquer un projet futur",
+    "",
+    "Dialogue :",
+    "A: Vad ska du göra nästa år?",
+    "(vad ska dou you-ra nèk-sta or ?)",
+    "B: Nästa år ska jag byta jobb.",
+    "(nèk-sta or ska ya bü-ta yob)",
+    "A: Varför då?",
+    "(var-feur do ?)",
+    "B: Eftersom jag tänker flytta till Sverige.",
+    "(éf-tèr-som ya tèn-kèr flüt-ta til svè-ri-yè)",
+    "A: Tror du att det kommer att bli svårt?",
+    "(trou dou att dèt komm-er att bli svoir-t ?)",
+    "B: Ja, men det kommer att bli bra på sikt.",
+    "(ya, mèn dèt komm-er att bli bra po sikt)",
+    "",
+    "==============================",
+    "DÉCOMPOSITION",
+    "",
+    "nästa år = l’année prochaine",
+    "byta jobb = changer de travail",
+    "på sikt = à long terme",
+    "flytta = déménager",
+    "",
+    "==============================",
+    "🧑‍🏫 EXPLICATION DU PROF",
+    "",
+    "👉 Pourquoi cette leçon est très importante en A2",
+    "",
+    "Jusqu’ici, tu as appris à utiliser séparément les outils du futur : ska pour un plan, tänker pour une intention, kommer att pour une prévision.",
+    "",
+    "Mais dans la vraie vie, on ne parle pas avec des phrases isolées. On explique ses projets, ses raisons, ses doutes et les conséquences possibles. Cette leçon t’apprend à assembler tout cela dans des phrases longues mais claires.",
+    "",
+    "C’est exactement ce qui fait passer ton suédois d’un A2 \"scolaire\" à un A2 réellement utilisable.",
+    "",
+    "",
+    "👉 Le principe fondamental : une idée = un rôle",
+    "",
+    "Dans une phrase longue A2, chaque partie a un rôle précis :",
+    "",
+    "• le temps (quand ?)",
+    "• le plan (ce qui est décidé)",
+    "• l’intention (ce que tu envisages)",
+    "• la prévision (ce qui est probable)",
+    "• la raison ou la conséquence",
+    "",
+    "Tu ne dois pas tout mettre, mais tu dois savoir les combiner.",
+    "",
+    "",
+    "👉 Exemple guidé (analyse)",
+    "",
+    "Nästa år ska jag byta jobb, eftersom jag tänker flytta till Sverige, och det kommer att bli svårt i början.",
+    "",
+    "Analyse :",
+    "Nästa år = temps",
+    "ska jag byta jobb = plan décidé",
+    "eftersom jag tänker flytta = intention (raison)",
+    "det kommer att bli svårt = prévision",
+    "",
+    "",
+    "👉 Ordre des mots et clarté",
+    "",
+    "Même dans une phrase longue, le suédois reste logique :",
+    "• les subordonnées (eftersom, när, om) n’annulent pas V2 dans la principale",
+    "• chaque verbe garde sa structure (ska + infinitif, tänker + infinitif, kommer att + infinitif)",
+    "",
+    "Il vaut mieux une phrase longue simple qu’une phrase compliquée mal construite.",
+    "",
+    "",
+    "👉 Différence avec le français",
+    "",
+    "En français, on peut empiler des idées sans structure claire.",
+    "En suédois A2, la clarté est essentielle : on préfère plusieurs blocs bien organisés.",
+    "",
+    "",
+    "👉 Erreurs fréquentes",
+    "",
+    "- mélanger les rôles (utiliser ska pour une prévision)",
+    "- oublier la raison (phrase trop sèche)",
+    "- vouloir faire trop long dès le début",
+    "",
+    "",
+    "👉 À retenir absolument",
+    "",
+    "Phrase A2 efficace =",
+    "temps + plan + (raison) + (prévision)",
+    "",
+    "Tu parles comme un adulte, pas comme un manuel."
+  ],
+  "vocab": [
+    { "sv": "nästa år", "fr": "l’année prochaine", "pron": "nèk-sta or" },
+    { "sv": "byta jobb", "fr": "changer de travail", "pron": "bü-ta yob" },
+    { "sv": "flytta", "fr": "déménager", "pron": "flüt-ta" },
+    { "sv": "på sikt", "fr": "à long terme", "pron": "po sikt" },
+    { "sv": "i början", "fr": "au début", "pron": "i beur-yan" }
+  ],
+  "examples": [
+    {
+      "sv": "Nästa år ska jag byta jobb, eftersom jag tänker flytta till Sverige.",
+      "fr": "L’année prochaine je vais changer de travail, parce que j’ai l’intention de déménager en Suède.",
+      "pron": "nèk-sta or ska ya bü-ta yob, éf-tèr-som ya tèn-kèr flüt-ta til svè-ri-yè"
+    },
+    {
+      "sv": "Det kommer att bli svårt i början, men bra på sikt.",
+      "fr": "Ça va être difficile au début, mais bien à long terme.",
+      "pron": "dèt komm-er att bli svoir-t i beur-yan, mèn bra po sikt"
+    }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Construis une phrase longue avec 3 blocs.",
+      "items": [
+        "temps + ska",
+        "eftersom + tänker",
+        "kommer att"
+      ]
+    },
+    {
+      "instruction": "Transforme en phrase A2 longue.",
+      "items": [
+        "Jag ska byta jobb.",
+        "Jag tänker flytta.",
+        "Det kommer att bli svårt."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mcq",
+      "q": "Quelle phrase est la plus naturelle en A2 ?",
+      "choices": [
+        "Jag ska byta jobb. Jag tänker flytta. Det kommer att bli svårt.",
+        "Nästa år ska jag byta jobb, eftersom jag tänker flytta, och det kommer att bli svårt."
+      ],
+      "answerIndex": 1
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Nästa år ___ jag byta jobb. (plan décidé)",
+      "answer": "ska"
+    }
+  ]
 }
       ]
     }
