@@ -1892,7 +1892,7 @@
   ]
 },
 {
-  "id": "a1_premium_10",
+  "id": "a1_premium_11",
   "title": "Possessifs + démonstratifs - min / din / hans / hennes + den här / det här / de här",
   "content": [
     "🎯 Objectif : parler de tes affaires, de celles des autres, et montrer des objets précis.",
@@ -2086,7 +2086,7 @@
   ]
 },
 {
-  "id": "a1_premium_11",
+  "id": "a1_premium_12",
   "title": "Exprimer ses besoins - vill / måste",
   "content": [
     "🎯 Objectif : dire ce que tu veux faire et ce que tu dois faire.",
@@ -2238,7 +2238,7 @@
   ]
 },
 {
-  "id": "a1_premium_12",
+  "id": "a1_premium_13",
   "title": "Routines quotidiennes - alltid / ofta / ibland",
   "content": [
     "🎯 Objectif : parler de tes habitudes et de ta routine quotidienne.",
@@ -2400,7 +2400,7 @@
   ]
 },
 {
-  "id": "a1_premium_13",
+  "id": "a1_premium_14",
   "title": "Parler du passé - har + participe",
   "content": [
     "🎯 Objectif : parler de ce que tu as fait.",
@@ -2537,7 +2537,7 @@
   ]
 },
 {
-  "id": "a1_premium_14",
+  "id": "a1_premium_15",
   "title": "Hier / aujourd’hui / demain - igår / idag / imorgon",
   "content": [
     "🎯 Objectif : situer une action dans le temps (passé, présent, futur proche).",
@@ -2706,7 +2706,7 @@
   ]
 },
 {
-  "id": "a1_premium_15",
+  "id": "a1_premium_16",
   "title": "Dire l’heure et fixer un rendez-vous",
   "content": [
     "🎯 Objectif : dire l’heure et parler d’un rendez-vous simple.",
@@ -2856,7 +2856,7 @@
   ]
 },
 {
-  "id": "a1_premium_16",
+  "id": "a1_premium_17",
   "title": "Prix et paiement - kostar / betala",
   "content": [
     "🎯 Objectif : demander un prix et payer.",
@@ -3007,7 +3007,7 @@
   ]
 },
 {
-  "id": "a1_premium_17",
+  "id": "a1_premium_18",
   "title": "Météo et saisons",
   "content": [
     "🎯 Objectif : parler du temps qu’il fait et des saisons.",
@@ -3191,7 +3191,7 @@
   ]
 },
 {
-  "id": "a1_premium_18",
+  "id": "a1_premium_19",
   "title": "Se repérer - directions et déplacements",
   "content": [
     "🎯 Objectif : demander et comprendre une direction simple.",
@@ -3364,7 +3364,7 @@
   ]
 },
 {
-  "id": "a1_premium_19",
+  "id": "a1_premium_20",
   "title": "Donner une opinion simple - tycker om / gillar",
   "content": [
     "🎯 Objectif : dire ce que tu aimes ou n’aimes pas.",
@@ -3542,7 +3542,7 @@
   ]
 },
 {
-  "id": "a1_premium_20",
+  "id": "a1_premium_21",
   "title": "Révision globale et projet final A1",
   "content": [
     "🎯 Objectif : consolider tout le niveau A1 et parler en autonomie simple.",
@@ -3678,6 +3678,7 @@
     }
   ]
 }
+
 
 
 
