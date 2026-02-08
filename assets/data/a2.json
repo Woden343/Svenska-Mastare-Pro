@@ -3321,7 +3321,204 @@
           "answerIndex": 1
         }
       ]
+    },
+{
+  "id": "a2_core_04_02",
+  "title": "Santé et état physique - må / ont i / trött / stressad",
+  "content": [
+    "🎯 Objectif : parler de ton état physique et mental, dire si tu vas bien ou mal, et expliquer ce que tu ressens (A2).",
+    "",
+    "À la fin de cette leçon tu sais :",
+    "• dire comment tu vas avec må",
+    "• dire où tu as mal avec ont i",
+    "• décrire la fatigue, le stress et l’énergie",
+    "• poser des questions simples sur la santé",
+    "",
+    "==============================",
+    "SITUATION - Parler de sa santé",
+    "",
+    "Dialogue :",
+    "A: Hur mår du?",
+    "(hour mor dou ?)",
+    "B: Jag mår ganska bra, men jag är lite trött.",
+    "(ya mor gas-ka bra, mèn ya èr li-te treutt)",
+    "A: Har du ont någonstans?",
+    "(har dou ont no-gon-stans ?)",
+    "B: Ja, jag har ont i ryggen.",
+    "(ya, ya har ont i rüg-gèn)",
+    "A: Oj. Är du stressad?",
+    "(oj. èr dou strèss-ad ?)",
+    "B: Ja, jag jobbar mycket just nu.",
+    "(ya, ya yob-bar mü-kèt youst nou)",
+    "",
+    "==============================",
+    "DÉCOMPOSITION",
+    "",
+    "hur mår du? = comment vas-tu ?",
+    "må = aller (état physique / mental)",
+    "ont i = avoir mal à",
+    "trött = fatigué",
+    "stressad = stressé",
+    "",
+    "==============================",
+    "🧑‍🏫 EXPLICATION DU PROF",
+    "",
+    "👉 Pourquoi cette leçon est essentielle en A2",
+    "",
+    "Parler de sa santé et de son état physique est une compétence indispensable dans la vie quotidienne : au travail, chez le médecin, avec des amis.",
+    "",
+    "En suédois, on n’utilise pas les mêmes structures qu’en français. Cette leçon te donne les bases pour t’exprimer naturellement, sans traduire mot à mot.",
+    "",
+    "",
+    "👉 1) « må » : dire comment tu vas",
+    "",
+    "Le verbe « må » signifie « aller » au sens de l’état physique ou mental. Il s’utilise presque toujours avec des adverbes.",
+    "",
+    "Structure :",
+    "sujet + mår + adverbe",
+    "",
+    "Exemples :",
+    "Jag mår bra.",
+    "Jag mår dåligt.",
+    "Jag mår ganska bra.",
+    "",
+    "⚠️ Important :",
+    "On ne dit pas *Jag är bra* pour dire « je vais bien ». On utilise toujours « må ».",
+    "",
+    "",
+    "👉 2) « ont i » : dire où tu as mal",
+    "",
+    "Pour parler d’une douleur précise, le suédois utilise la structure « ha ont i + partie du corps ».",
+    "",
+    "Structure :",
+    "jag har ont i + nom défini",
+    "",
+    "Exemples :",
+    "Jag har ont i huvudet. (mal à la tête)",
+    "Jag har ont i magen. (mal au ventre)",
+    "Jag har ont i ryggen. (mal au dos)",
+    "",
+    "Remarque importante :",
+    "Les parties du corps sont presque toujours à la forme définie.",
+    "",
+    "",
+    "👉 3) Adjectifs fréquents pour l’état physique et mental",
+    "",
+    "trött = fatigué",
+    "stressad = stressé",
+    "sjuk = malade",
+    "pigg = en forme",
+    "",
+    "Exemples :",
+    "Jag är trött.",
+    "Jag är stressad just nu.",
+    "Jag känner mig pigg idag.",
+    "",
+    "",
+    "👉 4) Poser des questions sur la santé",
+    "",
+    "Questions très fréquentes :",
+    "",
+    "Hur mår du?",
+    "Har du ont?",
+    "Har du ont någonstans?",
+    "",
+    "Ces questions sont simples, polies et très naturelles à l’oral.",
+    "",
+    "",
+    "👉 Différence avec le français",
+    "",
+    "Français : « J’ai mal à la tête » / « Je vais bien »",
+    "Suédois : « Jag har ont i huvudet » / « Jag mår bra »",
+    "",
+    "Éviter la traduction mot à mot est crucial ici.",
+    "",
+    "",
+    "👉 Erreurs fréquentes",
+    "",
+    "- dire *Jag är bra* pour l’état général",
+    "- oublier « i » après ont",
+    "- utiliser la forme indéfinie pour le corps",
+    "",
+    "",
+    "👉 À retenir absolument",
+    "",
+    "Hur mår du? → Jag mår bra / dåligt",
+    "ont i + forme définie",
+    "trött / stressad pour l’état"
+  ],
+  "vocab": [
+    { "sv": "mår", "fr": "vais (aller)", "pron": "mor" },
+    { "sv": "ont", "fr": "mal", "pron": "ont" },
+    { "sv": "huvudet", "fr": "la tête", "pron": "hu-vu-dèt" },
+    { "sv": "magen", "fr": "le ventre", "pron": "ma-gèn" },
+    { "sv": "ryggen", "fr": "le dos", "pron": "rüg-gèn" },
+    { "sv": "stressad", "fr": "stressé", "pron": "strèss-ad" }
+  ],
+  "examples": [
+    {
+      "sv": "Jag mår ganska bra.",
+      "fr": "Je vais plutôt bien.",
+      "pron": "ya mor gas-ka bra"
+    },
+    {
+      "sv": "Jag har ont i huvudet.",
+      "fr": "J’ai mal à la tête.",
+      "pron": "ya har ont i hu-vu-dèt"
+    },
+    {
+      "sv": "Jag är trött och stressad.",
+      "fr": "Je suis fatigué et stressé.",
+      "pron": "ya èr treutt ok strèss-ad"
     }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Dis comment tu vas avec må.",
+      "items": [
+        "bra",
+        "ganska bra",
+        "dåligt"
+      ]
+    },
+    {
+      "instruction": "Dis où tu as mal.",
+      "items": [
+        "huvudet",
+        "magen",
+        "ryggen"
+      ]
+    },
+    {
+      "instruction": "Réponds à la question.",
+      "items": [
+        "Hur mår du?",
+        "Har du ont någonstans?"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "gap",
+      "q": "Complète : Jag ___ bra. (aller)",
+      "answer": "mår"
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Jag har ont ___ huvudet.",
+      "answer": "i"
+    },
+    {
+      "type": "mcq",
+      "q": "Quelle phrase est correcte ?",
+      "choices": [
+        "Jag är bra.",
+        "Jag mår bra."
+      ],
+      "answerIndex": 1
+    }
+  ]
+}
   ]
 }
      ]
