@@ -113,31 +113,107 @@
             "• 3 questions (oui/non ou interrogatives)"
           ],
           "vocab": [
-            { "sv": "idag", "fr": "aujourd’hui", "pron": "i-dag" },
-            { "sv": "imorgon", "fr": "demain", "pron": "i-mor-gon" },
-            { "sv": "nu", "fr": "maintenant", "pron": "nou" },
-            { "sv": "inte", "fr": "ne pas", "pron": "intè" },
-            { "sv": "när", "fr": "quand", "pron": "nèr" },
-            { "sv": "var", "fr": "où", "pron": "var" }
+            {
+              "sv": "idag",
+              "fr": "aujourd’hui",
+              "pron": "i-dag"
+            },
+            {
+              "sv": "imorgon",
+              "fr": "demain",
+              "pron": "i-mor-gon"
+            },
+            {
+              "sv": "nu",
+              "fr": "maintenant",
+              "pron": "nou"
+            },
+            {
+              "sv": "inte",
+              "fr": "ne pas",
+              "pron": "intè"
+            },
+            {
+              "sv": "när",
+              "fr": "quand",
+              "pron": "nèr"
+            },
+            {
+              "sv": "var",
+              "fr": "où",
+              "pron": "var"
+            }
           ],
           "examples": [
-            { "sv": "Idag jobbar jag inte.", "fr": "Aujourd’hui je ne travaille pas.", "pron": "i-dag yobb-ar ya intè" },
-            { "sv": "Imorgon kommer han.", "fr": "Demain il vient.", "pron": "i-mor-gon komm-er han" },
-            { "sv": "Var bor du nu?", "fr": "Où habites-tu maintenant ?", "pron": "var bour dou nou" },
-            { "sv": "När kommer hon?", "fr": "Quand arrive-t-elle ?", "pron": "nèr komm-er hon" }
+            {
+              "sv": "Idag jobbar jag inte.",
+              "fr": "Aujourd’hui je ne travaille pas.",
+              "pron": "i-dag yobb-ar ya intè"
+            },
+            {
+              "sv": "Imorgon kommer han.",
+              "fr": "Demain il vient.",
+              "pron": "i-mor-gon komm-er han"
+            },
+            {
+              "sv": "Var bor du nu?",
+              "fr": "Où habites-tu maintenant ?",
+              "pron": "var bour dou nou"
+            },
+            {
+              "sv": "När kommer hon?",
+              "fr": "Quand arrive-t-elle ?",
+              "pron": "nèr komm-er hon"
+            }
           ],
           "mini_drills": [
-            { "instruction": "V2 : commence par idag / imorgon / nu.", "items": ["Idag ...", "Imorgon ...", "Nu ..."] },
-            { "instruction": "Ajoute inte au bon endroit.", "items": ["Idag jobbar jag.", "Jag kan komma.", "Jag har jobbat idag."] },
-            { "instruction": "Transforme en question.", "items": ["Du jobbar idag.", "Du kan komma.", "Du har ätit."] }
+            {
+              "instruction": "V2 : commence par idag / imorgon / nu.",
+              "items": [
+                "Idag ...",
+                "Imorgon ...",
+                "Nu ..."
+              ]
+            },
+            {
+              "instruction": "Ajoute inte au bon endroit.",
+              "items": [
+                "Idag jobbar jag.",
+                "Jag kan komma.",
+                "Jag har jobbat idag."
+              ]
+            },
+            {
+              "instruction": "Transforme en question.",
+              "items": [
+                "Du jobbar idag.",
+                "Du kan komma.",
+                "Du har ätit."
+              ]
+            }
           ],
           "quiz": [
-            { "type": "mcq", "q": "Quelle phrase respecte V2 ?", "choices": ["Idag jag jobbar inte.", "Idag jobbar jag inte."], "answerIndex": 1 },
-            { "type": "gap", "q": "Complète : Jag kan ___ komma. (Je ne peux pas venir.)", "answer": "inte" },
-            { "type": "gap", "q": "Complète : ___ kommer du? (Quand viens-tu ?)", "answer": "När" }
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": [
+                "Idag jag jobbar inte.",
+                "Idag jobbar jag inte."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag kan ___ komma. (Je ne peux pas venir.)",
+              "answer": "inte"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ kommer du? (Quand viens-tu ?)",
+              "answer": "När"
+            }
           ]
         },
-
         {
           "id": "a2_bridge_02",
           "title": "Inte - placement avancé (verbe simple / modal / har)",
@@ -176,20 +252,57 @@
             "inte vient juste après."
           ],
           "examples": [
-            { "sv": "Jag jobbar inte idag.", "fr": "Je ne travaille pas aujourd’hui.", "pron": "ya yobb-ar intè i-dag" },
-            { "sv": "Jag kan inte komma.", "fr": "Je ne peux pas venir.", "pron": "ya kan intè kom-ma" },
-            { "sv": "Jag har inte ätit.", "fr": "Je n’ai pas mangé.", "pron": "ya har intè è-tit" }
+            {
+              "sv": "Jag jobbar inte idag.",
+              "fr": "Je ne travaille pas aujourd’hui.",
+              "pron": "ya yobb-ar intè i-dag"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan intè kom-ma"
+            },
+            {
+              "sv": "Jag har inte ätit.",
+              "fr": "Je n’ai pas mangé.",
+              "pron": "ya har intè è-tit"
+            }
           ],
           "mini_drills": [
-            { "instruction": "Ajoute inte au bon endroit.", "items": ["Jag jobbar idag.", "Jag kan komma.", "Jag har ätit."] },
-            { "instruction": "Transforme en négatif (oral rapide).", "items": ["Hon kommer.", "Vi ska åka.", "De har jobbat."] }
+            {
+              "instruction": "Ajoute inte au bon endroit.",
+              "items": [
+                "Jag jobbar idag.",
+                "Jag kan komma.",
+                "Jag har ätit."
+              ]
+            },
+            {
+              "instruction": "Transforme en négatif (oral rapide).",
+              "items": [
+                "Hon kommer.",
+                "Vi ska åka.",
+                "De har jobbat."
+              ]
+            }
           ],
           "quiz": [
-            { "type": "mcq", "q": "Choisis la phrase correcte.", "choices": ["Jag har ätit inte.", "Jag har inte ätit."], "answerIndex": 1 },
-            { "type": "gap", "q": "Complète : Jag ___ inte komma. (Je ne veux pas venir.)", "answer": "vill" }
+            {
+              "type": "mcq",
+              "q": "Choisis la phrase correcte.",
+              "choices": [
+                "Jag har ätit inte.",
+                "Jag har inte ätit."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ inte komma. (Je ne veux pas venir.)",
+              "answer": "vill"
+            }
           ]
         },
-
         {
           "id": "a2_bridge_03",
           "title": "Questions A2 - mots interrogatifs + V2 (où, quand, pourquoi, comment)",
@@ -220,25 +333,65 @@
             "Var/När/Vad/Varför/Hur + verbe + sujet + …"
           ],
           "vocab": [
-            { "sv": "varför", "fr": "pourquoi", "pron": "var-feur" },
-            { "sv": "hur", "fr": "comment", "pron": "hour" },
-            { "sv": "mår", "fr": "vais (se sentir)", "pron": "mor" }
+            {
+              "sv": "varför",
+              "fr": "pourquoi",
+              "pron": "var-feur"
+            },
+            {
+              "sv": "hur",
+              "fr": "comment",
+              "pron": "hour"
+            },
+            {
+              "sv": "mår",
+              "fr": "vais (se sentir)",
+              "pron": "mor"
+            }
           ],
           "examples": [
-            { "sv": "Varför kommer du inte?", "fr": "Pourquoi tu ne viens pas ?", "pron": "var-feur komm-er dou intè" },
-            { "sv": "Hur mår du idag?", "fr": "Comment vas-tu aujourd’hui ?", "pron": "hour mor dou i-dag" }
+            {
+              "sv": "Varför kommer du inte?",
+              "fr": "Pourquoi tu ne viens pas ?",
+              "pron": "var-feur komm-er dou intè"
+            },
+            {
+              "sv": "Hur mår du idag?",
+              "fr": "Comment vas-tu aujourd’hui ?",
+              "pron": "hour mor dou i-dag"
+            }
           ],
           "mini_drills": [
-            { "instruction": "Crée 5 questions (var / när / varför / hur / vad).", "items": ["Var ...?", "När ...?", "Varför ...?", "Hur ...?", "Vad ...?"] }
+            {
+              "instruction": "Crée 5 questions (var / när / varför / hur / vad).",
+              "items": [
+                "Var ...?",
+                "När ...?",
+                "Varför ...?",
+                "Hur ...?",
+                "Vad ...?"
+              ]
+            }
           ],
           "quiz": [
-            { "type": "mcq", "q": "Quelle question est correcte ?", "choices": ["Var du bor?", "Var bor du?"], "answerIndex": 1 },
-            { "type": "gap", "q": "Complète : ___ mår du? (Comment vas-tu ?)", "answer": "Hur" }
+            {
+              "type": "mcq",
+              "q": "Quelle question est correcte ?",
+              "choices": [
+                "Var du bor?",
+                "Var bor du?"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ mår du? (Comment vas-tu ?)",
+              "answer": "Hur"
+            }
           ]
         }
       ]
     },
-
     {
       "id": "a2_core_01",
       "title": "1) Narration A2 - raconter (hier, la semaine dernière, expérience)",
@@ -315,779 +468,1096 @@
             "Commence petit, puis répète."
           ],
           "vocab": [
-            { "sv": "igår", "fr": "hier", "pron": "i-gor" },
-            { "sv": "sen", "fr": "ensuite", "pron": "sèn" },
-            { "sv": "åkte", "fr": "je suis allé (åka)", "pron": "o-ktè" },
-            { "sv": "köpte", "fr": "j’ai acheté (köpa)", "pron": "shöpt-è" },
-            { "sv": "såg", "fr": "j’ai vu (se)", "pron": "sog" },
-            { "sv": "drack", "fr": "j’ai bu (dricka)", "pron": "drak" }
+            {
+              "sv": "igår",
+              "fr": "hier",
+              "pron": "i-gor"
+            },
+            {
+              "sv": "sen",
+              "fr": "ensuite",
+              "pron": "sèn"
+            },
+            {
+              "sv": "åkte",
+              "fr": "je suis allé (åka)",
+              "pron": "o-ktè"
+            },
+            {
+              "sv": "köpte",
+              "fr": "j’ai acheté (köpa)",
+              "pron": "shöpt-è"
+            },
+            {
+              "sv": "såg",
+              "fr": "j’ai vu (se)",
+              "pron": "sog"
+            },
+            {
+              "sv": "drack",
+              "fr": "j’ai bu (dricka)",
+              "pron": "drak"
+            }
           ],
           "examples": [
-            { "sv": "Igår jobbade jag.", "fr": "Hier j’ai travaillé.", "pron": "i-gor yob-bad-è ya" },
-            { "sv": "Sen åkte jag till stan.", "fr": "Ensuite je suis allé en ville.", "pron": "sèn o-ktè ya til stan" },
-            { "sv": "Jag köpte en bok.", "fr": "J’ai acheté un livre.", "pron": "ya shöpt-è èn bouk" },
-            { "sv": "Jag såg Sara.", "fr": "J’ai vu Sara.", "pron": "ya sog sara" }
+            {
+              "sv": "Igår jobbade jag.",
+              "fr": "Hier j’ai travaillé.",
+              "pron": "i-gor yob-bad-è ya"
+            },
+            {
+              "sv": "Sen åkte jag till stan.",
+              "fr": "Ensuite je suis allé en ville.",
+              "pron": "sèn o-ktè ya til stan"
+            },
+            {
+              "sv": "Jag köpte en bok.",
+              "fr": "J’ai acheté un livre.",
+              "pron": "ya shöpt-è èn bouk"
+            },
+            {
+              "sv": "Jag såg Sara.",
+              "fr": "J’ai vu Sara.",
+              "pron": "ya sog sara"
+            }
           ],
           "mini_drills": [
-            { "instruction": "Récit en 4 phrases (oral) : Igår + action / Sen + action / Och + action / Till slut + action.", "items": ["Igår ...", "Sen ...", "Och ...", "Till slut ..."] },
-            { "instruction": "Substitution verbes : remplace 'jobba' par 'åka / köpa / se / dricka'.", "items": ["Igår jobbade jag."] }
+            {
+              "instruction": "Récit en 4 phrases (oral) : Igår + action / Sen + action / Och + action / Till slut + action.",
+              "items": [
+                "Igår ...",
+                "Sen ...",
+                "Och ...",
+                "Till slut ..."
+              ]
+            },
+            {
+              "instruction": "Substitution verbes : remplace 'jobba' par 'åka / köpa / se / dricka'.",
+              "items": [
+                "Igår jobbade jag."
+              ]
+            }
           ],
           "quiz": [
-            { "type": "mcq", "q": "Quelle phrase est correcte (V2) ?", "choices": ["Igår jag jobbade.", "Igår jobbade jag."], "answerIndex": 1 },
-            { "type": "gap", "q": "Complète : Sen ___ jag till stan. (je suis allé)", "answer": "åkte" },
-            { "type": "gap", "q": "Complète : Jag ___ en bok. (j’ai acheté)", "answer": "köpte" }
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte (V2) ?",
+              "choices": [
+                "Igår jag jobbade.",
+                "Igår jobbade jag."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Sen ___ jag till stan. (je suis allé)",
+              "answer": "åkte"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ en bok. (j’ai acheté)",
+              "answer": "köpte"
+            }
           ]
         },
-{
-  "id": "a2_core_01_02",
-  "title": "Raconter - i helgen / förra veckan + connecteurs (sen, sedan, men, därför)",
-  "content": [
-    "🎯 Objectif : raconter un événement simple en reliant les phrases (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• utiliser i helgen (ce week-end) et förra veckan (la semaine dernière)",
-    "• relier les idées avec sen / sedan / men / därför",
-    "• produire un petit récit de 6 à 8 phrases clair et naturel",
-    "",
-    "==============================",
-    "SITUATION - Discussion après le week-end",
-    "",
-    "Dialogue :",
-    "A: Vad gjorde du i helgen?",
-    "(vad you-ré dou i hèl-gèn ?)",
-    "B: I helgen åkte jag till stan.",
-    "(i hèl-gèn o-ktè ya til stan)",
-    "B: Sen träffade jag en vän och vi drack kaffe.",
-    "(sèn tréf-fad-è ya èn vèn ok vi drak kafé)",
-    "A: Vad köpte du?",
-    "(vad shöpt-è dou ?)",
-    "B: Jag ville köpa en bok, men den var dyr.",
-    "(ya vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
-    "B: Därför köpte jag bara en kaffe.",
-    "(dèr-feur shöpt-è ya ba-ra èn kafé)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "i helgen = ce week-end",
-    "förra veckan = la semaine dernière",
-    "sen / sedan = ensuite / puis",
-    "men = mais",
-    "därför = donc / c’est pourquoi",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 A2 : passer de “phrases isolées” à “petit récit”",
-    "",
-    "En A1, tu sais produire des phrases correctes : “Jag jobbar.”, “Jag gillar kaffe.”",
-    "En A2, l’objectif est de faire un mini-récit : plusieurs phrases simples, mais reliées pour créer une histoire.",
-    "",
-    "Le secret n’est pas d’utiliser des phrases compliquées. Le secret est d’utiliser des connecteurs très simples, mais très fréquents, qui donnent immédiatement une impression de fluidité.",
-    "",
-    "Tu vas donc travailler deux choses en même temps :",
-    "1) les marqueurs de temps (i helgen, förra veckan)",
-    "2) les connecteurs logiques (sen/sedan, men, därför)",
-    "",
-    "",
-    "👉 1) Les marqueurs de temps",
-    "",
-    "i helgen = ce week-end (période terminée). On l’utilise souvent au début de la phrase pour poser le décor.",
-    "",
-    "I helgen åkte jag till stan.",
-    "",
-    "förra veckan = la semaine dernière. Même logique : c’est un repère temporel très utile en A2.",
-    "",
-    "Förra veckan jobbade jag mycket.",
-    "",
-    "⚠️ Piège francophone : oublier V2. Quand tu commences par i helgen ou förra veckan, le verbe conjugué doit venir juste après.",
-    "",
-    "Correct : I helgen åkte jag …",
-    "Incorrect : *I helgen jag åkte …*",
-    "",
-    "",
-    "👉 2) Les connecteurs qui font “A2”",
-    "",
-    "A) sen / sedan = ensuite / puis",
-    "",
-    "Ces mots servent à enchaîner des actions dans un récit. Les deux existent : dans la pratique, tu peux utiliser sen (court et courant) ou sedan (un peu plus long).",
-    "",
-    "I helgen åkte jag till stan. Sen träffade jag en vän.",
-    "",
-    "B) men = mais",
-    "",
-    "men sert à introduire une opposition. C’est un connecteur essentiel pour raconter des situations réelles : tu veux faire quelque chose, mais il y a un problème.",
-    "",
-    "Jag ville köpa en bok, men den var dyr.",
-    "",
-    "C) därför = donc / c’est pourquoi",
-    "",
-    "därför exprime une conséquence. Il permet de relier une cause et une décision, très utile dans la vie quotidienne.",
-    "",
-    "Den var dyr. Därför köpte jag inte boken.",
-    "",
-    "Ici, ton récit devient immédiatement plus “adulte” : tu expliques tes raisons.",
-    "",
-    "",
-    "👉 Comment construire un récit A2 (modèle simple)",
-    "",
-    "Tu peux suivre cette trame :",
-    "",
-    "1) temps (i helgen / förra veckan)",
-    "2) action 1",
-    "3) sen/sedan + action 2",
-    "4) men + problème",
-    "5) därför + décision",
-    "6) conclusion simple",
-    "",
-    "Ce modèle te permet de parler longtemps avec une grammaire très simple.",
-    "",
-    "",
-    "👉 Erreurs fréquentes des francophones",
-    "",
-    "- oublier V2 après un mot de temps",
-    "- utiliser men sans phrase complète derrière",
-    "- confondre därför (conséquence) et för att (but)",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "i helgen / förra veckan (temps au début -> V2)",
-    "sen/sedan (chronologie)",
-    "men (opposition)",
-    "därför (conséquence)",
-    "",
-    "==============================",
-    "STRUCTURES CLÉS",
-    "",
-    "I helgen åkte jag till stan.",
-    "(i hèl-gèn o-ktè ya til stan)",
-    "Sen träffade jag en vän.",
-    "(sèn tréf-fad-è ya èn vèn)",
-    "Jag ville köpa en bok, men den var dyr.",
-    "(ya vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
-    "Därför köpte jag bara en kaffe.",
-    "(dèr-feur shöpt-è ya ba-ra èn kafé)",
-    "",
-    "==============================",
-    "DRILLS - AUTOMATISATION (oral)",
-    "",
-    "A) Place le temps au début + V2 :",
-    "I helgen ...",
-    "Förra veckan ...",
-    "",
-    "B) Enchaîne avec sen/sedan :",
-    "I helgen ... Sen ...",
-    "",
-    "C) Ajoute une opposition avec men :",
-    "... men ...",
-    "",
-    "D) Ajoute une conséquence avec därför :",
-    "... därför ...",
-    "",
-    "==============================",
-    "DRILLS - SUBSTITUTION",
-    "",
-    "I helgen åkte jag till stan.",
-    "→ I helgen åkte jag till jobbet.",
-    "→ Förra veckan åkte jag till Stockholm.",
-    "",
-    "Jag ville köpa en bok, men den var dyr.",
-    "→ Jag ville äta, men jag hade inte tid.",
-    "",
-    "Därför köpte jag bara en kaffe.",
-    "→ Därför stannade jag hemma.",
-    "",
-    "==============================",
-    "MINI-STORY",
-    "",
-    "I helgen åkte Alex till stan.",
-    "(i hèl-gèn o-ktè alèks til stan)",
-    "Sen träffade han Sara.",
-    "(sèn tréf-fad-è han sara)",
-    "Han ville köpa en bok, men den var dyr.",
-    "(han vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
-    "Därför köpte han bara kaffe.",
-    "(dèr-feur shöpt-è han ba-ra kafé)",
-    "",
-    "==============================",
-    "PRODUCTION GUIDÉE",
-    "",
-    "Fais un récit de 6 phrases :",
-    "",
-    "1) I helgen ...",
-    "2) Sen ...",
-    "3) Jag ville ..., men ...",
-    "4) Därför ...",
-    "5) Sen ...",
-    "6) Till slut ..."
-  ],
-  "vocab": [
-    { "sv": "i helgen", "fr": "ce week-end", "pron": "i hèl-gèn" },
-    { "sv": "förra veckan", "fr": "la semaine dernière", "pron": "feur-ra véck-an" },
-    { "sv": "sen", "fr": "ensuite", "pron": "sèn" },
-    { "sv": "sedan", "fr": "puis", "pron": "sé-dan" },
-    { "sv": "men", "fr": "mais", "pron": "mèn" },
-    { "sv": "därför", "fr": "donc / c’est pourquoi", "pron": "dèr-feur" },
-    { "sv": "träffade", "fr": "j’ai rencontré (träffa)", "pron": "tréf-fad-è" },
-    { "sv": "ville", "fr": "voulais (vilja)", "pron": "vil-lè" },
-    { "sv": "dyr", "fr": "cher", "pron": "du-r" }
-  ],
-  "examples": [
-    { "sv": "I helgen åkte jag till stan.", "fr": "Ce week-end je suis allé en ville.", "pron": "i hèl-gèn o-ktè ya til stan" },
-    { "sv": "Jag ville köpa en bok, men den var dyr.", "fr": "Je voulais acheter un livre, mais il était cher.", "pron": "ya vil-lè shoo-pa èn bouk, mèn dèn var du-r" },
-    { "sv": "Därför köpte jag bara en kaffe.", "fr": "Donc j’ai seulement acheté un café.", "pron": "dèr-feur shöpt-è ya ba-ra èn kafé" }
-  ],
-  "mini_drills": [
-    { "instruction": "Crée 4 phrases en commençant par i helgen / förra veckan (V2 obligatoire).", "items": ["I helgen ...", "Förra veckan ..."] },
-    { "instruction": "Relie deux phrases avec men (opposition).", "items": ["Jag ville ...", "..., men ..."] },
-    { "instruction": "Ajoute därför (conséquence).", "items": ["Den var ...", "Därför ..."] }
-  ],
-  "quiz": [
-    { "type": "mcq", "q": "Quelle phrase respecte V2 ?", "choices": ["I helgen jag åkte till stan.", "I helgen åkte jag till stan."], "answerIndex": 1 },
-    { "type": "gap", "q": "Complète : Jag ville köpa en bok, ___ den var dyr. (mais)", "answer": "men" },
-    { "type": "gap", "q": "Complète : Den var dyr. ___ köpte jag inte boken. (donc)", "answer": "Därför" }
-  ]
-},
-{
-  "id": "a2_core_01_03",
-  "title": "Raconter une expérience complète - först / sedan / efter det / till slut",
-  "content": [
-    "🎯 Objectif : raconter une expérience complète de manière claire et structurée (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• organiser un récit du début à la fin",
-    "• utiliser först, sedan, efter det, till slut",
-    "• produire un récit de 8 à 10 phrases cohérentes",
-    "",
-    "==============================",
-    "SITUATION - Raconter une journée spéciale",
-    "",
-    "Dialogue :",
-    "A: Kan du berätta om din dag?",
-    "(kan dou bé-rèt-ta om din dag ?)",
-    "B: Ja. Först jobbade jag hemma.",
-    "(ya. feurst yob-bad-è ya hém-ma)",
-    "B: Sedan åkte jag till stan.",
-    "(sé-dan o-ktè ya til stan)",
-    "B: Efter det träffade jag en vän.",
-    "(éf-tèr dèt tréf-fad-è ya èn vèn)",
-    "B: Till slut gick jag hem.",
-    "(til slut yik ya hém)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "först = d’abord",
-    "sedan = ensuite / puis",
-    "efter det = après cela",
-    "till slut = à la fin",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 A2 : structurer un récit, pas seulement enchaîner",
-    "",
-    "À ce stade, ton objectif n’est plus seulement de dire ce que tu as fait, mais de montrer clairement l’ordre des événements. Pour cela, le suédois utilise très souvent des marqueurs de chronologie simples mais extrêmement efficaces.",
-    "",
-    "Ces mots jouent le rôle de panneaux indicateurs dans ton discours : ils guident ton interlocuteur du début jusqu’à la fin de ton histoire.",
-    "",
-    "",
-    "👉 Les quatre piliers de la chronologie A2",
-    "",
-    "1) först = d’abord",
-    "Utilisé pour introduire la première action. Il sert à lancer le récit.",
-    "",
-    "Först jobbade jag hemma.",
-    "",
-    "2) sedan = ensuite / puis",
-    "Utilisé pour continuer naturellement l’histoire. C’est le connecteur le plus fréquent à l’oral.",
-    "",
-    "Sedan åkte jag till stan.",
-    "",
-    "3) efter det = après cela",
-    "Il permet d’éviter les répétitions de \"sedan\" et de rendre le récit plus fluide.",
-    "",
-    "Efter det träffade jag en vän.",
-    "",
-    "4) till slut = à la fin",
-    "Il marque la conclusion de l’histoire. Il est très utile pour fermer un récit proprement.",
-    "",
-    "Till slut gick jag hem.",
-    "",
-    "",
-    "👉 V2 reste obligatoire",
-    "",
-    "Attention : tous ces mots comptent comme des éléments en première position. Le verbe conjugué doit donc venir immédiatement après.",
-    "",
-    "Correct : Först jobbade jag.",
-    "Incorrect : *Först jag jobbade.*",
-    "",
-    "",
-    "👉 Différence avec le français",
-    "",
-    "En français, on peut raconter sans trop structurer.",
-    "En suédois A2, l’utilisation explicite de ces marqueurs rend ton discours beaucoup plus clair et naturel.",
-    "",
-    "",
-    "👉 Erreurs fréquentes des francophones",
-    "",
-    "- oublier V2 après först / sedan / efter det / till slut",
-    "- utiliser uniquement \"och\" pour tout relier",
-    "- ne pas conclure le récit",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "Récit A2 efficace =",
-    "först → sedan → efter det → till slut",
-    "",
-    "Pense ton histoire comme une ligne droite, pas comme une liste.",
-    "",
-    "==============================",
-    "STRUCTURES CLÉS",
-    "",
-    "Först jobbade jag hemma.",
-    "(feurst yob-bad-è ya hém-ma)",
-    "Sedan åkte jag till stan.",
-    "(sé-dan o-ktè ya til stan)",
-    "Efter det träffade jag en vän.",
-    "(éf-tèr dèt tréf-fad-è ya èn vèn)",
-    "Till slut gick jag hem.",
-    "(til slut yik ya hém)",
-    "",
-    "==============================",
-    "DRILLS - AUTOMATISATION (oral)",
-    "",
-    "Construis un récit avec les 4 marqueurs :",
-    "",
-    "Först ...",
-    "Sedan ...",
-    "Efter det ...",
-    "Till slut ...",
-    "",
-    "==============================",
-    "DRILLS - SUBSTITUTION",
-    "",
-    "Först jobbade jag hemma.",
-    "→ Först studerade jag.",
-    "",
-    "Sedan åkte jag till stan.",
-    "→ Sedan åkte jag till jobbet.",
-    "",
-    "Till slut gick jag hem.",
-    "→ Till slut stannade jag hemma.",
-    "",
-    "==============================",
-    "MINI-STORY",
-    "",
-    "Först vaknade Alex tidigt.",
-    "(feurst vak-nad-è alèks ti-digt)",
-    "Sedan åt han frukost.",
-    "(sé-dan ot han fru-kost)",
-    "Efter det jobbade han hela dagen.",
-    "(éf-tèr dèt yob-bad-è han hé-la da-gen)",
-    "Till slut gick han hem.",
-    "(til slut yik han hém)",
-    "",
-    "==============================",
-    "PRODUCTION GUIDÉE",
-    "",
-    "Raconte une journée en 8 phrases.",
-    "",
-    "Utilise obligatoirement :",
-    "först / sedan / efter det / till slut"
-  ],
-  "vocab": [
-    { "sv": "först", "fr": "d’abord", "pron": "feurst" },
-    { "sv": "sedan", "fr": "ensuite / puis", "pron": "sé-dan" },
-    { "sv": "efter det", "fr": "après cela", "pron": "éf-tèr dèt" },
-    { "sv": "till slut", "fr": "à la fin", "pron": "til slut" },
-    { "sv": "berätta", "fr": "raconter", "pron": "bé-rèt-ta" },
-    { "sv": "gick", "fr": "je suis allé / allé à pied", "pron": "yik" }
-  ],
-  "examples": [
-    { "sv": "Först jobbade jag hemma.", "fr": "D’abord j’ai travaillé à la maison.", "pron": "feurst yob-bad-è ya hém-ma" },
-    { "sv": "Efter det träffade jag en vän.", "fr": "Après cela j’ai rencontré un ami.", "pron": "éf-tèr dèt tréf-fad-è ya èn vèn" },
-    { "sv": "Till slut gick jag hem.", "fr": "À la fin je suis rentré.", "pron": "til slut yik ya hém" }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Ordonne les phrases avec först / sedan / efter det / till slut.",
-      "items": ["Jag jobbade.", "Jag åkte till stan.", "Jag träffade en vän.", "Jag gick hem."]
-    },
-    {
-      "instruction": "Raconte oralement une journée complète.",
-      "items": ["Först ... Sedan ... Efter det ... Till slut ..."]
-    }
-  ],
-  "quiz": [
-    { "type": "gap", "q": "Complète : ___ jobbade jag hemma. (d’abord)", "answer": "Först" },
-    { "type": "gap", "q": "Complète : ___ det träffade jag en vän.", "answer": "Efter" },
-    { "type": "gap", "q": "Complète : ___ slut gick jag hem.", "answer": "Till" }
-  ]
-},
-{
-  "id": "a2_core_01_04",
-  "title": "Raconter une expérience personnelle + opinion (det var bra / svårt / intressant)",
-  "content": [
-    "🎯 Objectif : raconter une expérience personnelle et donner une opinion simple (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• décrire une expérience vécue",
-    "• exprimer une opinion simple et nuancée",
-    "• relier faits et impressions personnelles",
-    "",
-    "==============================",
-    "SITUATION - Parler d’un événement passé",
-    "",
-    "Dialogue :",
-    "A: Hur var resan?",
-    "(hour var ré-san ?)",
-    "B: Den var bra, men lite lång.",
-    "(dèn var bra, mèn li-te long)",
-    "A: Vad gjorde du där?",
-    "(vad you-ré dou dèr ?)",
-    "B: Jag jobbade mycket, men det var intressant.",
-    "(ya yob-bad-è mü-kèt, mèn dèt var in-té-res-sant)",
-    "A: Var det svårt?",
-    "(var dèt svoir-t ?)",
-    "B: Ja, ibland var det svårt, men roligt.",
-    "(ya, i-bland var dèt svoir-t, mèn roo-ligt)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "Hur var ...? = Comment était ... ?",
-    "det var = c’était",
-    "bra = bien",
-    "svårt = difficile",
-    "roligt = amusant",
-    "intressant = intéressant",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 A2 : ne plus seulement raconter, mais commenter",
-    "",
-    "À ce niveau, parler correctement ne suffit plus. Tu dois aussi montrer ce que tu penses de ce que tu racontes. En suédois A2, cela se fait avec des structures très simples, mais extrêmement fréquentes dans la langue parlée.",
-    "",
-    "L’une des plus importantes est : « det var + adjectif ».",
-    "",
-    "Cette structure te permet de donner ton avis sans construire des phrases complexes. Elle est utilisée partout : conversations, récits, avis, retours d’expérience.",
-    "",
-    "",
-    "👉 1) La structure « det var »",
-    "",
-    "« det » est un pronom neutre qui sert ici à parler d’une situation entière : un voyage, un travail, une journée, un film, etc.",
-    "",
-    "Exemples :",
-    "Resan var bra.",
-    "Det var bra.",
-    "",
-    "Les deux phrases sont correctes, mais « det var » est plus naturel et plus souple à l’oral.",
-    "",
-    "",
-    "👉 2) Les adjectifs les plus utiles en A2",
-    "",
-    "Tu n’as pas besoin de beaucoup d’adjectifs. Quelques-uns suffisent pour exprimer beaucoup d’idées :",
-    "",
-    "bra = bien / bon",
-    "dåligt = mauvais",
-    "svårt = difficile",
-    "lätt = facile",
-    "roligt = amusant",
-    "tråkigt = ennuyeux",
-    "intressant = intéressant",
-    "",
-    "Ces adjectifs sont souvent utilisés avec « men » pour nuancer.",
-    "",
-    "Exemple :",
-    "Det var svårt, men intressant.",
-    "",
-    "",
-    "👉 3) Donner une opinion nuancée",
-    "",
-    "En suédois A2, on aime beaucoup équilibrer une phrase : quelque chose peut être bien, mais difficile ; intéressant, mais long.",
-    "",
-    "Cette structure est très naturelle :",
-    "",
-    "Det var bra, men svårt.",
-    "Det var roligt, men lite trött.",
-    "",
-    "Cela donne un discours plus réaliste et plus mature.",
-    "",
-    "",
-    "👉 Différence avec le français",
-    "",
-    "En français, on dit souvent « c’était + adjectif ». Le suédois fonctionne de manière très similaire, mais utilise presque toujours « det » comme support.",
-    "",
-    "Piège francophone : vouloir accorder ou compliquer la phrase. En A2, reste simple.",
-    "",
-    "",
-    "👉 Erreurs fréquentes",
-    "",
-    "- oublier « det »",
-    "- répéter uniquement « bra »",
-    "- ne pas relier les idées avec « men »",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "det var + adjectif",
-    "men = pour nuancer",
-    "opinion simple = discours naturel",
-    "",
-    "==============================",
-    "STRUCTURES CLÉS",
-    "",
-    "Det var bra.",
-    "(dèt var bra)",
-    "Det var svårt, men intressant.",
-    "(dèt var svoir-t, mèn in-té-res-sant)",
-    "Det var roligt, men lite långt.",
-    "(dèt var roo-ligt, mèn li-te long)",
-    "",
-    "==============================",
-    "DRILLS - AUTOMATISATION (oral)",
-    "",
-    "Réponds à la question : Hur var det?",
-    "",
-    "Det var bra.",
-    "Det var svårt.",
-    "Det var intressant.",
-    "Det var bra, men svårt.",
-    "",
-    "==============================",
-    "DRILLS - SUBSTITUTION",
-    "",
-    "Det var bra.",
-    "→ Det var roligt.",
-    "→ Det var tråkigt.",
-    "",
-    "Det var svårt, men intressant.",
-    "→ Det var lätt, men tråkigt.",
-    "",
-    "==============================",
-    "MINI-STORY",
-    "",
-    "Alex reste i helgen.",
-    "(alèks ré-stè i hèl-gèn)",
-    "Han jobbade mycket.",
-    "(han yob-bad-è mü-kèt)",
-    "Det var svårt.",
-    "(dèt var svoir-t)",
-    "Men det var intressant.",
-    "(mèn dèt var in-té-res-sant)",
-    "",
-    "==============================",
-    "PRODUCTION GUIDÉE",
-    "",
-    "Raconte une expérience personnelle :",
-    "",
-    "1) Quand c’était",
-    "2) Ce que tu as fait",
-    "3) Ton opinion (det var ...)",
-    "4) Une nuance avec men"
-  ],
-  "vocab": [
-    { "sv": "hur", "fr": "comment", "pron": "hour" },
-    { "sv": "det var", "fr": "c’était", "pron": "dèt var" },
-    { "sv": "bra", "fr": "bien", "pron": "bra" },
-    { "sv": "svårt", "fr": "difficile", "pron": "svoir-t" },
-    { "sv": "roligt", "fr": "amusant", "pron": "roo-ligt" },
-    { "sv": "tråkigt", "fr": "ennuyeux", "pron": "tro-ki-gt" },
-    { "sv": "intressant", "fr": "intéressant", "pron": "in-té-res-sant" },
-    { "sv": "ibland", "fr": "parfois", "pron": "i-bland" }
-  ],
-  "examples": [
-    { "sv": "Det var bra.", "fr": "C’était bien.", "pron": "dèt var bra" },
-    { "sv": "Det var svårt, men intressant.", "fr": "C’était difficile, mais intéressant.", "pron": "dèt var svoir-t, mèn in-té-res-sant" },
-    { "sv": "Det var roligt.", "fr": "C’était amusant.", "pron": "dèt var roo-ligt" }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Donne ton opinion avec det var.",
-      "items": ["Resan", "Jobbet", "Helgen"]
-    },
-    {
-      "instruction": "Ajoute une nuance avec men.",
-      "items": ["Det var bra.", "Det var svårt."]
-    }
-  ],
-  "quiz": [
-    { "type": "gap", "q": "Complète : ___ var intressant. (c’était)", "answer": "Det" },
-    { "type": "gap", "q": "Complète : Det var bra, ___ svårt. (mais)", "answer": "men" },
-    { "type": "mcq", "q": "Quelle phrase est la plus naturelle ?", "choices": ["Resan var intressant men svårt.", "Det var intressant, men svårt."], "answerIndex": 1 }
-  ]
-},
-{
-  "id": "a2_core_01_06",
-  "title": "Synthèse narration A2 - récit libre et automatisation",
-  "content": [
-    "🎯 Objectif : produire un récit A2 autonome, clair et fluide.",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• raconter un événement passé du début à la fin",
-    "• utiliser les marqueurs de temps et de chronologie",
-    "• donner ton opinion et expliquer les raisons",
-    "• parler sans t’arrêter pendant 1 à 2 minutes",
-    "",
-    "==============================",
-    "SITUATION - Raconter sans aide",
-    "",
-    "Consigne :",
-    "Tu racontes une expérience réelle (week-end, journée, voyage, travail).",
-    "Tu n’as pas de dialogue modèle : c’est toi qui parles.",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 Pourquoi une leçon de synthèse ?",
-    "",
-    "Dans une méthode sérieuse, une unité ne se termine pas par une nouvelle règle, mais par une consolidation active. Cette leçon sert à transformer ce que tu as appris en automatisme réel.",
-    "",
-    "Si tu peux raconter une histoire simple sans t’arrêter, sans traduire dans ta tête, alors tu es bien au niveau A2.",
-    "",
-    "",
-    "👉 Ce que tu dois mobiliser maintenant",
-    "",
-    "Dans cette leçon, tu dois combiner plusieurs éléments déjà vus :",
-    "",
-    "• les marqueurs de temps : igår, i helgen, förra veckan",
-    "• les connecteurs de chronologie : först, sedan, efter det, till slut",
-    "• l’expression de l’opinion : det var bra / svårt / intressant",
-    "• l’explication : för att (but), eftersom (cause)",
-    "",
-    "Le but n’est pas la perfection grammaticale, mais la clarté et la continuité du discours.",
-    "",
-    "",
-    "👉 Comment structurer ton récit (modèle mental)",
-    "",
-    "Tu peux suivre ce schéma très simple :",
-    "",
-    "1) Quand ? (temps)",
-    "2) Que s’est-il passé ? (actions principales)",
-    "3) Comment c’était ? (opinion)",
-    "4) Pourquoi ? (raison ou but)",
-    "5) Conclusion (till slut)",
-    "",
-    "Ce schéma te permet de parler longtemps avec des phrases simples.",
-    "",
-    "",
-    "👉 Différence clé avec le niveau A1",
-    "",
-    "En A1, tu réponds à des questions.",
-    "En A2, tu prends la parole et tu racontes.",
-    "",
-    "Si tu hésites, ralentis, mais continue. La fluidité vient avec la répétition.",
-    "",
-    "",
-    "👉 Erreurs normales (et acceptables)",
-    "",
-    "- répéter les mêmes mots",
-    "- faire des phrases courtes",
-    "- corriger en parlant",
-    "",
-    "Ces erreurs sont normales et font partie du processus.",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "Parler longtemps > parler parfaitement",
-    "Structure > grammaire parfaite",
-    "Répéter = progresser",
-    "",
-    "==============================",
-    "STRUCTURES CLÉS",
-    "",
-    "I helgen ...",
-    "Först ... Sedan ... Efter det ...",
-    "Det var ... men ...",
-    "Jag gjorde det för att ...",
-    "Jag var ... eftersom ...",
-    "Till slut ...",
-    "",
-    "==============================",
-    "DRILLS - AUTOMATISATION (oral)",
-    "",
-    "1) Parle 30 secondes sans t’arrêter.",
-    "2) Parle 1 minute.",
-    "3) Parle 2 minutes.",
-    "",
-    "Utilise au moins :",
-    "• 1 marqueur de temps",
-    "• 2 connecteurs",
-    "• 1 opinion",
-    "• 1 explication",
-    "",
-    "==============================",
-    "DRILLS - AUTO-CORRECTION",
-    "",
-    "Après avoir parlé, réponds mentalement :",
-    "• Ai-je utilisé un mot de temps ?",
-    "• Ai-je structuré mon récit ?",
-    "• Ai-je donné une opinion ?",
-    "",
-    "==============================",
-    "MINI-STORY (modèle possible)",
-    "",
-    "I helgen var jag hemma.",
-    "(i hèl-gèn var ya hém-ma)",
-    "Först städade jag.",
-    "(feurst stè-dad-è ya)",
-    "Sedan träffade jag en vän.",
-    "(sé-dan tréf-fad-è ya èn vèn)",
-    "Det var roligt, men lite trött.",
-    "(dèt var roo-ligt, mèn li-te trött)",
-    "Jag gjorde det för att vila.",
-    "(ya yoo-rè dèt feur att vi-la)",
-    "Till slut gick jag hem.",
-    "(til slut yik ya hém)",
-    "",
-    "==============================",
-    "PRODUCTION LIBRE",
-    "",
-    "Raconte une expérience réelle pendant 1 à 2 minutes.",
-    "",
-    "Tu peux t’enregistrer et te réécouter."
-  ],
-  "vocab": [
-    { "sv": "först", "fr": "d’abord", "pron": "feurst" },
-    { "sv": "sedan", "fr": "ensuite", "pron": "sé-dan" },
-    { "sv": "efter det", "fr": "après cela", "pron": "éf-tèr dèt" },
-    { "sv": "till slut", "fr": "à la fin", "pron": "til slut" },
-    { "sv": "eftersom", "fr": "parce que", "pron": "éf-tèr-som" },
-    { "sv": "för att", "fr": "pour", "pron": "feur att" }
-  ],
-  "examples": [
-    { "sv": "Det var svårt, men intressant.", "fr": "C’était difficile, mais intéressant.", "pron": "dèt var svoir-t, mèn in-té-res-sant" },
-    { "sv": "Jag gjorde det för att vila.", "fr": "Je l’ai fait pour me reposer.", "pron": "ya yoo-rè dèt feur att vi-la" }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Parle 1 minute en utilisant au moins 3 connecteurs.",
-      "items": ["först", "sedan", "till slut"]
-    },
-    {
-      "instruction": "Ajoute une opinion et une raison.",
-      "items": ["det var ...", "för att ...", "eftersom ..."]
-    }
-  ],
-  "quiz": [
-    {
-      "type": "mcq",
-      "q": "Quel élément n’est PAS obligatoire dans un récit A2 ?",
-      "choices": ["Un temps", "Une opinion", "Une grammaire parfaite"],
-      "answerIndex": 2
-    },
-    {
-      "type": "gap",
-      "q": "Complète : Jag gjorde det ___ vila. (pour)",
-      "answer": "för att"
-    }
-  ]
-}
+        {
+          "id": "a2_core_01_02",
+          "title": "Raconter - i helgen / förra veckan + connecteurs (sen, sedan, men, därför)",
+          "content": [
+            "🎯 Objectif : raconter un événement simple en reliant les phrases (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser i helgen (ce week-end) et förra veckan (la semaine dernière)",
+            "• relier les idées avec sen / sedan / men / därför",
+            "• produire un petit récit de 6 à 8 phrases clair et naturel",
+            "",
+            "==============================",
+            "SITUATION - Discussion après le week-end",
+            "",
+            "Dialogue :",
+            "A: Vad gjorde du i helgen?",
+            "(vad you-ré dou i hèl-gèn ?)",
+            "B: I helgen åkte jag till stan.",
+            "(i hèl-gèn o-ktè ya til stan)",
+            "B: Sen träffade jag en vän och vi drack kaffe.",
+            "(sèn tréf-fad-è ya èn vèn ok vi drak kafé)",
+            "A: Vad köpte du?",
+            "(vad shöpt-è dou ?)",
+            "B: Jag ville köpa en bok, men den var dyr.",
+            "(ya vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
+            "B: Därför köpte jag bara en kaffe.",
+            "(dèr-feur shöpt-è ya ba-ra èn kafé)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "i helgen = ce week-end",
+            "förra veckan = la semaine dernière",
+            "sen / sedan = ensuite / puis",
+            "men = mais",
+            "därför = donc / c’est pourquoi",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : passer de “phrases isolées” à “petit récit”",
+            "",
+            "En A1, tu sais produire des phrases correctes : “Jag jobbar.”, “Jag gillar kaffe.”",
+            "En A2, l’objectif est de faire un mini-récit : plusieurs phrases simples, mais reliées pour créer une histoire.",
+            "",
+            "Le secret n’est pas d’utiliser des phrases compliquées. Le secret est d’utiliser des connecteurs très simples, mais très fréquents, qui donnent immédiatement une impression de fluidité.",
+            "",
+            "Tu vas donc travailler deux choses en même temps :",
+            "1) les marqueurs de temps (i helgen, förra veckan)",
+            "2) les connecteurs logiques (sen/sedan, men, därför)",
+            "",
+            "",
+            "👉 1) Les marqueurs de temps",
+            "",
+            "i helgen = ce week-end (période terminée). On l’utilise souvent au début de la phrase pour poser le décor.",
+            "",
+            "I helgen åkte jag till stan.",
+            "",
+            "förra veckan = la semaine dernière. Même logique : c’est un repère temporel très utile en A2.",
+            "",
+            "Förra veckan jobbade jag mycket.",
+            "",
+            "⚠️ Piège francophone : oublier V2. Quand tu commences par i helgen ou förra veckan, le verbe conjugué doit venir juste après.",
+            "",
+            "Correct : I helgen åkte jag …",
+            "Incorrect : *I helgen jag åkte …*",
+            "",
+            "",
+            "👉 2) Les connecteurs qui font “A2”",
+            "",
+            "A) sen / sedan = ensuite / puis",
+            "",
+            "Ces mots servent à enchaîner des actions dans un récit. Les deux existent : dans la pratique, tu peux utiliser sen (court et courant) ou sedan (un peu plus long).",
+            "",
+            "I helgen åkte jag till stan. Sen träffade jag en vän.",
+            "",
+            "B) men = mais",
+            "",
+            "men sert à introduire une opposition. C’est un connecteur essentiel pour raconter des situations réelles : tu veux faire quelque chose, mais il y a un problème.",
+            "",
+            "Jag ville köpa en bok, men den var dyr.",
+            "",
+            "C) därför = donc / c’est pourquoi",
+            "",
+            "därför exprime une conséquence. Il permet de relier une cause et une décision, très utile dans la vie quotidienne.",
+            "",
+            "Den var dyr. Därför köpte jag inte boken.",
+            "",
+            "Ici, ton récit devient immédiatement plus “adulte” : tu expliques tes raisons.",
+            "",
+            "",
+            "👉 Comment construire un récit A2 (modèle simple)",
+            "",
+            "Tu peux suivre cette trame :",
+            "",
+            "1) temps (i helgen / förra veckan)",
+            "2) action 1",
+            "3) sen/sedan + action 2",
+            "4) men + problème",
+            "5) därför + décision",
+            "6) conclusion simple",
+            "",
+            "Ce modèle te permet de parler longtemps avec une grammaire très simple.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier V2 après un mot de temps",
+            "- utiliser men sans phrase complète derrière",
+            "- confondre därför (conséquence) et för att (but)",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "i helgen / förra veckan (temps au début -> V2)",
+            "sen/sedan (chronologie)",
+            "men (opposition)",
+            "därför (conséquence)",
+            "",
+            "==============================",
+            "STRUCTURES CLÉS",
+            "",
+            "I helgen åkte jag till stan.",
+            "(i hèl-gèn o-ktè ya til stan)",
+            "Sen träffade jag en vän.",
+            "(sèn tréf-fad-è ya èn vèn)",
+            "Jag ville köpa en bok, men den var dyr.",
+            "(ya vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
+            "Därför köpte jag bara en kaffe.",
+            "(dèr-feur shöpt-è ya ba-ra èn kafé)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "A) Place le temps au début + V2 :",
+            "I helgen ...",
+            "Förra veckan ...",
+            "",
+            "B) Enchaîne avec sen/sedan :",
+            "I helgen ... Sen ...",
+            "",
+            "C) Ajoute une opposition avec men :",
+            "... men ...",
+            "",
+            "D) Ajoute une conséquence avec därför :",
+            "... därför ...",
+            "",
+            "==============================",
+            "DRILLS - SUBSTITUTION",
+            "",
+            "I helgen åkte jag till stan.",
+            "→ I helgen åkte jag till jobbet.",
+            "→ Förra veckan åkte jag till Stockholm.",
+            "",
+            "Jag ville köpa en bok, men den var dyr.",
+            "→ Jag ville äta, men jag hade inte tid.",
+            "",
+            "Därför köpte jag bara en kaffe.",
+            "→ Därför stannade jag hemma.",
+            "",
+            "==============================",
+            "MINI-STORY",
+            "",
+            "I helgen åkte Alex till stan.",
+            "(i hèl-gèn o-ktè alèks til stan)",
+            "Sen träffade han Sara.",
+            "(sèn tréf-fad-è han sara)",
+            "Han ville köpa en bok, men den var dyr.",
+            "(han vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
+            "Därför köpte han bara kaffe.",
+            "(dèr-feur shöpt-è han ba-ra kafé)",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Fais un récit de 6 phrases :",
+            "",
+            "1) I helgen ...",
+            "2) Sen ...",
+            "3) Jag ville ..., men ...",
+            "4) Därför ...",
+            "5) Sen ...",
+            "6) Till slut ..."
+          ],
+          "vocab": [
+            {
+              "sv": "i helgen",
+              "fr": "ce week-end",
+              "pron": "i hèl-gèn"
+            },
+            {
+              "sv": "förra veckan",
+              "fr": "la semaine dernière",
+              "pron": "feur-ra véck-an"
+            },
+            {
+              "sv": "sen",
+              "fr": "ensuite",
+              "pron": "sèn"
+            },
+            {
+              "sv": "sedan",
+              "fr": "puis",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "men",
+              "fr": "mais",
+              "pron": "mèn"
+            },
+            {
+              "sv": "därför",
+              "fr": "donc / c’est pourquoi",
+              "pron": "dèr-feur"
+            },
+            {
+              "sv": "träffade",
+              "fr": "j’ai rencontré (träffa)",
+              "pron": "tréf-fad-è"
+            },
+            {
+              "sv": "ville",
+              "fr": "voulais (vilja)",
+              "pron": "vil-lè"
+            },
+            {
+              "sv": "dyr",
+              "fr": "cher",
+              "pron": "du-r"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "I helgen åkte jag till stan.",
+              "fr": "Ce week-end je suis allé en ville.",
+              "pron": "i hèl-gèn o-ktè ya til stan"
+            },
+            {
+              "sv": "Jag ville köpa en bok, men den var dyr.",
+              "fr": "Je voulais acheter un livre, mais il était cher.",
+              "pron": "ya vil-lè shoo-pa èn bouk, mèn dèn var du-r"
+            },
+            {
+              "sv": "Därför köpte jag bara en kaffe.",
+              "fr": "Donc j’ai seulement acheté un café.",
+              "pron": "dèr-feur shöpt-è ya ba-ra èn kafé"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Crée 4 phrases en commençant par i helgen / förra veckan (V2 obligatoire).",
+              "items": [
+                "I helgen ...",
+                "Förra veckan ..."
+              ]
+            },
+            {
+              "instruction": "Relie deux phrases avec men (opposition).",
+              "items": [
+                "Jag ville ...",
+                "..., men ..."
+              ]
+            },
+            {
+              "instruction": "Ajoute därför (conséquence).",
+              "items": [
+                "Den var ...",
+                "Därför ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": [
+                "I helgen jag åkte till stan.",
+                "I helgen åkte jag till stan."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ville köpa en bok, ___ den var dyr. (mais)",
+              "answer": "men"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Den var dyr. ___ köpte jag inte boken. (donc)",
+              "answer": "Därför"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_03",
+          "title": "Raconter une expérience complète - först / sedan / efter det / till slut",
+          "content": [
+            "🎯 Objectif : raconter une expérience complète de manière claire et structurée (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• organiser un récit du début à la fin",
+            "• utiliser först, sedan, efter det, till slut",
+            "• produire un récit de 8 à 10 phrases cohérentes",
+            "",
+            "==============================",
+            "SITUATION - Raconter une journée spéciale",
+            "",
+            "Dialogue :",
+            "A: Kan du berätta om din dag?",
+            "(kan dou bé-rèt-ta om din dag ?)",
+            "B: Ja. Först jobbade jag hemma.",
+            "(ya. feurst yob-bad-è ya hém-ma)",
+            "B: Sedan åkte jag till stan.",
+            "(sé-dan o-ktè ya til stan)",
+            "B: Efter det träffade jag en vän.",
+            "(éf-tèr dèt tréf-fad-è ya èn vèn)",
+            "B: Till slut gick jag hem.",
+            "(til slut yik ya hém)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "först = d’abord",
+            "sedan = ensuite / puis",
+            "efter det = après cela",
+            "till slut = à la fin",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : structurer un récit, pas seulement enchaîner",
+            "",
+            "À ce stade, ton objectif n’est plus seulement de dire ce que tu as fait, mais de montrer clairement l’ordre des événements. Pour cela, le suédois utilise très souvent des marqueurs de chronologie simples mais extrêmement efficaces.",
+            "",
+            "Ces mots jouent le rôle de panneaux indicateurs dans ton discours : ils guident ton interlocuteur du début jusqu’à la fin de ton histoire.",
+            "",
+            "",
+            "👉 Les quatre piliers de la chronologie A2",
+            "",
+            "1) först = d’abord",
+            "Utilisé pour introduire la première action. Il sert à lancer le récit.",
+            "",
+            "Först jobbade jag hemma.",
+            "",
+            "2) sedan = ensuite / puis",
+            "Utilisé pour continuer naturellement l’histoire. C’est le connecteur le plus fréquent à l’oral.",
+            "",
+            "Sedan åkte jag till stan.",
+            "",
+            "3) efter det = après cela",
+            "Il permet d’éviter les répétitions de \"sedan\" et de rendre le récit plus fluide.",
+            "",
+            "Efter det träffade jag en vän.",
+            "",
+            "4) till slut = à la fin",
+            "Il marque la conclusion de l’histoire. Il est très utile pour fermer un récit proprement.",
+            "",
+            "Till slut gick jag hem.",
+            "",
+            "",
+            "👉 V2 reste obligatoire",
+            "",
+            "Attention : tous ces mots comptent comme des éléments en première position. Le verbe conjugué doit donc venir immédiatement après.",
+            "",
+            "Correct : Först jobbade jag.",
+            "Incorrect : *Först jag jobbade.*",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on peut raconter sans trop structurer.",
+            "En suédois A2, l’utilisation explicite de ces marqueurs rend ton discours beaucoup plus clair et naturel.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier V2 après först / sedan / efter det / till slut",
+            "- utiliser uniquement \"och\" pour tout relier",
+            "- ne pas conclure le récit",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Récit A2 efficace =",
+            "först → sedan → efter det → till slut",
+            "",
+            "Pense ton histoire comme une ligne droite, pas comme une liste.",
+            "",
+            "==============================",
+            "STRUCTURES CLÉS",
+            "",
+            "Först jobbade jag hemma.",
+            "(feurst yob-bad-è ya hém-ma)",
+            "Sedan åkte jag till stan.",
+            "(sé-dan o-ktè ya til stan)",
+            "Efter det träffade jag en vän.",
+            "(éf-tèr dèt tréf-fad-è ya èn vèn)",
+            "Till slut gick jag hem.",
+            "(til slut yik ya hém)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "Construis un récit avec les 4 marqueurs :",
+            "",
+            "Först ...",
+            "Sedan ...",
+            "Efter det ...",
+            "Till slut ...",
+            "",
+            "==============================",
+            "DRILLS - SUBSTITUTION",
+            "",
+            "Först jobbade jag hemma.",
+            "→ Först studerade jag.",
+            "",
+            "Sedan åkte jag till stan.",
+            "→ Sedan åkte jag till jobbet.",
+            "",
+            "Till slut gick jag hem.",
+            "→ Till slut stannade jag hemma.",
+            "",
+            "==============================",
+            "MINI-STORY",
+            "",
+            "Först vaknade Alex tidigt.",
+            "(feurst vak-nad-è alèks ti-digt)",
+            "Sedan åt han frukost.",
+            "(sé-dan ot han fru-kost)",
+            "Efter det jobbade han hela dagen.",
+            "(éf-tèr dèt yob-bad-è han hé-la da-gen)",
+            "Till slut gick han hem.",
+            "(til slut yik han hém)",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Raconte une journée en 8 phrases.",
+            "",
+            "Utilise obligatoirement :",
+            "först / sedan / efter det / till slut"
+          ],
+          "vocab": [
+            {
+              "sv": "först",
+              "fr": "d’abord",
+              "pron": "feurst"
+            },
+            {
+              "sv": "sedan",
+              "fr": "ensuite / puis",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "efter det",
+              "fr": "après cela",
+              "pron": "éf-tèr dèt"
+            },
+            {
+              "sv": "till slut",
+              "fr": "à la fin",
+              "pron": "til slut"
+            },
+            {
+              "sv": "berätta",
+              "fr": "raconter",
+              "pron": "bé-rèt-ta"
+            },
+            {
+              "sv": "gick",
+              "fr": "je suis allé / allé à pied",
+              "pron": "yik"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Först jobbade jag hemma.",
+              "fr": "D’abord j’ai travaillé à la maison.",
+              "pron": "feurst yob-bad-è ya hém-ma"
+            },
+            {
+              "sv": "Efter det träffade jag en vän.",
+              "fr": "Après cela j’ai rencontré un ami.",
+              "pron": "éf-tèr dèt tréf-fad-è ya èn vèn"
+            },
+            {
+              "sv": "Till slut gick jag hem.",
+              "fr": "À la fin je suis rentré.",
+              "pron": "til slut yik ya hém"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Ordonne les phrases avec först / sedan / efter det / till slut.",
+              "items": [
+                "Jag jobbade.",
+                "Jag åkte till stan.",
+                "Jag träffade en vän.",
+                "Jag gick hem."
+              ]
+            },
+            {
+              "instruction": "Raconte oralement une journée complète.",
+              "items": [
+                "Först ... Sedan ... Efter det ... Till slut ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ___ jobbade jag hemma. (d’abord)",
+              "answer": "Först"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ det träffade jag en vän.",
+              "answer": "Efter"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ slut gick jag hem.",
+              "answer": "Till"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_04",
+          "title": "Raconter une expérience personnelle + opinion (det var bra / svårt / intressant)",
+          "content": [
+            "🎯 Objectif : raconter une expérience personnelle et donner une opinion simple (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• décrire une expérience vécue",
+            "• exprimer une opinion simple et nuancée",
+            "• relier faits et impressions personnelles",
+            "",
+            "==============================",
+            "SITUATION - Parler d’un événement passé",
+            "",
+            "Dialogue :",
+            "A: Hur var resan?",
+            "(hour var ré-san ?)",
+            "B: Den var bra, men lite lång.",
+            "(dèn var bra, mèn li-te long)",
+            "A: Vad gjorde du där?",
+            "(vad you-ré dou dèr ?)",
+            "B: Jag jobbade mycket, men det var intressant.",
+            "(ya yob-bad-è mü-kèt, mèn dèt var in-té-res-sant)",
+            "A: Var det svårt?",
+            "(var dèt svoir-t ?)",
+            "B: Ja, ibland var det svårt, men roligt.",
+            "(ya, i-bland var dèt svoir-t, mèn roo-ligt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "Hur var ...? = Comment était ... ?",
+            "det var = c’était",
+            "bra = bien",
+            "svårt = difficile",
+            "roligt = amusant",
+            "intressant = intéressant",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : ne plus seulement raconter, mais commenter",
+            "",
+            "À ce niveau, parler correctement ne suffit plus. Tu dois aussi montrer ce que tu penses de ce que tu racontes. En suédois A2, cela se fait avec des structures très simples, mais extrêmement fréquentes dans la langue parlée.",
+            "",
+            "L’une des plus importantes est : « det var + adjectif ».",
+            "",
+            "Cette structure te permet de donner ton avis sans construire des phrases complexes. Elle est utilisée partout : conversations, récits, avis, retours d’expérience.",
+            "",
+            "",
+            "👉 1) La structure « det var »",
+            "",
+            "« det » est un pronom neutre qui sert ici à parler d’une situation entière : un voyage, un travail, une journée, un film, etc.",
+            "",
+            "Exemples :",
+            "Resan var bra.",
+            "Det var bra.",
+            "",
+            "Les deux phrases sont correctes, mais « det var » est plus naturel et plus souple à l’oral.",
+            "",
+            "",
+            "👉 2) Les adjectifs les plus utiles en A2",
+            "",
+            "Tu n’as pas besoin de beaucoup d’adjectifs. Quelques-uns suffisent pour exprimer beaucoup d’idées :",
+            "",
+            "bra = bien / bon",
+            "dåligt = mauvais",
+            "svårt = difficile",
+            "lätt = facile",
+            "roligt = amusant",
+            "tråkigt = ennuyeux",
+            "intressant = intéressant",
+            "",
+            "Ces adjectifs sont souvent utilisés avec « men » pour nuancer.",
+            "",
+            "Exemple :",
+            "Det var svårt, men intressant.",
+            "",
+            "",
+            "👉 3) Donner une opinion nuancée",
+            "",
+            "En suédois A2, on aime beaucoup équilibrer une phrase : quelque chose peut être bien, mais difficile ; intéressant, mais long.",
+            "",
+            "Cette structure est très naturelle :",
+            "",
+            "Det var bra, men svårt.",
+            "Det var roligt, men lite trött.",
+            "",
+            "Cela donne un discours plus réaliste et plus mature.",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on dit souvent « c’était + adjectif ». Le suédois fonctionne de manière très similaire, mais utilise presque toujours « det » comme support.",
+            "",
+            "Piège francophone : vouloir accorder ou compliquer la phrase. En A2, reste simple.",
+            "",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- oublier « det »",
+            "- répéter uniquement « bra »",
+            "- ne pas relier les idées avec « men »",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "det var + adjectif",
+            "men = pour nuancer",
+            "opinion simple = discours naturel",
+            "",
+            "==============================",
+            "STRUCTURES CLÉS",
+            "",
+            "Det var bra.",
+            "(dèt var bra)",
+            "Det var svårt, men intressant.",
+            "(dèt var svoir-t, mèn in-té-res-sant)",
+            "Det var roligt, men lite långt.",
+            "(dèt var roo-ligt, mèn li-te long)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "Réponds à la question : Hur var det?",
+            "",
+            "Det var bra.",
+            "Det var svårt.",
+            "Det var intressant.",
+            "Det var bra, men svårt.",
+            "",
+            "==============================",
+            "DRILLS - SUBSTITUTION",
+            "",
+            "Det var bra.",
+            "→ Det var roligt.",
+            "→ Det var tråkigt.",
+            "",
+            "Det var svårt, men intressant.",
+            "→ Det var lätt, men tråkigt.",
+            "",
+            "==============================",
+            "MINI-STORY",
+            "",
+            "Alex reste i helgen.",
+            "(alèks ré-stè i hèl-gèn)",
+            "Han jobbade mycket.",
+            "(han yob-bad-è mü-kèt)",
+            "Det var svårt.",
+            "(dèt var svoir-t)",
+            "Men det var intressant.",
+            "(mèn dèt var in-té-res-sant)",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Raconte une expérience personnelle :",
+            "",
+            "1) Quand c’était",
+            "2) Ce que tu as fait",
+            "3) Ton opinion (det var ...)",
+            "4) Une nuance avec men"
+          ],
+          "vocab": [
+            {
+              "sv": "hur",
+              "fr": "comment",
+              "pron": "hour"
+            },
+            {
+              "sv": "det var",
+              "fr": "c’était",
+              "pron": "dèt var"
+            },
+            {
+              "sv": "bra",
+              "fr": "bien",
+              "pron": "bra"
+            },
+            {
+              "sv": "svårt",
+              "fr": "difficile",
+              "pron": "svoir-t"
+            },
+            {
+              "sv": "roligt",
+              "fr": "amusant",
+              "pron": "roo-ligt"
+            },
+            {
+              "sv": "tråkigt",
+              "fr": "ennuyeux",
+              "pron": "tro-ki-gt"
+            },
+            {
+              "sv": "intressant",
+              "fr": "intéressant",
+              "pron": "in-té-res-sant"
+            },
+            {
+              "sv": "ibland",
+              "fr": "parfois",
+              "pron": "i-bland"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det var bra.",
+              "fr": "C’était bien.",
+              "pron": "dèt var bra"
+            },
+            {
+              "sv": "Det var svårt, men intressant.",
+              "fr": "C’était difficile, mais intéressant.",
+              "pron": "dèt var svoir-t, mèn in-té-res-sant"
+            },
+            {
+              "sv": "Det var roligt.",
+              "fr": "C’était amusant.",
+              "pron": "dèt var roo-ligt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Donne ton opinion avec det var.",
+              "items": [
+                "Resan",
+                "Jobbet",
+                "Helgen"
+              ]
+            },
+            {
+              "instruction": "Ajoute une nuance avec men.",
+              "items": [
+                "Det var bra.",
+                "Det var svårt."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ___ var intressant. (c’était)",
+              "answer": "Det"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det var bra, ___ svårt. (mais)",
+              "answer": "men"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est la plus naturelle ?",
+              "choices": [
+                "Resan var intressant men svårt.",
+                "Det var intressant, men svårt."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_06",
+          "title": "Synthèse narration A2 - récit libre et automatisation",
+          "content": [
+            "🎯 Objectif : produire un récit A2 autonome, clair et fluide.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• raconter un événement passé du début à la fin",
+            "• utiliser les marqueurs de temps et de chronologie",
+            "• donner ton opinion et expliquer les raisons",
+            "• parler sans t’arrêter pendant 1 à 2 minutes",
+            "",
+            "==============================",
+            "SITUATION - Raconter sans aide",
+            "",
+            "Consigne :",
+            "Tu racontes une expérience réelle (week-end, journée, voyage, travail).",
+            "Tu n’as pas de dialogue modèle : c’est toi qui parles.",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi une leçon de synthèse ?",
+            "",
+            "Dans une méthode sérieuse, une unité ne se termine pas par une nouvelle règle, mais par une consolidation active. Cette leçon sert à transformer ce que tu as appris en automatisme réel.",
+            "",
+            "Si tu peux raconter une histoire simple sans t’arrêter, sans traduire dans ta tête, alors tu es bien au niveau A2.",
+            "",
+            "",
+            "👉 Ce que tu dois mobiliser maintenant",
+            "",
+            "Dans cette leçon, tu dois combiner plusieurs éléments déjà vus :",
+            "",
+            "• les marqueurs de temps : igår, i helgen, förra veckan",
+            "• les connecteurs de chronologie : först, sedan, efter det, till slut",
+            "• l’expression de l’opinion : det var bra / svårt / intressant",
+            "• l’explication : för att (but), eftersom (cause)",
+            "",
+            "Le but n’est pas la perfection grammaticale, mais la clarté et la continuité du discours.",
+            "",
+            "",
+            "👉 Comment structurer ton récit (modèle mental)",
+            "",
+            "Tu peux suivre ce schéma très simple :",
+            "",
+            "1) Quand ? (temps)",
+            "2) Que s’est-il passé ? (actions principales)",
+            "3) Comment c’était ? (opinion)",
+            "4) Pourquoi ? (raison ou but)",
+            "5) Conclusion (till slut)",
+            "",
+            "Ce schéma te permet de parler longtemps avec des phrases simples.",
+            "",
+            "",
+            "👉 Différence clé avec le niveau A1",
+            "",
+            "En A1, tu réponds à des questions.",
+            "En A2, tu prends la parole et tu racontes.",
+            "",
+            "Si tu hésites, ralentis, mais continue. La fluidité vient avec la répétition.",
+            "",
+            "",
+            "👉 Erreurs normales (et acceptables)",
+            "",
+            "- répéter les mêmes mots",
+            "- faire des phrases courtes",
+            "- corriger en parlant",
+            "",
+            "Ces erreurs sont normales et font partie du processus.",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Parler longtemps > parler parfaitement",
+            "Structure > grammaire parfaite",
+            "Répéter = progresser",
+            "",
+            "==============================",
+            "STRUCTURES CLÉS",
+            "",
+            "I helgen ...",
+            "Först ... Sedan ... Efter det ...",
+            "Det var ... men ...",
+            "Jag gjorde det för att ...",
+            "Jag var ... eftersom ...",
+            "Till slut ...",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "1) Parle 30 secondes sans t’arrêter.",
+            "2) Parle 1 minute.",
+            "3) Parle 2 minutes.",
+            "",
+            "Utilise au moins :",
+            "• 1 marqueur de temps",
+            "• 2 connecteurs",
+            "• 1 opinion",
+            "• 1 explication",
+            "",
+            "==============================",
+            "DRILLS - AUTO-CORRECTION",
+            "",
+            "Après avoir parlé, réponds mentalement :",
+            "• Ai-je utilisé un mot de temps ?",
+            "• Ai-je structuré mon récit ?",
+            "• Ai-je donné une opinion ?",
+            "",
+            "==============================",
+            "MINI-STORY (modèle possible)",
+            "",
+            "I helgen var jag hemma.",
+            "(i hèl-gèn var ya hém-ma)",
+            "Först städade jag.",
+            "(feurst stè-dad-è ya)",
+            "Sedan träffade jag en vän.",
+            "(sé-dan tréf-fad-è ya èn vèn)",
+            "Det var roligt, men lite trött.",
+            "(dèt var roo-ligt, mèn li-te trött)",
+            "Jag gjorde det för att vila.",
+            "(ya yoo-rè dèt feur att vi-la)",
+            "Till slut gick jag hem.",
+            "(til slut yik ya hém)",
+            "",
+            "==============================",
+            "PRODUCTION LIBRE",
+            "",
+            "Raconte une expérience réelle pendant 1 à 2 minutes.",
+            "",
+            "Tu peux t’enregistrer et te réécouter."
+          ],
+          "vocab": [
+            {
+              "sv": "först",
+              "fr": "d’abord",
+              "pron": "feurst"
+            },
+            {
+              "sv": "sedan",
+              "fr": "ensuite",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "efter det",
+              "fr": "après cela",
+              "pron": "éf-tèr dèt"
+            },
+            {
+              "sv": "till slut",
+              "fr": "à la fin",
+              "pron": "til slut"
+            },
+            {
+              "sv": "eftersom",
+              "fr": "parce que",
+              "pron": "éf-tèr-som"
+            },
+            {
+              "sv": "för att",
+              "fr": "pour",
+              "pron": "feur att"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det var svårt, men intressant.",
+              "fr": "C’était difficile, mais intéressant.",
+              "pron": "dèt var svoir-t, mèn in-té-res-sant"
+            },
+            {
+              "sv": "Jag gjorde det för att vila.",
+              "fr": "Je l’ai fait pour me reposer.",
+              "pron": "ya yoo-rè dèt feur att vi-la"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Parle 1 minute en utilisant au moins 3 connecteurs.",
+              "items": [
+                "först",
+                "sedan",
+                "till slut"
+              ]
+            },
+            {
+              "instruction": "Ajoute une opinion et une raison.",
+              "items": [
+                "det var ...",
+                "för att ...",
+                "eftersom ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel élément n’est PAS obligatoire dans un récit A2 ?",
+              "choices": [
+                "Un temps",
+                "Une opinion",
+                "Une grammaire parfaite"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag gjorde det ___ vila. (pour)",
+              "answer": "för att"
+            }
+          ]
+        }
       ]
     }
   ]
