@@ -3127,6 +3127,10 @@
         }
       ]
     },
+     {
+      "id": "a2_core_03",
+      "title": "3) Opinions, préférences et comparaisons",
+      "lessons": [
     {
       "id": "a2_core_04_01",
       "title": "Parler de ses habitudes - brukar + présent",
@@ -3319,4 +3323,6 @@
       ]
     }
   ]
+}
+     ]
 }
