@@ -2492,730 +2492,831 @@
             }
           ]
         },
-{
-  "id": "a2_core_03_02",
-  "title": "Exprimer ses préférences - gilla / föredra / hellre",
-  "content": [
-    "🎯 Objectif : exprimer ce que tu aimes, ce que tu préfères et faire un choix entre deux options (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• dire ce que tu aimes avec gilla",
-    "• exprimer une préférence claire avec föredra",
-    "• comparer deux options avec hellre",
-    "• comprendre la nuance entre goût, préférence et choix",
-    "",
-    "==============================",
-    "SITUATION - Choisir et comparer",
-    "",
-    "Dialogue :",
-    "A: Gillar du kaffe?",
-    "(yil-lar dou kafé ?)",
-    "B: Ja, jag gillar kaffe.",
-    "(ya yil-lar kafé)",
-    "A: Te eller kaffe?",
-    "(té èl-lèr kafé ?)",
-    "B: Jag föredrar kaffe.",
-    "(ya feu-ré-drar kafé)",
-    "A: Vill du ha kaffe nu?",
-    "(vil dou ha kafé nou ?)",
-    "B: Nej, jag dricker hellre te.",
-    "(nèï, ya drik-kèr hèl-rè té)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "gilla = aimer (goût général)",
-    "föredra = préférer (choix réfléchi)",
-    "hellre = plutôt (choix comparatif)",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 Pourquoi cette leçon est essentielle en A2",
-    "",
-    "En A1, tu dis surtout ce que tu fais ou ce que tu es. En A2, tu dois pouvoir exprimer tes goûts, tes préférences et faire des choix. Cela rend la conversation beaucoup plus naturelle et personnelle.",
-    "",
-    "Le suédois utilise trois outils différents là où le français dit souvent simplement « aimer » ou « préférer ». Comprendre la nuance entre ces mots est très important pour bien s’exprimer.",
-    "",
-    "",
-    "👉 1) « gilla » : aimer (goût général)",
-    "",
-    "« gilla » sert à exprimer ce que tu aimes en général : nourriture, activités, choses, personnes.",
-    "",
-    "Structure simple :",
-    "sujet + gillar + chose",
-    "",
-    "Exemples :",
-    "Jag gillar kaffe.",
-    "Jag gillar musik.",
-    "Jag gillar att resa.",
-    "",
-    "👉 Utilisation typique :",
-    "• parler de goûts en général",
-    "• répondre à une question simple",
-    "• démarrer une conversation",
-    "",
-    "⚠️ Point important :",
-    "Après « gillar », tu peux mettre :",
-    "• un nom (kaffe)",
-    "• ou « att + infinitif » (att resa)",
-    "",
-    "",
-    "👉 2) « föredra » : préférer (choix réfléchi)",
-    "",
-    "« föredra » est plus fort que « gilla ». Il exprime une préférence consciente entre plusieurs options.",
-    "",
-    "Structure :",
-    "sujet + föredrar + option",
-    "",
-    "Exemples :",
-    "Jag föredrar kaffe.",
-    "Jag föredrar att arbeta hemma.",
-    "",
-    "On l’utilise souvent quand une alternative existe clairement, même si elle n’est pas toujours exprimée.",
-    "",
-    "Comparer :",
-    "Jag gillar kaffe. (j’aime le café)",
-    "Jag föredrar kaffe. (je préfère le café à autre chose)",
-    "",
-    "",
-    "👉 3) « hellre » : plutôt (choix comparatif)",
-    "",
-    "« hellre » est utilisé quand tu compares explicitement deux possibilités. Il est très courant à l’oral.",
-    "",
-    "Structure typique :",
-    "jag + verbe + hellre + option A (än option B)",
-    "",
-    "Exemples :",
-    "Jag dricker hellre te (än kaffe).",
-    "Jag stannar hellre hemma (än går ut).",
-    "",
-    "Souvent, la deuxième option est sous-entendue et n’a pas besoin d’être dite.",
-    "",
-    "",
-    "👉 Comment choisir entre gilla / föredra / hellre ?",
-    "",
-    "Pose-toi cette question :",
-    "",
-    "• Est-ce un goût général ? → gilla",
-    "• Est-ce une préférence claire ? → föredra",
-    "• Est-ce un choix entre deux options ? → hellre",
-    "",
-    "",
-    "👉 Différence avec le français",
-    "",
-    "En français, on utilise beaucoup « aimer » et « préférer ».",
-    "En suédois, on distingue plus clairement :",
-    "• le goût (gilla)",
-    "• la préférence (föredra)",
-    "• le choix immédiat (hellre)",
-    "",
-    "👉 Erreurs fréquentes",
-    "",
-    "- utiliser hellre sans comparaison implicite",
-    "- utiliser föredra pour un simple goût",
-    "- oublier l’infinitif après att",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "gilla = aimer en général",
-    "föredra = préférer",
-    "hellre = plutôt (choix)"
-  ],
-  "vocab": [
-    { "sv": "gillar", "fr": "aime", "pron": "yil-lar" },
-    { "sv": "föredrar", "fr": "préfère", "pron": "feu-ré-drar" },
-    { "sv": "hellre", "fr": "plutôt", "pron": "hèl-rè" },
-    { "sv": "än", "fr": "que (comparaison)", "pron": "èn" },
-    { "sv": "stanna", "fr": "rester", "pron": "stan-na" }
-  ],
-  "examples": [
-    {
-      "sv": "Jag gillar kaffe.",
-      "fr": "J’aime le café.",
-      "pron": "ya yil-lar kafé"
-    },
-    {
-      "sv": "Jag föredrar att arbeta hemma.",
-      "fr": "Je préfère travailler à la maison.",
-      "pron": "ya feu-ré-drar att ar-bè-ta hém-ma"
-    },
-    {
-      "sv": "Jag stannar hellre hemma.",
-      "fr": "Je préfère rester à la maison.",
-      "pron": "ya stan-nar hèl-rè hém-ma"
-    }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Exprime un goût général avec gilla.",
-      "items": ["kaffe", "musik", "att resa"]
-    },
-    {
-      "instruction": "Exprime une préférence avec föredra.",
-      "items": ["att arbeta hemma", "te"]
-    },
-    {
-      "instruction": "Fais un choix avec hellre.",
-      "items": ["stanna hemma / gå ut", "te / kaffe"]
-    }
-  ],
-  "quiz": [
-    {
-      "type": "mcq",
-      "q": "Quelle phrase exprime un choix entre deux options ?",
-      "choices": [
-        "Jag gillar kaffe.",
-        "Jag föredrar kaffe.",
-        "Jag dricker hellre te."
-      ],
-      "answerIndex": 2
-    },
-    {
-      "type": "gap",
-      "q": "Complète : Jag ___ kaffe. (aimer en général)",
-      "answer": "gillar"
-    },
-    {
-      "type": "gap",
-      "q": "Complète : Jag ___ att arbeta hemma. (préférer)",
-      "answer": "föredrar"
-    }
-  ]
-},
-{
-  "id": "a2_core_03_03",
-  "title": "Comparer simplement - mer än / mindre än / lika ... som",
-  "content": [
-    "🎯 Objectif : comparer deux personnes, choses ou situations de manière claire et naturelle (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• dire que quelque chose est plus que / moins que",
-    "• dire que deux choses sont égales",
-    "• formuler des comparaisons simples dans la vie quotidienne",
-    "",
-    "==============================",
-    "SITUATION - Comparer",
-    "",
-    "Dialogue :",
-    "A: Är Stockholm större än Paris?",
-    "(èr stok-holm steur-rè èn pa-riss ?)",
-    "B: Ja, Stockholm är större än Paris.",
-    "(ya, stok-holm èr steur-rè èn pa-riss)",
-    "A: Är jobbet svårare nu?",
-    "(èr yob-bet svoir-rè nou ?)",
-    "B: Ja, men det är också mer intressant.",
-    "(ya, mèn dèt èr ok-so mér in-té-res-sant)",
-    "A: Är kaffe lika gott som te?",
-    "(èr kafé li-ka gott som té ?)",
-    "B: Nej, kaffe är bättre.",
-    "(nèï, kafé èr bèt-trè)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "mer än = plus que",
-    "mindre än = moins que",
-    "lika ... som = aussi ... que",
-    "än = que (comparaison)",
-    "som = que (égalité)",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 Pourquoi les comparaisons sont essentielles en A2",
-    "",
-    "À partir du niveau A2, tu ne décris plus seulement des choses. Tu les compares. Tu dis qu’une chose est meilleure, plus grande, plus intéressante qu’une autre. C’est indispensable pour donner ton avis et nuancer ton discours.",
-    "",
-    "Le suédois utilise une structure très logique et régulière pour les comparaisons. Bonne nouvelle : elle est plus simple qu’en français.",
-    "",
-    "",
-    "👉 1) « mer än » : plus que",
-    "",
-    "« mer » signifie plus. On l’utilise avec des adjectifs ou des adverbes.",
-    "",
-    "Structure :",
-    "adjectif + mer + än",
-    "",
-    "Exemples :",
-    "Det är mer intressant än jag trodde.",
-    "Jobbet är mer stressigt nu.",
-    "",
-    "⚠️ Attention : « än » est obligatoire pour comparer deux éléments.",
-    "",
-    "",
-    "👉 2) « mindre än » : moins que",
-    "",
-    "« mindre » est l’opposé de « mer ».",
-    "",
-    "Structure identique :",
-    "adjectif + mindre + än",
-    "",
-    "Exemples :",
-    "Det är mindre svårt nu.",
-    "Stockholm är mindre än Paris.",
-    "",
-    "",
-    "👉 3) « lika ... som » : aussi ... que",
-    "",
-    "Pour dire que deux choses sont égales, le suédois utilise une structure en deux parties :",
-    "",
-    "lika + adjectif + som",
-    "",
-    "Exemples :",
-    "Kaffe är lika gott som te.",
-    "Jobbet är lika svårt som innan.",
-    "",
-    "Cette structure est très stable : ne change ni l’ordre, ni les mots.",
-    "",
-    "",
-    "👉 Comparaison avec le français",
-    "",
-    "Français : plus que / moins que / aussi ... que",
-    "Suédois : mer än / mindre än / lika ... som",
-    "",
-    "Le suédois est très régulier :",
-    "• än = comparaison",
-    "• som = égalité",
-    "",
-    "",
-    "👉 Adjectifs irréguliers fréquents",
-    "",
-    "Certains adjectifs ont une forme comparative spéciale :",
-    "",
-    "bra → bättre (meilleur)",
-    "dålig → sämre (pire)",
-    "stor → större (plus grand)",
-    "liten → mindre (plus petit)",
-    "",
-    "Exemples :",
-    "Det är bättre nu.",
-    "Stockholm är större än Göteborg.",
-    "",
-    "",
-    "👉 Erreurs fréquentes des francophones",
-    "",
-    "- oublier än / som",
-    "- mélanger mer et bättre",
-    "- utiliser la structure française",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "mer än = plus que",
-    "mindre än = moins que",
-    "lika ... som = aussi ... que",
-    "bra → bättre / dålig → sämre"
-  ],
-  "vocab": [
-    { "sv": "mer", "fr": "plus", "pron": "mér" },
-    { "sv": "mindre", "fr": "moins", "pron": "min-drè" },
-    { "sv": "lika", "fr": "aussi / égal", "pron": "li-ka" },
-    { "sv": "än", "fr": "que (comparaison)", "pron": "èn" },
-    { "sv": "som", "fr": "que (égalité)", "pron": "som" }
-  ],
-  "examples": [
-    {
-      "sv": "Jobbet är mer intressant nu.",
-      "fr": "Le travail est plus intéressant maintenant.",
-      "pron": "yob-bet èr mér in-té-res-sant nou"
-    },
-    {
-      "sv": "Stockholm är större än Paris.",
-      "fr": "Stockholm est plus grande que Paris.",
-      "pron": "stok-holm èr steur-rè èn pa-riss"
-    },
-    {
-      "sv": "Kaffe är lika gott som te.",
-      "fr": "Le café est aussi bon que le thé.",
-      "pron": "kafé èr li-ka gott som té"
-    }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Compare avec mer än.",
-      "items": ["intressant", "svårt", "dyrt"]
-    },
-    {
-      "instruction": "Compare avec mindre än.",
-      "items": ["stressigt", "svårt"]
-    },
-    {
-      "instruction": "Compare avec lika ... som.",
-      "items": ["gott", "bra"]
-    }
-  ],
-  "quiz": [
-    {
-      "type": "gap",
-      "q": "Complète : Det är ___ intressant nu. (plus)",
-      "answer": "mer"
-    },
-    {
-      "type": "gap",
-      "q": "Complète : Stockholm är större ___ Paris.",
-      "answer": "än"
-    },
-    {
-      "type": "mcq",
-      "q": "Quelle phrase exprime une égalité ?",
-      "choices": [
-        "Jobbet är bättre nu.",
-        "Jobbet är lika svårt som innan."
-      ],
-      "answerIndex": 1
-    }
-  ]
-},
-{
-  "id": "a2_core_03_04",
-  "title": "Exprimer le superlatif - bäst / sämst / störst / minst",
-  "content": [
-    "🎯 Objectif : exprimer le maximum, le minimum et faire un classement simple (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• dire que quelque chose est le meilleur / le pire / le plus grand",
-    "• utiliser correctement les formes irrégulières",
-    "• donner ton avis de manière plus nuancée et naturelle",
-    "",
-    "==============================",
-    "SITUATION - Donner un avis fort",
-    "",
-    "Dialogue :",
-    "A: Vad är den bästa filmen du har sett?",
-    "(vad èr dèn bès-ta fil-mèn dou har sèt ?)",
-    "B: Enligt mig är det den bästa filmen i år.",
-    "(èn-ligt mèy èr dèt dèn bès-ta fil-mèn i or)",
-    "A: Och jobbet?",
-    "(ok yob-bet ?)",
-    "B: Det svåraste är stressen, men lönen är bäst.",
-    "(dèt svoir-as-tè èr strèss-èn, mèn lö-nèn èr bès-t)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "bäst = le meilleur",
-    "sämst = le pire",
-    "störst = le plus grand",
-    "minst = le plus petit / le moins",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 Pourquoi les superlatifs sont importants en A2",
-    "",
-    "Après avoir appris à comparer deux choses (plus que / moins que), l’étape suivante est de parler d’un extrême : le maximum ou le minimum.",
-    "",
-    "Les superlatifs te permettent de :",
-    "• donner un avis fort",
-    "• classer des choses",
-    "• exprimer des préférences claires",
-    "",
-    "C’est très fréquent dans les conversations réelles : films, travail, villes, expériences.",
-    "",
-    "",
-    "👉 1) Les superlatifs irréguliers essentiels",
-    "",
-    "Certains adjectifs très fréquents ont une forme spéciale au superlatif. Il faut les mémoriser comme des blocs.",
-    "",
-    "bra → bättre → bäst",
-    "dålig → sämre → sämst",
-    "stor → större → störst",
-    "liten → mindre → minst",
-    "",
-    "Exemples :",
-    "Det är den bästa filmen.",
-    "Det är den sämsta dagen.",
-    "Stockholm är den största staden.",
-    "",
-    "",
-    "👉 2) Structure du superlatif",
-    "",
-    "Structure typique :",
-    "den / det / de + superlatif + nom",
-    "",
-    "Exemples :",
-    "den bästa filmen",
-    "det största problemet",
-    "de bästa idéerna",
-    "",
-    "⚠️ Important :",
-    "Le superlatif est souvent précédé d’un article défini (den / det / de).",
-    "",
-    "",
-    "👉 3) Superlatif sans nom",
-    "",
-    "Quand le nom est évident ou déjà mentionné, tu peux utiliser le superlatif seul.",
-    "",
-    "Exemples :",
-    "Det är bäst.",
-    "Det är sämst.",
-    "",
-    "Très courant à l’oral pour donner un avis rapide.",
-    "",
-    "",
-    "👉 Comparaison avec le français",
-    "",
-    "Français : le meilleur / le pire / le plus grand",
-    "Suédois : bäst / sämst / störst",
-    "",
-    "Le suédois est souvent plus direct et plus court.",
-    "",
-    "",
-    "👉 Erreurs fréquentes des francophones",
-    "",
-    "- oublier l’article (den / det)",
-    "- confondre comparatif et superlatif",
-    "- traduire mot à mot depuis le français",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "bäst = le meilleur",
-    "sämst = le pire",
-    "störst = le plus grand",
-    "minst = le plus petit / le moins"
-  ],
-  "vocab": [
-    { "sv": "bäst", "fr": "le meilleur", "pron": "bès-t" },
-    { "sv": "sämst", "fr": "le pire", "pron": "sèmst" },
-    { "sv": "störst", "fr": "le plus grand", "pron": "steur-sht" },
-    { "sv": "minst", "fr": "le plus petit / le moins", "pron": "minst" },
-    { "sv": "problem", "fr": "problème", "pron": "pro-blèm" }
-  ],
-  "examples": [
-    {
-      "sv": "Det är den bästa filmen.",
-      "fr": "C’est le meilleur film.",
-      "pron": "dèt èr dèn bès-ta fil-mèn"
-    },
-    {
-      "sv": "Stockholm är den största staden.",
-      "fr": "Stockholm est la plus grande ville.",
-      "pron": "stok-holm èr dèn steur-shta sta-dèn"
-    },
-    {
-      "sv": "Det är sämst.",
-      "fr": "C’est le pire.",
-      "pron": "dèt èr sèmst"
-    }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Transforme en superlatif.",
-      "items": [
-        "bra →",
-        "dålig →",
-        "stor →",
-        "liten →"
+        {
+          "id": "a2_core_03_02",
+          "title": "Exprimer ses préférences - gilla / föredra / hellre",
+          "content": [
+            "🎯 Objectif : exprimer ce que tu aimes, ce que tu préfères et faire un choix entre deux options (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire ce que tu aimes avec gilla",
+            "• exprimer une préférence claire avec föredra",
+            "• comparer deux options avec hellre",
+            "• comprendre la nuance entre goût, préférence et choix",
+            "",
+            "==============================",
+            "SITUATION - Choisir et comparer",
+            "",
+            "Dialogue :",
+            "A: Gillar du kaffe?",
+            "(yil-lar dou kafé ?)",
+            "B: Ja, jag gillar kaffe.",
+            "(ya yil-lar kafé)",
+            "A: Te eller kaffe?",
+            "(té èl-lèr kafé ?)",
+            "B: Jag föredrar kaffe.",
+            "(ya feu-ré-drar kafé)",
+            "A: Vill du ha kaffe nu?",
+            "(vil dou ha kafé nou ?)",
+            "B: Nej, jag dricker hellre te.",
+            "(nèï, ya drik-kèr hèl-rè té)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "gilla = aimer (goût général)",
+            "föredra = préférer (choix réfléchi)",
+            "hellre = plutôt (choix comparatif)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi cette leçon est essentielle en A2",
+            "",
+            "En A1, tu dis surtout ce que tu fais ou ce que tu es. En A2, tu dois pouvoir exprimer tes goûts, tes préférences et faire des choix. Cela rend la conversation beaucoup plus naturelle et personnelle.",
+            "",
+            "Le suédois utilise trois outils différents là où le français dit souvent simplement « aimer » ou « préférer ». Comprendre la nuance entre ces mots est très important pour bien s’exprimer.",
+            "",
+            "",
+            "👉 1) « gilla » : aimer (goût général)",
+            "",
+            "« gilla » sert à exprimer ce que tu aimes en général : nourriture, activités, choses, personnes.",
+            "",
+            "Structure simple :",
+            "sujet + gillar + chose",
+            "",
+            "Exemples :",
+            "Jag gillar kaffe.",
+            "Jag gillar musik.",
+            "Jag gillar att resa.",
+            "",
+            "👉 Utilisation typique :",
+            "• parler de goûts en général",
+            "• répondre à une question simple",
+            "• démarrer une conversation",
+            "",
+            "⚠️ Point important :",
+            "Après « gillar », tu peux mettre :",
+            "• un nom (kaffe)",
+            "• ou « att + infinitif » (att resa)",
+            "",
+            "",
+            "👉 2) « föredra » : préférer (choix réfléchi)",
+            "",
+            "« föredra » est plus fort que « gilla ». Il exprime une préférence consciente entre plusieurs options.",
+            "",
+            "Structure :",
+            "sujet + föredrar + option",
+            "",
+            "Exemples :",
+            "Jag föredrar kaffe.",
+            "Jag föredrar att arbeta hemma.",
+            "",
+            "On l’utilise souvent quand une alternative existe clairement, même si elle n’est pas toujours exprimée.",
+            "",
+            "Comparer :",
+            "Jag gillar kaffe. (j’aime le café)",
+            "Jag föredrar kaffe. (je préfère le café à autre chose)",
+            "",
+            "",
+            "👉 3) « hellre » : plutôt (choix comparatif)",
+            "",
+            "« hellre » est utilisé quand tu compares explicitement deux possibilités. Il est très courant à l’oral.",
+            "",
+            "Structure typique :",
+            "jag + verbe + hellre + option A (än option B)",
+            "",
+            "Exemples :",
+            "Jag dricker hellre te (än kaffe).",
+            "Jag stannar hellre hemma (än går ut).",
+            "",
+            "Souvent, la deuxième option est sous-entendue et n’a pas besoin d’être dite.",
+            "",
+            "",
+            "👉 Comment choisir entre gilla / föredra / hellre ?",
+            "",
+            "Pose-toi cette question :",
+            "",
+            "• Est-ce un goût général ? → gilla",
+            "• Est-ce une préférence claire ? → föredra",
+            "• Est-ce un choix entre deux options ? → hellre",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on utilise beaucoup « aimer » et « préférer ».",
+            "En suédois, on distingue plus clairement :",
+            "• le goût (gilla)",
+            "• la préférence (föredra)",
+            "• le choix immédiat (hellre)",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- utiliser hellre sans comparaison implicite",
+            "- utiliser föredra pour un simple goût",
+            "- oublier l’infinitif après att",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "gilla = aimer en général",
+            "föredra = préférer",
+            "hellre = plutôt (choix)"
+          ],
+          "vocab": [
+            {
+              "sv": "gillar",
+              "fr": "aime",
+              "pron": "yil-lar"
+            },
+            {
+              "sv": "föredrar",
+              "fr": "préfère",
+              "pron": "feu-ré-drar"
+            },
+            {
+              "sv": "hellre",
+              "fr": "plutôt",
+              "pron": "hèl-rè"
+            },
+            {
+              "sv": "än",
+              "fr": "que (comparaison)",
+              "pron": "èn"
+            },
+            {
+              "sv": "stanna",
+              "fr": "rester",
+              "pron": "stan-na"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Jag föredrar att arbeta hemma.",
+              "fr": "Je préfère travailler à la maison.",
+              "pron": "ya feu-ré-drar att ar-bè-ta hém-ma"
+            },
+            {
+              "sv": "Jag stannar hellre hemma.",
+              "fr": "Je préfère rester à la maison.",
+              "pron": "ya stan-nar hèl-rè hém-ma"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Exprime un goût général avec gilla.",
+              "items": [
+                "kaffe",
+                "musik",
+                "att resa"
+              ]
+            },
+            {
+              "instruction": "Exprime une préférence avec föredra.",
+              "items": [
+                "att arbeta hemma",
+                "te"
+              ]
+            },
+            {
+              "instruction": "Fais un choix avec hellre.",
+              "items": [
+                "stanna hemma / gå ut",
+                "te / kaffe"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase exprime un choix entre deux options ?",
+              "choices": [
+                "Jag gillar kaffe.",
+                "Jag föredrar kaffe.",
+                "Jag dricker hellre te."
+              ],
+              "answerIndex": 2
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ kaffe. (aimer en général)",
+              "answer": "gillar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ att arbeta hemma. (préférer)",
+              "answer": "föredrar"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_03_03",
+          "title": "Comparer simplement - mer än / mindre än / lika ... som",
+          "content": [
+            "🎯 Objectif : comparer deux personnes, choses ou situations de manière claire et naturelle (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire que quelque chose est plus que / moins que",
+            "• dire que deux choses sont égales",
+            "• formuler des comparaisons simples dans la vie quotidienne",
+            "",
+            "==============================",
+            "SITUATION - Comparer",
+            "",
+            "Dialogue :",
+            "A: Är Stockholm större än Paris?",
+            "(èr stok-holm steur-rè èn pa-riss ?)",
+            "B: Ja, Stockholm är större än Paris.",
+            "(ya, stok-holm èr steur-rè èn pa-riss)",
+            "A: Är jobbet svårare nu?",
+            "(èr yob-bet svoir-rè nou ?)",
+            "B: Ja, men det är också mer intressant.",
+            "(ya, mèn dèt èr ok-so mér in-té-res-sant)",
+            "A: Är kaffe lika gott som te?",
+            "(èr kafé li-ka gott som té ?)",
+            "B: Nej, kaffe är bättre.",
+            "(nèï, kafé èr bèt-trè)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "mer än = plus que",
+            "mindre än = moins que",
+            "lika ... som = aussi ... que",
+            "än = que (comparaison)",
+            "som = que (égalité)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi les comparaisons sont essentielles en A2",
+            "",
+            "À partir du niveau A2, tu ne décris plus seulement des choses. Tu les compares. Tu dis qu’une chose est meilleure, plus grande, plus intéressante qu’une autre. C’est indispensable pour donner ton avis et nuancer ton discours.",
+            "",
+            "Le suédois utilise une structure très logique et régulière pour les comparaisons. Bonne nouvelle : elle est plus simple qu’en français.",
+            "",
+            "",
+            "👉 1) « mer än » : plus que",
+            "",
+            "« mer » signifie plus. On l’utilise avec des adjectifs ou des adverbes.",
+            "",
+            "Structure :",
+            "adjectif + mer + än",
+            "",
+            "Exemples :",
+            "Det är mer intressant än jag trodde.",
+            "Jobbet är mer stressigt nu.",
+            "",
+            "⚠️ Attention : « än » est obligatoire pour comparer deux éléments.",
+            "",
+            "",
+            "👉 2) « mindre än » : moins que",
+            "",
+            "« mindre » est l’opposé de « mer ».",
+            "",
+            "Structure identique :",
+            "adjectif + mindre + än",
+            "",
+            "Exemples :",
+            "Det är mindre svårt nu.",
+            "Stockholm är mindre än Paris.",
+            "",
+            "",
+            "👉 3) « lika ... som » : aussi ... que",
+            "",
+            "Pour dire que deux choses sont égales, le suédois utilise une structure en deux parties :",
+            "",
+            "lika + adjectif + som",
+            "",
+            "Exemples :",
+            "Kaffe är lika gott som te.",
+            "Jobbet är lika svårt som innan.",
+            "",
+            "Cette structure est très stable : ne change ni l’ordre, ni les mots.",
+            "",
+            "",
+            "👉 Comparaison avec le français",
+            "",
+            "Français : plus que / moins que / aussi ... que",
+            "Suédois : mer än / mindre än / lika ... som",
+            "",
+            "Le suédois est très régulier :",
+            "• än = comparaison",
+            "• som = égalité",
+            "",
+            "",
+            "👉 Adjectifs irréguliers fréquents",
+            "",
+            "Certains adjectifs ont une forme comparative spéciale :",
+            "",
+            "bra → bättre (meilleur)",
+            "dålig → sämre (pire)",
+            "stor → större (plus grand)",
+            "liten → mindre (plus petit)",
+            "",
+            "Exemples :",
+            "Det är bättre nu.",
+            "Stockholm är större än Göteborg.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier än / som",
+            "- mélanger mer et bättre",
+            "- utiliser la structure française",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "mer än = plus que",
+            "mindre än = moins que",
+            "lika ... som = aussi ... que",
+            "bra → bättre / dålig → sämre"
+          ],
+          "vocab": [
+            {
+              "sv": "mer",
+              "fr": "plus",
+              "pron": "mér"
+            },
+            {
+              "sv": "mindre",
+              "fr": "moins",
+              "pron": "min-drè"
+            },
+            {
+              "sv": "lika",
+              "fr": "aussi / égal",
+              "pron": "li-ka"
+            },
+            {
+              "sv": "än",
+              "fr": "que (comparaison)",
+              "pron": "èn"
+            },
+            {
+              "sv": "som",
+              "fr": "que (égalité)",
+              "pron": "som"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jobbet är mer intressant nu.",
+              "fr": "Le travail est plus intéressant maintenant.",
+              "pron": "yob-bet èr mér in-té-res-sant nou"
+            },
+            {
+              "sv": "Stockholm är större än Paris.",
+              "fr": "Stockholm est plus grande que Paris.",
+              "pron": "stok-holm èr steur-rè èn pa-riss"
+            },
+            {
+              "sv": "Kaffe är lika gott som te.",
+              "fr": "Le café est aussi bon que le thé.",
+              "pron": "kafé èr li-ka gott som té"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Compare avec mer än.",
+              "items": [
+                "intressant",
+                "svårt",
+                "dyrt"
+              ]
+            },
+            {
+              "instruction": "Compare avec mindre än.",
+              "items": [
+                "stressigt",
+                "svårt"
+              ]
+            },
+            {
+              "instruction": "Compare avec lika ... som.",
+              "items": [
+                "gott",
+                "bra"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Det är ___ intressant nu. (plus)",
+              "answer": "mer"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Stockholm är större ___ Paris.",
+              "answer": "än"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase exprime une égalité ?",
+              "choices": [
+                "Jobbet är bättre nu.",
+                "Jobbet är lika svårt som innan."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_03_04",
+          "title": "Exprimer le superlatif - bäst / sämst / störst / minst",
+          "content": [
+            "🎯 Objectif : exprimer le maximum, le minimum et faire un classement simple (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire que quelque chose est le meilleur / le pire / le plus grand",
+            "• utiliser correctement les formes irrégulières",
+            "• donner ton avis de manière plus nuancée et naturelle",
+            "",
+            "==============================",
+            "SITUATION - Donner un avis fort",
+            "",
+            "Dialogue :",
+            "A: Vad är den bästa filmen du har sett?",
+            "(vad èr dèn bès-ta fil-mèn dou har sèt ?)",
+            "B: Enligt mig är det den bästa filmen i år.",
+            "(èn-ligt mèy èr dèt dèn bès-ta fil-mèn i or)",
+            "A: Och jobbet?",
+            "(ok yob-bet ?)",
+            "B: Det svåraste är stressen, men lönen är bäst.",
+            "(dèt svoir-as-tè èr strèss-èn, mèn lö-nèn èr bès-t)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "bäst = le meilleur",
+            "sämst = le pire",
+            "störst = le plus grand",
+            "minst = le plus petit / le moins",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi les superlatifs sont importants en A2",
+            "",
+            "Après avoir appris à comparer deux choses (plus que / moins que), l’étape suivante est de parler d’un extrême : le maximum ou le minimum.",
+            "",
+            "Les superlatifs te permettent de :",
+            "• donner un avis fort",
+            "• classer des choses",
+            "• exprimer des préférences claires",
+            "",
+            "C’est très fréquent dans les conversations réelles : films, travail, villes, expériences.",
+            "",
+            "",
+            "👉 1) Les superlatifs irréguliers essentiels",
+            "",
+            "Certains adjectifs très fréquents ont une forme spéciale au superlatif. Il faut les mémoriser comme des blocs.",
+            "",
+            "bra → bättre → bäst",
+            "dålig → sämre → sämst",
+            "stor → större → störst",
+            "liten → mindre → minst",
+            "",
+            "Exemples :",
+            "Det är den bästa filmen.",
+            "Det är den sämsta dagen.",
+            "Stockholm är den största staden.",
+            "",
+            "",
+            "👉 2) Structure du superlatif",
+            "",
+            "Structure typique :",
+            "den / det / de + superlatif + nom",
+            "",
+            "Exemples :",
+            "den bästa filmen",
+            "det största problemet",
+            "de bästa idéerna",
+            "",
+            "⚠️ Important :",
+            "Le superlatif est souvent précédé d’un article défini (den / det / de).",
+            "",
+            "",
+            "👉 3) Superlatif sans nom",
+            "",
+            "Quand le nom est évident ou déjà mentionné, tu peux utiliser le superlatif seul.",
+            "",
+            "Exemples :",
+            "Det är bäst.",
+            "Det är sämst.",
+            "",
+            "Très courant à l’oral pour donner un avis rapide.",
+            "",
+            "",
+            "👉 Comparaison avec le français",
+            "",
+            "Français : le meilleur / le pire / le plus grand",
+            "Suédois : bäst / sämst / störst",
+            "",
+            "Le suédois est souvent plus direct et plus court.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier l’article (den / det)",
+            "- confondre comparatif et superlatif",
+            "- traduire mot à mot depuis le français",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "bäst = le meilleur",
+            "sämst = le pire",
+            "störst = le plus grand",
+            "minst = le plus petit / le moins"
+          ],
+          "vocab": [
+            {
+              "sv": "bäst",
+              "fr": "le meilleur",
+              "pron": "bès-t"
+            },
+            {
+              "sv": "sämst",
+              "fr": "le pire",
+              "pron": "sèmst"
+            },
+            {
+              "sv": "störst",
+              "fr": "le plus grand",
+              "pron": "steur-sht"
+            },
+            {
+              "sv": "minst",
+              "fr": "le plus petit / le moins",
+              "pron": "minst"
+            },
+            {
+              "sv": "problem",
+              "fr": "problème",
+              "pron": "pro-blèm"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det är den bästa filmen.",
+              "fr": "C’est le meilleur film.",
+              "pron": "dèt èr dèn bès-ta fil-mèn"
+            },
+            {
+              "sv": "Stockholm är den största staden.",
+              "fr": "Stockholm est la plus grande ville.",
+              "pron": "stok-holm èr dèn steur-shta sta-dèn"
+            },
+            {
+              "sv": "Det är sämst.",
+              "fr": "C’est le pire.",
+              "pron": "dèt èr sèmst"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Transforme en superlatif.",
+              "items": [
+                "bra →",
+                "dålig →",
+                "stor →",
+                "liten →"
+              ]
+            },
+            {
+              "instruction": "Donne ton avis avec un superlatif.",
+              "items": [
+                "film",
+                "stad",
+                "jobb"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle forme est un superlatif ?",
+              "choices": [
+                "bättre",
+                "bäst"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det är den ___ filmen. (meilleur)",
+              "answer": "bästa"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": [
+                "Det är bästa filmen.",
+                "Det är den bästa filmen."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        }
       ]
     },
     {
-      "instruction": "Donne ton avis avec un superlatif.",
-      "items": [
-        "film",
-        "stad",
-        "jobb"
-      ]
-    }
-  ],
-  "quiz": [
-    {
-      "type": "mcq",
-      "q": "Quelle forme est un superlatif ?",
-      "choices": ["bättre", "bäst"],
-      "answerIndex": 1
-    },
-    {
-      "type": "gap",
-      "q": "Complète : Det är den ___ filmen. (meilleur)",
-      "answer": "bästa"
-    },
-    {
-      "type": "mcq",
-      "q": "Quelle phrase est correcte ?",
-      "choices": [
-        "Det är bästa filmen.",
-        "Det är den bästa filmen."
-      ],
-      "answerIndex": 1
-    }
-  ]
-}
-      ]
-    },
-{
-  "id": "a2_core_04_01",
-  "title": "Parler de ses habitudes - brukar + présent",
-  "content": [
-    "🎯 Objectif : parler de ce que tu fais habituellement, de tes routines et de tes habitudes (A2).",
-    "",
-    "À la fin de cette leçon tu sais :",
-    "• utiliser brukar pour parler d’habitudes",
-    "• distinguer une action ponctuelle d’une action habituelle",
-    "• décrire ta routine quotidienne de manière naturelle",
-    "",
-    "==============================",
-    "SITUATION - Parler de sa routine",
-    "",
-    "Dialogue :",
-    "A: Vad gör du på vardagar?",
-    "(vad you-ré dou po var-da-gar ?)",
-    "B: Jag brukar jobba på dagen.",
-    "(ya brou-kar yob-ba po da-gen)",
-    "A: Och på kvällen?",
-    "(ok po kvèl-len ?)",
-    "B: Då brukar jag träna eller vila hemma.",
-    "(do brou-kar ya trè-na èl-lèr vi-la hém-ma)",
-    "",
-    "==============================",
-    "DÉCOMPOSITION",
-    "",
-    "brukar = avoir l’habitude de",
-    "vardagar = jours de semaine",
-    "på dagen = la journée",
-    "på kvällen = le soir",
-    "",
-    "==============================",
-    "🧑‍🏫 EXPLICATION DU PROF",
-    "",
-    "👉 Pourquoi « brukar » est fondamental en A2",
-    "",
-    "À partir du niveau A2, on ne parle plus seulement de ce que l’on fait maintenant ou ponctuellement. On parle très souvent de ce que l’on fait en général : routines, habitudes, comportements réguliers.",
-    "",
-    "En suédois, le mot-clé pour exprimer cette idée est « brukar ».",
-    "",
-    "",
-    "👉 1) « brukar » : exprimer une habitude",
-    "",
-    "« brukar » signifie littéralement « avoir l’habitude de ». Il sert à indiquer qu’une action se répète régulièrement.",
-    "",
-    "Structure :",
-    "sujet + brukar + infinitif",
-    "",
-    "Exemples :",
-    "Jag brukar jobba på vardagar.",
-    "Jag brukar dricka kaffe på morgonen.",
-    "Vi brukar träna tillsammans.",
-    "",
-    "⚠️ Important :",
-    "Après « brukar », le verbe est toujours à l’infinitif.",
-    "",
-    "",
-    "👉 2) Différence entre présent simple et « brukar »",
-    "",
-    "Comparer :",
-    "",
-    "Jag jobbar idag.",
-    "→ action ponctuelle (aujourd’hui)",
-    "",
-    "Jag brukar jobba på vardagar.",
-    "→ habitude générale",
-    "",
-    "En français, on utilise souvent le présent pour les deux. En suédois A2, « brukar » rend le discours beaucoup plus clair.",
-    "",
-    "",
-    "👉 3) Les marqueurs de fréquence",
-    "",
-    "« brukar » est souvent accompagné de mots qui indiquent la fréquence :",
-    "",
-    "ofta = souvent",
-    "ibland = parfois",
-    "alltid = toujours",
-    "aldrig = jamais",
-    "",
-    "Exemples :",
-    "Jag brukar ofta träna.",
-    "Jag brukar ibland vila hemma.",
-    "",
-    "",
-    "👉 4) Poser des questions sur les habitudes",
-    "",
-    "Pour demander une habitude, on peut dire :",
-    "",
-    "Vad brukar du göra ...?",
-    "",
-    "Exemples :",
-    "Vad brukar du göra på helgen?",
-    "Vad brukar du äta till lunch?",
-    "",
-    "",
-    "👉 Différence avec le français",
-    "",
-    "Le français dit : « d’habitude, je… »",
-    "Le suédois préfère : « jag brukar + verbe »",
-    "",
-    "Utiliser « brukar » est un marqueur très fort de niveau A2.",
-    "",
-    "",
-    "👉 Erreurs fréquentes",
-    "",
-    "- oublier l’infinitif après brukar",
-    "- utiliser brukar pour une action unique",
-    "- oublier les mots de fréquence",
-    "",
-    "",
-    "👉 À retenir absolument",
-    "",
-    "brukar = habitude",
-    "brukar + infinitif",
-    "présent simple = action ponctuelle"
-  ],
-  "vocab": [
-    { "sv": "brukar", "fr": "a l’habitude de", "pron": "brou-kar" },
-    { "sv": "vardagar", "fr": "jours de semaine", "pron": "var-da-gar" },
-    { "sv": "ofta", "fr": "souvent", "pron": "of-ta" },
-    { "sv": "ibland", "fr": "parfois", "pron": "i-bland" },
-    { "sv": "aldrig", "fr": "jamais", "pron": "al-drig" }
-  ],
-  "examples": [
-    {
-      "sv": "Jag brukar jobba på vardagar.",
-      "fr": "J’ai l’habitude de travailler en semaine.",
-      "pron": "ya brou-kar yob-ba po var-da-gar"
-    },
-    {
-      "sv": "Jag brukar ofta träna.",
-      "fr": "J’ai souvent l’habitude de m’entraîner.",
-      "pron": "ya brou-kar of-ta trè-na"
-    }
-  ],
-  "mini_drills": [
-    {
-      "instruction": "Parle de tes habitudes avec brukar.",
-      "items": [
-        "på morgonen",
-        "på kvällen",
-        "på helgen"
-      ]
-    },
-    {
-      "instruction": "Transforme en habitude.",
-      "items": [
-        "Jag jobbar.",
-        "Jag dricker kaffe.",
-        "Jag tränar."
-      ]
-    }
-  ],
-  "quiz": [
-    {
-      "type": "gap",
-      "q": "Complète : Jag ___ jobba på vardagar. (habitude)",
-      "answer": "brukar"
-    },
-    {
-      "type": "mcq",
-      "q": "Quelle phrase parle d’une habitude ?",
-      "choices": [
+      "id": "a2_core_04_01",
+      "title": "Parler de ses habitudes - brukar + présent",
+      "content": [
+        "🎯 Objectif : parler de ce que tu fais habituellement, de tes routines et de tes habitudes (A2).",
+        "",
+        "À la fin de cette leçon tu sais :",
+        "• utiliser brukar pour parler d’habitudes",
+        "• distinguer une action ponctuelle d’une action habituelle",
+        "• décrire ta routine quotidienne de manière naturelle",
+        "",
+        "==============================",
+        "SITUATION - Parler de sa routine",
+        "",
+        "Dialogue :",
+        "A: Vad gör du på vardagar?",
+        "(vad you-ré dou po var-da-gar ?)",
+        "B: Jag brukar jobba på dagen.",
+        "(ya brou-kar yob-ba po da-gen)",
+        "A: Och på kvällen?",
+        "(ok po kvèl-len ?)",
+        "B: Då brukar jag träna eller vila hemma.",
+        "(do brou-kar ya trè-na èl-lèr vi-la hém-ma)",
+        "",
+        "==============================",
+        "DÉCOMPOSITION",
+        "",
+        "brukar = avoir l’habitude de",
+        "vardagar = jours de semaine",
+        "på dagen = la journée",
+        "på kvällen = le soir",
+        "",
+        "==============================",
+        "🧑‍🏫 EXPLICATION DU PROF",
+        "",
+        "👉 Pourquoi « brukar » est fondamental en A2",
+        "",
+        "À partir du niveau A2, on ne parle plus seulement de ce que l’on fait maintenant ou ponctuellement. On parle très souvent de ce que l’on fait en général : routines, habitudes, comportements réguliers.",
+        "",
+        "En suédois, le mot-clé pour exprimer cette idée est « brukar ».",
+        "",
+        "",
+        "👉 1) « brukar » : exprimer une habitude",
+        "",
+        "« brukar » signifie littéralement « avoir l’habitude de ». Il sert à indiquer qu’une action se répète régulièrement.",
+        "",
+        "Structure :",
+        "sujet + brukar + infinitif",
+        "",
+        "Exemples :",
+        "Jag brukar jobba på vardagar.",
+        "Jag brukar dricka kaffe på morgonen.",
+        "Vi brukar träna tillsammans.",
+        "",
+        "⚠️ Important :",
+        "Après « brukar », le verbe est toujours à l’infinitif.",
+        "",
+        "",
+        "👉 2) Différence entre présent simple et « brukar »",
+        "",
+        "Comparer :",
+        "",
         "Jag jobbar idag.",
-        "Jag brukar jobba på vardagar."
+        "→ action ponctuelle (aujourd’hui)",
+        "",
+        "Jag brukar jobba på vardagar.",
+        "→ habitude générale",
+        "",
+        "En français, on utilise souvent le présent pour les deux. En suédois A2, « brukar » rend le discours beaucoup plus clair.",
+        "",
+        "",
+        "👉 3) Les marqueurs de fréquence",
+        "",
+        "« brukar » est souvent accompagné de mots qui indiquent la fréquence :",
+        "",
+        "ofta = souvent",
+        "ibland = parfois",
+        "alltid = toujours",
+        "aldrig = jamais",
+        "",
+        "Exemples :",
+        "Jag brukar ofta träna.",
+        "Jag brukar ibland vila hemma.",
+        "",
+        "",
+        "👉 4) Poser des questions sur les habitudes",
+        "",
+        "Pour demander une habitude, on peut dire :",
+        "",
+        "Vad brukar du göra ...?",
+        "",
+        "Exemples :",
+        "Vad brukar du göra på helgen?",
+        "Vad brukar du äta till lunch?",
+        "",
+        "",
+        "👉 Différence avec le français",
+        "",
+        "Le français dit : « d’habitude, je… »",
+        "Le suédois préfère : « jag brukar + verbe »",
+        "",
+        "Utiliser « brukar » est un marqueur très fort de niveau A2.",
+        "",
+        "",
+        "👉 Erreurs fréquentes",
+        "",
+        "- oublier l’infinitif après brukar",
+        "- utiliser brukar pour une action unique",
+        "- oublier les mots de fréquence",
+        "",
+        "",
+        "👉 À retenir absolument",
+        "",
+        "brukar = habitude",
+        "brukar + infinitif",
+        "présent simple = action ponctuelle"
       ],
-      "answerIndex": 1
+      "vocab": [
+        {
+          "sv": "brukar",
+          "fr": "a l’habitude de",
+          "pron": "brou-kar"
+        },
+        {
+          "sv": "vardagar",
+          "fr": "jours de semaine",
+          "pron": "var-da-gar"
+        },
+        {
+          "sv": "ofta",
+          "fr": "souvent",
+          "pron": "of-ta"
+        },
+        {
+          "sv": "ibland",
+          "fr": "parfois",
+          "pron": "i-bland"
+        },
+        {
+          "sv": "aldrig",
+          "fr": "jamais",
+          "pron": "al-drig"
+        }
+      ],
+      "examples": [
+        {
+          "sv": "Jag brukar jobba på vardagar.",
+          "fr": "J’ai l’habitude de travailler en semaine.",
+          "pron": "ya brou-kar yob-ba po var-da-gar"
+        },
+        {
+          "sv": "Jag brukar ofta träna.",
+          "fr": "J’ai souvent l’habitude de m’entraîner.",
+          "pron": "ya brou-kar of-ta trè-na"
+        }
+      ],
+      "mini_drills": [
+        {
+          "instruction": "Parle de tes habitudes avec brukar.",
+          "items": [
+            "på morgonen",
+            "på kvällen",
+            "på helgen"
+          ]
+        },
+        {
+          "instruction": "Transforme en habitude.",
+          "items": [
+            "Jag jobbar.",
+            "Jag dricker kaffe.",
+            "Jag tränar."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "type": "gap",
+          "q": "Complète : Jag ___ jobba på vardagar. (habitude)",
+          "answer": "brukar"
+        },
+        {
+          "type": "mcq",
+          "q": "Quelle phrase parle d’une habitude ?",
+          "choices": [
+            "Jag jobbar idag.",
+            "Jag brukar jobba på vardagar."
+          ],
+          "answerIndex": 1
+        }
+      ]
     }
   ]
-}
-  ]
-}
-]
 }
