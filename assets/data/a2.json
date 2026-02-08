@@ -1721,15 +1721,15 @@
         { "sv": "Jag ska jobba imorgon.", "fr": "Je vais travailler demain.", "pron": "ya ska yob-ba i-mor-gon" },
         { "sv": "Vad ska du göra?", "fr": "Qu’est-ce que tu vas faire ?", "pron": "vad ska dou you-ra" }
       ],
-      "mini_drills": [
-        { "instruction": "Parle de tes projets avec ska.", "items": ["Imorgon ...", "I helgen ...", "Nästa vecka ..."] }
-      ],
-      "quiz": [
-        { "type": "gap", "q": "Complète : Jag ___ resa imorgon. (futur)", "answer": "ska" },
-        { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Jag ska reser imorgon.", "Jag ska resa imorgon."], "answerIndex": 1 },
-      ]
-    }
+     "mini_drills": [
+    { "instruction": "Parle de tes projets avec ska.", "items": ["Imorgon ...", "I helgen ...", "Nästa vecka ..."] }
+  ],
+  "quiz": [
+    { "type": "gap", "q": "Complète : Jag ___ resa imorgon. (futur)", "answer": "ska" },
+    { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Jag ska reser imorgon.", "Jag ska resa imorgon."], "answerIndex": 1 }
   ]
 }
       ]
     }
+  ]
+}
