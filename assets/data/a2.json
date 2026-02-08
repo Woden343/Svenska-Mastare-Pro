@@ -920,7 +920,8 @@
     { "type": "gap", "q": "Complète : Det var bra, ___ svårt. (mais)", "answer": "men" },
     { "type": "mcq", "q": "Quelle phrase est la plus naturelle ?", "choices": ["Resan var intressant men svårt.", "Det var intressant, men svårt."], "answerIndex": 1 }
   ]
-}
+},
+
       ]
     }
   ]
