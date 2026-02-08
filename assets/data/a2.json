@@ -2866,6 +2866,181 @@
       "answerIndex": 1
     }
   ]
+},
+{
+  "id": "a2_core_03_04",
+  "title": "Exprimer le superlatif - bäst / sämst / störst / minst",
+  "content": [
+    "🎯 Objectif : exprimer le maximum, le minimum et faire un classement simple (A2).",
+    "",
+    "À la fin de cette leçon tu sais :",
+    "• dire que quelque chose est le meilleur / le pire / le plus grand",
+    "• utiliser correctement les formes irrégulières",
+    "• donner ton avis de manière plus nuancée et naturelle",
+    "",
+    "==============================",
+    "SITUATION - Donner un avis fort",
+    "",
+    "Dialogue :",
+    "A: Vad är den bästa filmen du har sett?",
+    "(vad èr dèn bès-ta fil-mèn dou har sèt ?)",
+    "B: Enligt mig är det den bästa filmen i år.",
+    "(èn-ligt mèy èr dèt dèn bès-ta fil-mèn i or)",
+    "A: Och jobbet?",
+    "(ok yob-bet ?)",
+    "B: Det svåraste är stressen, men lönen är bäst.",
+    "(dèt svoir-as-tè èr strèss-èn, mèn lö-nèn èr bès-t)",
+    "",
+    "==============================",
+    "DÉCOMPOSITION",
+    "",
+    "bäst = le meilleur",
+    "sämst = le pire",
+    "störst = le plus grand",
+    "minst = le plus petit / le moins",
+    "",
+    "==============================",
+    "🧑‍🏫 EXPLICATION DU PROF",
+    "",
+    "👉 Pourquoi les superlatifs sont importants en A2",
+    "",
+    "Après avoir appris à comparer deux choses (plus que / moins que), l’étape suivante est de parler d’un extrême : le maximum ou le minimum.",
+    "",
+    "Les superlatifs te permettent de :",
+    "• donner un avis fort",
+    "• classer des choses",
+    "• exprimer des préférences claires",
+    "",
+    "C’est très fréquent dans les conversations réelles : films, travail, villes, expériences.",
+    "",
+    "",
+    "👉 1) Les superlatifs irréguliers essentiels",
+    "",
+    "Certains adjectifs très fréquents ont une forme spéciale au superlatif. Il faut les mémoriser comme des blocs.",
+    "",
+    "bra → bättre → bäst",
+    "dålig → sämre → sämst",
+    "stor → större → störst",
+    "liten → mindre → minst",
+    "",
+    "Exemples :",
+    "Det är den bästa filmen.",
+    "Det är den sämsta dagen.",
+    "Stockholm är den största staden.",
+    "",
+    "",
+    "👉 2) Structure du superlatif",
+    "",
+    "Structure typique :",
+    "den / det / de + superlatif + nom",
+    "",
+    "Exemples :",
+    "den bästa filmen",
+    "det största problemet",
+    "de bästa idéerna",
+    "",
+    "⚠️ Important :",
+    "Le superlatif est souvent précédé d’un article défini (den / det / de).",
+    "",
+    "",
+    "👉 3) Superlatif sans nom",
+    "",
+    "Quand le nom est évident ou déjà mentionné, tu peux utiliser le superlatif seul.",
+    "",
+    "Exemples :",
+    "Det är bäst.",
+    "Det är sämst.",
+    "",
+    "Très courant à l’oral pour donner un avis rapide.",
+    "",
+    "",
+    "👉 Comparaison avec le français",
+    "",
+    "Français : le meilleur / le pire / le plus grand",
+    "Suédois : bäst / sämst / störst",
+    "",
+    "Le suédois est souvent plus direct et plus court.",
+    "",
+    "",
+    "👉 Erreurs fréquentes des francophones",
+    "",
+    "- oublier l’article (den / det)",
+    "- confondre comparatif et superlatif",
+    "- traduire mot à mot depuis le français",
+    "",
+    "",
+    "👉 À retenir absolument",
+    "",
+    "bäst = le meilleur",
+    "sämst = le pire",
+    "störst = le plus grand",
+    "minst = le plus petit / le moins"
+  ],
+  "vocab": [
+    { "sv": "bäst", "fr": "le meilleur", "pron": "bès-t" },
+    { "sv": "sämst", "fr": "le pire", "pron": "sèmst" },
+    { "sv": "störst", "fr": "le plus grand", "pron": "steur-sht" },
+    { "sv": "minst", "fr": "le plus petit / le moins", "pron": "minst" },
+    { "sv": "problem", "fr": "problème", "pron": "pro-blèm" }
+  ],
+  "examples": [
+    {
+      "sv": "Det är den bästa filmen.",
+      "fr": "C’est le meilleur film.",
+      "pron": "dèt èr dèn bès-ta fil-mèn"
+    },
+    {
+      "sv": "Stockholm är den största staden.",
+      "fr": "Stockholm est la plus grande ville.",
+      "pron": "stok-holm èr dèn steur-shta sta-dèn"
+    },
+    {
+      "sv": "Det är sämst.",
+      "fr": "C’est le pire.",
+      "pron": "dèt èr sèmst"
+    }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Transforme en superlatif.",
+      "items": [
+        "bra →",
+        "dålig →",
+        "stor →",
+        "liten →"
+      ]
+    },
+    {
+      "instruction": "Donne ton avis avec un superlatif.",
+      "items": [
+        "film",
+        "stad",
+        "jobb"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mcq",
+      "q": "Quelle forme est un superlatif ?",
+      "choices": ["bättre", "bäst"],
+      "answerIndex": 1
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Det är den ___ filmen. (meilleur)",
+      "answer": "bästa"
+    },
+    {
+      "type": "mcq",
+      "q": "Quelle phrase est correcte ?",
+      "choices": [
+        "Det är bästa filmen.",
+        "Det är den bästa filmen."
+      ],
+      "answerIndex": 1
+    }
+  ]
 }
       ]
     }
