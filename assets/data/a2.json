@@ -1726,7 +1726,7 @@
       ],
       "quiz": [
         { "type": "gap", "q": "Complète : Jag ___ resa imorgon. (futur)", "answer": "ska" },
-        { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Jag ska reser imorgon.", "Jag ska resa imorgon."], "answerIndex": 1 }
+        { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Jag ska reser imorgon.", "Jag ska resa imorgon."], "answerIndex": 1 },
       ]
     }
   ]
