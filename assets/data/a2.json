@@ -2491,7 +2491,198 @@
               "answerIndex": 1
             }
           ]
-        }
+        },
+{
+  "id": "a2_core_03_02",
+  "title": "Exprimer ses préférences - gilla / föredra / hellre",
+  "content": [
+    "🎯 Objectif : exprimer ce que tu aimes, ce que tu préfères et faire un choix entre deux options (A2).",
+    "",
+    "À la fin de cette leçon tu sais :",
+    "• dire ce que tu aimes avec gilla",
+    "• exprimer une préférence claire avec föredra",
+    "• comparer deux options avec hellre",
+    "• comprendre la nuance entre goût, préférence et choix",
+    "",
+    "==============================",
+    "SITUATION - Choisir et comparer",
+    "",
+    "Dialogue :",
+    "A: Gillar du kaffe?",
+    "(yil-lar dou kafé ?)",
+    "B: Ja, jag gillar kaffe.",
+    "(ya yil-lar kafé)",
+    "A: Te eller kaffe?",
+    "(té èl-lèr kafé ?)",
+    "B: Jag föredrar kaffe.",
+    "(ya feu-ré-drar kafé)",
+    "A: Vill du ha kaffe nu?",
+    "(vil dou ha kafé nou ?)",
+    "B: Nej, jag dricker hellre te.",
+    "(nèï, ya drik-kèr hèl-rè té)",
+    "",
+    "==============================",
+    "DÉCOMPOSITION",
+    "",
+    "gilla = aimer (goût général)",
+    "föredra = préférer (choix réfléchi)",
+    "hellre = plutôt (choix comparatif)",
+    "",
+    "==============================",
+    "🧑‍🏫 EXPLICATION DU PROF",
+    "",
+    "👉 Pourquoi cette leçon est essentielle en A2",
+    "",
+    "En A1, tu dis surtout ce que tu fais ou ce que tu es. En A2, tu dois pouvoir exprimer tes goûts, tes préférences et faire des choix. Cela rend la conversation beaucoup plus naturelle et personnelle.",
+    "",
+    "Le suédois utilise trois outils différents là où le français dit souvent simplement « aimer » ou « préférer ». Comprendre la nuance entre ces mots est très important pour bien s’exprimer.",
+    "",
+    "",
+    "👉 1) « gilla » : aimer (goût général)",
+    "",
+    "« gilla » sert à exprimer ce que tu aimes en général : nourriture, activités, choses, personnes.",
+    "",
+    "Structure simple :",
+    "sujet + gillar + chose",
+    "",
+    "Exemples :",
+    "Jag gillar kaffe.",
+    "Jag gillar musik.",
+    "Jag gillar att resa.",
+    "",
+    "👉 Utilisation typique :",
+    "• parler de goûts en général",
+    "• répondre à une question simple",
+    "• démarrer une conversation",
+    "",
+    "⚠️ Point important :",
+    "Après « gillar », tu peux mettre :",
+    "• un nom (kaffe)",
+    "• ou « att + infinitif » (att resa)",
+    "",
+    "",
+    "👉 2) « föredra » : préférer (choix réfléchi)",
+    "",
+    "« föredra » est plus fort que « gilla ». Il exprime une préférence consciente entre plusieurs options.",
+    "",
+    "Structure :",
+    "sujet + föredrar + option",
+    "",
+    "Exemples :",
+    "Jag föredrar kaffe.",
+    "Jag föredrar att arbeta hemma.",
+    "",
+    "On l’utilise souvent quand une alternative existe clairement, même si elle n’est pas toujours exprimée.",
+    "",
+    "Comparer :",
+    "Jag gillar kaffe. (j’aime le café)",
+    "Jag föredrar kaffe. (je préfère le café à autre chose)",
+    "",
+    "",
+    "👉 3) « hellre » : plutôt (choix comparatif)",
+    "",
+    "« hellre » est utilisé quand tu compares explicitement deux possibilités. Il est très courant à l’oral.",
+    "",
+    "Structure typique :",
+    "jag + verbe + hellre + option A (än option B)",
+    "",
+    "Exemples :",
+    "Jag dricker hellre te (än kaffe).",
+    "Jag stannar hellre hemma (än går ut).",
+    "",
+    "Souvent, la deuxième option est sous-entendue et n’a pas besoin d’être dite.",
+    "",
+    "",
+    "👉 Comment choisir entre gilla / föredra / hellre ?",
+    "",
+    "Pose-toi cette question :",
+    "",
+    "• Est-ce un goût général ? → gilla",
+    "• Est-ce une préférence claire ? → föredra",
+    "• Est-ce un choix entre deux options ? → hellre",
+    "",
+    "",
+    "👉 Différence avec le français",
+    "",
+    "En français, on utilise beaucoup « aimer » et « préférer ».",
+    "En suédois, on distingue plus clairement :",
+    "• le goût (gilla)",
+    "• la préférence (föredra)",
+    "• le choix immédiat (hellre)",
+    "",
+    "👉 Erreurs fréquentes",
+    "",
+    "- utiliser hellre sans comparaison implicite",
+    "- utiliser föredra pour un simple goût",
+    "- oublier l’infinitif après att",
+    "",
+    "👉 À retenir absolument",
+    "",
+    "gilla = aimer en général",
+    "föredra = préférer",
+    "hellre = plutôt (choix)"
+  ],
+  "vocab": [
+    { "sv": "gillar", "fr": "aime", "pron": "yil-lar" },
+    { "sv": "föredrar", "fr": "préfère", "pron": "feu-ré-drar" },
+    { "sv": "hellre", "fr": "plutôt", "pron": "hèl-rè" },
+    { "sv": "än", "fr": "que (comparaison)", "pron": "èn" },
+    { "sv": "stanna", "fr": "rester", "pron": "stan-na" }
+  ],
+  "examples": [
+    {
+      "sv": "Jag gillar kaffe.",
+      "fr": "J’aime le café.",
+      "pron": "ya yil-lar kafé"
+    },
+    {
+      "sv": "Jag föredrar att arbeta hemma.",
+      "fr": "Je préfère travailler à la maison.",
+      "pron": "ya feu-ré-drar att ar-bè-ta hém-ma"
+    },
+    {
+      "sv": "Jag stannar hellre hemma.",
+      "fr": "Je préfère rester à la maison.",
+      "pron": "ya stan-nar hèl-rè hém-ma"
+    }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Exprime un goût général avec gilla.",
+      "items": ["kaffe", "musik", "att resa"]
+    },
+    {
+      "instruction": "Exprime une préférence avec föredra.",
+      "items": ["att arbeta hemma", "te"]
+    },
+    {
+      "instruction": "Fais un choix avec hellre.",
+      "items": ["stanna hemma / gå ut", "te / kaffe"]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "mcq",
+      "q": "Quelle phrase exprime un choix entre deux options ?",
+      "choices": [
+        "Jag gillar kaffe.",
+        "Jag föredrar kaffe.",
+        "Jag dricker hellre te."
+      ],
+      "answerIndex": 2
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Jag ___ kaffe. (aimer en général)",
+      "answer": "gillar"
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Jag ___ att arbeta hemma. (préférer)",
+      "answer": "föredrar"
+    }
+  ]
+}
       ]
     }
   ]
