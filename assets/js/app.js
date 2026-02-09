@@ -1,6 +1,6 @@
 // assets/js/app.js — NORDIC MINIMAL (stable + clean layout)
 
-const App = {,
+const App = {
   mount: null,
 
   levels: {},
