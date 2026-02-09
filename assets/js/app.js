@@ -356,6 +356,22 @@ renderContent(lines) {
 
   const norm = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 
+  // --- détecte une section pédagogique même si elle est collée à une phrase ---
+const isInlineSection = (line) => {
+  const n = norm(line);
+  return (
+    n.includes("decomposition") ||
+    n.includes("explication du prof") ||
+    n.includes("prononciation utile") ||
+    n.includes("structures cles") ||
+    n.includes("structures clés") ||
+    n.includes("ordre des mots") ||
+    n.includes("vocabulaire") ||
+    n.includes("question") ||
+    n.includes("quiz")
+  );
+};
+
   const isHeading = (s) => {
     const t = s.trim();
     if (t.endsWith(":")) return true;
@@ -519,10 +535,25 @@ renderContent(lines) {
       continue;
     }
 
-    if (mode === "dialogue") {
-      dialogueLines.push(line);
-      continue;
-    }
+  if (mode === "dialogue") {
+
+  // 🚨 Si une section pédagogique apparaît inline → on coupe le dialogue
+  if (isInlineSection(line)) {
+    flushDialogue();
+    mode = "normal";
+
+    blocks.push({
+      type: "h",
+      text: line.replace(/:$/, "")
+    });
+
+    if (norm(line).includes("decomposition")) mode = "breakdown";
+    continue;
+  }
+
+  dialogueLines.push(line);
+  continue;
+}
 
     if (mode === "breakdown") {
       const row = splitBreakdown(line);
