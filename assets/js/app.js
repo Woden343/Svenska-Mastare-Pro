@@ -317,10 +317,6 @@ const App = {
   // ===== CONTENT RENDERER (Dialogue + Décomposition) =====
 renderContent(lines) {
   if (!Array.isArray(lines)) return "";
-
-  // IMPORTANT :
-  // - on garde la logique "raw" (sans séparateurs ======)
-  // - mais on ne dépend PLUS des lignes vides pour structurer le dialogue
   const raw = lines
     .map(x => String(x ?? "").trim())
     .filter(Boolean)
@@ -328,16 +324,13 @@ renderContent(lines) {
 
   if (!raw.length) return "";
 
-  const norm = (s) =>
-    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  const norm = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
 
   const isHeading = (s) => {
     const t = s.trim();
     if (t.endsWith(":")) return true;
     const letters = t.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ]/g, "");
-    const upperRatio = letters
-      ? (letters.replace(/[^A-ZÀ-ÖØ-Þ]/g, "").length / letters.length)
-      : 0;
+    const upperRatio = letters ? (letters.replace(/[^A-ZÀ-ÖØ-Þ]/g, "").length / letters.length) : 0;
     return (t.length <= 44 && upperRatio >= 0.75);
   };
 
@@ -350,32 +343,93 @@ renderContent(lines) {
       low.startsWith("note") ||
       low.startsWith("a retenir") ||
       low.startsWith("attention") ||
-      s.includes("→") ||
       s.includes("=>")
     );
   };
 
   const isObjective = (s) => norm(s).startsWith("objectif");
 
-  // ==============================
-  // ✅ NOUVEAU : parser dialogue "manuel"
-  // supporte :
-  // A: 🇸🇪 ...
-  // → 🇫🇷 ...
-  // 🔊 ...
-  //
-  // Et aussi fallback ancien format :
-  // A: ... (pron)
-  // ==============================
-  const isSvLine = (l) => /^[AB]:\s*(🇸🇪\s*)?/i.test(l);
-  const isFrLine = (l) => /^→\s*(🇫🇷\s*)?/i.test(l);
-  const isPronLine = (l) => /^🔊\s*/.test(l);
+  // --- Dialogue parsing (STANDARD GLOBAL) ---
+  // Regroupe A/B + pron + FR(→) dans UNE bulle
+  const parseDialogueLines = (lines) => {
+    const turns = [];
+    const speakerRe = /^([A-ZÅÄÖ])\s*:\s*(.+)$/;     // "A: ..."
+    const onlyPronRe = /^\(([^)]+)\)\s*$/;          // "(pron ...)"
+    const arrowFrRe = /^→\s*(.+)$/;                 // "→ FR ..."
 
-  const parseSpeaker = (l) => (l.trim().startsWith("A:") ? "A" : "B");
+    const cleanFr = (s) => s
+      .replace(/^→\s*/, "")
+      .replace(/^🇫🇷\s*/i, "")
+      .trim();
 
-  const cleanSv = (l) => l.replace(/^[AB]:\s*(🇸🇪\s*)?/i, "").trim();
-  const cleanFr = (l) => l.replace(/^→\s*(🇫🇷\s*)?/i, "").trim();
-  const cleanPron = (l) => l.replace(/^🔊\s*/i, "").trim();
+    const cleanSv = (s) => s
+      .replace(/^🇸🇪\s*/i, "")
+      .trim();
+
+    let cur = null;
+
+    const pushCur = () => {
+      if (!cur) return;
+      // Nettoyage final
+      cur.sv = cleanSv(cur.sv || "");
+      cur.fr = cleanFr(cur.fr || "");
+      cur.pron = (cur.pron || "").trim();
+      if (cur.sv) turns.push(cur);
+      cur = null;
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = String(lines[i] ?? "").trim();
+      if (!line) continue;
+
+      const sp = line.match(speakerRe);
+      if (sp) {
+        pushCur();
+        cur = { speaker: sp[1], sv: sp[2].trim(), fr: "", pron: "" };
+
+        // Si la pron est déjà sur la même ligne (rare)
+        const pronInline = cur.sv.match(/\(([^)]+)\)\s*$/);
+        if (pronInline) {
+          cur.pron = pronInline[1].trim();
+          cur.sv = cur.sv.replace(/\(([^)]+)\)\s*$/, "").trim();
+        }
+        continue;
+      }
+
+      // Si on n'a pas encore de speaker, on ignore (sécurité)
+      if (!cur) continue;
+
+      // Pron sur ligne seule "(...)"
+      const pr = line.match(onlyPronRe);
+      if (pr) {
+        if (!cur.pron) cur.pron = pr[1].trim();
+        else cur.pron += " • " + pr[1].trim();
+        continue;
+      }
+
+      // Traduction FR (ligne "→ ...")
+      const fr = line.match(arrowFrRe);
+      if (fr) {
+        const piece = cleanFr(fr[1]);
+        cur.fr = cur.fr ? (cur.fr + " " + piece) : piece;
+        continue;
+      }
+
+      // Certaines leçons peuvent mettre FR sans flèche (optionnel)
+      // Heuristique : si la ligne commence par 🇫🇷, on la met en FR
+      if (/^🇫🇷\s*/i.test(line)) {
+        const piece = cleanFr(line);
+        cur.fr = cur.fr ? (cur.fr + " " + piece) : piece;
+        continue;
+      }
+
+      // Sinon: on considère que ça continue le suédois (multi-lignes)
+      cur.sv = (cur.sv ? (cur.sv + " " + line) : line).trim();
+    }
+
+    pushCur();
+    return turns;
+  };
 
   const splitBreakdown = (s) => {
     const idx = s.indexOf("=");
@@ -386,65 +440,40 @@ renderContent(lines) {
     return { left, right };
   };
 
-  // blocs
   const blocks = [];
   let paragraph = [];
   let list = [];
   let mode = "normal";
   let breakdownRows = [];
 
-  // dialogue structuré
-  let dialogueItems = [];
-  let currentDlg = null;
+  // Dialogue accumulator (on parse à la fin)
+  let dialogueLines = [];
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
     blocks.push({ type: "p", text: paragraph.join(" ") });
     paragraph = [];
   };
-
   const flushList = () => {
     if (!list.length) return;
     blocks.push({ type: "ul", items: list.slice() });
     list = [];
   };
-
   const flushBreakdown = () => {
     if (!breakdownRows.length) return;
     blocks.push({ type: "breakdown", rows: breakdownRows.slice() });
     breakdownRows = [];
   };
-
   const flushDialogue = () => {
-    if (currentDlg) {
-      dialogueItems.push(currentDlg);
-      currentDlg = null;
-    }
-    if (!dialogueItems.length) return;
-    blocks.push({ type: "dialogue2", items: dialogueItems.slice() });
-    dialogueItems = [];
+    if (!dialogueLines.length) return;
+    const turns = parseDialogueLines(dialogueLines);
+    if (turns.length) blocks.push({ type: "dialogue", turns });
+    dialogueLines = [];
   };
 
-  // ancienne compat : "A: ... (pron)" sur une seule ligne
-  const splitOldTurn = (line) => {
-    const m = line.match(/^([A-ZÅÄÖ]):\s*(.+)$/);
-    if (!m) return null;
-    const speaker = m[1];
-    const text = (m[2] || "").trim();
-
-    // pron entre parenthèses en fin de ligne
-    const pronMatch = text.match(/\(([^)]+)\)\s*$/);
-    const pron = pronMatch ? pronMatch[1].trim() : "";
-    const sv = pronMatch ? text.replace(/\(([^)]+)\)\s*$/, "").trim() : text;
-
-    return { speaker, sv, fr: "", pron };
-  };
-
-  // parcours lignes
   for (const line of raw) {
     const n = norm(line);
 
-    // Titre / Heading
     if (isHeading(line)) {
       flushList(); flushParagraph(); flushDialogue(); flushBreakdown();
       blocks.push({ type: "h", text: line.replace(/:$/, "") });
@@ -455,52 +484,13 @@ renderContent(lines) {
       continue;
     }
 
-    // MODE DIALOGUE (nouveau)
     if (mode === "dialogue") {
-      // Nouveau standard : SV / FR / 🔊
-      if (isSvLine(line)) {
-        // push ancien item si existait
-        if (currentDlg) dialogueItems.push(currentDlg);
-
-        const speaker = parseSpeaker(line);
-        currentDlg = { speaker, sv: cleanSv(line), fr: "", pron: "" };
-        continue;
-      }
-
-      if (isFrLine(line)) {
-        if (!currentDlg) {
-          // si FR sans SV (rare), on ignore proprement
-          continue;
-        }
-        currentDlg.fr = cleanFr(line);
-        continue;
-      }
-
-      if (isPronLine(line)) {
-        if (!currentDlg) continue;
-        currentDlg.pron = cleanPron(line);
-        continue;
-      }
-
-      // Fallback : ancien format "A: ..." (sur une seule ligne)
-      const old = splitOldTurn(line);
-      if (old) {
-        if (currentDlg) dialogueItems.push(currentDlg);
-        currentDlg = old;
-        continue;
-      }
-
-      // Texte libre en dialogue : on l'ajoute dans sv (utile si une ligne passe hors pattern)
-      if (currentDlg) {
-        currentDlg.sv = (currentDlg.sv ? currentDlg.sv + " " : "") + line;
-      } else {
-        // sinon on crée une bulle neutre (rare)
-        dialogueItems.push({ speaker: "•", sv: line, fr: "", pron: "" });
-      }
+      // IMPORTANT: on n'applique plus callout/list ici
+      // On empile, puis on parse proprement en bulles A/B
+      dialogueLines.push(line);
       continue;
     }
 
-    // MODE DÉCOMPOSITION
     if (mode === "breakdown") {
       const row = splitBreakdown(line);
       if (row) breakdownRows.push(row);
@@ -508,35 +498,32 @@ renderContent(lines) {
       continue;
     }
 
-    // lead "Objectif"
     if (isObjective(line)) {
       flushList(); flushParagraph();
       blocks.push({ type: "lead", text: line });
       continue;
     }
 
-    // liste
     if (isListItem(line)) {
       flushParagraph();
       list.push(line.replace(/^[-•]\s+/, ""));
       continue;
     }
 
-    // callout
     if (isCallout(line)) {
       flushList(); flushParagraph();
-      blocks.push({ type: "callout", text: line });
+      const cleaned = line.replace(/^\s*(Astuce|Note|À retenir|A retenir|Attention)\s*[:\-]\s*/i, "").trim();
+      const label = (/^\s*attention/i.test(norm(line))) ? "Attention" : "À retenir";
+      blocks.push({ type: "callout", label, text: cleaned });
       continue;
     }
 
-    // paragraphe
     flushList();
     paragraph.push(line);
   }
 
   flushList(); flushParagraph(); flushDialogue(); flushBreakdown();
 
-  // rendu blocs
   const renderBlocks = blocks.map(b => {
     if (b.type === "h") return `<h3><span class="hl">${this.esc(b.text)}</span></h3>`;
 
@@ -550,28 +537,26 @@ renderContent(lines) {
     }
 
     if (b.type === "callout") {
-      const cleaned = b.text.replace(/^\s*(Astuce|Note|À retenir|A retenir|Attention)\s*[:\-]\s*/i, "").trim();
-      const label = (/^\s*attention/i.test(norm(b.text))) ? "Attention" : "À retenir";
-      return `<div class="callout"><div class="label">${this.esc(label)}</div><p>${this.esc(cleaned)}</p></div>`;
+      return `<div class="callout"><div class="label">${this.esc(b.label || "À retenir")}</div><p>${this.esc(b.text || "")}</p></div>`;
     }
 
-    // ✅ NOUVEAU RENDU DIALOGUE
-    if (b.type === "dialogue2") {
-      const bubbles = b.items.map(it => {
-        const speaker = (it.speaker || "•").trim();
-        const cls = (speaker === "B") ? "b" : (speaker === "A" ? "a" : "n");
-
-        const label =
-          speaker === "A" ? "Locuteur A" :
-          speaker === "B" ? "Locuteur B" :
-          "Dialogue";
+    if (b.type === "dialogue") {
+      const bubbles = b.turns.map(t => {
+        const speaker = (t.speaker || "").trim();
+        const cls = (speaker === "B") ? "b" : "a";
 
         return `
           <div class="bubble ${cls}">
-            <div class="meta"><span class="tag">${this.esc(speaker)}</span> ${this.esc(label)}</div>
-            <div class="sv">${this.esc(it.sv || "")}</div>
-            ${it.fr ? `<div class="fr">→ ${this.esc(it.fr)}</div>` : ""}
-            ${it.pron ? `<div class="pron">🔊 ${this.esc(it.pron)}</div>` : ""}
+            <div class="meta">
+              <span class="tag">${this.esc(speaker || "•")}</span>
+              <span>${this.esc(speaker ? `Locuteur ${speaker}` : "Dialogue")}</span>
+            </div>
+
+            <div class="sv">${this.esc(t.sv || "")}</div>
+
+            ${t.pron ? `<div class="pron">🔊 ${this.esc(t.pron)}</div>` : ""}
+
+            ${t.fr ? `<div class="fr">🇫🇷 ${this.esc(t.fr)}</div>` : ""}
           </div>
         `;
       }).join("");
