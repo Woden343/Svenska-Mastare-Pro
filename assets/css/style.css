@@ -588,4 +588,4 @@ to{ opacity:1; transform: translateY(0); }
   .bubble{ max-width: 100%; }
   .bubble.a{ justify-self: stretch; }
   .bubble.b{ justify-self: stretch; }
-},
+}
