@@ -317,7 +317,37 @@ const App = {
   // ===== CONTENT RENDERER (Dialogue + Décomposition) =====
 renderContent(lines) {
   if (!Array.isArray(lines)) return "";
-  const raw = lines
+
+  // --- 0) explode "compact" lines (LESSON 1 case) into logical lines ---
+  const explodeCompactLine = (s) => {
+    if (!s) return [];
+    let t = String(s);
+
+    // Force breaks before common section markers if they appear inline
+    // (adds structure even if JSON is a single big paragraph)
+    t = t.replace(/\s*(SITUATION\s*[—-]\s*)/gi, "\n$1");
+    t = t.replace(/\s*(DIALOGUE\b)/gi, "\n$1");
+    t = t.replace(/\s*(DÉCOMPOSITION\b|DECOMPOSITION\b)/gi, "\nDÉCOMPOSITION");
+    t = t.replace(/\s*(EXPLICATION DU PROF\b)/gi, "\nEXPLICATION DU PROF");
+    t = t.replace(/\s*(PRONONCIATION UTILE\b)/gi, "\nPRONONCIATION UTILE");
+    t = t.replace(/\s*(STRUCTURES CLÉS\b|STRUCTURES CLES\b)/gi, "\nSTRUCTURES CLÉS");
+    t = t.replace(/\s*(ORDRE DES MOTS\b)/gi, "\nORDRE DES MOTS");
+
+    // Force breaks for dialogue markers found inline
+    t = t.replace(/\s+([A-ZÅÄÖ])\s*:\s*/g, "\n$1: "); // " A: " / " B: "
+    t = t.replace(/\s*→\s*/g, "\n→ ");               // FR line
+    t = t.replace(/\s*🔊\s*/g, "\n🔊 ");             // Pron line
+
+    // Cleanup extra newlines
+    return t
+      .split("\n")
+      .map(x => x.trim())
+      .filter(Boolean);
+  };
+
+  // Build raw lines + auto explode
+  const raw = (lines || [])
+    .flatMap(x => explodeCompactLine(String(x ?? "").trim()))
     .map(x => String(x ?? "").trim())
     .filter(Boolean)
     .filter(x => !/^[=\-_*]{6,}$/.test(x));
@@ -356,21 +386,15 @@ renderContent(lines) {
     const speakerRe = /^([A-ZÅÄÖ])\s*:\s*(.+)$/;     // "A: ..."
     const onlyPronRe = /^\(([^)]+)\)\s*$/;          // "(pron ...)"
     const arrowFrRe = /^→\s*(.+)$/;                 // "→ FR ..."
+    const speakerInlineRe = /(^|\s)([A-ZÅÄÖ])\s*:\s*/g; // safety
 
-    const cleanFr = (s) => s
-      .replace(/^→\s*/, "")
-      .replace(/^🇫🇷\s*/i, "")
-      .trim();
-
-    const cleanSv = (s) => s
-      .replace(/^🇸🇪\s*/i, "")
-      .trim();
+    const cleanFr = (s) => s.replace(/^→\s*/, "").replace(/^🇫🇷\s*/i, "").trim();
+    const cleanSv = (s) => s.replace(/^🇸🇪\s*/i, "").trim();
 
     let cur = null;
 
     const pushCur = () => {
       if (!cur) return;
-      // Nettoyage final
       cur.sv = cleanSv(cur.sv || "");
       cur.fr = cleanFr(cur.fr || "");
       cur.pron = (cur.pron || "").trim();
@@ -382,12 +406,19 @@ renderContent(lines) {
       const line = String(lines[i] ?? "").trim();
       if (!line) continue;
 
+      // Safety: if a line still contains inline "A: ... B: ...", split it
+      if (speakerInlineRe.test(line) && !speakerRe.test(line)) {
+        const tmp = line.replace(/\s+([A-ZÅÄÖ])\s*:\s*/g, "\n$1: ").split("\n").map(x=>x.trim()).filter(Boolean);
+        tmp.forEach(part => lines.splice(i + 1, 0, part));
+        continue;
+      }
+
       const sp = line.match(speakerRe);
       if (sp) {
         pushCur();
         cur = { speaker: sp[1], sv: sp[2].trim(), fr: "", pron: "" };
 
-        // Si la pron est déjà sur la même ligne (rare)
+        // If pron is inline at end: "(...)"
         const pronInline = cur.sv.match(/\(([^)]+)\)\s*$/);
         if (pronInline) {
           cur.pron = pronInline[1].trim();
@@ -396,10 +427,17 @@ renderContent(lines) {
         continue;
       }
 
-      // Si on n'a pas encore de speaker, on ignore (sécurité)
       if (!cur) continue;
 
-      // Pron sur ligne seule "(...)"
+      // Pron line format: "🔊 ..."
+      if (line.startsWith("🔊")) {
+        const p = line.replace(/^🔊\s*/, "").trim();
+        if (!cur.pron) cur.pron = p;
+        else cur.pron += " • " + p;
+        continue;
+      }
+
+      // Pron line format: "(...)"
       const pr = line.match(onlyPronRe);
       if (pr) {
         if (!cur.pron) cur.pron = pr[1].trim();
@@ -407,7 +445,7 @@ renderContent(lines) {
         continue;
       }
 
-      // Traduction FR (ligne "→ ...")
+      // FR translation: "→ ..."
       const fr = line.match(arrowFrRe);
       if (fr) {
         const piece = cleanFr(fr[1]);
@@ -415,15 +453,14 @@ renderContent(lines) {
         continue;
       }
 
-      // Certaines leçons peuvent mettre FR sans flèche (optionnel)
-      // Heuristique : si la ligne commence par 🇫🇷, on la met en FR
+      // Optional: FR line starting with 🇫🇷
       if (/^🇫🇷\s*/i.test(line)) {
         const piece = cleanFr(line);
         cur.fr = cur.fr ? (cur.fr + " " + piece) : piece;
         continue;
       }
 
-      // Sinon: on considère que ça continue le suédois (multi-lignes)
+      // Otherwise: continue SV
       cur.sv = (cur.sv ? (cur.sv + " " + line) : line).trim();
     }
 
@@ -445,8 +482,6 @@ renderContent(lines) {
   let list = [];
   let mode = "normal";
   let breakdownRows = [];
-
-  // Dialogue accumulator (on parse à la fin)
   let dialogueLines = [];
 
   const flushParagraph = () => {
@@ -485,8 +520,6 @@ renderContent(lines) {
     }
 
     if (mode === "dialogue") {
-      // IMPORTANT: on n'applique plus callout/list ici
-      // On empile, puis on parse proprement en bulles A/B
       dialogueLines.push(line);
       continue;
     }
