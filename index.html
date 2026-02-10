@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Svenska Mästare — Apprentissage progressif du suédois A1→B2">
+  <title>Svenska Mästare</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Sidebar (desktop) -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <div class="logo">🇸🇪</div>
+      <div class="logo-text">
+        <div class="t1">Svenska</div>
+        <div class="t2">Mästare</div>
+      </div>
+    </div>
+
+    <nav class="side-nav">
+      <!-- Keep legacy IDs so app.js nav bindings continue to work -->
+      <button class="side-item active" id="nav-home-btn">
+        <span class="material-icons-outlined">home</span>
+        Accueil
+      </button>
+      <button class="side-item" id="nav-ref">
+        <span class="material-icons-outlined">book</span>
+        Référence
+      </button>
+      <button class="side-item" id="nav-review">
+        <span class="material-icons-outlined">psychology</span>
+        Révision
+      </button>
+      <button class="side-item" id="nav-stats">
+        <span class="material-icons-outlined">insights</span>
+        Stats
+      </button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <button class="side-item subtle" id="themeToggle">
+        <span class="material-icons-outlined">dark_mode</span>
+        Mode sombre
+      </button>
+    </div>
+
+    <!-- hidden legacy brand hook (optional) -->
+    <div id="nav-home" style="display:none;"></div>
+  </aside>
+
+  <!-- Mobile topbar -->
+  <header class="m-topbar">
+    <button class="icon-btn" id="menuBtn" aria-label="Menu">
+      <span class="material-icons-outlined">menu</span>
+    </button>
+    <div class="m-brand" id="nav-home-mobile">🇸🇪 Svenska Mästare</div>
+    <button class="icon-btn" id="themeToggleMobile" aria-label="Mode sombre">
+      <span class="material-icons-outlined">dark_mode</span>
+    </button>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main -->
+  <main class="main">
+    <div id="app">
+      <div class="card" style="text-align:center; padding:40px;">
+        <div style="font-size:48px; margin-bottom:20px;">⏳</div>
+        <h2>Chargement...</h2>
+        <p class="muted">Préparation des leçons en cours</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts dans le bon ordre -->
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/srs.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
