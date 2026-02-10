@@ -1006,3 +1006,253 @@ html.dark .prof-card{
   transition: transform var(--speed) var(--ease);
 }
 .lesson-cta .cta-btn:hover{ transform: translateY(-1px); }
+
+/* =========================================
+   Lesson Organization (pill cards / guided practice / prof grid / steps)
+   ========================================= */
+
+.section-head{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin: 4px 0 12px;
+}
+.section-tag{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: var(--pill);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,82,153,0.18);
+  background: rgba(0,82,153,0.10);
+  color: var(--primary);
+}
+.section-title{
+  margin:0;
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Pill-card grid (Dialogue decomposition) */
+.pill-grid{
+  display:grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px){
+  .pill-grid{ grid-template-columns: 1fr 1fr; }
+}
+.pill-card{
+  background: var(--paper);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  transition: transform var(--speed) var(--ease), box-shadow var(--speed) var(--ease), border-color var(--speed) var(--ease);
+}
+.pill-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow2);
+  border-color: rgba(0,82,153,0.18);
+}
+.pill-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pill-sv{
+  font-weight: 950;
+  color: var(--primary);
+  font-size: 16px;
+}
+.pill-idx{
+  font-size: 11px;
+  color: rgba(100,116,139,0.75);
+  font-family: var(--mono);
+}
+.pill-pron{
+  margin-top: 8px;
+  font-style: italic;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.pill-fr{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(226,232,240,0.45);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Guided production */
+.guided{
+  background: rgba(0,82,153,0.06);
+  border: 2px dashed rgba(0,82,153,0.22);
+  border-radius: 18px;
+  padding: 16px;
+}
+html.dark .guided{
+  background: rgba(0,82,153,0.06);
+  border-color: rgba(0,82,153,0.18);
+}
+.guided-head{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.guided-icon{
+  width: 42px; height: 42px;
+  border-radius: 16px;
+  display:grid;
+  place-items:center;
+  background: rgba(0,82,153,0.12);
+  color: var(--primary);
+  border: 1px solid rgba(0,82,153,0.18);
+}
+.guided-title{ margin:0; font-weight: 950; }
+.guided-sub{ margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+.guided-quote{
+  margin-top: 12px;
+  background: var(--paper);
+  border: 1px solid rgba(0,82,153,0.14);
+  border-radius: 16px;
+  padding: 14px;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 16px;
+}
+.guided-actions{
+  display:flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.btn.mic{
+  flex: 1;
+  min-width: 220px;
+  border: 2px solid rgba(0,82,153,0.22);
+  color: var(--primary);
+  font-weight: 950;
+}
+
+/* Prof explanation grid (4 cards) */
+.prof-grid-4{
+  display:grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px){
+  .prof-grid-4{ grid-template-columns: 1fr 1fr; }
+}
+.prof-note{
+  background: var(--paper);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  display:grid;
+  gap: 8px;
+}
+.note-head{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.note-head .ico{
+  width: 28px; height: 28px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  border: 1px solid rgba(15,23,42,0.10);
+  background: rgba(15,23,42,0.04);
+}
+.note-head.tip{ color: #f59e0b; }
+.note-head.tip .ico{ background: rgba(245,158,11,0.10); border-color: rgba(245,158,11,0.25); }
+.note-head.warn{ color: #fb7185; }
+.note-head.warn .ico{ background: rgba(251,113,133,0.10); border-color: rgba(251,113,133,0.25); }
+.note-head.pron{ color: #10b981; }
+.note-head.pron .ico{ background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.25); }
+.note-head.info{ color: var(--primary); }
+.note-head.info .ico{ background: rgba(0,82,153,0.10); border-color: rgba(0,82,153,0.25); }
+
+.prof-note p{
+  margin:0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 13.5px;
+}
+
+/* Lesson vocab "table card" */
+.table-card{
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  overflow:hidden;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.table-card table{ width:100%; border-collapse: collapse; }
+.table-card th{
+  text-align:left;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 12px 14px;
+  background: rgba(100,116,139,0.08);
+}
+.table-card td{
+  padding: 12px 14px;
+  border-top: 1px solid rgba(226,232,240,0.40);
+}
+.table-card tr:hover td{ background: rgba(0,82,153,0.05); }
+.table-card .sv{ font-weight: 950; color: var(--primary); }
+.table-card .help{ color: rgba(100,116,139,0.80); font-style: italic; font-size: 12px; }
+
+/* Bottom steps */
+.lesson-steps{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  border-top: 1px solid var(--stroke);
+}
+.step-skip{
+  flex: 1;
+  min-width: 220px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(100,116,139,0.10);
+  border: 1px solid var(--stroke);
+  font-weight: 900;
+  cursor:pointer;
+}
+.step-next{
+  flex: 2;
+  min-width: 260px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--primary);
+  border: 1px solid rgba(0,82,153,0.35);
+  color: #fff;
+  font-weight: 950;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  box-shadow: 0 18px 34px rgba(0,82,153,0.22);
+}
+.step-next:hover{ filter: brightness(1.03); }
