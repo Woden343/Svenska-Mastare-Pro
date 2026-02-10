@@ -602,6 +602,7 @@ tbody tr:hover td{ background: rgba(0,82,153,0.05); }
 @keyframes fadeUp{
   from{ opacity:0; transform: translateY(8px); }
   to{ opacity:1; transform: translateY(0); }
+}
 
 /* =========================================
    Lesson Premium Layout (Tailwind-like, Vanilla CSS)
