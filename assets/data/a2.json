@@ -1,0 +1,3525 @@
+{
+  "level": "A2",
+  "title": "Débutant",
+  "description": "A2 complet : consolidation du niveau A1, V2 automatisé, narration (passé), projets, compréhension et production.",
+  "modules": [
+    {
+      "id": "a2_bridge",
+      "title": "0) Transition A1 -> A2",
+      "lessons": [
+        {
+          "id": "a2_bridge_01",
+          "title": "Rappels essentiels - V2 + inte + questions",
+          "content": [
+            "🎯 Objectif : parler plus vite et plus juste en automatisant 3 piliers : V2, la négation, les questions.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• appliquer V2 sans réfléchir dans une phrase principale",
+            "• placer inte au bon endroit (verbe simple / modal / temps composé)",
+            "• poser des questions oui/non et des questions avec mot interrogatif",
+            "",
+            "==============================",
+            "SITUATION - Conversation rapide",
+            "",
+            "Dialogue :",
+            "A: Jobbar du idag?",
+            "(yobb-ar dou i-dag ?)",
+            "B: Nej, idag jobbar jag inte.",
+            "(néj, i-dag yobb-ar ya intè)",
+            "A: När kommer du?",
+            "(nèr komm-er dou ?)",
+            "B: Jag kommer imorgon.",
+            "(ya komm-er i-mor-gon)",
+            "A: Var bor du nu?",
+            "(var bour dou nou ?)",
+            "B: Nu bor jag i Paris.",
+            "(nou bour ya i pari)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 = même grammaire, plus d’automatismes",
+            "",
+            "Tu connais déjà les briques A1. En A2, on ne rajoute pas “beaucoup de règles” d’un coup : on rend les règles A1 plus rapides et plus fiables. L’objectif est simple : faire des phrases correctes sans avoir besoin de réfléchir à chaque mot.",
+            "",
+            "Ce pont A1->A2 repose sur trois réflexes :",
+            "1) V2 en phrase principale",
+            "2) la place de inte",
+            "3) la mécanique des questions",
+            "",
+            "",
+            "👉 1) V2 (règle centrale)",
+            "",
+            "En suédois, dans une phrase principale, le verbe conjugué arrive presque toujours en 2e position (V2). Concrètement : tu peux mettre un élément au début (temps, lieu, adverbe), mais le verbe doit venir juste après.",
+            "",
+            "Exemples :",
+            "Idag jobbar jag.",
+            "Imorgon kommer han.",
+            "Nu bor vi i Paris.",
+            "",
+            "Piège francophone : en français, on peut dire “Aujourd’hui je travaille…”. En suédois, si tu commences par “Idag”, tu dois enchaîner directement avec le verbe : “Idag jobbar…”.",
+            "",
+            "",
+            "👉 2) La négation inte : où la mettre ?",
+            "",
+            "Règle A2 : inte se place après le verbe conjugué (ou après le modal). C’est ce placement qui donne une phrase naturelle.",
+            "",
+            "• Verbe simple : Idag jobbar jag inte.",
+            "• Modal : Jag kan inte komma.",
+            "• Temps composé : Jag har inte jobbat idag.",
+            "",
+            "Piège francophone : mettre “inte” trop tôt ou trop tard. Pour t’aider, repère le verbe conjugué (jobbar / kan / har). Inte vient juste après.",
+            "",
+            "",
+            "👉 3) Les questions : deux types",
+            "",
+            "A) Question oui/non : le verbe passe en 1re position.",
+            "Jobbar du idag?",
+            "Kan du komma?",
+            "Har du ätit?",
+            "",
+            "B) Question avec mot interrogatif : le mot interrogatif prend la 1re place, et le verbe reste en 2e (V2).",
+            "När kommer du?",
+            "Var bor du?",
+            "Vad gör du?",
+            "",
+            "Astuce : en A2, entraîne-toi à produire 10 phrases d’affilée. La vitesse vient de la répétition, pas de la théorie.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Phrase principale : (élément) + verbe + sujet + …",
+            "inte : après le verbe conjugué / après le modal",
+            "question oui/non : verbe en 1er",
+            "question interrogative : mot interrogatif + verbe (V2)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "1) V2 : commence par un mot de temps",
+            "Idag ... / Imorgon ... / Nu ... / Ibland ...",
+            "",
+            "2) Ajoute inte",
+            "Idag ... inte.",
+            "",
+            "3) Transforme en question",
+            "... du idag?",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Fais 12 phrases :",
+            "• 6 affirmatives (avec un mot au début)",
+            "• 3 négatives (inte bien placé)",
+            "• 3 questions (oui/non ou interrogatives)"
+          ],
+          "vocab": [
+            {
+              "sv": "idag",
+              "fr": "aujourd’hui",
+              "pron": "i-dag"
+            },
+            {
+              "sv": "imorgon",
+              "fr": "demain",
+              "pron": "i-mor-gon"
+            },
+            {
+              "sv": "nu",
+              "fr": "maintenant",
+              "pron": "nou"
+            },
+            {
+              "sv": "inte",
+              "fr": "ne pas",
+              "pron": "intè"
+            },
+            {
+              "sv": "när",
+              "fr": "quand",
+              "pron": "nèr"
+            },
+            {
+              "sv": "var",
+              "fr": "où",
+              "pron": "var"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Idag jobbar jag inte.",
+              "fr": "Aujourd’hui je ne travaille pas.",
+              "pron": "i-dag yobb-ar ya intè"
+            },
+            {
+              "sv": "Imorgon kommer han.",
+              "fr": "Demain il vient.",
+              "pron": "i-mor-gon komm-er han"
+            },
+            {
+              "sv": "Var bor du nu?",
+              "fr": "Où habites-tu maintenant ?",
+              "pron": "var bour dou nou"
+            },
+            {
+              "sv": "När kommer hon?",
+              "fr": "Quand arrive-t-elle ?",
+              "pron": "nèr komm-er hon"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "V2 : commence par idag / imorgon / nu.",
+              "items": [
+                "Idag ...",
+                "Imorgon ...",
+                "Nu ..."
+              ]
+            },
+            {
+              "instruction": "Ajoute inte au bon endroit.",
+              "items": [
+                "Idag jobbar jag.",
+                "Jag kan komma.",
+                "Jag har jobbat idag."
+              ]
+            },
+            {
+              "instruction": "Transforme en question.",
+              "items": [
+                "Du jobbar idag.",
+                "Du kan komma.",
+                "Du har ätit."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": [
+                "Idag jag jobbar inte.",
+                "Idag jobbar jag inte."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag kan ___ komma. (Je ne peux pas venir.)",
+              "answer": "inte"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ kommer du? (Quand viens-tu ?)",
+              "answer": "När"
+            }
+          ]
+        },
+        {
+          "id": "a2_bridge_02",
+          "title": "Inte - placement avancé (verbe simple / modal / har)",
+          "content": [
+            "🎯 Objectif : placer inte correctement dans 90% des phrases A2.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• repérer le verbe conjugué",
+            "• placer inte juste après ce verbe",
+            "• éviter les erreurs typiques francophones",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 La règle est simple, mais il faut la sentir",
+            "",
+            "Le placement de inte n’est pas “un détail”. C’est un marqueur de phrase naturelle. En A2, tu dois apprendre à le placer automatiquement, comme si tu suivais une voie ferrée : tu repères le verbe conjugué, et inte arrive juste après.",
+            "",
+            "1) Verbe simple (présent / passé simple narratif) :",
+            "Idag jobbar jag inte.",
+            "Igår jobbade jag inte.",
+            "",
+            "2) Modal (kan / vill / måste / ska) :",
+            "Jag kan inte komma.",
+            "Jag vill inte äta.",
+            "",
+            "3) Temps composé (har + supinum) :",
+            "Jag har inte jobbat idag.",
+            "Hon har inte ätit.",
+            "",
+            "Piège classique : mettre inte après le complément, comme en français. En suédois, inte vient tôt, juste après le verbe conjugué.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Repère le verbe conjugué : jobbar / kan / har",
+            "inte vient juste après."
+          ],
+          "examples": [
+            {
+              "sv": "Jag jobbar inte idag.",
+              "fr": "Je ne travaille pas aujourd’hui.",
+              "pron": "ya yobb-ar intè i-dag"
+            },
+            {
+              "sv": "Jag kan inte komma.",
+              "fr": "Je ne peux pas venir.",
+              "pron": "ya kan intè kom-ma"
+            },
+            {
+              "sv": "Jag har inte ätit.",
+              "fr": "Je n’ai pas mangé.",
+              "pron": "ya har intè è-tit"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Ajoute inte au bon endroit.",
+              "items": [
+                "Jag jobbar idag.",
+                "Jag kan komma.",
+                "Jag har ätit."
+              ]
+            },
+            {
+              "instruction": "Transforme en négatif (oral rapide).",
+              "items": [
+                "Hon kommer.",
+                "Vi ska åka.",
+                "De har jobbat."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Choisis la phrase correcte.",
+              "choices": [
+                "Jag har ätit inte.",
+                "Jag har inte ätit."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ inte komma. (Je ne veux pas venir.)",
+              "answer": "vill"
+            }
+          ]
+        },
+        {
+          "id": "a2_bridge_03",
+          "title": "Questions A2 - mots interrogatifs + V2 (où, quand, pourquoi, comment)",
+          "content": [
+            "🎯 Objectif : poser des questions naturelles sans casser V2.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser var / när / vad / varför / hur",
+            "• garder le verbe en 2e position (V2)",
+            "• répondre avec des phrases courtes mais correctes",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 La règle : mot interrogatif + verbe (V2)",
+            "",
+            "Dans une question avec un mot interrogatif, le mot interrogatif prend la 1re place. Ensuite, comme en phrase principale, le verbe conjugué arrive en 2e position.",
+            "",
+            "Var bor du? (où habites-tu ?)",
+            "När kommer du? (quand viens-tu ?)",
+            "Varför jobbar du? (pourquoi tu travailles ?)",
+            "Hur mår du? (comment vas-tu ?)",
+            "",
+            "Piège francophone : vouloir conserver l’ordre français. En suédois, garde ton réflexe : 1er élément + verbe.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Var/När/Vad/Varför/Hur + verbe + sujet + …"
+          ],
+          "vocab": [
+            {
+              "sv": "varför",
+              "fr": "pourquoi",
+              "pron": "var-feur"
+            },
+            {
+              "sv": "hur",
+              "fr": "comment",
+              "pron": "hour"
+            },
+            {
+              "sv": "mår",
+              "fr": "vais (se sentir)",
+              "pron": "mor"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Varför kommer du inte?",
+              "fr": "Pourquoi tu ne viens pas ?",
+              "pron": "var-feur komm-er dou intè"
+            },
+            {
+              "sv": "Hur mår du idag?",
+              "fr": "Comment vas-tu aujourd’hui ?",
+              "pron": "hour mor dou i-dag"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Crée 5 questions (var / när / varför / hur / vad).",
+              "items": [
+                "Var ...?",
+                "När ...?",
+                "Varför ...?",
+                "Hur ...?",
+                "Vad ...?"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle question est correcte ?",
+              "choices": [
+                "Var du bor?",
+                "Var bor du?"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ mår du? (Comment vas-tu ?)",
+              "answer": "Hur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_core_01",
+      "title": "1) Narration - raconter (hier, la semaine dernière, expérience)",
+      "lessons": [
+        {
+          "id": "a2_core_01_01",
+          "title": "Le passé narratif - igår + verbes fréquents (jobba, åka, köpa, se)",
+          "content": [
+            "🎯 Objectif : raconter une mini-histoire simple au passé (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• raconter hier avec une structure claire",
+            "• utiliser quelques verbes très fréquents au passé",
+            "• enchaîner 4-6 phrases cohérentes",
+            "",
+            "==============================",
+            "SITUATION - Raconter sa journée",
+            "",
+            "Dialogue :",
+            "A: Vad gjorde du igår?",
+            "(vad you-ré dou i-gor ?)",
+            "B: Igår jobbade jag på morgonen.",
+            "(i-gor yob-bad-è ya po mor-gon-en)",
+            "B: Sen åkte jag till stan och köpte en bok.",
+            "(sèn o-ktè ya til stan ok shöpt-è èn bouk)",
+            "A: Såg du någon vän?",
+            "(sog dou no-gon vèn ?)",
+            "B: Ja, jag såg Sara. Vi drack kaffe.",
+            "(ya, ya sog sara. vi drak kafé)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 = raconter, pas seulement répondre",
+            "",
+            "En A1, tu sais répondre : “Jag har jobbat.” En A2, tu dois raconter avec une chronologie simple. Tu vas donc apprendre à enchaîner des phrases courtes, reliées par des mots très simples : sen (ensuite), och (et), sedan (puis), till slut (à la fin).",
+            "",
+            "Le but n’est pas d’avoir un passé parfait, mais de produire un récit clair et compréhensible. En suédois, un récit A2 est souvent composé de 5 ou 6 phrases très simples, mais bien ordonnées.",
+            "",
+            "",
+            "👉 Deux options de passé (A2 début)",
+            "",
+            "1) Le passé composé (har + supinum) : utile pour dire “j’ai fait” sans raconter.",
+            "Jag har jobbat.",
+            "",
+            "2) Le passé narratif (prétérit) : utile pour raconter “hier, j’ai fait X puis Y”.",
+            "Igår jobbade jag. Sen åkte jag…",
+            "",
+            "Dans cette leçon, on utilise surtout le passé narratif parce qu’on veut raconter.",
+            "",
+            "",
+            "👉 Verbes fréquents au passé (à automatiser)",
+            "",
+            "jobba -> jobbade (j’ai travaillé / je travaillais)",
+            "åka -> åkte (je suis allé / je suis parti)",
+            "köpa -> köpte (j’ai acheté)",
+            "se -> såg (j’ai vu)",
+            "dricka -> drack (j’ai bu)",
+            "",
+            "Tu n’as pas besoin de mémoriser des tables : commence par 5 verbes ultra fréquents et entraîne-les en phrases.",
+            "",
+            "",
+            "👉 V2 et mots de temps : attention",
+            "",
+            "Quand tu commences par un mot de temps (igår, i helgen, förra veckan), tu gardes V2 :",
+            "Igår jobbade jag...",
+            "",
+            "Piège : dire *Igår jag jobbade...* (ordre français).",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Récit A2 = temps + action 1 + sen + action 2 + (och) + action 3.",
+            "Commence petit, puis répète."
+          ],
+          "vocab": [
+            {
+              "sv": "igår",
+              "fr": "hier",
+              "pron": "i-gor"
+            },
+            {
+              "sv": "sen",
+              "fr": "ensuite",
+              "pron": "sèn"
+            },
+            {
+              "sv": "åkte",
+              "fr": "je suis allé (åka)",
+              "pron": "o-ktè"
+            },
+            {
+              "sv": "köpte",
+              "fr": "j’ai acheté (köpa)",
+              "pron": "shöpt-è"
+            },
+            {
+              "sv": "såg",
+              "fr": "j’ai vu (se)",
+              "pron": "sog"
+            },
+            {
+              "sv": "drack",
+              "fr": "j’ai bu (dricka)",
+              "pron": "drak"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Igår jobbade jag.",
+              "fr": "Hier j’ai travaillé.",
+              "pron": "i-gor yob-bad-è ya"
+            },
+            {
+              "sv": "Sen åkte jag till stan.",
+              "fr": "Ensuite je suis allé en ville.",
+              "pron": "sèn o-ktè ya til stan"
+            },
+            {
+              "sv": "Jag köpte en bok.",
+              "fr": "J’ai acheté un livre.",
+              "pron": "ya shöpt-è èn bouk"
+            },
+            {
+              "sv": "Jag såg Sara.",
+              "fr": "J’ai vu Sara.",
+              "pron": "ya sog sara"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Récit en 4 phrases (oral) : Igår + action / Sen + action / Och + action / Till slut + action.",
+              "items": [
+                "Igår ...",
+                "Sen ...",
+                "Och ...",
+                "Till slut ..."
+              ]
+            },
+            {
+              "instruction": "Substitution verbes : remplace 'jobba' par 'åka / köpa / se / dricka'.",
+              "items": [
+                "Igår jobbade jag."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte (V2) ?",
+              "choices": [
+                "Igår jag jobbade.",
+                "Igår jobbade jag."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Sen ___ jag till stan. (je suis allé)",
+              "answer": "åkte"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ en bok. (j’ai acheté)",
+              "answer": "köpte"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_02",
+          "title": "Raconter - i helgen / förra veckan + connecteurs (sen, sedan, men, därför)",
+          "content": [
+            "🎯 Objectif : raconter un événement simple en reliant les phrases (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser i helgen (ce week-end) et förra veckan (la semaine dernière)",
+            "• relier les idées avec sen / sedan / men / därför",
+            "• produire un petit récit de 6 à 8 phrases clair et naturel",
+            "",
+            "==============================",
+            "SITUATION - Discussion après le week-end",
+            "",
+            "Dialogue :",
+            "A: Vad gjorde du i helgen?",
+            "(vad you-ré dou i hèl-gèn ?)",
+            "B: I helgen åkte jag till stan.",
+            "(i hèl-gèn o-ktè ya til stan)",
+            "B: Sen träffade jag en vän och vi drack kaffe.",
+            "(sèn tréf-fad-è ya èn vèn ok vi drak kafé)",
+            "A: Vad köpte du?",
+            "(vad shöpt-è dou ?)",
+            "B: Jag ville köpa en bok, men den var dyr.",
+            "(ya vil-lè shoo-pa èn bouk, mèn dèn var du-r)",
+            "B: Därför köpte jag bara en kaffe.",
+            "(dèr-feur shöpt-è ya ba-ra èn kafé)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "i helgen = ce week-end",
+            "förra veckan = la semaine dernière",
+            "sen / sedan = ensuite / puis",
+            "men = mais",
+            "därför = donc / c’est pourquoi",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : passer de “phrases isolées” à “petit récit”",
+            "",
+            "En A1, tu sais produire des phrases correctes : “Jag jobbar.”, “Jag gillar kaffe.”",
+            "En A2, l’objectif est de faire un mini-récit : plusieurs phrases simples, mais reliées pour créer une histoire.",
+            "",
+            "Le secret n’est pas d’utiliser des phrases compliquées. Le secret est d’utiliser des connecteurs très simples, mais très fréquents, qui donnent immédiatement une impression de fluidité.",
+            "",
+            "Tu vas donc travailler deux choses en même temps :",
+            "1) les marqueurs de temps (i helgen, förra veckan)",
+            "2) les connecteurs logiques (sen/sedan, men, därför)",
+            "",
+            "",
+            "👉 1) Les marqueurs de temps",
+            "",
+            "i helgen = ce week-end (période terminée). On l’utilise souvent au début de la phrase pour poser le décor.",
+            "",
+            "I helgen åkte jag till stan.",
+            "",
+            "förra veckan = la semaine dernière. Même logique : c’est un repère temporel très utile en A2.",
+            "",
+            "Förra veckan jobbade jag mycket.",
+            "",
+            "⚠️ Piège francophone : oublier V2. Quand tu commences par i helgen ou förra veckan, le verbe conjugué doit venir juste après.",
+            "",
+            "Correct : I helgen åkte jag …",
+            "Incorrect : *I helgen jag åkte …*",
+            "",
+            "",
+            "👉 2) Les connecteurs qui font “A2”",
+            "",
+            "A) sen / sedan = ensuite / puis",
+            "",
+            "Ces mots servent à enchaîner des actions dans un récit. Les deux existent : dans la pratique, tu peux utiliser sen (court et courant) ou sedan (un peu plus long).",
+            "",
+            "I helgen åkte jag till stan. Sen träffade jag en vän.",
+            "",
+            "B) men = mais",
+            "",
+            "men sert à introduire une opposition. C’est un connecteur essentiel pour raconter des situations réelles : tu veux faire quelque chose, mais il y a un problème.",
+            "",
+            "Jag ville köpa en bok, men den var dyr.",
+            "",
+            "C) därför = donc / c’est pourquoi",
+            "",
+            "därför exprime une conséquence. Il permet de relier une cause et une décision, très utile dans la vie quotidienne.",
+            "",
+            "Den var dyr. Därför köpte jag inte boken.",
+            "",
+            "Ici, ton récit devient immédiatement plus “adulte” : tu expliques tes raisons.",
+            "",
+            "",
+            "👉 Comment construire un récit A2 (modèle simple)",
+            "",
+            "Tu peux suivre cette trame :",
+            "",
+            "1) temps (i helgen / förra veckan)",
+            "2) action 1",
+            "3) sen/sedan + action 2",
+            "4) men + problème",
+            "5) därför + décision",
+            "6) conclusion simple",
+            "",
+            "Ce modèle te permet de parler longtemps avec une grammaire très simple.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier V2 après un mot de temps",
+            "- utiliser men sans phrase complète derrière",
+            "- confondre därför (conséquence) et för att (but)",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "i helgen / förra veckan (temps au début -> V2)",
+            "sen/sedan (chronologie)",
+            "men (opposition)",
+            "därför (conséquence)"
+          ],
+          "vocab": [
+            {
+              "sv": "i helgen",
+              "fr": "ce week-end",
+              "pron": "i hèl-gèn"
+            },
+            {
+              "sv": "förra veckan",
+              "fr": "la semaine dernière",
+              "pron": "feur-ra véck-an"
+            },
+            {
+              "sv": "sen",
+              "fr": "ensuite",
+              "pron": "sèn"
+            },
+            {
+              "sv": "sedan",
+              "fr": "puis",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "men",
+              "fr": "mais",
+              "pron": "mèn"
+            },
+            {
+              "sv": "därför",
+              "fr": "donc / c’est pourquoi",
+              "pron": "dèr-feur"
+            },
+            {
+              "sv": "träffade",
+              "fr": "j’ai rencontré (träffa)",
+              "pron": "tréf-fad-è"
+            },
+            {
+              "sv": "ville",
+              "fr": "voulais (vilja)",
+              "pron": "vil-lè"
+            },
+            {
+              "sv": "dyr",
+              "fr": "cher",
+              "pron": "du-r"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "I helgen åkte jag till stan.",
+              "fr": "Ce week-end je suis allé en ville.",
+              "pron": "i hèl-gèn o-ktè ya til stan"
+            },
+            {
+              "sv": "Jag ville köpa en bok, men den var dyr.",
+              "fr": "Je voulais acheter un livre, mais il était cher.",
+              "pron": "ya vil-lè shoo-pa èn bouk, mèn dèn var du-r"
+            },
+            {
+              "sv": "Därför köpte jag bara en kaffe.",
+              "fr": "Donc j’ai seulement acheté un café.",
+              "pron": "dèr-feur shöpt-è ya ba-ra èn kafé"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Crée 4 phrases en commençant par i helgen / förra veckan (V2 obligatoire).",
+              "items": [
+                "I helgen ...",
+                "Förra veckan ..."
+              ]
+            },
+            {
+              "instruction": "Relie deux phrases avec men (opposition).",
+              "items": [
+                "Jag ville ...",
+                "..., men ..."
+              ]
+            },
+            {
+              "instruction": "Ajoute därför (conséquence).",
+              "items": [
+                "Den var ...",
+                "Därför ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase respecte V2 ?",
+              "choices": [
+                "I helgen jag åkte till stan.",
+                "I helgen åkte jag till stan."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ville köpa en bok, ___ den var dyr. (mais)",
+              "answer": "men"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Den var dyr. ___ köpte jag inte boken. (donc)",
+              "answer": "Därför"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_03",
+          "title": "Raconter une expérience complète - först / sedan / efter det / till slut",
+          "content": [
+            "🎯 Objectif : raconter une expérience complète de manière claire et structurée (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• organiser un récit du début à la fin",
+            "• utiliser först, sedan, efter det, till slut",
+            "• produire un récit de 8 à 10 phrases cohérentes",
+            "",
+            "==============================",
+            "SITUATION - Raconter une journée spéciale",
+            "",
+            "Dialogue :",
+            "A: Kan du berätta om din dag?",
+            "(kan dou bé-rèt-ta om din dag ?)",
+            "B: Ja. Först jobbade jag hemma.",
+            "(ya. feurst yob-bad-è ya hém-ma)",
+            "B: Sedan åkte jag till stan.",
+            "(sé-dan o-ktè ya til stan)",
+            "B: Efter det träffade jag en vän.",
+            "(éf-tèr dèt tréf-fad-è ya èn vèn)",
+            "B: Till slut gick jag hem.",
+            "(til slut yik ya hém)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "först = d’abord",
+            "sedan = ensuite / puis",
+            "efter det = après cela",
+            "till slut = à la fin",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : structurer un récit, pas seulement enchaîner",
+            "",
+            "À ce stade, ton objectif n’est plus seulement de dire ce que tu as fait, mais de montrer clairement l’ordre des événements. Pour cela, le suédois utilise très souvent des marqueurs de chronologie simples mais extrêmement efficaces.",
+            "",
+            "Ces mots jouent le rôle de panneaux indicateurs dans ton discours : ils guident ton interlocuteur du début jusqu’à la fin de ton histoire.",
+            "",
+            "",
+            "👉 Les quatre piliers de la chronologie A2",
+            "",
+            "1) först = d’abord",
+            "Utilisé pour introduire la première action. Il sert à lancer le récit.",
+            "",
+            "Först jobbade jag hemma.",
+            "",
+            "2) sedan = ensuite / puis",
+            "Utilisé pour continuer naturellement l’histoire. C’est le connecteur le plus fréquent à l’oral.",
+            "",
+            "Sedan åkte jag till stan.",
+            "",
+            "3) efter det = après cela",
+            "Il permet d’éviter les répétitions de \"sedan\" et de rendre le récit plus fluide.",
+            "",
+            "Efter det träffade jag en vän.",
+            "",
+            "4) till slut = à la fin",
+            "Il marque la conclusion de l’histoire. Il est très utile pour fermer un récit proprement.",
+            "",
+            "Till slut gick jag hem.",
+            "",
+            "",
+            "👉 V2 reste obligatoire",
+            "",
+            "Attention : tous ces mots comptent comme des éléments en première position. Le verbe conjugué doit donc venir immédiatement après.",
+            "",
+            "Correct : Först jobbade jag.",
+            "Incorrect : *Först jag jobbade.*",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on peut raconter sans trop structurer.",
+            "En suédois A2, l’utilisation explicite de ces marqueurs rend ton discours beaucoup plus clair et naturel.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier V2 après först / sedan / efter det / till slut",
+            "- utiliser uniquement \"och\" pour tout relier",
+            "- ne pas conclure le récit",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Récit A2 efficace =",
+            "först → sedan → efter det → till slut",
+            "",
+            "Pense ton histoire comme une ligne droite, pas comme une liste."
+          ],
+          "vocab": [
+            {
+              "sv": "först",
+              "fr": "d’abord",
+              "pron": "feurst"
+            },
+            {
+              "sv": "sedan",
+              "fr": "ensuite / puis",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "efter det",
+              "fr": "après cela",
+              "pron": "éf-tèr dèt"
+            },
+            {
+              "sv": "till slut",
+              "fr": "à la fin",
+              "pron": "til slut"
+            },
+            {
+              "sv": "berätta",
+              "fr": "raconter",
+              "pron": "bé-rèt-ta"
+            },
+            {
+              "sv": "gick",
+              "fr": "je suis allé / allé à pied",
+              "pron": "yik"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Först jobbade jag hemma.",
+              "fr": "D’abord j’ai travaillé à la maison.",
+              "pron": "feurst yob-bad-è ya hém-ma"
+            },
+            {
+              "sv": "Efter det träffade jag en vän.",
+              "fr": "Après cela j’ai rencontré un ami.",
+              "pron": "éf-tèr dèt tréf-fad-è ya èn vèn"
+            },
+            {
+              "sv": "Till slut gick jag hem.",
+              "fr": "À la fin je suis rentré.",
+              "pron": "til slut yik ya hém"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Ordonne les phrases avec först / sedan / efter det / till slut.",
+              "items": [
+                "Jag jobbade.",
+                "Jag åkte till stan.",
+                "Jag träffade en vän.",
+                "Jag gick hem."
+              ]
+            },
+            {
+              "instruction": "Raconte oralement une journée complète.",
+              "items": [
+                "Först ... Sedan ... Efter det ... Till slut ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ___ jobbade jag hemma. (d’abord)",
+              "answer": "Först"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ det träffade jag en vän.",
+              "answer": "Efter"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : ___ slut gick jag hem.",
+              "answer": "Till"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_04",
+          "title": "Raconter une expérience personnelle + opinion (det var bra / svårt / intressant)",
+          "content": [
+            "🎯 Objectif : raconter une expérience personnelle et donner une opinion simple (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• décrire une expérience vécue",
+            "• exprimer une opinion simple et nuancée",
+            "• relier faits et impressions personnelles",
+            "",
+            "==============================",
+            "SITUATION - Parler d’un événement passé",
+            "",
+            "Dialogue :",
+            "A: Hur var resan?",
+            "(hour var ré-san ?)",
+            "B: Den var bra, men lite lång.",
+            "(dèn var bra, mèn li-te long)",
+            "A: Vad gjorde du där?",
+            "(vad you-ré dou dèr ?)",
+            "B: Jag jobbade mycket, men det var intressant.",
+            "(ya yob-bad-è mü-kèt, mèn dèt var in-té-res-sant)",
+            "A: Var det svårt?",
+            "(var dèt svoir-t ?)",
+            "B: Ja, ibland var det svårt, men roligt.",
+            "(ya, i-bland var dèt svoir-t, mèn roo-ligt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "Hur var ...? = Comment était ... ?",
+            "det var = c’était",
+            "bra = bien",
+            "svårt = difficile",
+            "roligt = amusant",
+            "intressant = intéressant",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : ne plus seulement raconter, mais commenter",
+            "",
+            "À ce niveau, parler correctement ne suffit plus. Tu dois aussi montrer ce que tu penses de ce que tu racontes. En suédois A2, cela se fait avec des structures très simples, mais extrêmement fréquentes dans la langue parlée.",
+            "",
+            "L’une des plus importantes est : « det var + adjectif ».",
+            "",
+            "Cette structure te permet de donner ton avis sans construire des phrases complexes. Elle est utilisée partout : conversations, récits, avis, retours d’expérience.",
+            "",
+            "",
+            "👉 1) La structure « det var »",
+            "",
+            "« det » est un pronom neutre qui sert ici à parler d’une situation entière : un voyage, un travail, une journée, un film, etc.",
+            "",
+            "Exemples :",
+            "Resan var bra.",
+            "Det var bra.",
+            "",
+            "Les deux phrases sont correctes, mais « det var » est plus naturel et plus souple à l’oral.",
+            "",
+            "",
+            "👉 2) Les adjectifs les plus utiles en A2",
+            "",
+            "Tu n’as pas besoin de beaucoup d’adjectifs. Quelques-uns suffisent pour exprimer beaucoup d’idées :",
+            "",
+            "bra = bien / bon",
+            "dåligt = mauvais",
+            "svårt = difficile",
+            "lätt = facile",
+            "roligt = amusant",
+            "tråkigt = ennuyeux",
+            "intressant = intéressant",
+            "",
+            "Ces adjectifs sont souvent utilisés avec « men » pour nuancer.",
+            "",
+            "Exemple :",
+            "Det var svårt, men intressant.",
+            "",
+            "",
+            "👉 3) Donner une opinion nuancée",
+            "",
+            "En suédois A2, on aime beaucoup équilibrer une phrase : quelque chose peut être bien, mais difficile ; intéressant, mais long.",
+            "",
+            "Cette structure est très naturelle :",
+            "",
+            "Det var bra, men svårt.",
+            "Det var roligt, men lite trött.",
+            "",
+            "Cela donne un discours plus réaliste et plus mature.",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on dit souvent « c’était + adjectif ». Le suédois fonctionne de manière très similaire, mais utilise presque toujours « det » comme support.",
+            "",
+            "Piège francophone : vouloir accorder ou compliquer la phrase. En A2, reste simple.",
+            "",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- oublier « det »",
+            "- répéter uniquement « bra »",
+            "- ne pas relier les idées avec « men »",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "det var + adjectif",
+            "men = pour nuancer",
+            "opinion simple = discours naturel"
+          ],
+          "vocab": [
+            {
+              "sv": "hur",
+              "fr": "comment",
+              "pron": "hour"
+            },
+            {
+              "sv": "det var",
+              "fr": "c’était",
+              "pron": "dèt var"
+            },
+            {
+              "sv": "bra",
+              "fr": "bien",
+              "pron": "bra"
+            },
+            {
+              "sv": "svårt",
+              "fr": "difficile",
+              "pron": "svoir-t"
+            },
+            {
+              "sv": "roligt",
+              "fr": "amusant",
+              "pron": "roo-ligt"
+            },
+            {
+              "sv": "tråkigt",
+              "fr": "ennuyeux",
+              "pron": "tro-ki-gt"
+            },
+            {
+              "sv": "intressant",
+              "fr": "intéressant",
+              "pron": "in-té-res-sant"
+            },
+            {
+              "sv": "ibland",
+              "fr": "parfois",
+              "pron": "i-bland"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det var bra.",
+              "fr": "C’était bien.",
+              "pron": "dèt var bra"
+            },
+            {
+              "sv": "Det var svårt, men intressant.",
+              "fr": "C’était difficile, mais intéressant.",
+              "pron": "dèt var svoir-t, mèn in-té-res-sant"
+            },
+            {
+              "sv": "Det var roligt.",
+              "fr": "C’était amusant.",
+              "pron": "dèt var roo-ligt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Donne ton opinion avec det var.",
+              "items": [
+                "Resan",
+                "Jobbet",
+                "Helgen"
+              ]
+            },
+            {
+              "instruction": "Ajoute une nuance avec men.",
+              "items": [
+                "Det var bra.",
+                "Det var svårt."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : ___ var intressant. (c’était)",
+              "answer": "Det"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det var bra, ___ svårt. (mais)",
+              "answer": "men"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est la plus naturelle ?",
+              "choices": [
+                "Resan var intressant men svårt.",
+                "Det var intressant, men svårt."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_05",
+          "title": "Donner une raison - för att / eftersom (but vs cause)",
+          "content": [
+            "🎯 Objectif : expliquer pourquoi tu fais quelque chose ou pourquoi quelque chose s’est passé (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• exprimer un but avec för att",
+            "• exprimer une cause avec eftersom",
+            "• construire des phrases plus complètes et naturelles",
+            "",
+            "==============================",
+            "SITUATION - Expliquer une décision",
+            "",
+            "Dialogue :",
+            "A: Varför reste du till Stockholm?",
+            "(var-feur ré-stè dou til stok-holm ?)",
+            "B: Jag reste dit för att jobba.",
+            "(ya ré-stè dit feur att yob-ba)",
+            "A: Var det stressigt?",
+            "(var dèt strèss-igt ?)",
+            "B: Ja, eftersom jag jobbade mycket.",
+            "(ya, éf-tèr-som ya yob-bad-è mü-kèt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "för att = pour / afin de (but)",
+            "eftersom = parce que / puisque (cause)",
+            "varför = pourquoi",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : ne plus seulement dire ce que tu fais, mais pourquoi",
+            "",
+            "En A2, un discours devient vraiment intéressant quand tu peux expliquer les raisons de tes actions. Le suédois propose deux outils très fréquents pour cela : « för att » et « eftersom ».",
+            "",
+            "Même s’ils peuvent tous les deux se traduire par « parce que » ou « pour », ils n’ont pas le même rôle. Les confondre est une erreur classique chez les francophones.",
+            "",
+            "",
+            "👉 1) « för att » : exprimer un but",
+            "",
+            "« för att » sert à expliquer le but d’une action, c’est-à-dire ce que tu veux faire ou obtenir.",
+            "",
+            "Structure : verbe conjugué + för att + infinitif",
+            "",
+            "Exemples :",
+            "Jag studerar svenska för att jobba i Sverige.",
+            "Jag gick hem tidigt för att vila.",
+            "",
+            "",
+            "👉 2) « eftersom » : exprimer une cause",
+            "",
+            "« eftersom » sert à expliquer la raison d’un fait ou d’une situation. Il répond directement à « varför ? ».",
+            "",
+            "Exemples :",
+            "Jag var trött eftersom jag jobbade mycket.",
+            "Vi stannade hemma eftersom det regnade.",
+            "",
+            "Contrairement à « för att », « eftersom » est suivi d’une phrase complète (sujet + verbe).",
+            "",
+            "",
+            "👉 Différence clé",
+            "",
+            "• för att = intention / objectif",
+            "• eftersom = cause / raison réelle",
+            "",
+            "Comparer :",
+            "Jag studerar svenska för att prata bättre. (objectif)",
+            "Jag studerar svenska eftersom jag bor i Sverige. (raison)",
+            "",
+            "",
+            "👉 Placement et V2 (bonus A2)",
+            "",
+            "Si tu commences par « eftersom ... », n’oublie pas que la proposition principale garde V2 :",
+            "Eftersom jag jobbade mycket, var jag trött.",
+            "",
+            "Piège : oublier l’inversion après la subordonnée.",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "för att + infinitif = but",
+            "eftersom + phrase = cause"
+          ],
+          "vocab": [
+            {
+              "sv": "för att",
+              "fr": "pour / afin de",
+              "pron": "feur att"
+            },
+            {
+              "sv": "eftersom",
+              "fr": "parce que / puisque",
+              "pron": "éf-tèr-som"
+            },
+            {
+              "sv": "varför",
+              "fr": "pourquoi",
+              "pron": "var-feur"
+            },
+            {
+              "sv": "resa",
+              "fr": "voyager",
+              "pron": "ré-sa"
+            },
+            {
+              "sv": "vila",
+              "fr": "se reposer",
+              "pron": "vi-la"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag studerar svenska för att jobba i Sverige.",
+              "fr": "J’étudie le suédois pour travailler en Suède.",
+              "pron": "ya stu-dé-rar svèn-ska feur att yob-ba i svè-ri-yè"
+            },
+            {
+              "sv": "Jag var trött eftersom jag jobbade mycket.",
+              "fr": "J’étais fatigué parce que je travaillais beaucoup.",
+              "pron": "ya var trött éf-tèr-som ya yob-bad-è mü-kèt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Explique un but avec för att.",
+              "items": [
+                "Jag lär mig svenska.",
+                "Jag går till jobbet."
+              ]
+            },
+            {
+              "instruction": "Explique une cause avec eftersom.",
+              "items": [
+                "Jag var trött.",
+                "Vi stannade hemma."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase exprime un but ?",
+              "choices": [
+                "Jag var trött eftersom jag jobbade.",
+                "Jag studerar svenska för att jobba."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag gick hem ___ vila. (pour)",
+              "answer": "för att"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag var trött ___ jag sov lite. (parce que)",
+              "answer": "eftersom"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_01_06",
+          "title": "Synthèse narration A2 - récit libre et automatisation",
+          "content": [
+            "🎯 Objectif : produire un récit A2 autonome, clair et fluide.",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• raconter un événement passé du début à la fin",
+            "• utiliser les marqueurs de temps et de chronologie",
+            "• donner ton opinion et expliquer les raisons",
+            "• parler sans t’arrêter pendant 1 à 2 minutes",
+            "",
+            "==============================",
+            "SITUATION - Raconter sans aide",
+            "",
+            "Consigne :",
+            "Tu racontes une expérience réelle (week-end, journée, voyage, travail).",
+            "Tu n’as pas de dialogue modèle : c’est toi qui parles.",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi une leçon de synthèse ?",
+            "",
+            "Dans une méthode sérieuse, une unité ne se termine pas par une nouvelle règle, mais par une consolidation active. Cette leçon sert à transformer ce que tu as appris en automatisme réel.",
+            "",
+            "Si tu peux raconter une histoire simple sans t’arrêter, sans traduire dans ta tête, alors tu es bien au niveau A2.",
+            "",
+            "",
+            "👉 Ce que tu dois mobiliser maintenant",
+            "",
+            "Dans cette leçon, tu dois combiner plusieurs éléments déjà vus :",
+            "",
+            "• les marqueurs de temps : igår, i helgen, förra veckan",
+            "• les connecteurs de chronologie : först, sedan, efter det, till slut",
+            "• l’expression de l’opinion : det var bra / svårt / intressant",
+            "• l’explication : för att (but), eftersom (cause)",
+            "",
+            "Le but n’est pas la perfection grammaticale, mais la clarté et la continuité du discours.",
+            "",
+            "",
+            "👉 Comment structurer ton récit (modèle mental)",
+            "",
+            "1) Quand ? (temps)",
+            "2) Que s’est-il passé ? (actions principales)",
+            "3) Comment c’était ? (opinion)",
+            "4) Pourquoi ? (raison ou but)",
+            "5) Conclusion (till slut)",
+            "",
+            "Si tu hésites, ralentis, mais continue. La fluidité vient avec la répétition.",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Parler longtemps > parler parfaitement",
+            "Structure > grammaire parfaite",
+            "Répéter = progresser",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "Parle 1 minute en utilisant :",
+            "• 1 marqueur de temps",
+            "• 2 connecteurs",
+            "• 1 opinion",
+            "• 1 explication",
+            "",
+            "==============================",
+            "MINI-STORY (modèle possible)",
+            "",
+            "I helgen var jag hemma.",
+            "(i hèl-gèn var ya hém-ma)",
+            "Först städade jag.",
+            "(feurst stè-dad-è ya)",
+            "Sedan träffade jag en vän.",
+            "(sé-dan tréf-fad-è ya èn vèn)",
+            "Det var roligt, men lite trött.",
+            "(dèt var roo-ligt, mèn li-te trött)",
+            "Jag gjorde det för att vila.",
+            "(ya yoo-rè dèt feur att vi-la)",
+            "Till slut gick jag hem.",
+            "(til slut yik ya hém)",
+            "",
+            "==============================",
+            "PRODUCTION LIBRE",
+            "",
+            "Raconte une expérience réelle pendant 1 à 2 minutes.",
+            "Tu peux t’enregistrer et te réécouter."
+          ],
+          "vocab": [
+            {
+              "sv": "först",
+              "fr": "d’abord",
+              "pron": "feurst"
+            },
+            {
+              "sv": "sedan",
+              "fr": "ensuite",
+              "pron": "sé-dan"
+            },
+            {
+              "sv": "efter det",
+              "fr": "après cela",
+              "pron": "éf-tèr dèt"
+            },
+            {
+              "sv": "till slut",
+              "fr": "à la fin",
+              "pron": "til slut"
+            },
+            {
+              "sv": "eftersom",
+              "fr": "parce que",
+              "pron": "éf-tèr-som"
+            },
+            {
+              "sv": "för att",
+              "fr": "pour",
+              "pron": "feur att"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det var svårt, men intressant.",
+              "fr": "C’était difficile, mais intéressant.",
+              "pron": "dèt var svoir-t, mèn in-té-res-sant"
+            },
+            {
+              "sv": "Jag gjorde det för att vila.",
+              "fr": "Je l’ai fait pour me reposer.",
+              "pron": "ya yoo-rè dèt feur att vi-la"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Parle 1 minute en utilisant au moins 3 connecteurs.",
+              "items": [
+                "först",
+                "sedan",
+                "till slut"
+              ]
+            },
+            {
+              "instruction": "Ajoute une opinion et une raison.",
+              "items": [
+                "det var ...",
+                "för att ...",
+                "eftersom ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quel élément n’est PAS obligatoire dans un récit A2 ?",
+              "choices": [
+                "Un temps",
+                "Une opinion",
+                "Une grammaire parfaite"
+              ],
+              "answerIndex": 2
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag gjorde det ___ vila. (pour)",
+              "answer": "för att"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_core_02",
+      "title": "2) Futur, projets et intentions",
+      "lessons": [
+        {
+          "id": "a2_core_02_01",
+          "title": "Parler du futur proche - ska (projets décidés)",
+          "content": [
+            "🎯 Objectif : parler de projets déjà décidés et d’actions prévues (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser ska pour parler du futur",
+            "• poser des questions sur les projets de quelqu’un",
+            "• distinguer futur décidé et simple idée",
+            "",
+            "==============================",
+            "SITUATION - Parler des plans",
+            "",
+            "Dialogue :",
+            "A: Vad ska du göra imorgon?",
+            "(vad ska dou you-ra i-mor-gon ?)",
+            "B: Jag ska jobba på morgonen.",
+            "(ya ska yob-ba po mor-gon-en)",
+            "A: Och på kvällen?",
+            "(ok po kvèl-len ?)",
+            "B: Då ska jag träffa en vän.",
+            "(do ska ya tréf-fa èn vèn)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "ska = aller / futur (intention décidée)",
+            "imorgon = demain",
+            "på morgonen = le matin",
+            "på kvällen = le soir",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : commencer à parler du futur",
+            "",
+            "En A1, tu parlais surtout du présent et du passé immédiat. En A2, tu dois pouvoir expliquer ce que tu vas faire, ce que tu as prévu, et quels sont tes projets proches.",
+            "",
+            "Le futur le plus courant en suédois est formé avec le verbe « ska ». Il correspond très souvent au « je vais » français.",
+            "",
+            "👉 1) Quand utiliser « ska »",
+            "",
+            "On utilise « ska » quand :",
+            "• la décision est déjà prise",
+            "• le plan est clair dans ta tête",
+            "• tu parles d’un futur proche ou organisé",
+            "",
+            "Exemples :",
+            "Jag ska jobba imorgon.",
+            "Vi ska resa i sommar.",
+            "Hon ska plugga svenska.",
+            "",
+            "👉 2) Structure de la phrase",
+            "",
+            "sujet + ska + infinitif",
+            "",
+            "Jag ska jobba.",
+            "Du ska resa.",
+            "",
+            "Attention : après ska, le verbe reste toujours à l’infinitif.",
+            "",
+            "👉 3) Les questions avec « ska »",
+            "",
+            "Question oui/non : ska en première position.",
+            "Ska du jobba imorgon?",
+            "",
+            "Question interrogative : mot interrogatif + ska (V2).",
+            "Vad ska du göra?",
+            "När ska du resa?",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- oublier ska",
+            "- conjuguer le verbe après ska",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "ska = futur décidé",
+            "ska + infinitif",
+            "question = ska en premier"
+          ],
+          "vocab": [
+            {
+              "sv": "ska",
+              "fr": "aller / futur",
+              "pron": "ska"
+            },
+            {
+              "sv": "imorgon",
+              "fr": "demain",
+              "pron": "i-mor-gon"
+            },
+            {
+              "sv": "kvällen",
+              "fr": "le soir",
+              "pron": "kvèl-len"
+            },
+            {
+              "sv": "resa",
+              "fr": "voyager",
+              "pron": "ré-sa"
+            },
+            {
+              "sv": "göra",
+              "fr": "faire",
+              "pron": "you-ra"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag ska jobba imorgon.",
+              "fr": "Je vais travailler demain.",
+              "pron": "ya ska yob-ba i-mor-gon"
+            },
+            {
+              "sv": "Vad ska du göra?",
+              "fr": "Qu’est-ce que tu vas faire ?",
+              "pron": "vad ska dou you-ra"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Parle de tes projets avec ska.",
+              "items": [
+                "Imorgon ...",
+                "I helgen ...",
+                "Nästa vecka ..."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ resa imorgon. (futur)",
+              "answer": "ska"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": [
+                "Jag ska reser imorgon.",
+                "Jag ska resa imorgon."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_02_02",
+          "title": "Futur probable - kommer att (prévision) + comparaison avec ska",
+          "content": [
+            "🎯 Objectif : parler du futur probable (prévisions) et distinguer ska vs kommer att (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser kommer att pour une prévision / quelque chose de probable",
+            "• garder ska pour un plan décidé",
+            "• poser des questions sur le futur",
+            "• construire 6 à 8 phrases naturelles sur tes projets et tes prévisions",
+            "",
+            "==============================",
+            "SITUATION - Parler du futur (plan vs prévision)",
+            "",
+            "Dialogue :",
+            "A: Vad ska du göra i helgen?",
+            "(vad ska dou you-ra i hèl-gèn ?)",
+            "B: Jag ska jobba på lördag.",
+            "(ya ska yob-ba po leur-dag)",
+            "A: Okej. Tror du att du kommer att vara trött?",
+            "(o-kéï. trou du att dou komm-er att va-ra treutt ?)",
+            "B: Ja, jag kommer att vara trött, eftersom jag ska jobba mycket.",
+            "(ya komm-er att va-ra treutt, éf-tèr-som ya ska yob-ba mü-kèt)",
+            "A: Kommer du att vila på söndag?",
+            "(komm-er dou att vi-la po seun-dag ?)",
+            "B: Ja, jag ska vila hemma.",
+            "(ya, ya ska vi-la hém-ma)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "ska = futur décidé (plan, intention claire)",
+            "kommer att = futur probable (prévision, estimation)",
+            "tror du att...? = tu penses que... ?",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Deux futurs très courants en suédois A2",
+            "",
+            "En suédois, on ne choisit pas le futur au hasard. À l’oral, il y a deux façons très fréquentes de parler du futur :",
+            "",
+            "1) ska + infinitif",
+            "2) kommer att + infinitif",
+            "",
+            "Ces deux structures existent en français (je vais / ça va arriver), mais la logique d’utilisation est légèrement différente. En A2, savoir choisir entre les deux rend ton suédois beaucoup plus naturel.",
+            "",
+            "",
+            "👉 1) « ska » = plan décidé (intention)",
+            "",
+            "Tu utilises ska quand la décision est déjà prise. Tu es en train de parler d’un plan réel : quelque chose que tu as prévu de faire.",
+            "",
+            "Exemples :",
+            "Jag ska jobba imorgon. (c’est décidé)",
+            "Vi ska resa i sommar. (c’est prévu)",
+            "Jag ska träffa en vän i kväll. (c’est planifié)",
+            "",
+            "Astuce : si tu peux ajouter “c’est prévu / c’est décidé” en français, alors ska marche très bien.",
+            "",
+            "",
+            "👉 2) « kommer att » = prévision / probabilité",
+            "",
+            "Tu utilises kommer att quand tu ne décris pas un plan, mais une prévision : tu estimes que quelque chose va arriver.",
+            "",
+            "Exemples :",
+            "Det kommer att regna. (prévision météo)",
+            "Jag kommer att vara trött. (probable)",
+            "Han kommer att förstå. (tu penses que oui)",
+            "",
+            "L’idée clé : ce n’est pas forcément “décidé par toi”. C’est un futur qui “arrive” ou qui est “probable”.",
+            "",
+            "",
+            "👉 Comment choisir rapidement ? (méthode A2)",
+            "",
+            "Pose-toi cette question :",
+            "",
+            "Est-ce un plan que je contrôle ?",
+            "→ oui : ska",
+            "→ non / c’est une estimation : kommer att",
+            "",
+            "Comparer :",
+            "Jag ska resa till Stockholm. (plan)",
+            "Det kommer att ta lång tid. (prévision)",
+            "",
+            "",
+            "👉 Structure de la phrase",
+            "",
+            "• ska + infinitif",
+            "Jag ska jobba.",
+            "",
+            "• kommer att + infinitif",
+            "Jag kommer att jobba.",
+            "",
+            "Après ska et après kommer att, le verbe reste à l’infinitif. C’est un point important : tu ne conjuges pas le verbe principal.",
+            "",
+            "",
+            "👉 Les questions",
+            "",
+            "1) Oui/non : verbe en premier.",
+            "Ska du jobba imorgon?",
+            "Kommer du att vara trött?",
+            "",
+            "2) Avec mot interrogatif (V2) :",
+            "När ska du resa?",
+            "Varför kommer du att vara trött?",
+            "",
+            "",
+            "⚠️ Pièges fréquents francophones",
+            "",
+            "- utiliser kommer att pour un plan (ça sonne moins naturel)",
+            "- oublier « att » après kommer",
+            "- conjuguer le verbe après ska / kommer att",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "ska = plan décidé",
+            "kommer att = prévision / probable",
+            "après les deux : infinitif",
+            "",
+            "==============================",
+            "STRUCTURES CLÉS",
+            "",
+            "Jag ska jobba i helgen.",
+            "(ya ska yob-ba i hèl-gèn)",
+            "Jag kommer att vara trött.",
+            "(ya komm-er att va-ra treutt)",
+            "Det kommer att regna.",
+            "(dèt komm-er att rèï-na)",
+            "",
+            "==============================",
+            "DRILLS - AUTOMATISATION (oral)",
+            "",
+            "A) Dis 6 phrases avec ska (plans) :",
+            "Imorgon ska jag ...",
+            "I helgen ska jag ...",
+            "Nästa vecka ska jag ...",
+            "",
+            "B) Dis 6 phrases avec kommer att (prévisions) :",
+            "Jag kommer att ...",
+            "Det kommer att ...",
+            "Han/Hon kommer att ...",
+            "",
+            "==============================",
+            "DRILLS - TRI (plan ou prévision ?)",
+            "",
+            "Classe chaque idée : ska ou kommer att.",
+            "",
+            "1) Tu as déjà décidé : travailler samedi.",
+            "2) Tu penses être fatigué après le travail.",
+            "3) Tu prévois d’aller au sport demain.",
+            "4) Tu penses qu’il va pleuvoir.",
+            "",
+            "==============================",
+            "MINI-STORY",
+            "",
+            "Imorgon ska Alex jobba.",
+            "(i-mor-gon ska alèks yob-ba)",
+            "Han kommer att vara trött.",
+            "(han komm-er att va-ra treutt)",
+            "På söndag ska han vila hemma.",
+            "(po seun-dag ska han vi-la hém-ma)",
+            "Det kommer att bli bättre.",
+            "(dèt komm-er att bli bèt-trè)",
+            "",
+            "==============================",
+            "PRODUCTION GUIDÉE",
+            "",
+            "Fais 8 phrases :",
+            "",
+            "• 4 phrases avec ska (plans réels)",
+            "• 4 phrases avec kommer att (prévisions)",
+            "",
+            "Ajoute au moins une raison avec eftersom."
+          ],
+          "vocab": [
+            {
+              "sv": "kommer att",
+              "fr": "va / va probablement (prévision)",
+              "pron": "komm-er att"
+            },
+            {
+              "sv": "tror du att",
+              "fr": "tu penses que",
+              "pron": "trou dou att"
+            },
+            {
+              "sv": "regna",
+              "fr": "pleuvoir",
+              "pron": "rèï-na"
+            },
+            {
+              "sv": "bli",
+              "fr": "devenir",
+              "pron": "bli"
+            },
+            {
+              "sv": "trött",
+              "fr": "fatigué",
+              "pron": "treutt"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag ska resa imorgon.",
+              "fr": "Je vais voyager demain (plan).",
+              "pron": "ya ska ré-sa i-mor-gon"
+            },
+            {
+              "sv": "Det kommer att regna.",
+              "fr": "Il va pleuvoir (prévision).",
+              "pron": "dèt komm-er att rèï-na"
+            },
+            {
+              "sv": "Jag kommer att vara trött.",
+              "fr": "Je vais probablement être fatigué.",
+              "pron": "ya komm-er att va-ra treutt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Choisis ska ou kommer att.",
+              "items": [
+                "Je vais travailler samedi (décidé).",
+                "Je vais probablement être fatigué (prévision).",
+                "Il va pleuvoir (météo).",
+                "Je vais voir un ami ce soir (plan)."
+              ]
+            },
+            {
+              "instruction": "Transforme en question.",
+              "items": [
+                "Du ska jobba imorgon.",
+                "Du kommer att vara trött."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle forme correspond à une prévision ?",
+              "choices": [
+                "ska",
+                "kommer att"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det kommer ___ regna. (att)",
+              "answer": "att"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase parle d’un plan décidé ?",
+              "choices": [
+                "Jag kommer att resa imorgon.",
+                "Jag ska resa imorgon."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_02_03",
+          "title": "Intention et idée - tänker (att) + comparaison ska / tänker / kommer att",
+          "content": [
+            "🎯 Objectif : exprimer une intention, une idée ou un projet non totalement décidé, et choisir correctement entre ska / tänker / kommer att (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser tänker (att) pour parler d’une intention ou d’un projet en cours",
+            "• distinguer clairement plan décidé, intention et prévision",
+            "• produire des phrases naturelles sur tes projets futurs",
+            "",
+            "==============================",
+            "SITUATION - Parler de projets",
+            "",
+            "Dialogue :",
+            "A: Vad ska du göra i sommar?",
+            "(vad ska dou you-ra i som-mar ?)",
+            "B: Jag tänker resa till Spanien.",
+            "(ya tèn-kèr ré-sa til spà-ni-en)",
+            "A: Är det bestämt?",
+            "(èr dèt be-stèmt ?)",
+            "B: Inte helt. Men jag ska ta semester i juli.",
+            "(in-tè hèlt. mèn ya ska ta se-mès-tèr i you-li)",
+            "A: Tror du att det kommer att bli dyrt?",
+            "(trou dou att dèt komm-er att bli du-rt ?)",
+            "B: Ja, det kommer nog att bli dyrt.",
+            "(ya, dèt komm-er nog att bli du-rt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "tänker (att) = penser / avoir l’intention de",
+            "bestämt = décidé",
+            "inte helt = pas complètement",
+            "nog = probablement",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi cette leçon est essentielle en A2",
+            "",
+            "À ce stade, tu sais déjà parler du futur avec « ska » et « kommer att ». Mais dans la vraie vie, on ne parle pas toujours de décisions claires ou de prévisions. Très souvent, on parle d’idées, d’intentions, de projets encore ouverts.",
+            "",
+            "C’est exactement le rôle de « tänker (att) ».",
+            "",
+            "Cette leçon te permet de faire la différence entre :",
+            "• ce qui est décidé",
+            "• ce qui est envisagé",
+            "• ce qui est probable",
+            "",
+            "C’est un point clé pour parler comme un vrai locuteur A2.",
+            "",
+            "",
+            "👉 1) « tänker (att) » : intention ou idée",
+            "",
+            "« tänka » signifie penser. Avec tänker (att), tu exprimes une intention, une idée en cours, quelque chose que tu envisages mais qui n’est pas encore totalement décidé.",
+            "",
+            "Structure :",
+            "sujet + tänker (att) + infinitif",
+            "",
+            "Exemples :",
+            "Jag tänker resa till Spanien.",
+            "Hon tänker byta jobb.",
+            "Vi tänker stanna hemma i helgen.",
+            "",
+            "Ces phrases signifient : « j’ai l’intention de », « je pense faire », « j’envisage de ».",
+            "",
+            "",
+            "👉 2) Différence fondamentale entre ska / tänker / kommer att",
+            "",
+            "Pour bien choisir, pose-toi cette question :",
+            "",
+            "Est-ce une décision déjà prise ?",
+            "→ oui : ska",
+            "",
+            "Est-ce une idée, une intention, un projet encore ouvert ?",
+            "→ tänker (att)",
+            "",
+            "Est-ce une prévision ou quelque chose de probable ?",
+            "→ kommer att",
+            "",
+            "Comparer :",
+            "Jag ska resa i juli. (billets réservés, décision prise)",
+            "Jag tänker resa i juli. (idée, projet)",
+            "Det kommer att bli dyrt. (prévision)",
+            "",
+            "",
+            "👉 3) « att » après tänker",
+            "",
+            "À l’oral, « att » est parfois omis, mais en A2 il est recommandé de l’utiliser pour garder une structure claire.",
+            "",
+            "Jag tänker att resa. (correct mais moins courant)",
+            "Jag tänker resa. (le plus naturel)",
+            "",
+            "Dans la pratique :",
+            "• tänker + infinitif → OK",
+            "• tänker att + infinitif → possible mais plus formel",
+            "",
+            "",
+            "👉 4) Questions avec tänker",
+            "",
+            "Question oui/non :",
+            "Tänker du resa i sommar?",
+            "",
+            "Question avec mot interrogatif (V2) :",
+            "Vad tänker du göra?",
+            "När tänker du resa?",
+            "",
+            "",
+            "⚠️ Pièges fréquents francophones",
+            "",
+            "- utiliser ska pour une simple idée",
+            "- utiliser tänker pour une décision déjà prise",
+            "- oublier que le verbe reste à l’infinitif",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "ska = décision prise",
+            "tänker = intention / idée",
+            "kommer att = prévision",
+            "",
+            "Maîtriser ces trois formes = vrai niveau A2."
+          ],
+          "vocab": [
+            {
+              "sv": "tänker",
+              "fr": "pense / a l’intention de",
+              "pron": "tèn-kèr"
+            },
+            {
+              "sv": "bestämt",
+              "fr": "décidé",
+              "pron": "be-stèmt"
+            },
+            {
+              "sv": "nog",
+              "fr": "probablement",
+              "pron": "nog"
+            },
+            {
+              "sv": "byta",
+              "fr": "changer",
+              "pron": "bü-ta"
+            },
+            {
+              "sv": "stanna",
+              "fr": "rester",
+              "pron": "stan-na"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag tänker resa i sommar.",
+              "fr": "J’ai l’intention de voyager cet été.",
+              "pron": "ya tèn-kèr ré-sa i som-mar"
+            },
+            {
+              "sv": "Jag ska resa i juli.",
+              "fr": "Je vais voyager en juillet (décidé).",
+              "pron": "ya ska ré-sa i you-li"
+            },
+            {
+              "sv": "Det kommer att bli dyrt.",
+              "fr": "Ça va probablement être cher.",
+              "pron": "dèt komm-er att bli du-rt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Classe chaque phrase : ska / tänker / kommer att.",
+              "items": [
+                "Tu as déjà réservé les billets.",
+                "Tu envisages de changer de travail.",
+                "Tu penses qu’il va pleuvoir."
+              ]
+            },
+            {
+              "instruction": "Transforme avec tänker.",
+              "items": [
+                "Jag ska resa.",
+                "Jag ska stanna hemma."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle forme exprime une intention ?",
+              "choices": [
+                "ska",
+                "tänker",
+                "kommer att"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ resa i sommar. (intention)",
+              "answer": "tänker"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase parle d’une prévision ?",
+              "choices": [
+                "Jag tänker resa.",
+                "Det kommer att regna."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_02_04",
+          "title": "Futur mixte - phrases longues (temps + plan + raison + conséquence)",
+          "content": [
+            "🎯 Objectif : construire des phrases longues et naturelles au futur en combinant temps, plan, intention, prévision et raison (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• combiner ska / tänker / kommer att dans une même phrase",
+            "• structurer une phrase longue sans te perdre",
+            "• parler de projets futurs de manière fluide et réaliste",
+            "",
+            "==============================",
+            "SITUATION - Expliquer un projet futur",
+            "",
+            "Dialogue :",
+            "A: Vad ska du göra nästa år?",
+            "(vad ska dou you-ra nèk-sta or ?)",
+            "B: Nästa år ska jag byta jobb.",
+            "(nèk-sta or ska ya bü-ta yob)",
+            "A: Varför då?",
+            "(var-feur do ?)",
+            "B: Eftersom jag tänker flytta till Sverige.",
+            "(éf-tèr-som ya tèn-kèr flüt-ta til svè-ri-yè)",
+            "A: Tror du att det kommer att bli svårt?",
+            "(trou dou att dèt komm-er att bli svoir-t ?)",
+            "B: Ja, men det kommer att bli bra på sikt.",
+            "(ya, mèn dèt komm-er att bli bra po sikt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "nästa år = l’année prochaine",
+            "byta jobb = changer de travail",
+            "på sikt = à long terme",
+            "flytta = déménager",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi cette leçon est très importante en A2",
+            "",
+            "Jusqu’ici, tu as appris à utiliser séparément les outils du futur : ska pour un plan, tänker pour une intention, kommer att pour une prévision.",
+            "",
+            "Mais dans la vraie vie, on ne parle pas avec des phrases isolées. On explique ses projets, ses raisons, ses doutes et les conséquences possibles. Cette leçon t’apprend à assembler tout cela dans des phrases longues mais claires.",
+            "",
+            "C’est exactement ce qui fait passer ton suédois d’un A2 \"scolaire\" à un A2 réellement utilisable.",
+            "",
+            "",
+            "👉 Le principe fondamental : une idée = un rôle",
+            "",
+            "Dans une phrase longue A2, chaque partie a un rôle précis :",
+            "",
+            "• le temps (quand ?)",
+            "• le plan (ce qui est décidé)",
+            "• l’intention (ce que tu envisages)",
+            "• la prévision (ce qui est probable)",
+            "• la raison ou la conséquence",
+            "",
+            "Tu ne dois pas tout mettre, mais tu dois savoir les combiner.",
+            "",
+            "",
+            "👉 Exemple guidé (analyse)",
+            "",
+            "Nästa år ska jag byta jobb, eftersom jag tänker flytta till Sverige, och det kommer att bli svårt i början.",
+            "",
+            "Analyse :",
+            "Nästa år = temps",
+            "ska jag byta jobb = plan décidé",
+            "eftersom jag tänker flytta = intention (raison)",
+            "det kommer att bli svårt = prévision",
+            "",
+            "",
+            "👉 Ordre des mots et clarté",
+            "",
+            "Même dans une phrase longue, le suédois reste logique :",
+            "• les subordonnées (eftersom, när, om) n’annulent pas V2 dans la principale",
+            "• chaque verbe garde sa structure (ska + infinitif, tänker + infinitif, kommer att + infinitif)",
+            "",
+            "Il vaut mieux une phrase longue simple qu’une phrase compliquée mal construite.",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on peut empiler des idées sans structure claire.",
+            "En suédois A2, la clarté est essentielle : on préfère plusieurs blocs bien organisés.",
+            "",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- mélanger les rôles (utiliser ska pour une prévision)",
+            "- oublier la raison (phrase trop sèche)",
+            "- vouloir faire trop long dès le début",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "Phrase A2 efficace =",
+            "temps + plan + (raison) + (prévision)",
+            "",
+            "Tu parles comme un adulte, pas comme un manuel."
+          ],
+          "vocab": [
+            {
+              "sv": "nästa år",
+              "fr": "l’année prochaine",
+              "pron": "nèk-sta or"
+            },
+            {
+              "sv": "byta jobb",
+              "fr": "changer de travail",
+              "pron": "bü-ta yob"
+            },
+            {
+              "sv": "flytta",
+              "fr": "déménager",
+              "pron": "flüt-ta"
+            },
+            {
+              "sv": "på sikt",
+              "fr": "à long terme",
+              "pron": "po sikt"
+            },
+            {
+              "sv": "i början",
+              "fr": "au début",
+              "pron": "i beur-yan"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Nästa år ska jag byta jobb, eftersom jag tänker flytta till Sverige.",
+              "fr": "L’année prochaine je vais changer de travail, parce que j’ai l’intention de déménager en Suède.",
+              "pron": "nèk-sta or ska ya bü-ta yob, éf-tèr-som ya tèn-kèr flüt-ta til svè-ri-yè"
+            },
+            {
+              "sv": "Det kommer att bli svårt i början, men bra på sikt.",
+              "fr": "Ça va être difficile au début, mais bien à long terme.",
+              "pron": "dèt komm-er att bli svoir-t i beur-yan, mèn bra po sikt"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Construis une phrase longue avec 3 blocs.",
+              "items": [
+                "temps + ska",
+                "eftersom + tänker",
+                "kommer att"
+              ]
+            },
+            {
+              "instruction": "Transforme en phrase A2 longue.",
+              "items": [
+                "Jag ska byta jobb.",
+                "Jag tänker flytta.",
+                "Det kommer att bli svårt."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est la plus naturelle en A2 ?",
+              "choices": [
+                "Jag ska byta jobb. Jag tänker flytta. Det kommer att bli svårt.",
+                "Nästa år ska jag byta jobb, eftersom jag tänker flytta, och det kommer att bli svårt."
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Nästa år ___ jag byta jobb. (plan décidé)",
+              "answer": "ska"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2_core_03",
+      "title": "3) Opinions, préférences et comparaisons",
+      "lessons": [
+        {
+          "id": "a2_core_03_01",
+          "title": "Exprimer une opinion - jag tycker att / enligt mig",
+          "content": [
+            "🎯 Objectif : exprimer clairement ton opinion personnelle et réagir à celle des autres (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• utiliser jag tycker att pour donner ton avis",
+            "• utiliser enligt mig pour nuancer / personnaliser",
+            "• poser des questions d’opinion",
+            "",
+            "==============================",
+            "SITUATION - Donner son avis",
+            "",
+            "Dialogue :",
+            "A: Vad tycker du om jobbet?",
+            "(vad tük-kèr dou om yob-bet ?)",
+            "B: Jag tycker att det är intressant.",
+            "(ya tük-kèr att dèt èr in-té-res-sant)",
+            "A: Jaha. Är det svårt?",
+            "(ya-ha. èr dèt svoir-t ?)",
+            "B: Ibland, men enligt mig är det lärorikt.",
+            "(i-bland, mèn èn-ligt mèy èr dèt lè-ro-rikt)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "jag tycker att = je pense que / je trouve que",
+            "enligt mig = selon moi",
+            "om = à propos de",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 A2 : passer des faits aux opinions",
+            "",
+            "En A1 et au début de l’A2, tu parlais surtout de faits : ce que tu fais, ce que tu as fait, ce que tu vas faire.",
+            "À partir du module 3, tu entres dans un suédois plus personnel : tu donnes ton avis, tu expliques ce que tu penses.",
+            "",
+            "L’outil le plus important pour cela est « jag tycker att ».",
+            "",
+            "",
+            "👉 1) « jag tycker att » : donner son opinion",
+            "",
+            "« tycka » signifie penser / trouver (avoir une opinion).",
+            "Avec « jag tycker att », tu introduis une phrase complète qui exprime ton avis.",
+            "",
+            "Structure :",
+            "jag tycker att + phrase",
+            "",
+            "Exemples :",
+            "Jag tycker att jobbet är bra.",
+            "Jag tycker att filmen var tråkig.",
+            "",
+            "⚠️ Important : après « att », tu as une phrase normale avec sujet + verbe.",
+            "",
+            "",
+            "👉 2) « enligt mig » : selon moi (nuance)",
+            "",
+            "« enligt mig » permet d’adoucir ton opinion. C’est très utile dans une conversation polie.",
+            "",
+            "Tu peux l’utiliser :",
+            "• au début de la phrase",
+            "• ou au milieu",
+            "",
+            "Exemples :",
+            "Enligt mig är det svårt.",
+            "Det är, enligt mig, en bra idé.",
+            "",
+            "Cela montre que tu parles de ton point de vue, pas d’une vérité absolue.",
+            "",
+            "",
+            "👉 3) Poser des questions d’opinion",
+            "",
+            "Pour demander l’avis de quelqu’un, on utilise :",
+            "Vad tycker du om ...?",
+            "",
+            "Exemples :",
+            "Vad tycker du om jobbet?",
+            "Vad tycker du om Sverige?",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on dit souvent « je pense que » ou « je trouve que ».",
+            "En suédois, « jag tycker att » couvre ces deux idées et est extrêmement fréquent à l’oral.",
+            "",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- oublier « att »",
+            "- dire seulement « jag tycker » sans phrase après",
+            "- confondre opinion et fait",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "jag tycker att = opinion claire",
+            "enligt mig = opinion personnelle / nuance",
+            "Vad tycker du om ...? = demander un avis"
+          ],
+          "vocab": [
+            {
+              "sv": "tycker",
+              "fr": "pense / trouve",
+              "pron": "tük-kèr"
+            },
+            {
+              "sv": "enligt mig",
+              "fr": "selon moi",
+              "pron": "èn-ligt mèy"
+            },
+            {
+              "sv": "intressant",
+              "fr": "intéressant",
+              "pron": "in-té-res-sant"
+            },
+            {
+              "sv": "tråkig",
+              "fr": "ennuyeux",
+              "pron": "tro-kig"
+            },
+            {
+              "sv": "lärorik",
+              "fr": "instructif",
+              "pron": "lè-ro-rik"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag tycker att jobbet är intressant.",
+              "fr": "Je trouve que le travail est intéressant.",
+              "pron": "ya tük-kèr att yob-bet èr in-té-res-sant"
+            },
+            {
+              "sv": "Enligt mig är filmen tråkig.",
+              "fr": "Selon moi, le film est ennuyeux.",
+              "pron": "èn-ligt mèy èr fil-mèn tro-kig"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Donne ton opinion avec jag tycker att.",
+              "items": [
+                "jobbet",
+                "filmen",
+                "Sverige"
+              ]
+            },
+            {
+              "instruction": "Nuance avec enligt mig.",
+              "items": [
+                "Det är svårt.",
+                "Det är bra."
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Jag tycker ___ det är bra.",
+              "answer": "att"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est la plus naturelle ?",
+              "choices": [
+                "Jag tycker jobbet är bra.",
+                "Jag tycker att jobbet är bra."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_03_02",
+          "title": "Exprimer ses préférences - gilla / föredra / hellre",
+          "content": [
+            "🎯 Objectif : exprimer ce que tu aimes, ce que tu préfères et faire un choix entre deux options (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire ce que tu aimes avec gilla",
+            "• exprimer une préférence claire avec föredra",
+            "• comparer deux options avec hellre",
+            "• comprendre la nuance entre goût, préférence et choix",
+            "",
+            "==============================",
+            "SITUATION - Choisir et comparer",
+            "",
+            "Dialogue :",
+            "A: Gillar du kaffe?",
+            "(yil-lar dou kafé ?)",
+            "B: Ja, jag gillar kaffe.",
+            "(ya yil-lar kafé)",
+            "A: Te eller kaffe?",
+            "(té èl-lèr kafé ?)",
+            "B: Jag föredrar kaffe.",
+            "(ya feu-ré-drar kafé)",
+            "A: Vill du ha kaffe nu?",
+            "(vil dou ha kafé nou ?)",
+            "B: Nej, jag dricker hellre te.",
+            "(nèï, ya drik-kèr hèl-rè té)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "gilla = aimer (goût général)",
+            "föredra = préférer (choix réfléchi)",
+            "hellre = plutôt (choix comparatif)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi cette leçon est essentielle en A2",
+            "",
+            "En A1, tu dis surtout ce que tu fais ou ce que tu es. En A2, tu dois pouvoir exprimer tes goûts, tes préférences et faire des choix. Cela rend la conversation beaucoup plus naturelle et personnelle.",
+            "",
+            "Le suédois utilise trois outils différents là où le français dit souvent simplement « aimer » ou « préférer ». Comprendre la nuance entre ces mots est très important pour bien s’exprimer.",
+            "",
+            "",
+            "👉 1) « gilla » : aimer (goût général)",
+            "",
+            "« gilla » sert à exprimer ce que tu aimes en général : nourriture, activités, choses, personnes.",
+            "",
+            "Structure simple :",
+            "sujet + gillar + chose",
+            "",
+            "Exemples :",
+            "Jag gillar kaffe.",
+            "Jag gillar musik.",
+            "Jag gillar att resa.",
+            "",
+            "👉 Utilisation typique :",
+            "• parler de goûts en général",
+            "• répondre à une question simple",
+            "• démarrer une conversation",
+            "",
+            "⚠️ Point important :",
+            "Après « gillar », tu peux mettre :",
+            "• un nom (kaffe)",
+            "• ou « att + infinitif » (att resa)",
+            "",
+            "",
+            "👉 2) « föredra » : préférer (choix réfléchi)",
+            "",
+            "« föredra » est plus fort que « gilla ». Il exprime une préférence consciente entre plusieurs options.",
+            "",
+            "Structure :",
+            "sujet + föredrar + option",
+            "",
+            "Exemples :",
+            "Jag föredrar kaffe.",
+            "Jag föredrar att arbeta hemma.",
+            "",
+            "On l’utilise souvent quand une alternative existe clairement, même si elle n’est pas toujours exprimée.",
+            "",
+            "Comparer :",
+            "Jag gillar kaffe. (j’aime le café)",
+            "Jag föredrar kaffe. (je préfère le café à autre chose)",
+            "",
+            "",
+            "👉 3) « hellre » : plutôt (choix comparatif)",
+            "",
+            "« hellre » est utilisé quand tu compares explicitement deux possibilités. Il est très courant à l’oral.",
+            "",
+            "Structure typique :",
+            "jag + verbe + hellre + option A (än option B)",
+            "",
+            "Exemples :",
+            "Jag dricker hellre te (än kaffe).",
+            "Jag stannar hellre hemma (än går ut).",
+            "",
+            "Souvent, la deuxième option est sous-entendue et n’a pas besoin d’être dite.",
+            "",
+            "",
+            "👉 Comment choisir entre gilla / föredra / hellre ?",
+            "",
+            "Pose-toi cette question :",
+            "",
+            "• Est-ce un goût général ? → gilla",
+            "• Est-ce une préférence claire ? → föredra",
+            "• Est-ce un choix entre deux options ? → hellre",
+            "",
+            "",
+            "👉 Différence avec le français",
+            "",
+            "En français, on utilise beaucoup « aimer » et « préférer ».",
+            "En suédois, on distingue plus clairement :",
+            "• le goût (gilla)",
+            "• la préférence (föredra)",
+            "• le choix immédiat (hellre)",
+            "",
+            "👉 Erreurs fréquentes",
+            "",
+            "- utiliser hellre sans comparaison implicite",
+            "- utiliser föredra pour un simple goût",
+            "- oublier l’infinitif après att",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "gilla = aimer en général",
+            "föredra = préférer",
+            "hellre = plutôt (choix)"
+          ],
+          "vocab": [
+            {
+              "sv": "gillar",
+              "fr": "aime",
+              "pron": "yil-lar"
+            },
+            {
+              "sv": "föredrar",
+              "fr": "préfère",
+              "pron": "feu-ré-drar"
+            },
+            {
+              "sv": "hellre",
+              "fr": "plutôt",
+              "pron": "hèl-rè"
+            },
+            {
+              "sv": "än",
+              "fr": "que (comparaison)",
+              "pron": "èn"
+            },
+            {
+              "sv": "stanna",
+              "fr": "rester",
+              "pron": "stan-na"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jag gillar kaffe.",
+              "fr": "J’aime le café.",
+              "pron": "ya yil-lar kafé"
+            },
+            {
+              "sv": "Jag föredrar att arbeta hemma.",
+              "fr": "Je préfère travailler à la maison.",
+              "pron": "ya feu-ré-drar att ar-bè-ta hém-ma"
+            },
+            {
+              "sv": "Jag stannar hellre hemma.",
+              "fr": "Je préfère rester à la maison.",
+              "pron": "ya stan-nar hèl-rè hém-ma"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Exprime un goût général avec gilla.",
+              "items": [
+                "kaffe",
+                "musik",
+                "att resa"
+              ]
+            },
+            {
+              "instruction": "Exprime une préférence avec föredra.",
+              "items": [
+                "att arbeta hemma",
+                "te"
+              ]
+            },
+            {
+              "instruction": "Fais un choix avec hellre.",
+              "items": [
+                "stanna hemma / gå ut",
+                "te / kaffe"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle phrase exprime un choix entre deux options ?",
+              "choices": [
+                "Jag gillar kaffe.",
+                "Jag föredrar kaffe.",
+                "Jag dricker hellre te."
+              ],
+              "answerIndex": 2
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ kaffe. (aimer en général)",
+              "answer": "gillar"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Jag ___ att arbeta hemma. (préférer)",
+              "answer": "föredrar"
+            }
+          ]
+        },
+        {
+          "id": "a2_core_03_03",
+          "title": "Comparer simplement - mer än / mindre än / lika ... som",
+          "content": [
+            "🎯 Objectif : comparer deux personnes, choses ou situations de manière claire et naturelle (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire que quelque chose est plus que / moins que",
+            "• dire que deux choses sont égales",
+            "• formuler des comparaisons simples dans la vie quotidienne",
+            "",
+            "==============================",
+            "SITUATION - Comparer",
+            "",
+            "Dialogue :",
+            "A: Är Stockholm större än Paris?",
+            "(èr stok-holm steur-rè èn pa-riss ?)",
+            "B: Ja, Stockholm är större än Paris.",
+            "(ya, stok-holm èr steur-rè èn pa-riss)",
+            "A: Är jobbet svårare nu?",
+            "(èr yob-bet svoir-rè nou ?)",
+            "B: Ja, men det är också mer intressant.",
+            "(ya, mèn dèt èr ok-so mér in-té-res-sant)",
+            "A: Är kaffe lika gott som te?",
+            "(èr kafé li-ka gott som té ?)",
+            "B: Nej, kaffe är bättre.",
+            "(nèï, kafé èr bèt-trè)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "mer än = plus que",
+            "mindre än = moins que",
+            "lika ... som = aussi ... que",
+            "än = que (comparaison)",
+            "som = que (égalité)",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi les comparaisons sont essentielles en A2",
+            "",
+            "À partir du niveau A2, tu ne décris plus seulement des choses. Tu les compares. Tu dis qu’une chose est meilleure, plus grande, plus intéressante qu’une autre. C’est indispensable pour donner ton avis et nuancer ton discours.",
+            "",
+            "Le suédois utilise une structure très logique et régulière pour les comparaisons. Bonne nouvelle : elle est plus simple qu’en français.",
+            "",
+            "",
+            "👉 1) « mer än » : plus que",
+            "",
+            "« mer » signifie plus. On l’utilise avec des adjectifs ou des adverbes.",
+            "",
+            "Structure :",
+            "adjectif + mer + än",
+            "",
+            "Exemples :",
+            "Det är mer intressant än jag trodde.",
+            "Jobbet är mer stressigt nu.",
+            "",
+            "⚠️ Attention : « än » est obligatoire pour comparer deux éléments.",
+            "",
+            "",
+            "👉 2) « mindre än » : moins que",
+            "",
+            "« mindre » est l’opposé de « mer ».",
+            "",
+            "Structure identique :",
+            "adjectif + mindre + än",
+            "",
+            "Exemples :",
+            "Det är mindre svårt nu.",
+            "Stockholm är mindre än Paris.",
+            "",
+            "",
+            "👉 3) « lika ... som » : aussi ... que",
+            "",
+            "Pour dire que deux choses sont égales, le suédois utilise une structure en deux parties :",
+            "",
+            "lika + adjectif + som",
+            "",
+            "Exemples :",
+            "Kaffe är lika gott som te.",
+            "Jobbet är lika svårt som innan.",
+            "",
+            "Cette structure est très stable : ne change ni l’ordre, ni les mots.",
+            "",
+            "",
+            "👉 Comparaison avec le français",
+            "",
+            "Français : plus que / moins que / aussi ... que",
+            "Suédois : mer än / mindre än / lika ... som",
+            "",
+            "Le suédois est très régulier :",
+            "• än = comparaison",
+            "• som = égalité",
+            "",
+            "",
+            "👉 Adjectifs irréguliers fréquents",
+            "",
+            "Certains adjectifs ont une forme comparative spéciale :",
+            "",
+            "bra → bättre (meilleur)",
+            "dålig → sämre (pire)",
+            "stor → större (plus grand)",
+            "liten → mindre (plus petit)",
+            "",
+            "Exemples :",
+            "Det är bättre nu.",
+            "Stockholm är större än Göteborg.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier än / som",
+            "- mélanger mer et bättre",
+            "- utiliser la structure française",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "mer än = plus que",
+            "mindre än = moins que",
+            "lika ... som = aussi ... que",
+            "bra → bättre / dålig → sämre"
+          ],
+          "vocab": [
+            {
+              "sv": "mer",
+              "fr": "plus",
+              "pron": "mér"
+            },
+            {
+              "sv": "mindre",
+              "fr": "moins",
+              "pron": "min-drè"
+            },
+            {
+              "sv": "lika",
+              "fr": "aussi / égal",
+              "pron": "li-ka"
+            },
+            {
+              "sv": "än",
+              "fr": "que (comparaison)",
+              "pron": "èn"
+            },
+            {
+              "sv": "som",
+              "fr": "que (égalité)",
+              "pron": "som"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Jobbet är mer intressant nu.",
+              "fr": "Le travail est plus intéressant maintenant.",
+              "pron": "yob-bet èr mér in-té-res-sant nou"
+            },
+            {
+              "sv": "Stockholm är större än Paris.",
+              "fr": "Stockholm est plus grande que Paris.",
+              "pron": "stok-holm èr steur-rè èn pa-riss"
+            },
+            {
+              "sv": "Kaffe är lika gott som te.",
+              "fr": "Le café est aussi bon que le thé.",
+              "pron": "kafé èr li-ka gott som té"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Compare avec mer än.",
+              "items": [
+                "intressant",
+                "svårt",
+                "dyrt"
+              ]
+            },
+            {
+              "instruction": "Compare avec mindre än.",
+              "items": [
+                "stressigt",
+                "svårt"
+              ]
+            },
+            {
+              "instruction": "Compare avec lika ... som.",
+              "items": [
+                "gott",
+                "bra"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "gap",
+              "q": "Complète : Det är ___ intressant nu. (plus)",
+              "answer": "mer"
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Stockholm är större ___ Paris.",
+              "answer": "än"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase exprime une égalité ?",
+              "choices": [
+                "Jobbet är bättre nu.",
+                "Jobbet är lika svårt som innan."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        },
+        {
+          "id": "a2_core_03_04",
+          "title": "Exprimer le superlatif - bäst / sämst / störst / minst",
+          "content": [
+            "🎯 Objectif : exprimer le maximum, le minimum et faire un classement simple (A2).",
+            "",
+            "À la fin de cette leçon tu sais :",
+            "• dire que quelque chose est le meilleur / le pire / le plus grand",
+            "• utiliser correctement les formes irrégulières",
+            "• donner ton avis de manière plus nuancée et naturelle",
+            "",
+            "==============================",
+            "SITUATION - Donner un avis fort",
+            "",
+            "Dialogue :",
+            "A: Vad är den bästa filmen du har sett?",
+            "(vad èr dèn bès-ta fil-mèn dou har sèt ?)",
+            "B: Enligt mig är det den bästa filmen i år.",
+            "(èn-ligt mèy èr dèt dèn bès-ta fil-mèn i or)",
+            "A: Och jobbet?",
+            "(ok yob-bet ?)",
+            "B: Det svåraste är stressen, men lönen är bäst.",
+            "(dèt svoir-as-tè èr strèss-èn, mèn lö-nèn èr bès-t)",
+            "",
+            "==============================",
+            "DÉCOMPOSITION",
+            "",
+            "bäst = le meilleur",
+            "sämst = le pire",
+            "störst = le plus grand",
+            "minst = le plus petit / le moins",
+            "",
+            "==============================",
+            "🧑‍🏫 EXPLICATION DU PROF",
+            "",
+            "👉 Pourquoi les superlatifs sont importants en A2",
+            "",
+            "Après avoir appris à comparer deux choses (plus que / moins que), l’étape suivante est de parler d’un extrême : le maximum ou le minimum.",
+            "",
+            "Les superlatifs te permettent de :",
+            "• donner un avis fort",
+            "• classer des choses",
+            "• exprimer des préférences claires",
+            "",
+            "C’est très fréquent dans les conversations réelles : films, travail, villes, expériences.",
+            "",
+            "",
+            "👉 1) Les superlatifs irréguliers essentiels",
+            "",
+            "Certains adjectifs très fréquents ont une forme spéciale au superlatif. Il faut les mémoriser comme des blocs.",
+            "",
+            "bra → bättre → bäst",
+            "dålig → sämre → sämst",
+            "stor → större → störst",
+            "liten → mindre → minst",
+            "",
+            "Exemples :",
+            "Det är den bästa filmen.",
+            "Det är den sämsta dagen.",
+            "Stockholm är den största staden.",
+            "",
+            "",
+            "👉 2) Structure du superlatif",
+            "",
+            "Structure typique :",
+            "den / det / de + superlatif + nom",
+            "",
+            "Exemples :",
+            "den bästa filmen",
+            "det största problemet",
+            "de bästa idéerna",
+            "",
+            "⚠️ Important :",
+            "Le superlatif est souvent précédé d’un article défini (den / det / de).",
+            "",
+            "",
+            "👉 3) Superlatif sans nom",
+            "",
+            "Quand le nom est évident ou déjà mentionné, tu peux utiliser le superlatif seul.",
+            "",
+            "Exemples :",
+            "Det är bäst.",
+            "Det är sämst.",
+            "",
+            "Très courant à l’oral pour donner un avis rapide.",
+            "",
+            "",
+            "👉 Comparaison avec le français",
+            "",
+            "Français : le meilleur / le pire / le plus grand",
+            "Suédois : bäst / sämst / störst",
+            "",
+            "Le suédois est souvent plus direct et plus court.",
+            "",
+            "",
+            "👉 Erreurs fréquentes des francophones",
+            "",
+            "- oublier l’article (den / det)",
+            "- confondre comparatif et superlatif",
+            "- traduire mot à mot depuis le français",
+            "",
+            "",
+            "👉 À retenir absolument",
+            "",
+            "bäst = le meilleur",
+            "sämst = le pire",
+            "störst = le plus grand",
+            "minst = le plus petit / le moins"
+          ],
+          "vocab": [
+            {
+              "sv": "bäst",
+              "fr": "le meilleur",
+              "pron": "bès-t"
+            },
+            {
+              "sv": "sämst",
+              "fr": "le pire",
+              "pron": "sèmst"
+            },
+            {
+              "sv": "störst",
+              "fr": "le plus grand",
+              "pron": "steur-sht"
+            },
+            {
+              "sv": "minst",
+              "fr": "le plus petit / le moins",
+              "pron": "minst"
+            },
+            {
+              "sv": "problem",
+              "fr": "problème",
+              "pron": "pro-blèm"
+            }
+          ],
+          "examples": [
+            {
+              "sv": "Det är den bästa filmen.",
+              "fr": "C’est le meilleur film.",
+              "pron": "dèt èr dèn bès-ta fil-mèn"
+            },
+            {
+              "sv": "Stockholm är den största staden.",
+              "fr": "Stockholm est la plus grande ville.",
+              "pron": "stok-holm èr dèn steur-shta sta-dèn"
+            },
+            {
+              "sv": "Det är sämst.",
+              "fr": "C’est le pire.",
+              "pron": "dèt èr sèmst"
+            }
+          ],
+          "mini_drills": [
+            {
+              "instruction": "Transforme en superlatif.",
+              "items": [
+                "bra →",
+                "dålig →",
+                "stor →",
+                "liten →"
+              ]
+            },
+            {
+              "instruction": "Donne ton avis avec un superlatif.",
+              "items": [
+                "film",
+                "stad",
+                "jobb"
+              ]
+            }
+          ],
+          "quiz": [
+            {
+              "type": "mcq",
+              "q": "Quelle forme est un superlatif ?",
+              "choices": [
+                "bättre",
+                "bäst"
+              ],
+              "answerIndex": 1
+            },
+            {
+              "type": "gap",
+              "q": "Complète : Det är den ___ filmen. (meilleur)",
+              "answer": "bästa"
+            },
+            {
+              "type": "mcq",
+              "q": "Quelle phrase est correcte ?",
+              "choices": [
+                "Det är bästa filmen.",
+                "Det är den bästa filmen."
+              ],
+              "answerIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+     {
+      "id": "a2_core_04",
+      "title": "4) Habitudes",
+      "lessons": [
+    {
+      "id": "a2_core_04_01",
+      "title": "Parler de ses habitudes - brukar + présent",
+      "content": [
+        "🎯 Objectif : parler de ce que tu fais habituellement, de tes routines et de tes habitudes (A2).",
+        "",
+        "À la fin de cette leçon tu sais :",
+        "• utiliser brukar pour parler d’habitudes",
+        "• distinguer une action ponctuelle d’une action habituelle",
+        "• décrire ta routine quotidienne de manière naturelle",
+        "",
+        "==============================",
+        "SITUATION - Parler de sa routine",
+        "",
+        "Dialogue :",
+        "A: Vad gör du på vardagar?",
+        "(vad you-ré dou po var-da-gar ?)",
+        "B: Jag brukar jobba på dagen.",
+        "(ya brou-kar yob-ba po da-gen)",
+        "A: Och på kvällen?",
+        "(ok po kvèl-len ?)",
+        "B: Då brukar jag träna eller vila hemma.",
+        "(do brou-kar ya trè-na èl-lèr vi-la hém-ma)",
+        "",
+        "==============================",
+        "DÉCOMPOSITION",
+        "",
+        "brukar = avoir l’habitude de",
+        "vardagar = jours de semaine",
+        "på dagen = la journée",
+        "på kvällen = le soir",
+        "",
+        "==============================",
+        "🧑‍🏫 EXPLICATION DU PROF",
+        "",
+        "👉 Pourquoi « brukar » est fondamental en A2",
+        "",
+        "À partir du niveau A2, on ne parle plus seulement de ce que l’on fait maintenant ou ponctuellement. On parle très souvent de ce que l’on fait en général : routines, habitudes, comportements réguliers.",
+        "",
+        "En suédois, le mot-clé pour exprimer cette idée est « brukar ».",
+        "",
+        "",
+        "👉 1) « brukar » : exprimer une habitude",
+        "",
+        "« brukar » signifie littéralement « avoir l’habitude de ». Il sert à indiquer qu’une action se répète régulièrement.",
+        "",
+        "Structure :",
+        "sujet + brukar + infinitif",
+        "",
+        "Exemples :",
+        "Jag brukar jobba på vardagar.",
+        "Jag brukar dricka kaffe på morgonen.",
+        "Vi brukar träna tillsammans.",
+        "",
+        "⚠️ Important :",
+        "Après « brukar », le verbe est toujours à l’infinitif.",
+        "",
+        "",
+        "👉 2) Différence entre présent simple et « brukar »",
+        "",
+        "Comparer :",
+        "",
+        "Jag jobbar idag.",
+        "→ action ponctuelle (aujourd’hui)",
+        "",
+        "Jag brukar jobba på vardagar.",
+        "→ habitude générale",
+        "",
+        "En français, on utilise souvent le présent pour les deux. En suédois A2, « brukar » rend le discours beaucoup plus clair.",
+        "",
+        "",
+        "👉 3) Les marqueurs de fréquence",
+        "",
+        "« brukar » est souvent accompagné de mots qui indiquent la fréquence :",
+        "",
+        "ofta = souvent",
+        "ibland = parfois",
+        "alltid = toujours",
+        "aldrig = jamais",
+        "",
+        "Exemples :",
+        "Jag brukar ofta träna.",
+        "Jag brukar ibland vila hemma.",
+        "",
+        "",
+        "👉 4) Poser des questions sur les habitudes",
+        "",
+        "Pour demander une habitude, on peut dire :",
+        "",
+        "Vad brukar du göra ...?",
+        "",
+        "Exemples :",
+        "Vad brukar du göra på helgen?",
+        "Vad brukar du äta till lunch?",
+        "",
+        "",
+        "👉 Différence avec le français",
+        "",
+        "Le français dit : « d’habitude, je… »",
+        "Le suédois préfère : « jag brukar + verbe »",
+        "",
+        "Utiliser « brukar » est un marqueur très fort de niveau A2.",
+        "",
+        "",
+        "👉 Erreurs fréquentes",
+        "",
+        "- oublier l’infinitif après brukar",
+        "- utiliser brukar pour une action unique",
+        "- oublier les mots de fréquence",
+        "",
+        "",
+        "👉 À retenir absolument",
+        "",
+        "brukar = habitude",
+        "brukar + infinitif",
+        "présent simple = action ponctuelle"
+      ],
+      "vocab": [
+        {
+          "sv": "brukar",
+          "fr": "a l’habitude de",
+          "pron": "brou-kar"
+        },
+        {
+          "sv": "vardagar",
+          "fr": "jours de semaine",
+          "pron": "var-da-gar"
+        },
+        {
+          "sv": "ofta",
+          "fr": "souvent",
+          "pron": "of-ta"
+        },
+        {
+          "sv": "ibland",
+          "fr": "parfois",
+          "pron": "i-bland"
+        },
+        {
+          "sv": "aldrig",
+          "fr": "jamais",
+          "pron": "al-drig"
+        }
+      ],
+      "examples": [
+        {
+          "sv": "Jag brukar jobba på vardagar.",
+          "fr": "J’ai l’habitude de travailler en semaine.",
+          "pron": "ya brou-kar yob-ba po var-da-gar"
+        },
+        {
+          "sv": "Jag brukar ofta träna.",
+          "fr": "J’ai souvent l’habitude de m’entraîner.",
+          "pron": "ya brou-kar of-ta trè-na"
+        }
+      ],
+      "mini_drills": [
+        {
+          "instruction": "Parle de tes habitudes avec brukar.",
+          "items": [
+            "på morgonen",
+            "på kvällen",
+            "på helgen"
+          ]
+        },
+        {
+          "instruction": "Transforme en habitude.",
+          "items": [
+            "Jag jobbar.",
+            "Jag dricker kaffe.",
+            "Jag tränar."
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "type": "gap",
+          "q": "Complète : Jag ___ jobba på vardagar. (habitude)",
+          "answer": "brukar"
+        },
+        {
+          "type": "mcq",
+          "q": "Quelle phrase parle d’une habitude ?",
+          "choices": [
+            "Jag jobbar idag.",
+            "Jag brukar jobba på vardagar."
+          ],
+          "answerIndex": 1
+        }
+      ]
+    },
+{
+  "id": "a2_core_04_02",
+  "title": "Santé et état physique - må / ont i / trött / stressad",
+  "content": [
+    "🎯 Objectif : parler de ton état physique et mental, dire si tu vas bien ou mal, et expliquer ce que tu ressens (A2).",
+    "",
+    "À la fin de cette leçon tu sais :",
+    "• dire comment tu vas avec må",
+    "• dire où tu as mal avec ont i",
+    "• décrire la fatigue, le stress et l’énergie",
+    "• poser des questions simples sur la santé",
+    "",
+    "==============================",
+    "SITUATION - Parler de sa santé",
+    "",
+    "Dialogue :",
+    "A: Hur mår du?",
+    "(hour mor dou ?)",
+    "B: Jag mår ganska bra, men jag är lite trött.",
+    "(ya mor gas-ka bra, mèn ya èr li-te treutt)",
+    "A: Har du ont någonstans?",
+    "(har dou ont no-gon-stans ?)",
+    "B: Ja, jag har ont i ryggen.",
+    "(ya, ya har ont i rüg-gèn)",
+    "A: Oj. Är du stressad?",
+    "(oj. èr dou strèss-ad ?)",
+    "B: Ja, jag jobbar mycket just nu.",
+    "(ya, ya yob-bar mü-kèt youst nou)",
+    "",
+    "==============================",
+    "DÉCOMPOSITION",
+    "",
+    "hur mår du? = comment vas-tu ?",
+    "må = aller (état physique / mental)",
+    "ont i = avoir mal à",
+    "trött = fatigué",
+    "stressad = stressé",
+    "",
+    "==============================",
+    "🧑‍🏫 EXPLICATION DU PROF",
+    "",
+    "👉 Pourquoi cette leçon est essentielle en A2",
+    "",
+    "Parler de sa santé et de son état physique est une compétence indispensable dans la vie quotidienne : au travail, chez le médecin, avec des amis.",
+    "",
+    "En suédois, on n’utilise pas les mêmes structures qu’en français. Cette leçon te donne les bases pour t’exprimer naturellement, sans traduire mot à mot.",
+    "",
+    "",
+    "👉 1) « må » : dire comment tu vas",
+    "",
+    "Le verbe « må » signifie « aller » au sens de l’état physique ou mental. Il s’utilise presque toujours avec des adverbes.",
+    "",
+    "Structure :",
+    "sujet + mår + adverbe",
+    "",
+    "Exemples :",
+    "Jag mår bra.",
+    "Jag mår dåligt.",
+    "Jag mår ganska bra.",
+    "",
+    "⚠️ Important :",
+    "On ne dit pas *Jag är bra* pour dire « je vais bien ». On utilise toujours « må ».",
+    "",
+    "",
+    "👉 2) « ont i » : dire où tu as mal",
+    "",
+    "Pour parler d’une douleur précise, le suédois utilise la structure « ha ont i + partie du corps ».",
+    "",
+    "Structure :",
+    "jag har ont i + nom défini",
+    "",
+    "Exemples :",
+    "Jag har ont i huvudet. (mal à la tête)",
+    "Jag har ont i magen. (mal au ventre)",
+    "Jag har ont i ryggen. (mal au dos)",
+    "",
+    "Remarque importante :",
+    "Les parties du corps sont presque toujours à la forme définie.",
+    "",
+    "",
+    "👉 3) Adjectifs fréquents pour l’état physique et mental",
+    "",
+    "trött = fatigué",
+    "stressad = stressé",
+    "sjuk = malade",
+    "pigg = en forme",
+    "",
+    "Exemples :",
+    "Jag är trött.",
+    "Jag är stressad just nu.",
+    "Jag känner mig pigg idag.",
+    "",
+    "",
+    "👉 4) Poser des questions sur la santé",
+    "",
+    "Questions très fréquentes :",
+    "",
+    "Hur mår du?",
+    "Har du ont?",
+    "Har du ont någonstans?",
+    "",
+    "Ces questions sont simples, polies et très naturelles à l’oral.",
+    "",
+    "",
+    "👉 Différence avec le français",
+    "",
+    "Français : « J’ai mal à la tête » / « Je vais bien »",
+    "Suédois : « Jag har ont i huvudet » / « Jag mår bra »",
+    "",
+    "Éviter la traduction mot à mot est crucial ici.",
+    "",
+    "",
+    "👉 Erreurs fréquentes",
+    "",
+    "- dire *Jag är bra* pour l’état général",
+    "- oublier « i » après ont",
+    "- utiliser la forme indéfinie pour le corps",
+    "",
+    "",
+    "👉 À retenir absolument",
+    "",
+    "Hur mår du? → Jag mår bra / dåligt",
+    "ont i + forme définie",
+    "trött / stressad pour l’état"
+  ],
+  "vocab": [
+    { "sv": "mår", "fr": "vais (aller)", "pron": "mor" },
+    { "sv": "ont", "fr": "mal", "pron": "ont" },
+    { "sv": "huvudet", "fr": "la tête", "pron": "hu-vu-dèt" },
+    { "sv": "magen", "fr": "le ventre", "pron": "ma-gèn" },
+    { "sv": "ryggen", "fr": "le dos", "pron": "rüg-gèn" },
+    { "sv": "stressad", "fr": "stressé", "pron": "strèss-ad" }
+  ],
+  "examples": [
+    {
+      "sv": "Jag mår ganska bra.",
+      "fr": "Je vais plutôt bien.",
+      "pron": "ya mor gas-ka bra"
+    },
+    {
+      "sv": "Jag har ont i huvudet.",
+      "fr": "J’ai mal à la tête.",
+      "pron": "ya har ont i hu-vu-dèt"
+    },
+    {
+      "sv": "Jag är trött och stressad.",
+      "fr": "Je suis fatigué et stressé.",
+      "pron": "ya èr treutt ok strèss-ad"
+    }
+  ],
+  "mini_drills": [
+    {
+      "instruction": "Dis comment tu vas avec må.",
+      "items": [
+        "bra",
+        "ganska bra",
+        "dåligt"
+      ]
+    },
+    {
+      "instruction": "Dis où tu as mal.",
+      "items": [
+        "huvudet",
+        "magen",
+        "ryggen"
+      ]
+    },
+    {
+      "instruction": "Réponds à la question.",
+      "items": [
+        "Hur mår du?",
+        "Har du ont någonstans?"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "type": "gap",
+      "q": "Complète : Jag ___ bra. (aller)",
+      "answer": "mår"
+    },
+    {
+      "type": "gap",
+      "q": "Complète : Jag har ont ___ huvudet.",
+      "answer": "i"
+    },
+    {
+      "type": "mcq",
+      "q": "Quelle phrase est correcte ?",
+      "choices": [
+        "Jag är bra.",
+        "Jag mår bra."
+      ],
+      "answerIndex": 1
+    }
+  ]
+}
+  ]
+}
+     ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr" class="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Svenska Mästare — Apprentissage progressif du suédois A1→B2" />
+  <meta name="theme-color" content="#0EA5E9" />
+  <title>Svenska Mästare</title>
+
+  <!-- Fonts + Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+  <!-- App CSS (no Tailwind) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Mobile overlay -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Navigation principale">
+      <div class="sidebar-head" id="nav-home" role="button" tabindex="0" aria-label="Retour à l’accueil">
+        <div class="brand-mark" aria-hidden="true">🇸🇪</div>
+        <div class="brand-text">
+          <div class="brand-title">Svenska</div>
+          <div class="brand-sub">Mästare</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Sections">
+        <a href="#/" class="nav-item is-active" id="nav-home-link" aria-current="page">
+          <span class="material-icons-outlined" aria-hidden="true">home</span>
+          <span>Accueil</span>
+        </a>
+
+        <a href="#/ref" class="nav-item" id="nav-ref">
+          <span class="material-icons-outlined" aria-hidden="true">book</span>
+          <span>Référence</span>
+        </a>
+
+        <a href="#/review" class="nav-item" id="nav-review">
+          <span class="material-icons-outlined" aria-hidden="true">psychology</span>
+          <span>Révision</span>
+        </a>
+
+        <a href="#/stats" class="nav-item" id="nav-stats">
+          <span class="material-icons-outlined" aria-hidden="true">insights</span>
+          <span>Stats</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="sidebar-btn" id="themeToggle" type="button" aria-label="Basculer le mode sombre">
+          <span class="material-icons-outlined" aria-hidden="true">dark_mode</span>
+          <span>Mode sombre</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main" id="main" tabindex="-1">
+      <!-- Mobile topbar -->
+      <header class="mobile-topbar" role="banner">
+        <div class="mobile-brand" id="nav-home-btn" role="button" tabindex="0" aria-label="Retour à l’accueil">
+          <span class="flag" aria-hidden="true">🇸🇪</span>
+          <span class="name">Svenska Mästare</span>
+        </div>
+
+        <div class="mobile-actions" aria-label="Actions rapides">
+          <button class="icon-btn" id="themeToggleMobile" type="button" aria-label="Basculer le mode sombre">
+            <span class="material-icons-outlined" aria-hidden="true">dark_mode</span>
+          </button>
+          <button class="icon-btn" id="menuBtn" type="button" aria-label="Ouvrir le menu">
+            <span class="material-icons-outlined" aria-hidden="true">menu</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="container">
+        <!-- App mount -->
+        <div id="app" role="region" aria-label="Contenu">
+          <!-- Loading state (styled via CSS, no inline styles) -->
+          <div class="card is-loading" role="status" aria-live="polite">
+            <div class="loading-emoji" aria-hidden="true">⏳</div>
+            <h2 class="loading-title">Chargement…</h2>
+            <p class="muted">Préparation des leçons en cours</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer" role="contentinfo">
+        <span class="muted">Svenska Mästare — Apprentissage progressif A1 → B2 • Offline-ready</span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts (keep your existing order) -->
+  <script src="assets/js/router.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/srs.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
