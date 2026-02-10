@@ -22,6 +22,7 @@ const App = {
     console.log("[App] Démarrage...");
 
     this.mount = document.getElementById("app");
+    this.applyTheme();
     if (!this.mount) {
       console.error("[App] Element #app introuvable");
       return;
@@ -317,65 +318,190 @@ this.viewStats = () => { setActiveNav("stats"); _stats(); };
     });
   },
 
+// --- THEME (simple + persistant) ---
+applyTheme() {
+  const saved = localStorage.getItem("sm_theme");
+  if (saved === "dark") document.documentElement.classList.add("dark");
+  else document.documentElement.classList.remove("dark");
+},
+toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+  localStorage.setItem("sm_theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+},
+
   // ===== LESSON =====
-  viewLesson(params) {
-    const levelKey = params?.level;
-    const lessonId = params?.lesson;
+  // ===== LESSON (Premium UI shell) =====
+viewLesson(params) {
+  const levelKey = params?.level;
+  const lessonId = params?.lesson;
 
-    const L = this.levels[levelKey];
-    if (!L) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`); return; }
+  const L = this.levels[levelKey];
+  if (!L) {
+    this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Niveau introuvable.</p></div>`);
+    return;
+  }
 
-    let lesson = null;
-    let moduleTitle = "";
-    for (const m of (L.modules || [])) {
-      const found = (m.lessons || []).find(ls => String(ls.id) === String(lessonId));
-      if (found) { lesson = found; moduleTitle = m.title || ""; break; }
+  let lesson = null;
+  let moduleTitle = "";
+  let moduleLessons = [];
+  for (const m of (L.modules || [])) {
+    const found = (m.lessons || []).find(ls => String(ls.id) === String(lessonId));
+    if (found) {
+      lesson = found;
+      moduleTitle = m.title || "";
+      moduleLessons = (m.lessons || []);
+      break;
     }
-    if (!lesson) { this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`); return; }
+  }
+  if (!lesson) {
+    this.setView(`<div class="card error"><h2>Erreur</h2><p class="muted">Leçon introuvable.</p></div>`);
+    return;
+  }
 
-    const key = `${levelKey}:${lesson.id}`;
+  const key = `${levelKey}:${lesson.id}`;
 
-    this.setView(`
-      <div class="stack">
-        <div class="card">
-          <div class="row between">
-            <div>
-              <h1>${this.esc(lesson.title || "")}</h1>
-              <p class="muted">${this.esc(levelKey)} • ${this.esc(moduleTitle)} • ${this.esc(lesson.type || "")}</p>
-            </div>
-            <div class="row">
-              <button class="btn" id="backBtn">← Retour</button>
-              <button class="btn ghost" id="homeBtn">Accueil</button>
-              <button class="btn primary" id="doneBtn">Marquer terminé</button>
-            </div>
+  // Progress (module completion)
+  const total = moduleLessons.length || 1;
+  const doneCount = moduleLessons.reduce((acc, ls) => acc + (AppStorage.isDone(`${levelKey}:${ls.id}`) ? 1 : 0), 0);
+  const pct = Math.round((doneCount / total) * 100);
+
+  // Subtitle (petit texte propre)
+  const subtitle = lesson?.subtitle
+    ? this.esc(lesson.subtitle)
+    : "Lis, répète, puis fais les exercices — 5 minutes focus.";
+
+  this.setView(`
+    <div class="lesson-shell">
+
+      <!-- Progress bar -->
+      <div class="lesson-progress" aria-hidden="true">
+        <div style="--w:${pct}%"></div>
+      </div>
+
+      <!-- Topbar sticky -->
+      <div class="lesson-topbar">
+        <div class="lesson-navrow">
+          <div class="lesson-brand" id="homeBrand" role="button" tabindex="0" title="Accueil">
+            <span class="flag" aria-hidden="true"></span>
+            <span>Svenska Mästare</span>
+          </div>
+
+          <div class="lesson-actions">
+            <button class="btn pill subtle" id="backBtn">← Retour</button>
+            <button class="btn pill subtle" id="themeBtn" title="Mode sombre">🌓</button>
+            <button class="btn pill primary-solid" id="doneBtn">Terminé ✓</button>
           </div>
         </div>
-
-        ${this.renderContent(lesson.content)}
-        ${this.renderExamples(lesson.examples)}
-        ${this.renderVocab(lesson.vocab)}
-        ${this.renderMiniDrills(lesson.mini_drills)}
-        ${this.renderQuiz(lesson.quiz)}
       </div>
-    `);
 
-    document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
-    document.getElementById("homeBtn")?.addEventListener("click", () => Router.go("/"));
-    document.getElementById("doneBtn")?.addEventListener("click", () => {
-      AppStorage.markDone(key);
-      alert("✅ Leçon marquée comme terminée !");
-      Router.go("/level", { level: levelKey });
-    });
+      <!-- Header -->
+      <header class="lesson-header">
+        <div class="lesson-meta">
+          <span class="pill">${this.esc(levelKey)}</span>
+          <span>•</span>
+          <span>${this.esc(moduleTitle)}</span>
+          ${lesson.type ? `<span>•</span><span>${this.esc(lesson.type)}</span>` : ""}
+          <span>•</span>
+          <span>${doneCount}/${total} complétées</span>
+        </div>
 
-    this.mount.querySelectorAll("[data-reveal]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const id = btn.getAttribute("data-reveal");
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.style.display = (el.style.display === "none" ? "block" : "none");
-      });
+        <h1 class="lesson-title">${this.esc(lesson.title || "")}</h1>
+        <p class="lesson-subtitle">${subtitle}</p>
+      </header>
+
+      <!-- Blocks -->
+      <section class="lesson-block">
+        <div class="block-head">
+          <div class="lesson-icon" aria-hidden="true">🎯</div>
+          <div>
+            <h2 style="margin:0">Contenu</h2>
+            <p class="muted" style="margin:6px 0 0 0">Dialogue, explications, prononciation, structures.</p>
+          </div>
+        </div>
+        <div style="height:12px"></div>
+        ${this.renderContent(lesson.content)}
+      </section>
+
+      ${lesson.examples ? `
+        <section class="lesson-block">
+          <div class="block-head">
+            <div class="lesson-icon" aria-hidden="true">🧩</div>
+            <div>
+              <h2 style="margin:0">Exemples</h2>
+              <p class="muted" style="margin:6px 0 0 0">Lis → prononce → compare avec le FR.</p>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          ${this.renderExamples(lesson.examples)}
+        </section>
+      ` : ""}
+
+      ${lesson.vocab ? `
+        <section class="lesson-block">
+          <div class="block-head">
+            <div class="lesson-icon" aria-hidden="true">📚</div>
+            <div>
+              <h2 style="margin:0">Vocabulaire</h2>
+              <p class="muted" style="margin:6px 0 0 0">SV / FR / prononciation.</p>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          ${this.renderVocab(lesson.vocab)}
+        </section>
+      ` : ""}
+
+      ${lesson.mini_drills ? `
+        <section class="lesson-block">
+          <div class="block-head">
+            <div class="lesson-icon" aria-hidden="true">⚡</div>
+            <div>
+              <h2 style="margin:0">Mini drills</h2>
+              <p class="muted" style="margin:6px 0 0 0">Réflexes rapides, 2–3 minutes.</p>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          ${this.renderMiniDrills(lesson.mini_drills)}
+        </section>
+      ` : ""}
+
+      ${lesson.quiz ? `
+        <section class="lesson-block">
+          <div class="block-head">
+            <div class="lesson-icon" aria-hidden="true">🧠</div>
+            <div>
+              <h2 style="margin:0">Quiz</h2>
+              <p class="muted" style="margin:6px 0 0 0">Valide tes acquis en fin de leçon.</p>
+            </div>
+          </div>
+          <div style="height:12px"></div>
+          ${this.renderQuiz(lesson.quiz)}
+        </section>
+      ` : ""}
+
+    </div>
+  `);
+
+  // Events
+  document.getElementById("backBtn")?.addEventListener("click", () => Router.back("/"));
+  document.getElementById("homeBrand")?.addEventListener("click", () => Router.go("/"));
+  document.getElementById("themeBtn")?.addEventListener("click", () => this.toggleTheme());
+
+  document.getElementById("doneBtn")?.addEventListener("click", () => {
+    AppStorage.markDone(key);
+    alert("✅ Leçon marquée comme terminée !");
+    Router.go("/level", { level: levelKey });
+  });
+
+  // Keeps your reveal toggles working
+  this.mount.querySelectorAll("[data-reveal]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-reveal");
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = (el.style.display === "none" ? "block" : "none");
     });
-  },
+  });
+},
 
   // ===== CONTENT RENDERER (Dialogue + Décomposition) =====
 renderContent(lines) {
