@@ -1,37 +1,99 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Svenska Mästare — Apprentissage progressif du suédois A1→B2">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Svenska Mästare — Apprentissage progressif du suédois A1→B2" />
   <title>Svenska Mästare</title>
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Fonts + Icons (comme ton exemple) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="brand" style="cursor:pointer" id="nav-home">🇸🇪 Svenska Mästare</div>
-    <nav class="topnav">
-      <button class="btn" id="nav-home-btn">Accueil</button>
-      <button class="btn" id="nav-ref">Référence</button>
-      <button class="btn" id="nav-review">Révision</button>
-      <button class="btn" id="nav-stats">Stats</button>
-    </nav>
-  </header>
+  <!-- Mobile overlay -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
 
-  <main class="container">
-    <div id="app">
-      <div class="card" style="text-align:center; padding:40px;">
-        <div style="font-size:48px; margin-bottom:20px;">⏳</div>
-        <h2>Chargement...</h2>
-        <p class="muted">Préparation des leçons en cours</p>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Navigation">
+      <div class="sidebar-head" id="nav-home" role="button" tabindex="0" aria-label="Accueil">
+        <div class="brand-mark">🇸🇪</div>
+        <div class="brand-text">
+          <div class="brand-title">Svenska</div>
+          <div class="brand-sub">Mästare</div>
+        </div>
       </div>
-    </div>
-  </main>
 
-  <footer class="footer">
-    <span class="muted">Svenska Mästare — Apprentissage progressif A1 → B2 • Offline-ready</span>
-  </footer>
+      <nav class="sidebar-nav">
+        <a href="#/" class="nav-item is-active" id="nav-home-link">
+          <span class="material-icons-outlined">home</span>
+          Accueil
+        </a>
+
+        <a href="#/ref" class="nav-item" id="nav-ref">
+          <span class="material-icons-outlined">book</span>
+          Référence
+        </a>
+
+        <a href="#/review" class="nav-item" id="nav-review">
+          <span class="material-icons-outlined">psychology</span>
+          Révision
+        </a>
+
+        <a href="#/stats" class="nav-item" id="nav-stats">
+          <span class="material-icons-outlined">insights</span>
+          Stats
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="sidebar-btn" id="themeToggle" type="button">
+          <span class="material-icons-outlined">dark_mode</span>
+          Mode sombre
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Mobile topbar -->
+      <header class="mobile-topbar">
+        <div class="mobile-brand" id="nav-home-btn" role="button" tabindex="0">
+          <span class="flag">🇸🇪</span>
+          <span class="name">Svenska Mästare</span>
+        </div>
+
+        <div class="mobile-actions">
+          <button class="icon-btn" id="themeToggleMobile" type="button" aria-label="Mode sombre">
+            <span class="material-icons-outlined">dark_mode</span>
+          </button>
+          <button class="icon-btn" id="menuBtn" type="button" aria-label="Menu">
+            <span class="material-icons-outlined">menu</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="container">
+        <div id="app">
+          <div class="card" style="text-align:center; padding:40px;">
+            <div style="font-size:48px; margin-bottom:20px;">⏳</div>
+            <h2>Chargement...</h2>
+            <p class="muted">Préparation des leçons en cours</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span class="muted">Svenska Mästare — Apprentissage progressif A1 → B2 • Offline-ready</span>
+      </footer>
+    </main>
+  </div>
 
   <!-- Scripts dans le bon ordre -->
   <script src="assets/js/router.js"></script>
